@@ -1,0 +1,21 @@
+@use "../../../import" as *;
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+p {
+  text-align: center;
+}
+
+h2 {
+  margin: 0.5rem 0 1.5rem;
+}

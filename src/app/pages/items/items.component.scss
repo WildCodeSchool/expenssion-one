@@ -1,0 +1,23 @@
+@use "../../../import" as *;
+
+section {
+  padding: 4rem;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  li {
+    width: 350px;
+    max-width: 100%;
+  }
+}
+
+p {
+  font-size: 1.3rem;
+  text-align: center;
+  max-width: 600px;
+  margin: 6rem auto;
+}
