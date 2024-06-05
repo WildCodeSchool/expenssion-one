@@ -4,9 +4,27 @@
   background-color: $mainColor;
   color: $textColor;
   font-family: $contentFont;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
   width: 100%;
-  .discord {
-    width: 54px;
-    height: auto;
+  height: 8.1rem;
+  .containerFooter {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .globalInformation {
+      margin-left: 0.7rem;
+    }
+    .credits {
+      text-align: center;
+    }
+    .discord {
+      width: 3.4rem;
+      height: auto;
+    }
   }
 }
