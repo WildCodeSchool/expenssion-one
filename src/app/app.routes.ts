@@ -17,4 +17,8 @@ export const routes: Routes = [
     path: 'items',
     component: ItemsComponent,
   },
+  // {
+  //   path: '*',
+  //   component: FooterComponent,
+  // },
 ];
