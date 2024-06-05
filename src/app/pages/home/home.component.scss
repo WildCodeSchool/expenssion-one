@@ -1,5 +1,15 @@
 @use "../../../import" as *;
 
+
+
+*{
+  background-image:url("/assets/home-background-desktop.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 section {
   display: flex;
   flex-direction: column;
@@ -9,6 +19,7 @@ section {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 
 h1,
 h2,

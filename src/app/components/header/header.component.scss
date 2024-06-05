@@ -1,0 +1,193 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    //box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.7);
+    max-height: 10%;
+    min-height: 50px;
+
+    .a{
+        
+        color: white;
+        text-decoration: none;
+        font-size: 30px;
+        margin: 0 10px;
+    }
+
+    .navbar-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; // Adjusts spacing between elements
+        padding: 0 1rem;
+
+
+        .navbar-center {
+            display: flex;
+            align-items: center;
+            gap: 1rem; // Adjusts spacing between jouer container and navbar-left/navbar-right
+          }
+          .navbar-left{
+            margin-right: 2vh;
+            
+                  }
+
+                 
+          }
+          .nav-right{
+            margin-left: 2vw;
+          }
+
+          
+
+
+            
+    
+          
+
+      }
+
+
+
+     .logo-image{
+        height: 7vh;
+     }
+
+      .navbar-left ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 1rem; // Adjusts spacing between navbar-left items
+      }
+      
+      .navbar-left li {
+        position: relative;
+      }
+      
+      .navbar-left li ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+      .navbar-left li:hover ul {
+        display: block;
+      }
+      
+
+      
+ 
+      
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+
+
+
+
+//   .navbar {
+//     background-color: rgba(0, 0, 0, 0.7);
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding: 10px;
+// }
+// .navbar a {
+//     color: white;
+//     text-decoration: none;
+//     font-size: 30px;
+//     margin: 0 10px;
+// }
+// .navbar ul {
+//     list-style: none;
+//     padding: 0;
+//     margin: 0;
+//     display: flex;
+// }
+// .navbar ul li {
+//     position: relative;
+//     margin-right: 10px;
+// }
+// .navbar ul ul {
+//     display: none;
+//     position: absolute;
+//     background-color: rgba(0, 0, 0, 0.7);
+//     padding: 10px;
+//     flex-direction: column;
+//     top: 100%;
+//     left: 0;
+// }
+// .navbar li:hover > ul {
+//     display: flex;
+// }
+
+//  .navbar ul li > a::after {
+//     content: ' ►'; 
+//     font-size: 18px;
+// }
+// .navbar ul li ul li > a::after {
+//     content: ''; 
+// }
+
+// .navbar ul li:nth-child(3) > a::after,
+// .navbar ul li:nth-child(4) > a::after,
+// .navbar ul li:nth-child(5) > a::after {
+//     content: '';
+// }
+
+// .navbar ul.right-links li:nth-child(1) > a::after,
+// .navbar ul.right-links li:nth-child(2) > a::after {
+// content: ''; /* Pas de flèche pour les liens 'news' et 'studio' */
+// }
+
+
+
+// .navbar .logo img,
+// .navbar .image img,
+// .navbar ul li img {
+//     width: 70px;             
+//     height: 70px;
+// }
+// .navbar .logo {
+//     margin-left: 10px;
+// }
+// .navbar .image {
+//     margin-right: 10px;
+// }
+//    .jouer-container {
+//     position: absolute;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     display: flex;
+//     align-items: center;
+//     margin-right: calc(50% - 35px); 
+//     margin-top: 80px;
+
+// .navbar .jouer-image {
+//     width: 300px;             
+//     height: auto; 
+// }
+
+//  .left-links {
+//     order: -1; 
+// }
+
+// .right-links {
+//     order: 1; 
+// }
