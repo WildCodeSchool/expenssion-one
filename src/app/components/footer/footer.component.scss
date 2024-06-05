@@ -1,0 +1,12 @@
+@use "../../../import" as *;
+
+.footer {
+  background-color: $mainColor;
+  color: $textColor;
+  font-family: $contentFont;
+  width: 100%;
+  .discord {
+    width: 54px;
+    height: auto;
+  }
+}
