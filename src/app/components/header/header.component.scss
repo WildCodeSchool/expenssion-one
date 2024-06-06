@@ -1,102 +1,122 @@
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    //box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.7);
-    max-height: 10%;
-    min-height: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  //box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  background-color: rgba(51, 50, 50, 0.7);
+  height: calc(120px);
 
-    .a{
-        
-        color: white;
-        text-decoration: none;
-        font-size: 30px;
-        margin: 0 10px;
+
+  .a {
+
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    margin: 0 10px;
+  }
+
+  .navbar-container {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 10px;
+    justify-content: space-between; // Adjusts spacing between elements
+    //padding: 0 1rem;
+
+
+    .navbar-center {
+      display: flex;
+      align-items: center;
     }
 
-    .navbar-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between; // Adjusts spacing between elements
-        padding: 0 1rem;
+    .navbar-left {
+      display: flex;
+      margin-right: 2vw;
+
+    }
 
 
-        .navbar-center {
-            display: flex;
-            align-items: center;
-            gap: 1rem; // Adjusts spacing between jouer container and navbar-left/navbar-right
-          }
-          .navbar-left{
-            margin-right: 2vh;
-            
-                  }
+  }
 
-                 
-          }
-          .nav-right{
-            margin-left: 2vw;
-          }
-
-          
-
-
-            
-    
-          
-
-      }
+  .navbar-right {
+    display: flex;
+    margin-left: 2vw;
+    gap: 1rem;
+  }
 
 
 
-     .logo-image{
-        height: 7vh;
-     }
 
-      .navbar-left ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        gap: 1rem; // Adjusts spacing between navbar-left items
-      }
-      
-      .navbar-left li {
-        position: relative;
-      }
-      
-      .navbar-left li ul {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: white;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-      
-      .navbar-left li:hover ul {
-        display: block;
-      }
-      
 
-      
- 
-      
 
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+}
+
+
+.jouer-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 55px;
+
+  .image-jouer-container {
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+  }
+
+}
+
+
+.logo-image {
+  height: 75px;
+}
+
+.navbar-left ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem; // Adjusts spacing between navbar-left items
+}
+
+.navbar-left li {
+  position: relative;
+}
+
+.navbar-left li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left li:hover ul {
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
