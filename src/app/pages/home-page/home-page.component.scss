@@ -3,24 +3,25 @@
 .background_image {
     background-image: url("../../../assets/background_pictures/home_page_background.png");
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-position: center center;
     width: 100vw;
     height: 100vh;
 }
 
 section {
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
     height: 70vh;
+    width: 100%;
 }
 
 h1,
 h3 {
     text-align: center;
     font-family: "Kaisei Decol", serif;
+    width: 100%;
 }
 
 h1 {
@@ -30,4 +31,15 @@ h1 {
 
 h3 {
     font-size: larger;
+}
+
+@media screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
 }
