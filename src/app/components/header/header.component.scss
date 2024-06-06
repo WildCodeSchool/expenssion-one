@@ -1,32 +1,56 @@
-.navbar {
+$play-button-width:200px;
+$navbar-height:80px;
+
+  .header {
   position: fixed;
   top: 0;
   width: 100%;
-  //box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  background-color: rgba(51, 50, 50, 0.7);
-  height: calc(120px);
+  
 
 
-  .a {
 
-    color: white;
-    text-decoration: none;
-    font-size: 30px;
-    margin: 0 10px;
-  }
+  // .a {
 
-  .navbar-container {
+  //   color: white;
+  //   text-decoration: none;
+  //   font-size: 30px;
+  //   margin: 0 10px;
+  // }
+
+  .navbar{
     display: flex;
-    align-items: flex-start;
-    padding-top: 10px;
-    justify-content: space-between; // Adjusts spacing between elements
-    //padding: 0 1rem;
+    background-color: rgba(51, 50, 50, 0.7);
+    width: 100%;
+    align-items: center;
+    justify-content: space-between; 
+    height: $navbar-height;
+
+    .logo{
+      .logo-image {
+        padding: 5px 5px 5px 5px;
+        align-self: center;
+        justify-content: center;
+        height: 75px;
+      }
+      
+    }
+
+    .connexion-container{
+
+      .connexion-logo{
+        padding: 5px 5px 5px 5px;
+        justify-content: center;
+        align-items: center;
+      }
+    }
 
 
     .navbar-center {
       display: flex;
       align-items: center;
+      justify-content: center;
+      gap:$play-button-width;
     }
 
     .navbar-left {
@@ -44,64 +68,65 @@
     gap: 1rem;
   }
 
-
-
-
-
-
-
-
-
-
-}
-
-
-.jouer-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 55px;
-
-  .image-jouer-container {
-    align-items: center;
+  .play-button {
+    display: flex;
     justify-content: center;
-    height: 100px;
+    align-items: center;
+    margin-top: calc(-125px/2);
+    
+  
+    .image-jouer-container {
+      align-self: center;
+      align-content: center;
+      justify-content: center;
+      width: $play-button-width;
+      height: 125px;
+      
+    }
+  
   }
-
+  
 }
 
-
-.logo-image {
-  height: 75px;
-}
-
-.navbar-left ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  gap: 1rem; // Adjusts spacing between navbar-left items
-}
-
-.navbar-left li {
-  position: relative;
-}
-
-.navbar-left li ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-left li:hover ul {
+.menu{
+  margin-top: 80px;
   display: block;
 }
+
+
+
+
+
+// .navbar-left ul {
+//   list-style: none;
+//   padding: 0;
+//   margin: 0;
+//   display: flex;
+//   align-items: center;
+//   gap: 1rem; // Adjusts spacing between navbar-left items
+// }
+
+// .navbar-left li {
+//   position: relative;
+//   width: 100%;
+// }
+
+// .navbar-left li ul {
+//   display: none;
+//   position: absolute;
+//   top: 100%;
+//   left: 0;
+//   background-color: white;
+//   list-style: none;
+//   padding: 0;
+//   margin: 0;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+// }
+
+// .navbar-left li:hover ul {
+//   display: block;
+  
+// }
 
 
 

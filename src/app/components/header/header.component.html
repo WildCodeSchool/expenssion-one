@@ -1,19 +1,24 @@
 <!-- src/app/navbar/navbar.component.html -->
-<header class="navbar">
-  <nav class="navbar-container">
+<header class="header">
+  <nav class="navbar">
+
     <div class="logo">
       <img class="logo-image" src="assets/pictures/Blop.png" alt="Logo">
     </div>
+
     <div class="navbar-center">
       <div class="navbar-left">
         <ul>
-          <li><a href="#">Jeu</a>
-            <ul>
-              <li><a href="#">Introduction</a></li>
-              <li><a href="#">Règles</a></li>
-            </ul>
+          <li class="jeu-button"(mouseover)="showMenu = true" (mouseleave)="showMenu = false">Jeu
+            @if(showMenu){
+              <ul class="menu">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Règles</a></li>
+              </ul>
+            }
+            
           </li>
-          <li><a href="#">Glossaire</a>
+          <!-- <li><a href="#">Glossaire</a>
             <ul>
               <li><a href="#">Races</a></li>
               <li><a href="#">Classes</a></li>
@@ -21,11 +26,8 @@
               <li><a href="#">Croyances</a></li>
               <li><a href="#">Lieux</a></li>
             </ul>
-          </li>
+          </li> -->
         </ul>
-      </div>
-      <div class="jouer-container">
-        <img class="image-jouer-container" src="assets/pictures/jouer.png" alt="Jouer">
       </div>
       <div class="navbar-right">
         <a href="#">News</a>
@@ -33,8 +35,14 @@
       </div>
     </div>
 
-    <div class="image">
-      <a href="#"><img src="assets/pictures/Connexion.png" alt="Connexion"></a>
+    <div class="connexion-container">
+      <img class="connexion-logo" src="assets/pictures/Connexion.png" alt="Connexion">
     </div>
+
   </nav>
+
+  <div class="play-button">
+    <img class="image-jouer-container" src="assets/pictures/jouer.png" alt="Jouer">
+  </div>
+
 </header>
