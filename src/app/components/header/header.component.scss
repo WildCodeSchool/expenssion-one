@@ -1,88 +1,27 @@
 $play-button-width: 200px;
 $navbar-height: 80px;
 
-
-
-
-.mat-accordion {
-  width: 100%;
-  transition: height 0.3s ease;
-  padding: 0 0 0 0;
-  border-radius: 0;
-  background-color: rgba(51, 50, 50, 0.7);
-
-}
-
-.mat-accordion {
-  &>.mat-expansion-panel {
-
-    &:first-of-type,
-    &:last-of-type {
-      border-radius: unset;
-      background-color: rgba(51, 50, 50, 0.7);
-
-    }
-  }
-}
-
-
-
-.mat-expansion-panel {
-  background-color: rgba(51, 50, 50, 0.7);
-
-}
-
-.mat-expansion-panel-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
-.navbar-expanded {
-  height: 400px;
-  /* Adjust height as needed */
-}
-
 .header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 1;
+  left: 0;
+
 
   .navbar-container {
-    display: flex;
-    //background-color: rgba(51, 50, 50, 0.7);
-    width: 100%;
-    margin: 0;
-    align-items: center;
-    justify-content: space-between;
-    height: $navbar-height;
-  }
-
-
-  .a {
-
-    color: white;
-    text-decoration: none;
-    font-size: 30px;
-    margin: 0 10px;
-  }
-
-  .navbar {
     display: flex;
     background-color: rgba(51, 50, 50, 0.7);
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    height: $navbar-height;
+    //height: $navbar-height;
 
     .logo {
       .logo-image {
-        padding: 5px 5px 5px 5px;
-        align-self: center;
-        justify-content: center;
+        // padding: 5px 5px 5px 5px;
+        // align-self: center;
+        // justify-content: center;
         height: 75px;
       }
 
@@ -91,9 +30,9 @@ $navbar-height: 80px;
     .connexion-container {
 
       .connexion-logo {
-        padding: 5px 5px 5px 5px;
-        justify-content: center;
-        align-items: center;
+        // padding: 5px 5px 5px 5px;
+        // justify-content: center;
+        // align-items: center;
       }
     }
 
@@ -103,21 +42,83 @@ $navbar-height: 80px;
       align-items: center;
       justify-content: center;
       gap: $play-button-width;
+
     }
 
     .navbar-left {
       display: flex;
       margin-right: 2vw;
 
+
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 20px; // Adjusts spacing between navbar-left items
+      }
+
+      li {
+        ul.submenu {
+          display: none;
+
+          li {
+            //padding: 10px;
+            //white-space: nowrap;
+
+            &:hover {}
+          }
+        }
+
+        &:hover ul.submenu {
+
+
+          background-color: rgba(51, 50, 50, 0.7);
+          list-style: none;
+          padding-top: 100px;
+          //z-index: 1001;
+
+        }
+      }
+
+
     }
 
+
+  }
+
+  .sub-menu {
+    display: flex;
+    background-color: rgba(51, 50, 50, 0.7);
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    //margin-top: -1px;
+    padding-right: calc($play-button-width *2);
+
+    .menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
 
   }
 
   .navbar-right {
     display: flex;
     margin-left: 2vw;
-    gap: 1rem;
+
+    ul {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 20px; // Adjusts spacing between navbar-left items
+    }
+
   }
 
   .play-button {
@@ -125,6 +126,10 @@ $navbar-height: 80px;
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // margin-top: calc(-125px/2);
 
 
     .image-jouer-container {
@@ -140,24 +145,11 @@ $navbar-height: 80px;
 
 }
 
-.menu {
-  margin-top: 80px;
-  display: block;
-}
 
 
 
 
-
-.navbar-left ul {
-  pointer-events: all;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  gap: 1rem; // Adjusts spacing between navbar-left items
-}
+.navbar-left ul {}
 
 .navbar-left li {
   position: relative;
@@ -180,5 +172,3 @@ $navbar-height: 80px;
   display: block;
 
 }
-
-/* src/app/navbar/navbar.component.scss */

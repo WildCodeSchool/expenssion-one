@@ -10,6 +10,25 @@ import { MatExpansionModule } from '@angular/material/expansion';
 })
 export class HeaderComponent {
   isShowJeu: boolean = false;
-  panelOpenState: boolean = false;
   isShowGlossaire: boolean = false;
+  isSubMenuHover: boolean = false;
+  isLeftNavHover: boolean = false;
+
+
+
+
+  changeGlossaire() {
+    this.isShowGlossaire = true;
+    if (this.isShowJeu == true) {
+      this.isShowJeu = false
+    }
+  }
+
+  changeJeu() {
+    this.isShowJeu = true;
+    if (this.isShowGlossaire == true) {
+      this.isShowGlossaire = false
+    }
+
+  }
 }

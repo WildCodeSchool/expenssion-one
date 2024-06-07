@@ -1,52 +1,69 @@
-<mat-accordion class="header" (mouseleave)="panel.close()">
-  <mat-expansion-panel #panel hideToggle (click)="$event.stopPropagation();">
-    <mat-expansion-panel-header class="navbar-container">
-      <div class="navbar">
-        <div class="logo">
-          <img class="logo-image" src="assets/pictures/Blop.png" alt="Logo">
-        </div>
-
-        <div class="navbar-center">
-          <div class="navbar-left">
-            <ul>
-              <li class="jeu-button" (mouseover)="isShowJeu=!isShowJeu;panel.open()">
-                Jeu
-              </li>
-              <li (mouseover)="isShowGlossaire=!isShowGlossaire;panel.open()">Glossaire</li>
-            </ul>
-          </div>
-          <div class="navbar-right">
-            <a href="#">News</a>
-            <a href="#">Studio</a>
-          </div>
-        </div>
-
-        <div class="connexion-container">
-          <img class="connexion-logo" src="assets/pictures/Connexion.png" alt="Connexion">
-        </div>
-
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="logo">
+        <img class="logo-image" src="assets/pictures/Blop.png" alt="Logo">
       </div>
-      <div class="play-button">
-        <img class="image-jouer-container" src="assets/pictures/jouer.png" alt="Jouer">
+
+      <div class="navbar-center">
+        <div class="navbar-left">
+          <ul>
+            <li class="jeu-button">Jeu
+              <ul class="submenu">
+                <li>Introduction</li>
+                <li>Règles</li>
+              </ul>
+            </li>
+            <li>Glossaire</li>
+          </ul>
+        </div>
+        <div class="navbar-right">
+          <ul>
+            <li>News</li>
+            <li>Studio</li>
+          </ul>
+
+        </div>
       </div>
-    </mat-expansion-panel-header>
-    @if(isShowJeu){
-    <ul class="menu">
-      <li><a href="#">Introduction</a></li>
-      <li><a href="#">Règles</a></li>
-    </ul>
-    }
-    @if(isShowGlossaire){
-    <ul>
-      <li><a href="#">Races</a></li>
-      <li><a href="#">Classes</a></li>
-      <li><a href="#">Les Secrets</a></li>
-      <li><a href="#">Croyances</a></li>
-      <li><a href="#">Lieux</a></li>
-    </ul>
-    }
+
+      <div class="connexion-container">
+        <img class="connexion-logo" src="assets/pictures/Connexion.png" alt="Connexion">
+      </div>
 
 
-  </mat-expansion-panel>
+    </div>
+  </nav>
 
-</mat-accordion>
+  <div class="play-button">
+    <img class="image-jouer-container" src="assets/pictures/jouer.png" alt="Jouer">
+  </div>
+</header>
+<!-- @if((isShowJeu||isShowGlossaire)&&(isSubMenuHover||isLeftNavHover)){
+
+    <div class="sub-menu" (mouseleave)="isShowGlossaire=false;isShowJeu=false;isSubMenuHover=false"
+      (mouseenter)="isSubMenuHover=true">
+      @if(isShowJeu && (isSubMenuHover|| isLeftNavHover)){
+      <div class="menu">
+        <ul>
+          <li><a href="#">Introduction</a></li>
+          <li><a href="#">Règles</a></li>
+        </ul>
+      </div>
+
+      }
+      @if(isShowGlossaire && (isSubMenuHover|| isLeftNavHover)){
+      <div class="menu">
+        <ul>
+          <li><a href="#">Races</a></li>
+          <li><a href="#">Classes</a></li>
+          <li><a href="#">Les Secrets</a></li>
+          <li><a href="#">Croyances</a></li>
+          <li><a href="#">Lieux</a></li>
+        </ul>
+      </div>
+
+      }
+
+    </div>
+
+    } -->
