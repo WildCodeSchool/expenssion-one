@@ -1,0 +1,174 @@
+$play-button-width: 200px;
+$navbar-height: 80px;
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  left: 0;
+
+
+  .navbar-container {
+    display: flex;
+    background-color: rgba(51, 50, 50, 0.7);
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    //height: $navbar-height;
+
+    .logo {
+      .logo-image {
+        // padding: 5px 5px 5px 5px;
+        // align-self: center;
+        // justify-content: center;
+        height: 75px;
+      }
+
+    }
+
+    .connexion-container {
+
+      .connexion-logo {
+        // padding: 5px 5px 5px 5px;
+        // justify-content: center;
+        // align-items: center;
+      }
+    }
+
+
+    .navbar-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: $play-button-width;
+
+    }
+
+    .navbar-left {
+      display: flex;
+      margin-right: 2vw;
+
+
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 20px; // Adjusts spacing between navbar-left items
+      }
+
+      li {
+        ul.submenu {
+          display: none;
+
+          li {
+            //padding: 10px;
+            //white-space: nowrap;
+
+            &:hover {}
+          }
+        }
+
+        &:hover ul.submenu {
+
+
+          background-color: rgba(51, 50, 50, 0.7);
+          list-style: none;
+          padding-top: 100px;
+          //z-index: 1001;
+
+        }
+      }
+
+
+    }
+
+
+  }
+
+  .sub-menu {
+    display: flex;
+    background-color: rgba(51, 50, 50, 0.7);
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    //margin-top: -1px;
+    padding-right: calc($play-button-width *2);
+
+    .menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+  }
+
+  .navbar-right {
+    display: flex;
+    margin-left: 2vw;
+
+    ul {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 20px; // Adjusts spacing between navbar-left items
+    }
+
+  }
+
+  .play-button {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // margin-top: calc(-125px/2);
+
+
+    .image-jouer-container {
+      align-self: center;
+      align-content: center;
+      justify-content: center;
+      width: $play-button-width;
+      height: 125px;
+
+    }
+
+  }
+
+}
+
+
+
+
+
+.navbar-left ul {}
+
+.navbar-left li {
+  position: relative;
+  width: 100%;
+}
+
+.navbar-left li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left li:hover ul {
+  display: block;
+
+}

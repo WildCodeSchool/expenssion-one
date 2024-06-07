@@ -1,0 +1,59 @@
+$play-button-width: 200px;
+$navbar-height: 80px;
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+
+    .navbar-container {
+        display: flex;
+        background-color: rgba(51, 50, 50, 0.7);
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        height: $navbar-height;
+
+        .logo {
+            .logo-image {
+                padding: 5px 5px 5px 5px;
+                align-self: center;
+                justify-content: center;
+                height: 75px;
+            }
+
+        }
+
+
+
+        .connexion-container {
+
+            .connexion-logo {
+                padding: 5px 5px 5px 5px;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    .play-button {
+        position: fixed;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+
+        .image-jouer-container {
+            align-self: center;
+            align-content: center;
+            justify-content: center;
+            width: $play-button-width;
+            height: 125px;
+
+        }
+
+    }
+
+}
