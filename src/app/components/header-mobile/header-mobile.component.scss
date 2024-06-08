@@ -1,59 +1,68 @@
 $play-button-width: 200px;
-$navbar-height: 80px;
+
 
 .header {
-    position: fixed;
-    top: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  left: 0;
+
+  .burger-button-container{
+    display: flex;
+    margin-left: 10px;
+    margin-top: 25px;
+    .burger-button{
+      color: white;
+        
+    }
+  }
+
+
+  .navbar-container {
+    //padding: 2rem;
+    display: flex;
+    background-color: rgba(51, 50, 50, 0.7);
     width: 100%;
-    z-index: 1000;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .logo {
+      margin-left:10px;
+      .logo-image {
+        height: 75px;
+      }
+    }
 
 
-    .navbar-container {
-        display: flex;
-        background-color: rgba(51, 50, 50, 0.7);
-        width: 100%;
+
+   
+    
+
+    .connexion-container{
+      margin-top: 10px;
+      margin-right: 10px;
+      .connexion-logo{
+        justify-content: center;
         align-items: center;
-        justify-content: space-between;
-        height: $navbar-height;
-
-        .logo {
-            .logo-image {
-                padding: 5px 5px 5px 5px;
-                align-self: center;
-                justify-content: center;
-                height: 75px;
-            }
-
-        }
-
-
-
-        .connexion-container {
-
-            .connexion-logo {
-                padding: 5px 5px 5px 5px;
-                justify-content: center;
-                align-items: center;
-            }
-        }
+      }
     }
 
-    .play-button {
-        position: fixed;
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
 
-        .image-jouer-container {
-            align-self: center;
-            align-content: center;
-            justify-content: center;
-            width: $play-button-width;
-            height: 125px;
+  }
 
-        }
-
-    }
-
+ 
 }
+
+.sidenav {
+    position: fixed;
+    padding-top: 100px;
+    padding-left: 20px;
+    top: 80.5px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(51, 50, 50, 0.7);
+    z-index: 1;
+    color: white;
+  }

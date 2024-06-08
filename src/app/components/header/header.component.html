@@ -8,13 +8,21 @@
       <div class="navbar-center">
         <div class="navbar-left">
           <ul>
-            <li class="jeu-button">Jeu
+            <li routerLink="game" class="jeu-button">Jeu
               <ul class="submenu">
                 <li>Introduction</li>
                 <li>Règles</li>
               </ul>
             </li>
-            <li>Glossaire</li>
+            <li>Glossaire
+              <ul class="submenu">
+                <li>Races</li>
+                <li>Classes</li>
+                <li>Les Secrets</li>
+                <li>Croyances</li>
+                <li>Lieux</li>
+              </ul>
+            </li>
           </ul>
         </div>
         <div class="navbar-right">
@@ -38,32 +46,3 @@
     <img class="image-jouer-container" src="assets/pictures/jouer.png" alt="Jouer">
   </div>
 </header>
-<!-- @if((isShowJeu||isShowGlossaire)&&(isSubMenuHover||isLeftNavHover)){
-
-    <div class="sub-menu" (mouseleave)="isShowGlossaire=false;isShowJeu=false;isSubMenuHover=false"
-      (mouseenter)="isSubMenuHover=true">
-      @if(isShowJeu && (isSubMenuHover|| isLeftNavHover)){
-      <div class="menu">
-        <ul>
-          <li><a href="#">Introduction</a></li>
-          <li><a href="#">Règles</a></li>
-        </ul>
-      </div>
-
-      }
-      @if(isShowGlossaire && (isSubMenuHover|| isLeftNavHover)){
-      <div class="menu">
-        <ul>
-          <li><a href="#">Races</a></li>
-          <li><a href="#">Classes</a></li>
-          <li><a href="#">Les Secrets</a></li>
-          <li><a href="#">Croyances</a></li>
-          <li><a href="#">Lieux</a></li>
-        </ul>
-      </div>
-
-      }
-
-    </div>
-
-    } -->

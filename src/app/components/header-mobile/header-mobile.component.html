@@ -1,48 +1,52 @@
 <header class="header">
     <nav class="navbar">
-        <div class="navbar-container">
+      <div class="navbar-container">
 
-            <button class="logo" mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
-                <mat-icon (click)="drawer.toggle();">menu</mat-icon>
-            </button>
-
-
-            <div class="connexion-container">
-                <img class="connexion-logo" src="assets/pictures/Connexion.png" alt="Connexion">
-            </div>
+        <div class="burger-button-container">
+            <button (click)="isOpen=!isOpen" class="burger-button" mat-mini-fab color="primary">
+                <mat-icon>menu</mat-icon>
+            </button>        
+          </div>
 
 
+        <div class="logo">
+          <img class="logo-image" src="assets/pictures/Blop.png" alt="Logo">
         </div>
 
+       
+        <div class="connexion-container">
+          <img class="connexion-logo" src="assets/pictures/Connexion.png" alt="Connexion">
+        </div>
+  
+  
+      </div>
     </nav>
+  </header>
 
-    <div class="play-button">
-        <img class="image-jouer-container" src="assets/pictures/jouer.png" alt="Jouer">
-    </div>
-
-</header>
-<mat-drawer-container class="example-container" hasBackdrop="false" style="top:100px">
-    <mat-drawer #drawer mode="over">
-        wtf
-        <div class="menu">
-            <ul>
-                <li><a href="#">Introduction</a></li>
-                <li><a href="#">Règles</a></li>
+  @if(isOpen){
+    <div class="sidenav">
+        <ul>
+            <li routerLink="game" class="jeu-button">Jeu
+              <ul class="submenu">
+                <li>Introduction</li>
+                <li>Règles</li>
+              </ul>
+            </li>
+            <li>Glossaire
+              <ul class="submenu">
+                <li>Races</li>
+                <li>Classes</li>
+                <li>Les Secrets</li>
+                <li>Croyances</li>
+                <li>Lieux</li>
+              </ul>
+            </li>
+  
+            <li>News</li>
+            <li>Studio</li>
             </ul>
-        </div>
 
-        <div class="menu">
-            <ul>
-                <li><a href="#">Races</a></li>
-                <li><a href="#">Classes</a></li>
-                <li><a href="#">Les Secrets</a></li>
-                <li><a href="#">Croyances</a></li>
-                <li><a href="#">Lieux</a></li>
-            </ul>
-        </div>
-    </mat-drawer>
-    <mat-drawer-content>
-        <router-outlet></router-outlet>
+      </div>
+  }
 
-    </mat-drawer-content>
-</mat-drawer-container>
+

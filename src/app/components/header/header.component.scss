@@ -1,5 +1,5 @@
 $play-button-width: 200px;
-$navbar-height: 80px;
+
 
 .header {
   position: fixed;
@@ -8,8 +8,9 @@ $navbar-height: 80px;
   z-index: 1;
   left: 0;
 
+
   .navbar-container {
-    padding: 2rem;
+    //padding: 2rem;
     display: flex;
     background-color: rgba(51, 50, 50, 0.7);
     width: 100%;
@@ -17,6 +18,7 @@ $navbar-height: 80px;
     justify-content: space-between;
 
     .logo {
+      margin-left:10px;
       .logo-image {
         height: 75px;
       }
@@ -27,24 +29,31 @@ $navbar-height: 80px;
       align-items: flex-start;
       gap: $play-button-width;
       padding: 1.5rem 0;
+      margin-top: 7px;
+      color: white;
     }
 
     .navbar-left {
-      margin-right: 2vw;
+      margin-right: 5vw;
 
       ul {
         list-style: none;
         padding: 0;
         margin: 0;
         display: flex;
+      
+        gap: 80px;
       }
 
       li {
+        
+
         ul.submenu {
-          background-color: rgba(51, 50, 50, 0.7);
           list-style: none;
-          padding-top: 100px;
+          padding-top: 50px;
           display: none;
+          float:center;
+          width: 10px; //je sais pas pourquoi mais depuis ça bouge plus 
         }
         &:hover {
           ul.submenu {
@@ -53,34 +62,31 @@ $navbar-height: 80px;
         }
       }
     }
-  }
 
-  .sub-menu {
-    display: flex;
-    background-color: rgba(51, 50, 50, 0.7);
-    width: 100%;
-    align-items: flex-start;
-    justify-content: center;
-    //margin-top: -1px;
-    padding-right: calc($play-button-width * 2);
-
-    .menu {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .connexion-container{
+      margin-top: 10px;
+      margin-right: 10px;
+      .connexion-logo{
+        justify-content: center;
+        align-items: center;
+      }
     }
+
+
   }
+
+ 
 
   .navbar-right {
     display: flex;
-    margin-left: 2vw;
+    margin-left: 5vw;
 
     ul {
       padding: 0;
       margin: 0;
       display: flex;
       align-items: center;
-      gap: 20px; // Adjusts spacing between navbar-left items
+      gap: 80px; // Adjusts spacing between navbar-left items
     }
   }
 
@@ -90,9 +96,6 @@ $navbar-height: 80px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // margin-top: calc(-125px/2);
 
     .image-jouer-container {
       align-self: center;
