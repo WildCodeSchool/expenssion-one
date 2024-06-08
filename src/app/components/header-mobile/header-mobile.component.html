@@ -3,7 +3,7 @@
       <div class="navbar-container">
 
         <div class="burger-button-container">
-            <button (click)="isOpen=!isOpen" class="burger-button" mat-mini-fab color="primary">
+            <button (click)="toogle()" class="burger-button" mat-mini-fab color="primary">
                 <mat-icon>menu</mat-icon>
             </button>        
           </div>
@@ -23,7 +23,7 @@
     </nav>
   </header>
 
-  @if(isOpen){
+  @if((isMobileSidenavOpen$|async)){
     <div class="sidenav">
         <ul>
             <li routerLink="game" class="jeu-button">Jeu
@@ -44,7 +44,7 @@
   
             <li>News</li>
             <li>Studio</li>
-            </ul>
+          </ul>
 
       </div>
   }

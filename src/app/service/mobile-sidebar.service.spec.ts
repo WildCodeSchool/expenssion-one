@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { MobileSidebarService } from './mobile-sidebar.service';
+import { MobileSideNavService } from './mobile-sidenav.service';
 
 describe('MobileSidebarService', () => {
-  let service: MobileSidebarService;
+  let service: MobileSideNavService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(MobileSidebarService);
+    service = TestBed.inject(MobileSideNavService);
   });
 
   it('should be created', () => {

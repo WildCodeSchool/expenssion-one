@@ -65,4 +65,15 @@ $play-button-width: 200px;
     background-color: rgba(51, 50, 50, 0.7);
     z-index: 1;
     color: white;
+    font-size: 2rem;
+    line-height: 3rem;
+
+    ul{
+      margin-left: 50px;
+      li{
+        ul{
+          padding-left: 25px;
+        }
+      }
+    }
   }
