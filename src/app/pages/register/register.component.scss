@@ -1,0 +1,47 @@
+.inscription-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+    background-color: #3b1c07;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #d3b18f;
+}
+
+.inscription-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.inscription-form label {
+    margin-top: 10px;
+}
+
+.inscription-form input[type="text"],
+.inscription-form input[type="date"],
+.inscription-form input[type="email"],
+.inscription-form input[type="password"],
+.inscription-form input[type="checkbox"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.inscription-form button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #3b1c07;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.inscription-form button:disabled {
+    background-color: #a07c58;
+}
