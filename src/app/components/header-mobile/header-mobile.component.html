@@ -1,10 +1,10 @@
-<header class="header">
+<header class="header"  [ngClass]="{ 'blur-background': isMobileSidenavOpen }">
     <nav class="navbar">
       <div class="navbar-container">
 
         <div class="burger-button-container">
             <button (click)="toogle()" class="burger-button" mat-mini-fab color="primary">
-                <mat-icon>menu</mat-icon>
+                <mat-icon  class="large-icon">menu</mat-icon>
             </button>        
           </div>
 
@@ -23,10 +23,11 @@
     </nav>
   </header>
 
-  @if((isMobileSidenavOpen$|async)){
+  @if(isMobileSidenavOpen){
     <div class="sidenav">
         <ul>
-            <li routerLink="game" class="jeu-button">Jeu
+            <li>Création De Personnage</li>
+            <li routerLink="game" class="play-button">Jeu
               <ul class="submenu">
                 <li>Introduction</li>
                 <li>Règles</li>

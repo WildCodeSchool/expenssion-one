@@ -2,8 +2,6 @@ import { Component, inject } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterOutlet } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
-import { MobileSideNavService } from '../../service/mobile-sidenav.service';
-import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-header-mobile',
@@ -14,12 +12,10 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderMobileComponent {
 
-  
-  mobileSidenavService= inject(MobileSideNavService)
-  isMobileSidenavOpen$ :Observable<boolean>=this.mobileSidenavService.mobileSideNavIsOpen$
+  isMobileSidenavOpen:boolean=false
 
   toogle(){
-    this.mobileSidenavService.toggle()
+    this.isMobileSidenavOpen=!this.isMobileSidenavOpen;
 
   }
 
