@@ -15,10 +15,11 @@ section {
     align-items: center;
     height: 70vh;
     width: 100%;
+    padding: 1em;
 }
 
 h1,
-h3 {
+h2 {
     text-align: center;
     font-family: "Kaisei Decol", serif;
     width: 100%;
@@ -29,7 +30,7 @@ h1 {
     font-weight: 500;
 }
 
-h3 {
+h2 {
     font-size: larger;
 }
 
@@ -39,7 +40,7 @@ h3 {
         font-size: 50px;
     }
 
-    h3 {
+    h2 {
         font-size: 18px;
     }
 }
