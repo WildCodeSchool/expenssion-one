@@ -1,10 +1,10 @@
-<header class="header"  [ngClass]="{ 'blur-background': isMobileSidenavOpen }">
+<header class="header"  [ngClass]="{ 'blur-background': isMobileSideNavOpen }">
     <nav class="navbar">
       <div class="navbar-container">
 
         <div class="burger-button-container">
-            <button (click)="toogle()" class="burger-button" mat-mini-fab color="primary">
-                <mat-icon  class="large-icon">menu</mat-icon>
+            <button (click)="toggle()" class="burger-button" mat-mini-fab color="primary">
+                <!-- <mat-icon  class="large-icon">menu</mat-icon> -->
             </button>        
           </div>
 
@@ -23,7 +23,7 @@
     </nav>
   </header>
 
-  @if(isMobileSidenavOpen){
+  @if(isMobileSideNavOpen){
     <div class="sidenav">
         <ul>
             <li>Création De Personnage</li>
