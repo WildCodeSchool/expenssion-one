@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiDataService } from '../../../service/api-data.service';
 
 @Component({
   selector: 'app-location-page',
@@ -8,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrl: './location-page.component.scss'
 })
 export class LocationPageComponent {
+  data: any;
 
+  constructor(private ApiDataService: ApiDataService) {}
+
+  ngOnInit(): void {
+    this.ApiDataService.getLocations().subscribe(response => {this.data = response})
+  }
 }
