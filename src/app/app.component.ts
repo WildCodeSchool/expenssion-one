@@ -18,9 +18,6 @@ export class AppComponent implements OnInit {
 
   private breakpoints = {
     mobile: '(max-width: 768px)',
-    small: '(min-width: 600px) and (max-width: 959px)',
-    medium: '(min-width: 960px) and (max-width: 1279px)',
-    large: '(min-width: 1280px)'
   };
 
 
