@@ -1,5 +1,5 @@
 $play-button-width: 200px;
-
+$ul_gap: 80px;
 
 .header {
   position: fixed;
@@ -40,18 +40,16 @@ $play-button-width: 200px;
         padding: 0;
         margin: 0;
         display: flex; 
-        gap: 80px;
+        gap: $ul_gap;
+        ;
       }
 
       li {
-        
-
         ul.submenu {
           list-style: none;
           padding-top: 50px;
           display: none;
-          float:center;
-          width: 10px; //je sais pas pourquoi mais depuis ça bouge plus 
+          width: 10px;
         }
         &:hover {
           ul.submenu {
@@ -71,8 +69,6 @@ $play-button-width: 200px;
     }
   }
 
- 
-
   .navbar-right {
     display: flex;
     margin-left: 5vw;
@@ -82,7 +78,7 @@ $play-button-width: 200px;
       margin: 0;
       display: flex;
       align-items: center;
-      gap: 80px; // Adjusts spacing between navbar-left items
+      gap:$ul_gap;
     }
   }
 

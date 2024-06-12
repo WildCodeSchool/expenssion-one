@@ -3,8 +3,14 @@
       <div class="navbar-container">
 
         <div class="burger-button-container">
-            <button (click)="toggle()" class="burger-button" mat-mini-fab color="primary">
-                <!-- <mat-icon  class="large-icon">menu</mat-icon> -->
+            <button (click)="toggle()" class="burger-button">
+              @if(isMobileSideNavOpen){
+                <img src="assets/pictures/close.svg" class="large-icon" img> 
+              }
+              @else{
+                <img src="assets/pictures/burger-menu.svg" class="large-icon" img> 
+              }
+                 
             </button>        
           </div>
 
@@ -27,13 +33,15 @@
     <div class="sidenav">
         <ul>
             <li>Création De Personnage</li>
-            <li routerLink="game" class="play-button">Jeu
+            <li routerLink="game" class="play-button">
+              Jeu
               <ul class="submenu">
                 <li>Introduction</li>
                 <li>Règles</li>
               </ul>
             </li>
-            <li>Glossaire
+            <li>
+              Glossaire
               <ul class="submenu">
                 <li>Races</li>
                 <li>Classes</li>
