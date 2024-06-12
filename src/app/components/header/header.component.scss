@@ -8,7 +8,6 @@ $ul_gap: 80px;
   z-index: 1;
   left: 0;
 
-
   .navbar-container {
     display: flex;
     background-color: rgba(51, 50, 50, 0.7);
@@ -41,7 +40,6 @@ $ul_gap: 80px;
         margin: 0;
         display: flex; 
         gap: $ul_gap;
-        ;
       }
 
       li {
@@ -59,10 +57,10 @@ $ul_gap: 80px;
       }
     }
 
-    .connexion-container{
+    .connection-container{
       margin-top: 10px;
       margin-right: 10px;
-      .connexion-logo{
+      .connection-logo{
         justify-content: center;
         align-items: center;
       }
