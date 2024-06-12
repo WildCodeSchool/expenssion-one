@@ -9,7 +9,7 @@
     "max_height": 190,
     "min_speed": 6,
     "max_speed": 6,
-    "languages": [{ "name": "commun", "description": "" }],
+    "languages": [{ "name": "commun" }],
     "number_additional_language": 2,
     "url": "http://example.image"
   },
@@ -23,7 +23,7 @@
     "max_height": 150,
     "min_speed": 5,
     "max_speed": 5,
-    "languages": [{ "name": "Nain", "description": "" }],
+    "languages": [{ "name": "Nain" }],
     "number_additional_language": 2,
     "url": "http://example.image"
   },
@@ -37,10 +37,7 @@
     "max_height": 210,
     "min_speed": 5,
     "max_speed": 9,
-    "languages": [
-      { "name": "commun", "description": "" },
-      { "name": "bestial", "description": "" }
-    ],
+    "languages": [{ "name": "commun" }, { "name": "bestial" }],
     "number_additional_language": 1,
     "url": "http://example.image"
   },
@@ -54,10 +51,7 @@
     "max_height": 150,
     "min_speed": 5,
     "max_speed": 5,
-    "languages": [
-      { "name": "commun", "description": "" },
-      { "name": "Gobelin Nouveau", "description": "" }
-    ],
+    "languages": [{ "name": "commun" }, { "name": "Gobelin Nouveau" }],
     "number_additional_language": 1,
     "url": "http://example.image"
   },
@@ -72,9 +66,9 @@
     "min_speed": 6,
     "max_speed": 6,
     "languages": [
-      { "name": "commun", "description": "" },
-      { "name": "Gobelin Ancien", "description": "" },
-      { "name": "Minérale", "description": "" }
+      { "name": "commun" },
+      { "name": "Gobelin Ancien" },
+      { "name": "Minérale" }
     ],
     "number_additional_language": 1,
     "url": "http://example.image"
@@ -90,9 +84,9 @@
     "min_speed": 7,
     "max_speed": 7,
     "languages": [
-      { "name": "commun", "description": "" },
-      { "name": "Féérique", "description": "" },
-      { "name": "Forestier", "description": "" }
+      { "name": "commun" },
+      { "name": "Féérique" },
+      { "name": "Forestier" }
     ],
     "number_additional_language": 1,
     "url": "http://example.image"
@@ -107,7 +101,7 @@
     "max_height": 230,
     "min_speed": 6,
     "max_speed": 6,
-    "languages": [{ "name": "commun", "description": "" }],
+    "languages": [{ "name": "commun" }],
     "number_additional_language": 3,
     "url": "http://example.image"
   },
@@ -121,10 +115,7 @@
     "max_height": 180,
     "min_speed": 7,
     "max_speed": 7,
-    "languages": [
-      { "name": "commun", "description": "" },
-      { "name": "bestial", "description": "" }
-    ],
+    "languages": [{ "name": "commun" }, { "name": "bestial" }],
     "number_additional_language": 1,
     "url": "http://example.image"
   },
@@ -138,10 +129,7 @@
     "max_height": 200,
     "min_speed": 9,
     "max_speed": 9,
-    "languages": [
-      { "name": "commun", "description": "" },
-      { "name": "Angélique", "description": "" }
-    ],
+    "languages": [{ "name": "commun" }, { "name": "Angélique" }],
     "number_additional_language": 2,
     "url": "http://example.image"
   }
