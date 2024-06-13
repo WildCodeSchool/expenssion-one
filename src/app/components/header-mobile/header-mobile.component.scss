@@ -1,4 +1,3 @@
-$play-button-width: 200px;
 $header_height:80px;
 .blur-background {
   backdrop-filter: blur(4px);
@@ -10,7 +9,6 @@ $header_height:80px;
   z-index: 1;
   left: 0;
   
-
   .burger-button-container{
     display: flex;
     margin-left: 10px;
@@ -20,9 +18,7 @@ $header_height:80px;
       justify-content: center;
       .large-icon {
         height: 50px;
-      }
-      
-        
+      }       
     }
   }
   
@@ -41,10 +37,10 @@ $header_height:80px;
       }
     }
 
-    .connexion-container{
+    .connection-container{
       margin-top: 12px;
       margin-right: 10px;
-      .connexion-logo{
+      .connection-logo{
         justify-content: center;
         align-items: center;
       }
