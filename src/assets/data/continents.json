@@ -2,7 +2,7 @@
     {"name":"Nelm",
     "description":"Le continent de Nelm est partagé en Neuf Royaume, huit d'entre eux sont représentés par une capitale, où réside un.e Roi/ Reine.",
     "regions":[
-        {"name":"Rotham", 
+        {"name":"Région de Rotham", 
             "cities":[
                 {"name": "Analfan", "description":"Analfan est la capitale du pays du même nom, c'est aussi la seule ville présente sur son territoire . C'est une petite ville aux allures de modeste village. On y compte une dizaine d'habitants à peine et la plupart vivent de récoltes fortuites, de maigres pêches et de rares chasses. C'est un lieu ou presque rien ne pousse. On  raconte ailleurs que nul ne vit encore en ces terres sauf quelques fantômes du passé!"},
                 {"name": "Artul", "description":"Artul est une place forte du continent, placée en son centre c'est un village où aventuriers et pèlerins s'arrêtent pour quelques nuits histoire de faire le plein de repos et de vivres. La pêche y est de plus en plus rare, car une sombre créature des bas-fond réside dans l'immense lac adjacent. La population y est peu bavarde en dehors des tavernes et le gouvernement local prône les couvre-feu et le contrôle absolu sur son peuple. De nombreux artisans de renom y sont  basés et fabriquent armures rares et armes de légende, le coût de la vie n'y est pas donné! "},
@@ -38,7 +38,7 @@
     {"name":"Norta",
     "description":"Le continent de Norta est partagé en Trois Royaume, représenté par une capitale, où réside un.e Roi/ Reine.",
     "regions":[
-        {"name":"Quartam", 
+        {"name":"Région de Quartam", 
         "cities":[
             {"name": "Balaelle", "description": "Balaelle est la capitale de Quartam, c'est une immense cité fortifiée de pierre finement taillée, construite concentriquement autour d'un sommet de pierre rouge. Se côtoie dans ses rues, échoppe d'artisans talentueux, auberges et tavernes à l'accueille chaleureuses et bon nombre de commerce local. La cité de Balaelle est un lieu où il fait bon vivre, et le gouvernement en place  est plutôt enclin à mettre en place la paix avec les autres royaumes."},
             {"name": "Ducaria", "description":"/"},
@@ -65,7 +65,7 @@
             {"name": "Roram", "description":"/"},
             {"name": "Malto", "description":"/"}
         ]},
-        {"name":"Rotham", "cities":[
+        {"name":"Région de Rotham", "cities":[
             {"name": "Etalia", "description":"/"},
             {"name": "Falas", "description":"/"},
             {"name": "Fanolox", "description":"/"},
@@ -94,7 +94,7 @@
             {"name": "Navago", "description":"/"},
             {"name": "La Celestal", "description":"/"} 
         ]},
-        {"name":"Vinatatem", "cities":[
+        {"name":"Région de Vinatatem", "cities":[
             {"name": "Alette", "description":"/"},
             {"name": "Arnir", "description":"/"},
             {"name": "Dornette", "description":"/"},

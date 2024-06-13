@@ -1,21 +1,22 @@
-<div class="location_content">
-    <div class="background_image">
-    <section>   
-        <h1>Carte du monde</h1>
+  <div class="background_image">
+    <div class="location_content">
+        <section>   
+        <h1 class="title">Carte du monde</h1>
         <div class="worldmap"><img src="../assets/pictures/WorldMap.png" alt="Carte du monde"></div>
     </section>
     <section>
             @for(continent of continents; track continent) {
             <h2>{{ continent.name }}</h2><br>
-                {{ continent.description }}<br><br>
+                <p class="text-description">{{ continent.description }}</p><br>
                 @for(region of continent.regions; track region) {
                      <h3>{{ region.name }}</h3><br>
                         @for(city of region.cities; track city) {
                             <h4>{{ city.name }}</h4><br>
-                            <p>{{ city.description }}</p><br>
+                            <p class="text-description">{{ city.description }}</p><br>
                         }  
                 } 
         }
     </section>
 </div>
 </div>
+
