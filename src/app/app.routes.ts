@@ -14,7 +14,7 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'glossary/specialization',
+    path: 'glossaire/classes',
     component: SpecializationPageComponent,
   },
 ];

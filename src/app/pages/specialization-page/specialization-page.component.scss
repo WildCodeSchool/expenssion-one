@@ -7,8 +7,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center; 
-  padding-left: $glossary_padding_left_desktop; 
-  padding-right: $glossary_padding_right_desktop;
+  padding-left: $glossaryPaddingLeftDesktop; 
+  padding-right: $glossaryPaddingRightDesktop;
   padding-top: 50px;
 }
 .title-container{
@@ -66,8 +66,6 @@ text-align: center;
 }
 
 @media screen and (max-width: 768px) {
-//font-size: 14px;
-
 h1{
   font-size: 20px;
 }
@@ -76,8 +74,8 @@ h2{
 }
 
 .specialization-container{
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: $glossaryPaddingRightMobile;
+  padding-right: $glossaryPaddingRightMobile;
 }
 
 }
