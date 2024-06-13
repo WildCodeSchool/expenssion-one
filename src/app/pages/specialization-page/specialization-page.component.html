@@ -2,7 +2,7 @@
     @for(specialization of specializations;track specialization){
       <div class="specialization-container">
             <div class="title-container">
-                <h1>{{specialization.name}}</h1>
+                <h1 class="title">{{specialization.name}}</h1>
                 <div class="image-specialization">
                     <img [src]="specialization.url">
                 </div>
@@ -10,16 +10,19 @@
       
             
             <div class="contents-container">
-                <h2>Desciption:</h2>
+                <h2 class="text-description">Description:</h2>
+                <br>
                 @for(content of specialization.content;track content){
-                    <p>
+                    <p class="text-description">
                         {{content}}
                     </p>
                 }
+                <br>
             </div>  
               
             <div class="jobs-container">
-                <h2>Métiers:</h2>
+                <h2 class="text-description">Métiers:</h2>
+                <br>
                 @for(job of specialization.jobs;track job){  
                         {{job}}
                 }
@@ -27,7 +30,7 @@
 
             @if(specialization.skills?.length!==0){
                <div class="skills-container">
-                <h2>Skills:</h2>
+                <h2 class="text-description">Skills:</h2>
                 <table>
                     <thead>
                       <tr>

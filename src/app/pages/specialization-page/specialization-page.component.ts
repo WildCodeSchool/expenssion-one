@@ -14,7 +14,6 @@ export class SpecializationPageComponent {
   specializations:Specialization[]=[];
   ngOnInit(){
     this.apiDataService.getSpecialization().subscribe(x=>this.specializations=x)
-    console.log(this.specializations)
   }
 
 }
