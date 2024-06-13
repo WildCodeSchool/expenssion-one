@@ -1,1 +1,13 @@
-<p>race works!</p>
+<div class="container-list-races">
+  @for (race of races; track race) {
+  <div class="card-caracter">
+    <h2>{{ race.name }}</h2>
+    <ul class="description-race">
+      <li>{{ race.description }}</li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  }
+</div>

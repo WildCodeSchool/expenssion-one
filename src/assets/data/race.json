@@ -9,7 +9,7 @@
     "max_height": 190,
     "min_speed": 6,
     "max_speed": 6,
-    "languages": [{ "name": "commun" }],
+    "languages": ["commun"],
     "number_additional_language": 2,
     "url": "http://example.image"
   },
@@ -23,7 +23,7 @@
     "max_height": 150,
     "min_speed": 5,
     "max_speed": 5,
-    "languages": [{ "name": "Nain" }],
+    "languages": ["Nain"],
     "number_additional_language": 2,
     "url": "http://example.image"
   },
@@ -37,7 +37,7 @@
     "max_height": 210,
     "min_speed": 5,
     "max_speed": 9,
-    "languages": [{ "name": "commun" }, { "name": "bestial" }],
+    "languages": ["commun", "bestial"],
     "number_additional_language": 1,
     "url": "http://example.image"
   },
@@ -51,7 +51,7 @@
     "max_height": 150,
     "min_speed": 5,
     "max_speed": 5,
-    "languages": [{ "name": "commun" }, { "name": "Gobelin Nouveau" }],
+    "languages": ["commun", "Gobelin Nouveau"],
     "number_additional_language": 1,
     "url": "http://example.image"
   },
@@ -65,11 +65,7 @@
     "max_height": 120,
     "min_speed": 6,
     "max_speed": 6,
-    "languages": [
-      { "name": "commun" },
-      { "name": "Gobelin Ancien" },
-      { "name": "Minérale" }
-    ],
+    "languages": ["commun", "Gobelin Ancien", "Minérale"],
     "number_additional_language": 1,
     "url": "http://example.image"
   },
@@ -83,11 +79,7 @@
     "max_height": 190,
     "min_speed": 7,
     "max_speed": 7,
-    "languages": [
-      { "name": "commun" },
-      { "name": "Féérique" },
-      { "name": "Forestier" }
-    ],
+    "languages": ["commun", "Féérique", "Forestier"],
     "number_additional_language": 1,
     "url": "http://example.image"
   },
@@ -101,7 +93,7 @@
     "max_height": 230,
     "min_speed": 6,
     "max_speed": 6,
-    "languages": [{ "name": "commun" }],
+    "languages": ["commun"],
     "number_additional_language": 3,
     "url": "http://example.image"
   },
@@ -115,7 +107,7 @@
     "max_height": 180,
     "min_speed": 7,
     "max_speed": 7,
-    "languages": [{ "name": "commun" }, { "name": "bestial" }],
+    "languages": ["commun", "bestial"],
     "number_additional_language": 1,
     "url": "http://example.image"
   },
@@ -129,7 +121,7 @@
     "max_height": 200,
     "min_speed": 9,
     "max_speed": 9,
-    "languages": [{ "name": "commun" }, { "name": "Angélique" }],
+    "languages": ["commun", "Angélique"],
     "number_additional_language": 2,
     "url": "http://example.image"
   }

@@ -1,5 +1,6 @@
 export class Race {
   constructor(
+    readonly url: string,
     readonly name: string,
     readonly description: string,
     readonly racial_trait: string,
@@ -9,8 +10,7 @@ export class Race {
     readonly max_height: number,
     readonly min_speed: number,
     readonly max_speed: number,
-    readonly languages: string,
-    readonly number_additional_language: number,
-    readonly url: string
+    readonly languages: string[],
+    readonly number_additional_language: number
   ) {}
 }
