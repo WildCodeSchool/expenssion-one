@@ -15,6 +15,7 @@ import { PopupComponent } from '../pop-up-connexion/pop-up-connexion.component';
 })
 export class HeaderComponent {
 
+  isPopUpDisplay:boolean=false;
   constructor(public dialog: MatDialog) {}
   openDialog() {
     console.log('Clik OK');

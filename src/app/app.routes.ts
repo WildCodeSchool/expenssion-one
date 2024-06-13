@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { PopupComponent } from './components/pop-up-connexion/pop-up-connexion.component';
+import { PopUpMobileComponent } from './components/pop-up-mobile/pop-up-mobile.component';
 
 
 export const routes: Routes = [
@@ -16,7 +16,7 @@ export const routes: Routes = [
   },
   {
     path: 'connexion',
-    component: PopupComponent,
+    component: PopUpMobileComponent,
   }
   // {
   //   path: '*',

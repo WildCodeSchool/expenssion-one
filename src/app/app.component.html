@@ -1,16 +1,18 @@
-
-
 @if(isMobile){
 <app-header-mobile></app-header-mobile>
+
 }
 @else{
 <app-header></app-header>
+
+
 }
 
-<div class="background_image">
-  <main>
-    <router-outlet></router-outlet>
-  </main>
-</div>
+<main>
+  
+  <router-outlet />
+  <router-outlet></router-outlet>
+</main>
+
 <app-footer></app-footer>
 
