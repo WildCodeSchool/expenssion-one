@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
-import { FooterComponent } from './components/footer/footer.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
+
 
 export const routes: Routes = [
   {
@@ -18,3 +18,4 @@ export const routes: Routes = [
     component: SpecializationPageComponent,
   },
 ];
+
