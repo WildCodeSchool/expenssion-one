@@ -1,0 +1,92 @@
+@use "../../../import" as *;
+
+.background_image {
+    background-image: url("/assets/background_pictures/glossary_background.png");
+    
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 160px;
+    padding-bottom: 230px;
+    color:#D6D5BF;
+    
+        .specialization-container{
+            //backdrop-filter: blur(4px);
+            display: block;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center; 
+            padding-left: 20%; 
+            padding-right: 20%;
+        }
+        .title-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h1{
+                margin-right: 20px;
+            }
+            .image-container{
+                margin-left: 20px;
+            }
+        }
+        
+        .contents-container{
+
+        }
+        .skills-container{
+            align-items: center;
+            justify-content: center;
+        }
+    
+
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 2px solid rgb(140 140 140);
+        font-family: sans-serif;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+      }
+      
+      caption {
+        caption-side: bottom;
+        padding: 10px;
+        font-weight: bold;
+      }
+      
+      thead,
+      tfoot {
+        background-color: rgb(228 240 245);
+      }
+      
+      th,
+      td {
+        border: 1px solid rgb(160 160 160);
+        padding: 8px 10px;
+      }
+      
+      td:last-of-type {
+        text-align: center;
+      }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+}

@@ -1,7 +1,6 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
-import { ApiDataService } from './service/api-data.service';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -13,8 +12,5 @@ import { ApiDataService } from './service/api-data.service';
 
 export class AppComponent {
   title = 'angular-17-project-template';
-  apiDataService=inject(ApiDataService)
-  ngOnInit(){
-    this.apiDataService.getSpecialization().subscribe(x=>console.log(x))
-  }
+
 }

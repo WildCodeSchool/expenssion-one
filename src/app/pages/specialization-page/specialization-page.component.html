@@ -1,0 +1,57 @@
+<section class="background_image">
+    @for(specialization of specializations;track specialization){
+      <div class="specialization-container">
+            <div class="title-container">
+                <h1>{{specialization.name}}</h1>
+                <div class="image-specialization">
+                    <img [src]="specialization.url">
+                </div>
+            </div>
+      
+            
+            <div class="contents-container">
+                <h2>Desciption:</h2>
+                @for(content of specialization.content;track content){
+                    <p>
+                        {{content}}
+                    </p>
+                }
+            </div>  
+              
+            <div class="jobs-container">
+                <h2>Métiers:</h2>
+                @for(job of specialization.jobs;track job){  
+                        {{job}}
+                }
+            </div> 
+
+            @if(specialization.skills?.length!==0){
+               <div class="skills-container">
+                <h2>Skills:</h2>
+                <table>
+                    <thead>
+                      <tr>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Caracteristique</th>
+                        <th scope="col">Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        @for(skill of specialization.skills;track skill){
+                            <tr>
+                                <th scope="row"> {{skill.name}}</th>
+                                <td> {{skill.caracteristic}}</td>
+                                <td>{{skill.description}}</td>
+                            </tr>
+                           
+                    }                       
+                    </tbody>
+                  </table>  
+               </div>
+                
+            }
+            
+      </div>
+    }
+
+</section>
