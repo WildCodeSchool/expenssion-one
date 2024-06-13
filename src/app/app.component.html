@@ -1,5 +1,5 @@
 
-<div class="background_image">
+
 @if(isMobile){
 <app-header-mobile></app-header-mobile>
 }
@@ -7,11 +7,10 @@
 <app-header></app-header>
 }
 
-<main>
-  
-  <router-outlet />
-  <router-outlet></router-outlet>
-</main>
+<div class="background_image">
+  <main>
+    <router-outlet></router-outlet>
+  </main>
 </div>
 <app-footer></app-footer>
 
