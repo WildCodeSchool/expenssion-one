@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ApiDataService } from '../../../service/api-data.service';
+import { Locations } from '../../../model/locations/locations';
 
 @Component({
   selector: 'app-location-page',
@@ -9,11 +10,12 @@ import { ApiDataService } from '../../../service/api-data.service';
   styleUrl: './location-page.component.scss'
 })
 export class LocationPageComponent {
-  data: any;
+  apiDataService: ApiDataService = inject(ApiDataService);
+  locations: Locations[] = [];
 
-  constructor(private ApiDataService: ApiDataService) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.ApiDataService.getLocations().subscribe(response => {this.data = response})
+    this.apiDataService.getLocations().subscribe((data) => console.log(data))
   }
 }

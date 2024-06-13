@@ -1,0 +1,15 @@
+<div class="background_image">
+    <section>   
+        <h1>Carte du monde</h1>
+        <img src="../assets/pictures/WorldMap.png" alt="Carte du monde">
+    </section>
+    <section>
+        <h2>Norta</h2>
+        <ul>
+            @for(location of locations; track location) {
+                <li>{{ location.name }}</li>
+            }
+        </ul>
+    </section>
+
+</div>
