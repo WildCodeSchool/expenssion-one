@@ -9,6 +9,7 @@ import { Race } from '../model/race/race';
 })
 export class ApiDataService {
   private http = inject(HttpClient);
+
   constructor() {}
 
   getSpecialization(): Observable<Specialization> {
