@@ -19,7 +19,7 @@ export const routes: Routes = [
     component: ItemsComponent,
   },
   {
-    path: 'locations',
+    path: 'lieux',
     component: LocationPageComponent,
   },
   // {

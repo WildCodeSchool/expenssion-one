@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { ApiDataService } from '../../../service/api-data.service';
-import { Locations } from '../../../model/locations/locations';
+import { Continent } from '../../../model/continent/continent';
 
 @Component({
   selector: 'app-location-page',
@@ -11,11 +11,12 @@ import { Locations } from '../../../model/locations/locations';
 })
 export class LocationPageComponent {
   apiDataService: ApiDataService = inject(ApiDataService);
-  locations: Locations[] = [];
+  continents: Continent[] = [];
 
   constructor() {}
 
   ngOnInit(): void {
-    this.apiDataService.getLocations().subscribe((data) => console.log(data))
+    this.apiDataService.getContinents().subscribe((data) => this.continents = data)
+    console.log(this.continents)
   }
 }
