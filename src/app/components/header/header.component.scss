@@ -8,7 +8,6 @@ $ul_gap: 80px;
   z-index: 1000;
   left: 0;
 
-
   .navbar-container {
     display: flex;
     background-color: rgba(51, 50, 50, 0.7);
@@ -42,7 +41,6 @@ $ul_gap: 80px;
         margin: 0;
         display: flex;
         gap: $ul_gap;
-        ;
       }
 
       li {

@@ -2,48 +2,43 @@
   <nav class="navbar">
     <div class="navbar-container">
       <div class="logo">
-        <img class="logo-image" src="assets/pictures/Blop.png" alt="Logo">
+        <a routerLink="home"><img class="logo-image" src="assets/pictures/Blop.png" alt="Logo"></a>
       </div>
-
       <div class="navbar-center">
         <div class="navbar-left">
           <ul>
-            <li routerLink="game" class="game-button">
+            <li class="game-button">
               Jeu
               <ul class="submenu">
-                <li>Introduction</li>
-                <li>Règles</li>
+                <a routerLink="home"><li>Introduction</li></a>
+                <a routerLink="home"><li>Règles</li></a>
               </ul>
             </li>
             <li>
               Glossaire
               <ul class="submenu">
-                <li>Races</li>
-                <li>Classes</li>
-                <li>Les Secrets</li>
-                <li>Croyances</li>
-                <li>Lieux</li>
+                <a routerLink="home"><li>Races</li></a>
+                <a routerLink="home"><li>Classes</li></a>
+                <a routerLink="home"><li>Les Secrets</li></a>
+                <a routerLink="home"><li>Croyances</li></a>
+                <a routerLink="home"><li>Lieux</li></a>
               </ul>
             </li>
           </ul>
         </div>
         <div class="navbar-right">
           <ul>
-            <li>News</li>
-            <li>Studio</li>
+            <a routerLink="home"><li routerLink="home">News</li></a>
+            <a routerLink="home"><li routerLink="home">Studio</li></a>
           </ul>
-
         </div>
       </div>
 
-      <div class="connexion-container">
-        <img class="connexion-logo" src="assets/pictures/Connexion.png" alt="Connexion">
+      <div class="connection-container">
+        <a routerLink="home"><img class="connection-logo" src="assets/pictures/Connexion.png" alt="Connection"></a>
       </div>
-
-
     </div>
   </nav>
-
   <div class="play-button">
     <button (click)="openDialog()"><img class="image-play-container" src="assets/pictures/jouer.png"></button>
   </div>
