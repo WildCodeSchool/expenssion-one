@@ -1,30 +1,35 @@
 <body>
-    <form class="inscription-form">
+    <form class="register-form">
         <h1>INSCRIPTION</h1>
 
-        <label for="nom">Nom *</label>
-        <input id="nom" formControlName="nom" type="text">
+        <label for="name">Nom *</label>
+        <input id="name" formControlName="name" type="text" required title="Veuillez entrer votre nom.">
 
-        <label for="prenom">Prénom *</label>
-        <input id="prenom" formControlName="prenom" type="text">
+        <label for="lastName">Prénom *</label>
+        <input id="lastName" formControlName="lastName" type="text" required title="Veuillez entrer votre prénom.">
 
-        <label for="dateDeNaissance">Date de naissance *</label>
-        <input id="dateDeNaissance" formControlName="dateDeNaissance" type="date">
+        <label for="birthDate">Date de naissance *</label>
+        <input id="birthDate" formControlName="birthDate" type="date" required
+            title="Veuillez entrer votre date de naissance.">
 
         <label for="pseudo">Pseudo *</label>
-        <input id="pseudo" formControlName="pseudo" type="text">
+        <input id="pseudo" formControlName="pseudo" type="text" required title="Veuillez entrer votre pseudo.">
 
-        <label for="adresseMail">Adresse mail *</label>
-        <input id="adresseMail" formControlName="adresseMail" type="email">
+        <label for="Mail">Adresse mail *</label>
+        <input id="Mail" formControlName="emailAdress" type="email" required
+            title="Veuillez entrer votre adresse mail.">
 
         <label for="confirmationAdresseMail">Confirmation adresse mail *</label>
-        <input id="confirmationAdresseMail" formControlName="confirmationAdresseMail" type="email">
+        <input id="confirmationMail" formControlName="confirmationMail" type="email" required
+            title="Veuillez confirmer votre adresse mail.">
 
-        <label for="motDePasse">Mot de passe * (8 caractères min, num, maj, spé)</label>
-        <input id="motDePasse" formControlName="motDePasse" type="password">
+        <label for="password">Mot de passe * (8 caractères min, num, maj, spé)</label>
+        <input id="password" formControlName="password" type="password" required
+            title="Veuillez entrer un mot de passe.">
 
-        <label for="confirmationMotDePasse">Confirmation du mot de passe *</label>
-        <input id="confirmationMotDePasse" formControlName="confirmationMotDePasse" type="password">
+        <label for="confirmationPassword">Confirmation du mot de passe *</label>
+        <input id="confirmationPassword" formControlName="confirmationMotDePasse" type="password" required
+            title="Veuillez confirmer votre mot de passe.">
         <div class="cgu-container">
             <input type="checkbox" id="toggle-cgu" />
             <label for="toggle-cgu" class="cgu-button">

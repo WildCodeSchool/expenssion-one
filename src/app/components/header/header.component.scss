@@ -5,7 +5,7 @@ $ul_gap: 80px;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 1000;
   left: 0;
 
 
@@ -17,7 +17,8 @@ $ul_gap: 80px;
     justify-content: space-between;
 
     .logo {
-      margin-left:10px;
+      margin-left: 10px;
+
       .logo-image {
         height: 75px;
       }
@@ -39,7 +40,7 @@ $ul_gap: 80px;
         list-style: none;
         padding: 0;
         margin: 0;
-        display: flex; 
+        display: flex;
         gap: $ul_gap;
         ;
       }
@@ -51,6 +52,7 @@ $ul_gap: 80px;
           display: none;
           width: 10px;
         }
+
         &:hover {
           ul.submenu {
             display: block;
@@ -59,10 +61,11 @@ $ul_gap: 80px;
       }
     }
 
-    .connexion-container{
+    .connexion-container {
       margin-top: 10px;
       margin-right: 10px;
-      .connexion-logo{
+
+      .connexion-logo {
         justify-content: center;
         align-items: center;
       }
@@ -78,7 +81,7 @@ $ul_gap: 80px;
       margin: 0;
       display: flex;
       align-items: center;
-      gap:$ul_gap;
+      gap: $ul_gap;
     }
   }
 
