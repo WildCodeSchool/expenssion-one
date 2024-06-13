@@ -7,7 +7,7 @@ import { RaceComponent } from './pages/race/race/race.component';
 
 export const routes: Routes = [
   {
-    path: 'home',
+    path: 'accueil',
     component: HomePageComponent,
   },
   {
