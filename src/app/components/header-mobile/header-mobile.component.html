@@ -16,12 +16,12 @@
 
 
         <div class="logo">
-          <img class="logo-image" src="assets/pictures/Blop.png" alt="Logo">
+          <a routerLink="home"><img class="logo-image" src="assets/pictures/Blop.png" alt="Logo"></a>
         </div>
 
        
         <div class="connection-container">
-          <img class="connection-logo" src="assets/pictures/Connexion.png" alt="Connexion">
+          <a routerLink="home"><img class="connection-logo" src="assets/pictures/Connexion.png" alt="Connection"></a>
         </div>
   
   
@@ -32,27 +32,27 @@
   @if(isMobileSideNavOpen){
     <div class="sidenav">
         <ul>
-            <li>Création De Personnage</li>
-            <li routerLink="game" class="play-button">
+            <a routerLink="home"><li>Création De Personnage</li></a>
+            <li>
               Jeu
               <ul class="submenu">
-                <li>Introduction</li>
-                <li>Règles</li>
+                <a routerLink="home"><li>Introduction</li></a>
+                <a routerLink="home"><li>Règles</li></a>
               </ul>
             </li>
             <li>
               Glossaire
               <ul class="submenu">
-                <li>Races</li>
-                <li>Classes</li>
-                <li>Les Secrets</li>
-                <li>Croyances</li>
-                <li>Lieux</li>
+                <a routerLink="home"><li>Races</li></a>
+                <a routerLink="home"><li>Classes</li></a>
+                <a routerLink="home"><li>Les Secrets</li></a>
+                <a routerLink="home"><li>Croyances</li></a>
+                <a routerLink="home"><li>Lieux</li></a>
               </ul>
             </li>
   
-            <li>News</li>
-            <li>Studio</li>
+            <a routerLink="home"><li routerLink="home">News</li></a>
+            <a routerLink="home"><li routerLink="home">Studio</li></a>
           </ul>
 
       </div>

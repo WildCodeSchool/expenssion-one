@@ -12,7 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent implements OnInit {
+export class AppComponent{
   title = 'Expenssion One';
   isMobile: boolean = false;
 
