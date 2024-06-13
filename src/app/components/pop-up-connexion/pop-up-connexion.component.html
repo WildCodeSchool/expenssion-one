@@ -1,0 +1,24 @@
+
+<form>
+    <div class="container">
+        <div class="connect">
+            SE CONNECTER
+        </div>
+        <div class="logo">
+            <img class="logo-image" src="assets/pictures/Blop.png" alt="Logo">
+          </div>
+        <div class="formatText">
+            Identifiant :
+        </div>
+        <input type="text" class="saisieIndetifiants" [(ngModel)] = "login.login" [ngModelOptions]="{standalone: true}"/>
+        <div class="formatText">
+            Mot de passe :
+        </div>
+        <input type="text" class="saisieIndetifiants" [(ngModel)] = "login.password" [ngModelOptions]="{standalone: true}"/>
+        <div class="formatText forgot-password">
+            Mot de passe oublié ?
+        </div>
+        <button (click)="displayData()" class = "connexionButton">Connexion</button>
+        <button class = "inscriptionButton">Inscription</button>
+    </div>
+</form>

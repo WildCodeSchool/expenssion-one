@@ -1,0 +1,61 @@
+<header class="header"  [ngClass]="{ 'blur-background': isMobileSideNavOpen }">
+    <nav class="navbar">
+      <div class="navbar-container">
+
+        <div class="burger-button-container">
+            <button (click)="toggle()" class="burger-button">
+              @if(isMobileSideNavOpen){
+                <img src="assets/pictures/close.svg" class="large-icon" img> 
+              }
+              @else{
+                <img src="assets/pictures/burger-menu.svg" class="large-icon" img> 
+              }
+                 
+            </button>        
+          </div>
+
+
+        <div class="logo">
+          <img class="logo-image" src="assets/pictures/Blop.png" alt="Logo">
+        </div>
+
+       
+        <div class="connexion-container">
+          <img class="connexion-logo" src="assets/pictures/Connexion.png" alt="Connexion">
+        </div>
+  
+  
+      </div>
+    </nav>
+  </header>
+
+  @if(isMobileSideNavOpen){
+    <div class="sidenav">
+        <ul>
+            <li>Création De Personnage</li>
+            <li routerLink="game" class="play-button">
+              Jeu
+              <ul class="submenu">
+                <li>Introduction</li>
+                <li>Règles</li>
+              </ul>
+            </li>
+            <li>
+              Glossaire
+              <ul class="submenu">
+                <li>Races</li>
+                <li>Classes</li>
+                <li>Les Secrets</li>
+                <li>Croyances</li>
+                <li>Lieux</li>
+              </ul>
+            </li>
+  
+            <li>News</li>
+            <li>Studio</li>
+          </ul>
+
+      </div>
+  }
+
+

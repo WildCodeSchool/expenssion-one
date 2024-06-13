@@ -3,6 +3,8 @@ import { ItemsComponent } from './pages/items/items.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { PopupComponent } from './components/pop-up-connexion/pop-up-connexion.component';
+
 
 export const routes: Routes = [
   {
@@ -21,9 +23,14 @@ export const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent,
+  },
+  {
+    path: 'connexion',
+    component: PopupComponent,
   }
   // {
   //   path: '*',
   //   component: FooterComponent,
   // },
 ];
+
