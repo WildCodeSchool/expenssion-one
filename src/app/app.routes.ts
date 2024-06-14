@@ -23,7 +23,7 @@ export const routes: Routes = [
     path: 'glossaire/classes',
     component: SpecializationPageComponent,
   }, {
-    path: 'lieux',
+    path: 'glossaire/lieux',
     component: LocationPageComponent,
   },
  
