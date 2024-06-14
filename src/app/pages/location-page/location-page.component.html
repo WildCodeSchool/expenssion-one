@@ -5,17 +5,18 @@
         <div class="worldmap"><img src="../assets/pictures/WorldMap.png" alt="Carte du monde"></div>
     </section>
     <section>
-            @for(continent of continents; track continent) {
-            <h2>{{ continent.name }}</h2><br>
-                <p>{{ continent.description }}</p><br>
-                @for(region of continent.regions; track region) {
-                     <h3>{{ region.name }}</h3><br>
-                        @for(city of region.cities; track city) {
-                            <h4>{{ city.name }}</h4><br>
-                            <p>{{ city.description }}</p><br>
-                        }  
-                } 
-        }
+            <ul>@for(continent of continents; track continent) {
+                <li><h2>{{ continent.name }}</h2><br></li>
+                    <li><p>{{ continent.description }}</p><br></li>
+                    @for(region of continent.regions; track region) {
+                         <li><h3>{{ region.name }}</h3><br></li>
+                            @for(city of region.cities; track city) {
+                                <li><h4>{{ city.name }}</h4><br></li>
+                                <li><p>{{ city.description }}</p><br></li>
+                            }  
+                    } 
+            }
+        </ul>
     </section>
 </div>
 </div>
