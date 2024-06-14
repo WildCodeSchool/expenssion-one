@@ -10,8 +10,8 @@ export class ApiDataService {
   private http=inject(HttpClient)
   constructor() { }
 
-  getSpecialization():Observable<Specialization>{
-    return this.http.get<Specialization>('assets/data/specialization.json')
+  getSpecialization():Observable<Specialization[]>{
+    return this.http.get<Specialization[]>('assets/data/specialization.json')
   }
 
   getContinents():Observable<Continent[]>{
