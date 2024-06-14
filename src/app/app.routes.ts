@@ -19,6 +19,7 @@ export const routes: Routes = [
     redirectTo: '/home',
     pathMatch: 'full',
   },
+<<<<<<< HEAD
   {
     path: 'glossaire/classes',
     component: SpecializationPageComponent,
@@ -26,5 +27,6 @@ export const routes: Routes = [
     path: 'lieux',
     component: LocationPageComponent,
   },
+=======
+>>>>>>> 679ab4aa91cf0eb2ad580dba76de66560a23fc8e
 ];
-
