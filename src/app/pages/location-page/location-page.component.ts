@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { ApiDataService } from '../../../service/api-data.service';
-import { Continent } from '../../../model/continent/continent';
+import { ApiDataService } from '../../service/api-data.service';
+import { Continent } from '../../model/continent/continent';
 
 @Component({
   selector: 'app-location-page',
@@ -17,6 +17,5 @@ export class LocationPageComponent {
 
   ngOnInit(): void {
     this.apiDataService.getContinents().subscribe((data) => this.continents = data)
-    console.log(this.continents)
   }
 }
