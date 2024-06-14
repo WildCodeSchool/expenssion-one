@@ -1,10 +1,8 @@
-
-
 @use "../../_import.scss" as *;
 
 
 
-.background-image {
+.background_image {
     background-image: url("/assets/background_pictures/glossary_background.png");
     background-size: cover;
     background-position: center center;
@@ -14,17 +12,14 @@
     height: 100%;
     width: 100%;
     padding-top: $global_padding_top;
-    color:#D6D5BF;
+    color: #D6D5BF;
 
-    .title{
+    .title {
         font-family: 'Cinzel';
     }
-    .text-description{
+
+    .text-description {
         font-family: 'Inika'
     }
 
 }
-
-
-
-

@@ -1,5 +1,4 @@
-[
-        {"cities":[
+     {"cities":[
             {"name": "Balaelle", "region": "Quartam", "continent": "Norta", "description": "Balaelle est la capitale de Quartam, c'est une immense cité fortifiée de pierre finement taillée, construite concentriquement autour d'un sommet de pierre rouge. Se côtoie dans ses rues, échoppe d'artisans talentueux, auberges et tavernes à l'accueille chaleureuses et bon nombre de commerce local. La cité de Balaelle est un lieu où il fait bon vivre, et le gouvernement en place  est plutôt enclin à mettre en place la paix avec les autres royaumes."},
             {"name": "Ducaria", "region": "Quartam", "continent": "Norta", "description":""},
             {"name": "Ellia ", "region": "Quartam", "continent": "Norta", "description":"Ellia est un village vivant du travail du cuir du shuné, on y trouve aussi une académie de couture et de tissu assez réputée dans la région. C'est là que se situe le siège du Shuné Magazine"},
@@ -106,4 +105,3 @@
             {"name": "Xamegor", "region": "Rotham", "continent": "Nelm", "description":"Xamegor est une capitale ou érudits et philosophes partagent l'hydromel avec artisans et guerriers de tous horizons. Chacun y fait sa propre loi et les bagarres de rue sont monnaie courante. Gredins, guenaudes, centaures et autres semis s'entremêlent avec fracas dans des rues insalubres et bondées. Vôtre bourse et vos richesses sont surveillées de près, faites attention !"}
         ]
     }
-]

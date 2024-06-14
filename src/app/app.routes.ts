@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
+import { LocationPageComponent } from './pages/location-page/location-page.component';
 
 
 export const routes: Routes = [
@@ -16,6 +17,9 @@ export const routes: Routes = [
   {
     path: 'glossaire/classes',
     component: SpecializationPageComponent,
+  }, {
+    path: 'lieux',
+    component: LocationPageComponent,
   },
 ];
 
