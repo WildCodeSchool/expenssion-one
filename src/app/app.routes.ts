@@ -1,7 +1,8 @@
 import { Routes } from '@angular/router';
-import { FooterComponent } from './components/footer/footer.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { PopupComponent } from './components/pop-up-connexion/pop-up-connexion.component';
+import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
+import { LocationPageComponent } from './pages/location-page/location-page.component';
 
 
 export const routes: Routes = [
@@ -17,6 +18,12 @@ export const routes: Routes = [
   {
     path: 'connexion',
     component: PopupComponent,
+  }
+    path: 'glossaire/classes',
+    component: SpecializationPageComponent,
+  }, {
+    path: 'lieux',
+    component: LocationPageComponent,
   }
 ];
 
