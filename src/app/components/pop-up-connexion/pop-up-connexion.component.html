@@ -1,23 +1,23 @@
-    <form>
-        <div class="container">
-            <div class="connect">
-                SE CONNECTER
-            </div>
-            <div class="logo">
-                <img class="logo-content" src="assets/pictures/Blop.png" alt="Logo">
-            </div>
-            <div class="formatText">
-                Identifiant :
-            </div>
-            <input type="text" class="inputLogin" [(ngModel)] = "login.login" [ngModelOptions]="{standalone: true}"/>
-            <div class="formatText">
-                Mot de passe :
-            </div>
-            <input type="text" class="inputLogin" [(ngModel)] = "login.password" [ngModelOptions]="{standalone: true}"/>
-            <div class="formatText forgot-password">
-                Mot de passe oublié ?
-            </div>
-            <button (click)="displayData()" class = "connectButton">Connexion</button>
-            <button class = "registerButton">Inscription</button>
+<form>
+    <div class="container">
+        <div class="connect">
+            SE CONNECTER
         </div>
-    </form>
+        <div class="logo">
+            <img class="logo-content" src="assets/pictures/Blop.png" alt="Logo">
+        </div>
+        <label for="login" class="formatText">
+            Identifiant :
+        </label>
+        <input id="login" name="login" type="text" class="inputLogin" [(ngModel)] = "login.login" [ngModelOptions]="{standalone: true}"/>
+        <label for="password" class="formatText">
+            Mot de passe :
+        </label>
+        <input id="password" name="password" type="text" class="inputLogin" [(ngModel)] = "login.password" [ngModelOptions]="{standalone: true}"/>
+        <div class="formatText forgot-password">
+            Mot de passe oublié ?
+        </div>
+        <button (click)="displayData()" class = "connectButton">Connexion</button>
+        <button class = "registerButton">Inscription</button>
+    </div>
+</form>
