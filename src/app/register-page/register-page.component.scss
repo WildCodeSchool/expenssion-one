@@ -1,5 +1,7 @@
+@use "../../import" as *;
+
 body {
-    background-image: url(/assets/background_pictures/register.jpg);
+    background-image: url(../../assets/background_pictures/detailed-grunge-background.jpg);
     background-size: cover;
 }
 
@@ -12,7 +14,8 @@ body {
     padding: 20px;
     color: white;
     position: relative;
-    z-index: 1;
+    padding-top: $globalPaddingTop;
+    padding-bottom: 160px;
 }
 
 .register-form h1 {
