@@ -22,14 +22,15 @@ export const routes: Routes = [
   },
   {
     path: 'connexion',
-    component: PopupComponent,
-  }
+    component: PopupComponent
+  },
+  {
     path: 'glossaire/classes',
     component: SpecializationPageComponent,
-  }, {
+  }, 
+  {
     path: 'lieux',
-    component: LocationPageComponent,
-
+    component: LocationPageComponent
   }
 ];
 
