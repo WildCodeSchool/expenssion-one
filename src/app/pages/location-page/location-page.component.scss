@@ -2,48 +2,49 @@
 @use "../../styles/glossary.scss";
 
 .location_content {
-    color: $textColor;
-    padding-top: $global_padding_top;
-    padding-left: $glossary_padding_left_desktop;
-    padding-right: $glossary_padding_right_desktop;
+  color: $textColor;
+  padding-top: $globalPaddingTop;
+  padding-left: $glossaryPaddingLeftDesktop;
+  padding-right: $glossaryPaddingRightDesktop;
 }
 
-h1, h2, h3 {
-    text-align: center;
+h1,
+h2,
+h3 {
+  text-align: center;
 }
 
 h2 {
-    font-family: "Cinzel";
+  font-family: "Cinzel";
 }
 
-h3, h4 {
-    font-family: "Inika";
-    font-size: larger;
+h3,
+h4 {
+  font-family: "Inika";
+  font-size: larger;
 }
-
 
 .worldmap {
-    display: flex;
-    justify-content: center;
-    margin: 3rem;
+  display: flex;
+  justify-content: center;
+  margin: 3rem;
 }
 
 img {
-    max-width : 75%;
-    height : auto;
-    border-radius: 10px;
+  max-width: 75%;
+  height: auto;
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 768px) {
+  .location_content {
+    color: $textColor;
+    padding-top: 100px;
+  }
 
-    .location_content {
-        color: $textColor;
-        padding-top: 100px;
-    }
-
-    img {
-        max-width : 90%;
-        height : auto;
-        border-radius: 10px;
-    }
+  img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+  }
 }
