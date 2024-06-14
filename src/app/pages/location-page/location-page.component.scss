@@ -3,12 +3,14 @@
 
 .location_content {
     color: $textColor;
-    padding-top: $global_padding_top;
-    padding-left: $glossary_padding_left_desktop;
-    padding-right: $glossary_padding_right_desktop;
+    padding-top: $globalPaddingTop;
+    padding-left: $glossaryPaddingLeftDesktop;
+    padding-right: $glossaryPaddingRightDesktop;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     text-align: center;
 }
 
@@ -16,7 +18,8 @@ h2 {
     font-family: "Cinzel";
 }
 
-h3, h4 {
+h3,
+h4 {
     font-family: "Inika";
     font-size: larger;
 }
@@ -29,8 +32,8 @@ h3, h4 {
 }
 
 img {
-    max-width : 75%;
-    height : auto;
+    max-width: 75%;
+    height: auto;
     border-radius: 10px;
 }
 
@@ -42,8 +45,8 @@ img {
     }
 
     img {
-        max-width : 90%;
-        height : auto;
+        max-width: 90%;
+        height: auto;
         border-radius: 10px;
     }
 }

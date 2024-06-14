@@ -2,7 +2,7 @@
 
 
 
-.background_image {
+.background-image {
     background-image: url("/assets/background_pictures/glossary_background.png");
     background-size: cover;
     background-position: center center;
@@ -11,7 +11,7 @@
     padding: 0;
     height: 100%;
     width: 100%;
-    padding-top: $global_padding_top;
+    padding-top: $globalPaddingTop;
     color: #D6D5BF;
 
     .title {
