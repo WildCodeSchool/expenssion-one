@@ -1,0 +1,65 @@
+<section class="background-image">
+    <ul>
+        @for(specialization of specializations;track specialization){
+        <li class="specialization-container">
+            <div class="title-container">
+                <h1 class="title">{{specialization.name}}</h1>
+                <div class="image-specialization">
+                    <img [src]="specialization.url">
+                </div>
+            </div>
+
+
+            <div class="contents-container">
+                <h2 class="text-description">Description:</h2>
+                <br>
+                @for(content of specialization.content;track content){
+                <p class="text-description">
+                    {{content}}
+                </p>
+                }
+                <br>
+            </div>
+
+            <div class="jobs-container">
+                <h2 class="text-description">Métiers:</h2>
+                <br>
+                <ul>
+                    @for(job of specialization.jobs;track job){
+                    <li>{{job}}</li>
+                    }
+                </ul>
+            </div>
+
+            @if(specialization.skills?.length!==0){
+            <div class="skills-container">
+                <h2 class="text-description">Skills:</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Caracteristique</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @for(skill of specialization.skills;track skill){
+                        <tr>
+                            <th scope="row"> {{skill.name}}</th>
+                            <td> {{skill.caracteristic}}</td>
+                            <td>{{skill.description}}</td>
+                        </tr>
+
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            }
+
+        </li>
+        }
+    </ul>
+
+</section>
