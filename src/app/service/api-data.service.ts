@@ -3,6 +3,7 @@ import { Specialization } from '../model/specialization/specialization';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 import { Continent } from '../model/continent/continent';
+import { Secret } from '../model/secret/secret';
 @Injectable({
   providedIn: 'root'
 })
@@ -17,4 +18,8 @@ export class ApiDataService {
   getContinents():Observable<Continent[]>{
     return this.http.get<Continent[]>('assets/data/continents.json')
   }
+
+  // getAnecdoticSecrets():Observable<Secret[]>{
+  //   return this.http.get<Secret[]>('assets/data/anecdoticSecrets.json')
+  // }
 }
