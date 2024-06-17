@@ -1,5 +1,4 @@
 import { Component, inject } from '@angular/core';
-import { UserService } from '../../service/user/user.service';
 import { User } from '../../model/user/user';
 
 
@@ -12,11 +11,11 @@ import { User } from '../../model/user/user';
 })
 export class UserProfilPageComponent {
 
-  userService=inject(UserService)
+ // userService=inject(UserService)
   user?:User;
 
   ngOnInit(){
-    this.userService.getUserData().subscribe(x=>this.user=x)
+    //this.userService.getUserData().subscribe(x=>this.user=x)
   }
 
 }

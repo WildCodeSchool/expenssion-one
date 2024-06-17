@@ -2,10 +2,37 @@ import { Character } from "../character/character";
 import { Friend } from "../friend/friend";
 
 export class User {
-    id!:string;
-    profilPictureUrl!:string;
-    biography!:string;
+
+    id?:string;
     pseudo!:string;
-    friends!:Friend[];
-    characters!:Character[];
+    lastname!:String;
+    firstname!:string;
+    password!:string;
+    email!:string;
+    dateOfBirth!:string;
+
+    isNewletters?:boolean;
+    isPublic?:boolean;
+   
+    biography?:string;
+    profilPictureUrl?:string;
+    
+    friends?:Friend[];
+    characters?:Character[];
+
+    constructor(
+        pseudo: string,
+        lastname: string,
+        firstname: string,
+        password: string,
+        email: string,
+        dateOfBirth: string,
+      ) {
+        this.pseudo = pseudo;
+        this.lastname = lastname;
+        this.firstname = firstname;
+        this.password = password;
+        this.email = email;
+        this.dateOfBirth = dateOfBirth;
+      }
 }

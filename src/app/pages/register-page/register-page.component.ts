@@ -1,15 +1,20 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { Component, inject } from '@angular/core';
+import { FormBuilder, FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
+import { User } from '../../model/user/user';
+import { AuthentificationService } from '../../service/authentification/authentification.service';
 
 @Component({
-  selector: 'app-register',
+  selector: 'app-register-page',
   standalone: true,
-  imports: [],
-  templateUrl: './register.component.html',
-  styleUrl: './register.component.scss'
+  imports: [ReactiveFormsModule],
+  templateUrl: './register-page.component.html',
+  styleUrl: './register-page.component.scss'
 })
-export class RegisterComponent {
+export class RegisterPageComponent {
   registerForm: FormGroup;
+  user?:User;
+
+  authetificationService=inject(AuthentificationService)
 
   constructor(private fb: FormBuilder) {
     this.registerForm = this.fb.group({
@@ -19,10 +24,11 @@ export class RegisterComponent {
       pseudo: ['', [Validators.required]],
       emailAdress: ['', [Validators.required, Validators.email]],
       confirmationMail: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(8), this.passwordValidator]],
+      password: ['', [Validators.required, Validators.minLength(8)]],
       confirmationMotDePasse: ['', [Validators.required]]
     }, { validators: this.emailMatchValidator });
   }
+
 
   passwordValidator(control: FormControl): { [key: string]: boolean } | null {
     const value = control.value;
@@ -43,8 +49,20 @@ export class RegisterComponent {
   }
 
   onSubmit(): void {
+    console.log("ici")
     if (this.registerForm.valid) {
       console.log('Form Submitted!', this.registerForm.value);
+      this.user=new User(
+        this.registerForm.value.pseudo ,
+        this.registerForm.value.lastName,
+        this.registerForm.value.name,
+        this.registerForm.value.password,
+        this.registerForm.value.emailAdress,
+        this.registerForm.value.birthDate,
+      )
+      console.log("la")
+      this.authetificationService.register(this.user).subscribe()
+
     } else {
       console.log('Form is invalid');
     }

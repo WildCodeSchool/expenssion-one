@@ -19,7 +19,7 @@
               <ul class="submenu">
                 <a routerLink="home"><li>Races</li></a>
                 <a routerLink="glossaire/classes"><li>Classes</li></a>
-                <a routerLink="home"><li>Les Secrets</li></a>
+                <a routerLink="home"><li>Secrets</li></a>
                 <a routerLink="home"><li>Croyances</li></a>
                 <a routerLink="glossaire/lieux"><li>Lieux</li></a>
               </ul>
@@ -35,12 +35,17 @@
       </div>
 
       <div class="connection-container">
-        <a routerLink="home"><img class="connection-logo" src="assets/pictures/Connexion.png" alt="Connection"></a>
+        @if((isLogin$| async) ===true){
+          <a routerLink="/profil">Profil</a>
+          <a (click)="onLogout()">LO</a>
+        }
+
+        <img (click)="openDialogConnection()" class="connection-logo" src="assets/pictures/Connexion.png" alt="Connection">
       </div>
     </div>
   </nav>
   <div class="play-button">
-    <button (click)="openDialog()"><img class="image-play-container" src="assets/pictures/jouer.png"></button>
+    <button (click)="openDialogGame()"><img class="image-play-container" src="assets/pictures/jouer.png"></button>
   </div>
 </header>
 

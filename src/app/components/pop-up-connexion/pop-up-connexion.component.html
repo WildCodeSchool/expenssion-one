@@ -1,3 +1,4 @@
+<button  class="btn btn-primary"(click)="onClose()">X</button>
 <form>
     <div class="container">
         <div class="connect">
@@ -32,7 +33,7 @@
             Mot de passe oublié ?
         </div>
         
-        <button (click)="displayData()" class = "connectButton">Connexion</button>
-        <button class = "registerButton">Inscription</button>
+        <button (click)="onLogin(login.login,login.password)" class = "connectButton">Connexion</button>
+        <button class = "registerButton" (click)="onClose()" routerLink="inscription">Inscription</button>
     </div>
 </form>
