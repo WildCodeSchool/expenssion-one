@@ -7,8 +7,7 @@
     "max_age": 90,
     "min_height": 150,
     "max_height": 190,
-    "min_speed": 6,
-    "max_speed": 6,
+    "speed": 6,
     "languages": ["Commun"],
     "number_additional_language": 2,
     "url": "http://example.image"
@@ -21,8 +20,7 @@
     "max_age": 120,
     "min_height": 130,
     "max_height": 150,
-    "min_speed": 5,
-    "max_speed": 5,
+    "speed": 5,
     "languages": ["Nain"],
     "number_additional_language": 2,
     "url": "assets/races-pictures/dwarf_race_profile.jpg"
@@ -35,8 +33,7 @@
     "max_age": 110,
     "min_height": 90,
     "max_height": 210,
-    "min_speed": 5,
-    "max_speed": 9,
+    "speed": 7,
     "languages": ["Commun", " Bestial"],
     "number_additional_language": 1,
     "url": "http://example.image"
@@ -49,8 +46,7 @@
     "max_age": 120,
     "min_height": 110,
     "max_height": 150,
-    "min_speed": 5,
-    "max_speed": 5,
+    "speed": 5,
     "languages": ["Commun", " Gobelin Nouveau"],
     "number_additional_language": 1,
     "url": "http://example.image"
@@ -63,8 +59,7 @@
     "max_age": 90,
     "min_height": 90,
     "max_height": 120,
-    "min_speed": 6,
-    "max_speed": 6,
+    "speed": 6,
     "languages": ["Commun", " Gobelin Ancien", " Minérale"],
     "number_additional_language": 1,
     "url": "http://example.image"
@@ -77,8 +72,7 @@
     "max_age": 135,
     "min_height": 160,
     "max_height": 190,
-    "min_speed": 7,
-    "max_speed": 7,
+    "speed": 7,
     "languages": ["Commun", " Féérique", " Forestier"],
     "number_additional_language": 1,
     "url": "assets/races-pictures/prankster-fairy-race-profile.jpg"
@@ -91,8 +85,7 @@
     "max_age": 90,
     "min_height": 180,
     "max_height": 230,
-    "min_speed": 6,
-    "max_speed": 6,
+    "speed": 6,
     "languages": ["commun"],
     "number_additional_language": 3,
     "url": "http://example.image"
@@ -105,8 +98,7 @@
     "max_age": 95,
     "min_height": 130,
     "max_height": 180,
-    "min_speed": 7,
-    "max_speed": 7,
+    "speed": 7,
     "languages": ["Commun", " Bestial"],
     "number_additional_language": 1,
     "url": "http://example.image"
@@ -119,8 +111,7 @@
     "max_age": 90,
     "min_height": 150,
     "max_height": 200,
-    "min_speed": 9,
-    "max_speed": 9,
+    "speed": 9,
     "languages": ["Commun", " Angélique"],
     "number_additional_language": 2,
     "url": "http://example.image"

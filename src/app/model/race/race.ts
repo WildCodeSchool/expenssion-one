@@ -8,8 +8,7 @@ export class Race {
     readonly max_age: number,
     readonly min_height: number,
     readonly max_height: number,
-    readonly min_speed: number,
-    readonly max_speed: number,
+    readonly speed: number,
     readonly languages: string[],
     readonly number_additional_language: number
   ) {}
