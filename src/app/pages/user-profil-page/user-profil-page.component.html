@@ -1,0 +1,33 @@
+<section class="background-image">
+    <div class="row-1">
+        <div class="user-resume-container">
+            <h2>Profil</h2>
+            <div class="profil-picture"><img [src]="user?.profilPictureUrl"></div>
+            <div class="user-info-container">
+                <button class="parameters-button"><img src="/assets/pictures/parameters.png"></button>
+                <p>Pseudo: {{user?.pseudo}}</p>
+                <p>Biographie: {{user?.biography}}</p>
+            </div>
+    
+        </div>
+        <div class="characters-container">
+            <h2>Personnages</h2>
+            @for(let i of counter(10);$index=index){
+                <img [src]="character.ImagUrl">
+            }
+        </div>
+    </div>
+    <div class="row-2">
+        <div class="calendar">
+            <h2>Calendrier</h2>
+
+        </div>
+        <div class="friends-container">
+            <h2>Amis</h2>
+            @for(friend of user?.friends;track friend){
+                <img [src]="friend.profilPictureUrl">
+            }
+        </div>
+    </div>
+    
+</section>
