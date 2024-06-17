@@ -32,5 +32,9 @@ export const routes: Routes = [
     path: 'lieux',
     component: LocationPageComponent
   }
+  }, {
+    path: 'glossaire/lieux',
+    component: LocationPageComponent,
+  },
 ];
 
