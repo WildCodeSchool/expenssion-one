@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiDataService } from '../../../service/api-data.service';
-import { Race } from '../../../model/race/race';
+import { ApiDataService } from '../../service/api-data.service';
+import { Race } from '../../model/race/race';
 
 @Component({
   selector: 'app-race',
@@ -19,7 +19,7 @@ export class RaceComponent {
   ngOnInit(): void {
     this.ApiDataService.getRaces().subscribe((response: Race[]) => {
       //Affecte les données récupérées à la propriété 'races'/and display data race.json from api-service
-      this.races = response;
+      this.races = response; //parseInt()?
     });
   }
 }

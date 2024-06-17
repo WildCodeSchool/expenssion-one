@@ -1,0 +1,22 @@
+<div class="list-breed-container">
+  @for (race of races; track race) {
+  <section class="picture-profile-race-container">
+    <img [src]="race.url" alt="{{ race.name }}" />
+  </section>
+  <section class="card-profile-race-model">
+    <h2 class="breed-title">{{ race.name }}</h2>
+    <p class="breed-description">{{ race.description }}</p>
+    <p class="racial-trait">Traits raciaux : {{ race.racial_trait }}</p>
+    <ul class="breed-statistics">
+      <li>Âge : {{ race.min_age }} - {{ race.max_age }}</li>
+      <li>Taille : {{ race.min_height }} - {{ race.max_height }}</li>
+      <li>Vitesse : min {{ race.min_speed }} - max {{ race.max_speed }}</li>
+      <li>
+        Langues : {{ race.languages }}, +{{ race.number_additional_language }}
+        autre(s)
+      </li>
+      <li></li>
+    </ul>
+  </section>
+  }
+</div>
