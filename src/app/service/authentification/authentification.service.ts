@@ -15,7 +15,8 @@ export class AuthentificationService {
 
   http=inject(HttpClient)
   url=environment.apiUrl
-  private isLoginSubject: BehaviorSubject<any> = new BehaviorSubject<boolean>(localStorage.getItem('token')!==null);
+  private isLoginSubject: BehaviorSubject<any> = new BehaviorSubject<boolean>(typeof localStorage !== 'undefined'&& localStorage.getItem('token')!==null )
+
   isLogin$: Observable<any> = this.isLoginSubject.asObservable();
 
 
@@ -23,6 +24,7 @@ export class AuthentificationService {
  
 
 login(username: string, password: string): Observable<any> {
+    this.isLoginSubject.next(localStorage.getItem('token') !== null);
     const params = new HttpParams().set('password',password).set('username',username)
     return this.http.post(this.url+'/login',{},{params} );
 
@@ -67,7 +69,7 @@ register(user: User): Observable<any> {
 
 getUserData(): Observable<any> {
 
-  return this.http.get(this.url+'/User');
+  return this.http.get(this.url+'/user/');
 }
 
 

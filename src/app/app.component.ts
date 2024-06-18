@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { HeaderMobileComponent } from './components/header-mobile/header-mobile.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AuthentificationService } from './service/authentification/authentification.service';
 
 
 
@@ -24,9 +25,11 @@ export class AppComponent {
 
   breakpointObserver = inject(BreakpointObserver)
   isMobile: boolean = false;
+  
 
   ngOnInit() {
     this.breakpointObserver.observe(Object.values(this.breakpoints)).subscribe((state: BreakpointState) => {
       this.isMobile = state.breakpoints[this.breakpoints.mobile]});
+      
     }
 }

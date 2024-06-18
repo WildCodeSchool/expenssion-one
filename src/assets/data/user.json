@@ -1,25 +1,54 @@
-{"id":"sdgrdf-dfhtdh-dhdfdh",
-    "profilPictureUrl":"",
-    "biography":"Bonjour, j'aime les JDR",
-    "pseudo":"Boubseb",
-    "friends":[
-        {"id":"eztgerg-ergreg-esrgre",
-        "pseudo":"Annas",
-        "profilPictureUrl":""},
-        {"id":"eztgerg-greg-esrgre",
-        "pseudo":"Cam",
-        "profilPictureUrl":""},
-        {"id":"eztgerg-erreg-esrgre",
-        "pseudo":"Geekette",
-        "profilPictureUrl":""},
-        {"id":"eztgerg-ergreg-ergr",
-        "pseudo":"Cyrkill",
-        "profilPictureUrl":""}
-    ],
-    "characters":[
-        {},
-        {}
-    ]
-
-
+{
+    "name":"George",
+    "age":50,
+    "height":180,
+    "biography":"this is my bio",
+    "strength":10,
+    "dexterity":10,
+    "constitution":10,
+    "intelligence":10,
+    "wisdom":10,
+    "charisma":10,
+    "armor":10,
+    "addiction":10,
+    "speed":10,
+    "perception":10,
+    "additionalJob":{
+        "id":1
+    },
+    "additionalLanguage":{
+        "id":1
+    },
+    "anecdoticSecret":{
+        "id":1
+    },
+    "primordialSecret":{
+        "id":1
+    },
+    "specialization":{
+        "id":1
+    },
+    "titles":[{
+        "id":1
+    },
+    {
+        "id":2
+    }],
+    "bornCity":{
+        "id":1
+    },
+    "liveCity":{
+        "id":1
+    },
+    "divinity":{
+        "id":1
+    },
+    "race":{
+        "id":1
+    }
 }
+
+
+
+
+

@@ -5,6 +5,7 @@ import { SpecializationPageComponent } from './pages/specialization-page/special
 import { LocationPageComponent } from './pages/location-page/location-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { UserProfilPageComponent } from './pages/user-profil-page/user-profil-page.component';
+import { AuthentificationGuard } from './guards/authentification.guard';
 
 
 export const routes: Routes = [
@@ -30,7 +31,7 @@ export const routes: Routes = [
   },
   {
     path: 'profil',
-    component: UserProfilPageComponent,
+    component: UserProfilPageComponent,canActivate:[AuthentificationGuard],
   },
   {
     path: '**',

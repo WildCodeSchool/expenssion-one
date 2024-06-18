@@ -4,13 +4,16 @@ import { inject } from '@angular/core';
 
 
 
-export const authInterceptor: HttpInterceptorFn = (req, next) => {
-  const authentificationService=inject(AuthentificationService)
-  console.log('intercept')
+export const authentificationInterceptor: HttpInterceptorFn = (req, next) => {
+  if(typeof localStorage !== 'undefined'){
+      const authentificationService=inject(AuthentificationService)
   const headers = new HttpHeaders()
   .append('Authorization', `Bearer ${authentificationService.getToken()}`);
 
   const authReq = req.clone({ headers });
   
   return next(authReq);
+  }
+  return next(req);
+
 };

@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { User } from '../../model/user/user';
 import { AuthentificationService } from '../../service/authentification/authentification.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register-page',
@@ -13,6 +14,7 @@ import { AuthentificationService } from '../../service/authentification/authenti
 export class RegisterPageComponent {
   registerForm: FormGroup;
   user?:User;
+  router=inject(Router)
 
   authetificationService=inject(AuthentificationService)
 
@@ -62,6 +64,7 @@ export class RegisterPageComponent {
       )
       console.log("la")
       this.authetificationService.register(this.user).subscribe()
+      this.router.navigateByUrl('/')
 
     } else {
       console.log('Form is invalid');

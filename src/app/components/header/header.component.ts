@@ -53,9 +53,7 @@ export class HeaderComponent {
     this.authentificationService.removeToken();
   }
 
-  isLogin():boolean{
-    return this.authentificationService.getToken()!==null
-  }
+
 
 
 }

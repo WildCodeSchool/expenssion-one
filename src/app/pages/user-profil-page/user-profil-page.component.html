@@ -11,10 +11,18 @@
     
         </div>
         <div class="characters-container">
-            <h2>Personnages</h2>
-            <!-- @for(let i of counter(10);$index=index){
-                <img [src]="character.ImagUrl">
-            } -->
+            <div class="character-top-container"><h2>Personnages</h2>
+            <button class="add-character-button"><img (click)="addCharacter()" src="/assets/pictures/add-button.svg"></button>
+            </div>
+            <div class="list-character-container">
+                <div class="grid-character-container">
+                    @for(character of user?.characters ;track character){
+                    <img [src]="character.specialization.url">
+                    }
+                </div>
+            </div>
+            
+           
         </div>
     </div>
     <div class="row-2">
