@@ -2,7 +2,6 @@ import { Component, inject } from '@angular/core';
 import { Secret } from '../../model/secret/secret';
 import { ApiDataService } from '../../service/api-data.service';
 import { NgFor } from '@angular/common';
-import { anecdoticSecrets } from '../../../assets/data/anecdoticSecrets';
 
 @Component({
   selector: 'app-anecdotic-secrets-page',
@@ -12,9 +11,12 @@ import { anecdoticSecrets } from '../../../assets/data/anecdoticSecrets';
   styleUrl: './anecdotic-secrets-page.component.scss'
 })
 export class AnecdoticSecretsPageComponent {
+    apiService = inject(ApiDataService);
     secrets:Secret[] = [];
     ngOnInit()
     {
-      this.secrets = anecdoticSecrets.filter(secret => secret.description.length > 0);
+      this.apiService.getAnecdoticSecrets().subscribe(
+        x => this.secrets = x.filter(p => p.description.length > 0)
+      );
     }
 }

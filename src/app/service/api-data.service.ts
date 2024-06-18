@@ -19,7 +19,11 @@ export class ApiDataService {
     return this.http.get<Continent[]>('assets/data/continents.json')
   }
 
-  // getAnecdoticSecrets():Observable<Secret[]>{
-  //   return this.http.get<Secret[]>('assets/data/anecdoticSecrets.json')
-  // }
+  getAnecdoticSecrets():Observable<Secret[]>{
+    return this.http.get<Secret[]>('assets/data/anecdoticSecrets.json')
+  }
+
+  getPrimordialSecrets():Observable<Secret[]>{
+    return this.http.get<Secret[]>('assets/data/primordialSecrets.json')
+  }
 }
