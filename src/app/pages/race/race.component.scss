@@ -1,0 +1,52 @@
+@use "../../../import" as *;
+
+.list-breed-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 1rem;
+  gap: 1.2rem 0;
+
+  .picture-profile-race-container {
+    width: 30%;
+    height: 100%;
+    img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      border: $borderCardBreed;
+    }
+  }
+
+  .card-profile-race-model {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.5rem 3rem;
+    border: $borderCardBreed;
+
+    .title-container {
+      position: relative;
+      width: 100%;
+      .breed-title {
+        font-family: $subTitleFont;
+        font-weight: $fontBoldStyle;
+        font-size: 30px;
+      }
+      svg {
+        position: absolute;
+        top: -25px;
+        left: -40px;
+      }
+    }
+
+    .bold-title {
+      font-weight: $fontBoldStyle;
+    }
+  }
+}
+//responsive image au-dessus

@@ -2,6 +2,14 @@ $mainColor: #282828; //$mainDarkColor
 $textColor: #ffffff; //$mainLightColor
 // $colorHeadFoot: #412121;
 
-$contentFont: "Inter", sans-serif;
+// @import url("https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap");
+//font-styles
+$contentFont: "Inika", sans-serif;
+$subTitleFont: "Cinzel", sans-serif;
+$fontBoldStyle: bold;
+
+//text-decoration
+$borderCardBreed: 2px solid black;
