@@ -10,7 +10,7 @@
     "speed": 6,
     "languages": ["Commun"],
     "number_additional_language": 2,
-    "url": "http://example.image"
+    "url": "assets/races-pictures/prankster-fairy-race-profile.jpg"
   },
   {
     "name": "Nains",
@@ -36,7 +36,7 @@
     "speed": 7,
     "languages": ["Commun", " Bestial"],
     "number_additional_language": 1,
-    "url": "http://example.image"
+    "url": "assets/races-pictures/prankster-fairy-race-profile.jpg"
   },
   {
     "name": "Gobelin solaire",
@@ -62,7 +62,7 @@
     "speed": 6,
     "languages": ["Commun", " Gobelin Ancien", " Minérale"],
     "number_additional_language": 1,
-    "url": "http://example.image"
+    "url": "assets/races-pictures/prankster-fairy-race-profile.jpg"
   },
   {
     "name": "Fée farceuse",
