@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.scss'] // Correction ici
+  styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent {
   @Input() slides: { image: string, title: string, description: string }[] = [];
