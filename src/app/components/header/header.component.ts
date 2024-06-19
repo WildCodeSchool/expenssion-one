@@ -18,10 +18,7 @@ export class HeaderComponent {
   isPopUpDisplay:boolean=false;
   constructor(public dialog: MatDialog) {}
   openDialog() {
-    const dialogRef = this.dialog.open(PopupComponent, {
-      width: '254px',
-      height: '351px'
-    });
+    const dialogRef = this.dialog.open(PopupComponent);
 
     
 
