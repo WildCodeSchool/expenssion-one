@@ -1,0 +1,199 @@
+@use "../../../import" as *;
+@use "../../styles/user-profil.scss";
+
+.background-image {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+
+
+    button {
+            background-color: #303133;/* Couleur de fond */
+            color: white;/* Couleur du texte */
+            border: none;/* Pas de bordure */
+            padding: 10px 20px;/* Espacement intérieur */
+            font-size: 16px;/* Taille de la police */
+            font-weight: bold;/* Poids de la police */
+            border-radius: 5px;/* Coins arrondis */
+            cursor: pointer;/* Curseur en forme de main au survol */
+            transition: background-color 0.3s, transform 0.2s;/* Transition pour la couleur de fond et la transformation */
+    
+            &:hover {
+                background-color: #0056b3;/* Couleur de fond au survol */
+                transform: scale(1.05);/* Légère augmentation de la taille au survol */
+            }
+    
+            &:active {
+                background-color: #004494;/* Couleur de fond lors du clic */
+                transform: scale(1);/* Réinitialisation de la taille */
+            }
+    
+            &:focus {
+                outline: none;/* Suppression du contour par défaut */
+                box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);/* Ombre pour indiquer le focus */
+            }
+        }
+   
+
+
+    .parameters-container {
+        margin-left: 5%;
+        margin-right: 5%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        .top-parameters-container {
+            display: flex;
+            align-items: center;
+
+            .parameters-logo {
+                height: 100px;
+                img {
+                    width: 15%;
+                }
+            }
+
+            h1 {
+                margin-left: 20px;
+                color: #fff;
+                font-size: 24px;
+            }
+        }
+
+        
+        .profil-parameters-container {
+
+            .profil-picture-container {
+                display: flex;
+                flex-direction: column;
+                margin: 20px 2.5%;
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 10px;
+                padding: 20px;
+                color: #fff;
+                .profil-picture{
+                    display: flex;
+                    gap:50px;
+                    align-items: center;
+                    .avatar{    
+                        img {
+                            border-radius: 50%;
+                            width: 150px;
+                            height: 150px;
+                            object-fit: cover;
+                        }
+                    }
+                   
+                }
+            }
+
+            .biography-container,
+            .personnal-information-container,
+            .pseudo-display-container,
+            .change-password-container,
+            .notification-container,
+            .visibility-profil-container,
+            .delete-account-container {
+                margin: 20px 2.5%;
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 10px;
+                padding: 20px;
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+
+                    fieldset {
+                        border: none;
+                        margin-bottom: 15px;
+                        align-items: center;
+                        //display: grid;
+                        grid-template-columns: 1fr 5fr;
+                        gap:50px;
+
+                        label {
+                            grid-column-start: 1;
+                            grid-column-end: 1;
+                            margin-bottom: 5px;
+                            font-weight: bold;
+                            margin-right: 50px;
+                        }
+
+                        input,
+                        textarea {
+                            grid-column-start: 2;
+                            grid-column-end: 2;
+                            width: 100%;
+                            padding: 10px;
+                            border-radius: 5px;
+                            color: black;
+                            border: 1px solid #ccc;
+                            background-color: #fff;
+                            font-size: 16px;
+                        }
+
+                        input[type="submit"] {
+                            background-color: #4CAF50;
+                            color: white;
+                            border: none;
+                            cursor: pointer;
+                            padding: 10px 20px;
+                            font-size: 18px;
+                            transition: background-color 0.3s ease;
+                        }
+
+                        input[type="submit"]:hover {
+                            background-color: #45a049;
+                        }
+                    }
+                }
+                .button-container{
+                    display: flex;
+                    justify-content: right;
+                }
+
+
+
+            }
+
+            .change-password-container,
+            .notification-container,
+            .visibility-profil-container
+            {
+                display: flex;
+                flex-direction: column;
+            }
+            .delete-account-container {
+               display:flex;
+               justify-content: center;
+               align-items: center;
+               button{
+                background-color: red;
+
+               }
+            }
+        }
+    }
+
+      
+}
+
+  @media screen and (max-width: 1278px) {
+
+      
+              fieldset {
+                display: block;
+                border: none;
+                margin-bottom: 15px;
+
+              }
+
+
+  }

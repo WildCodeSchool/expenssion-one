@@ -4,7 +4,7 @@
             <h2>Profil</h2>
             <div class="profil-picture"><img [src]="user?.profilPictureUrl"></div>
             <div class="user-info-container">
-                <button class="parameters-button"><img src="/assets/pictures/parameters.png"></button>
+                <button class="parameters-button"><img routerLink="parametres"  src="/assets/pictures/parameters.png"></button>
                 <p>Pseudo: {{user?.pseudo}}</p>
                 <p>Biographie: {{user?.biography}}</p>
             </div>
@@ -26,10 +26,15 @@
         </div>
     </div>
     <div class="row-2">
-        <div class="calendar">
-            <h2>Calendrier</h2>
-
+        <div class="calendar-container">
+            <div class="calendar-top">
+                <h2>Calendrier</h2>
+            </div>         
+            <div class="calendar">
+                <full-calendar [options]="calendarOptions"></full-calendar>
+            </div>
         </div>
+
         <div class="friends-container">
             <h2>Amis</h2>
             @for(friend of user?.friends;track friend){

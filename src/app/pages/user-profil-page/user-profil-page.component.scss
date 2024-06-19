@@ -3,13 +3,15 @@
 .background-image{
     display: flex;
     flex-direction: column;
-
-
+    padding-bottom: 50px;
 
 
     .row-1{
         
         display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:50px;
         .user-resume-container{
             border: 2px;
             display: flex;
@@ -18,7 +20,7 @@
             backdrop-filter: blur(4px);
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
             width: 20vw;
-            margin-left: 10%;
+            height: 100%;
             
             h2{
                 display: flex;
@@ -58,13 +60,14 @@
         .characters-container{
             border: 2px;
             display: flex;
+            min-height: 30vh;
             flex-direction: column;
 
             background-color: rgb(0,0,0,0.5);
             backdrop-filter: blur(4px);
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
             width: 50vw;
-            margin-left: 10%;
+
             .character-top-container{
                 display: flex;
                 padding:10px;
@@ -122,21 +125,35 @@
 
     .row-2{
         display: flex;
+        justify-content: center;
+        gap:50px;
         padding-top: 50px;
-        .calendar{
+        height: 100%;
+
+        .calendar-container{
             border: 2px;
             display: flex;
             flex-direction: column;
             background-color: rgb(0,0,0,0.5);
             backdrop-filter: blur(4px);
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-            width: 20vw;
-            height:40vh ;
-            margin-left: 10%;
-            h2{
+            width: 20%;
+            max-width: 20%;
+            .calendar-top {
+                flex: 0 0 auto;
+                    h2 {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+            .calendar{
+                flex: 1 1 auto;
                 display: flex;
-                justify-content: center;
+                flex-direction: column;
+                padding: 10px;
             }
+           
+
         }
 
         .friends-container{
@@ -147,8 +164,6 @@
             backdrop-filter: blur(4px);
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
             width: 50vw;
-            height:40vh ;
-            margin-left: 10%;
             h2{
                 display: flex;
                 justify-content: center;

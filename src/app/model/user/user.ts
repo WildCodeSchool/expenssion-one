@@ -35,4 +35,5 @@ export class User {
         this.email = email;
         this.dateOfBirth = dateOfBirth;
       }
+     
 }

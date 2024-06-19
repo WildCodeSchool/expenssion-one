@@ -6,6 +6,7 @@ import { LocationPageComponent } from './pages/location-page/location-page.compo
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { UserProfilPageComponent } from './pages/user-profil-page/user-profil-page.component';
 import { AuthentificationGuard } from './guards/authentification.guard';
+import { ProfilParameterPageComponent } from './pages/profil-parameter-page/profil-parameter-page.component';
 
 
 export const routes: Routes = [
@@ -32,6 +33,10 @@ export const routes: Routes = [
   {
     path: 'profil',
     component: UserProfilPageComponent,canActivate:[AuthentificationGuard],
+  },
+    {
+    path: 'profil/parametres',
+    component: ProfilParameterPageComponent,canActivate:[AuthentificationGuard],
   },
   {
     path: '**',

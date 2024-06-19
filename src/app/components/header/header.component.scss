@@ -18,7 +18,8 @@ $ul_gap: 80px;
     .logo {
       margin-left:10px;
       .logo-image {
-        height: 75px;
+        width : 53px;
+        height: auto;
       }
     }
 
@@ -64,6 +65,8 @@ $ul_gap: 80px;
       .connection-logo{
         justify-content: center;
         align-items: center;
+        height: 53px;
+        width: 53px;
       }
     }
   }

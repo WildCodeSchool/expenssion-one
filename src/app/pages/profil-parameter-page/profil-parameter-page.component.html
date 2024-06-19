@@ -1,0 +1,170 @@
+<div class="background-image">
+    <div class="parameters-container">
+        <div class="top-parameters-container">
+             <img class="parameters-logo" src="/assets/pictures/parameters.png">
+            <h1>Paramètres</h1>
+        </div>
+
+        
+
+        <div class="profil-parameters-container">
+            <div class="profil-picture-container">
+                Avatar de profil
+                <div class="profil-picture">
+                    <div class="avatar">
+                        <img src="/assets/pictures/Connexion.png">
+                    </div>
+                    
+                    <button>changer d'Avatar</button>
+                </div>
+            </div>
+
+            <div class="pseudo-display-container">
+
+                <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+                
+                
+                    <fieldset>
+                
+                        <label for="firstname-field">Pseudo affiché: </label>
+                        <div>
+                            <input id="firstname-field" name="firstname" type="text" [(ngModel)]="user.pseudo" #pseudo="ngModel" required
+                                minlength="3" maxlength="15">
+                            <small>Entrez votre nom d'utilisateur.</small>
+                        </div>
+
+                        
+                    </fieldset>
+                </form>
+                <div class="button-container">
+                    <button type="submit">Sauvegarder</button>
+                </div>
+              
+
+
+            </div>
+            <div class="biography-container">
+                <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+                
+                
+                    <fieldset>
+                
+                        <label for="biography-field">Biographie: </label>
+                        <div>
+                            <textarea id="biography-field" name="biography" rows="5" maxlength="500" [(ngModel)]="user.biography"
+                                #biography="ngModel"></textarea>
+                            <small>Description de votre profil en moins de 300 caractères</small>
+
+                        </div>
+                    </fieldset>
+                    <div class="button-container">
+                    <button type="submit">Sauvegarder</button>
+                    </div>
+                </form>
+
+            </div>
+            <div class="personnal-information-container">
+                <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+
+                   
+                    <fieldset>
+                    
+                        <label for="firstname-field">nom: </label>
+                    
+                        <input id="firstname-field" name="firstname" type="text" [(ngModel)]="user.firstname" #firstname="ngModel"
+                            required minlength="3" maxlength="15">
+                    
+                    </fieldset>
+
+                    <fieldset>
+                    
+                        <label for="lastname-field">Prénom: </label>
+                    
+                        <input id="lastname-field" name="lastname" type="text" [(ngModel)]="user.lastname" #lastname="ngModel"
+                            required minlength="3" maxlength="15">
+                    
+                    </fieldset>
+
+                    <fieldset>
+                    
+                        <label for="date-of-birth-field">Date de naissance: </label>
+                    
+                        <input id="date-of-birth-field" name="DateOfBirth" type="date" [(ngModel)]="user.dateOfBirth" #DateOfBirth="ngModel"
+                            required minlength="3" maxlength="15">
+                    
+                    </fieldset>
+                   
+                    <fieldset>
+                
+                        <label for="email-field">email: </label>
+                
+                        <input id="email-field" name="email" [(ngModel)]="user.email" #email="ngModel" type="email" required
+                            email>
+                
+                    </fieldset>                
+                    <div class="button-container">
+                        <button type="submit">Sauvegarder</button>
+                       </div>
+                </form>
+
+            </div>
+            <div class="change-password-container">              
+                <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+                    <fieldset>
+                        <label for="actual-password-field">Mot de passe actuel: </label>
+                        <div>
+                            <input id="actual-password-field" name="actualPassword" type="password" (ngModel)="user.lastname" #actualPassword="ngModel">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <label for="new-password-field">Nouveau mot de passe: </label>
+                        <div>
+                            <input id="new-password-field" name="newPassword" type="password" (ngModel)="user.lastname" #newPassword="ngModel">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <label for="actual-password-field">Confirmation de mot de passe: </label>
+                        <div>
+                            <input id="actual-password-field" name="confirmationNewPassword" type="password" (ngModel)="user.lastname"#confirmationActualPassword="ngModel">
+                        </div>
+                    </fieldset>
+                    <div class="button-container">
+                        <button type="submit">Changer de mot de passe</button>
+                    </div>
+                    
+                </form>
+
+            </div>
+
+            <div class="notification-container">
+                <form>
+                    <fieldset>
+                        <label for="actual-password-field">Paramètres notifdications: </label>
+                        <div>
+                            <mat-slide-toggle [checked]="user.isNewletters"></mat-slide-toggle>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <label for="actual-password-field">Paramètres de visibilité: </label>
+                        <div>
+                            <mat-slide-toggle [checked]="user.isNewletters"></mat-slide-toggle>
+                        </div>
+                    </fieldset>
+                </form>
+                                <div class="button-container">
+                                    <button type="submit">Sauvegarder</button>
+                                </div>
+                
+                
+                
+            </div>
+
+            <div class="delete-account-container">
+                <button>Supprimer mon compte</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

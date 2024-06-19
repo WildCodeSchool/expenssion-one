@@ -36,11 +36,14 @@
 
       <div class="connection-container">
         @if((isLogin$| async) ===true){
-          <a routerLink="/profil">Profil</a>
-          <a (click)="onLogout()">LO</a>
-        }
+          <img routerLink="/profil" class="connection-logo" src="assets/pictures/Connexion.png" alt="profil">
+          <img (click)="onLogout()" class="connection-logo" src="assets/pictures/log-out-button.svg" alt="LO">
 
-        <img (click)="openDialogConnection()" class="connection-logo" src="assets/pictures/Connexion.png" alt="Connection">
+
+        }
+        @else {
+          <img (click)="openDialogConnection()" class="connection-logo" src="assets/pictures/Connexion.png" alt="Connection">
+        }
       </div>
     </div>
   </nav>
