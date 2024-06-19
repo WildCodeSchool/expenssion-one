@@ -1,19 +1,9 @@
-
 <body>
-    <div class="news-container">
+<div class="news-container">
     <div class="carousel">
         <app-carousel [slides]="slides"></app-carousel>
     </div>
-    <div class="news-content">
-        <div class="news-item" *ngFor="let news of newsItems">
-            <img [src]="news.imageUrl" [alt]="news.title">
-            <div class="news-text">
-                <h2>{{ news.title }}</h2>
-                <p>{{ news.content }}</p>
-            </div>
-        </div>
     </div>
-</div>
 
 <div class="news-content">
     <div class="news-item">

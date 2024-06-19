@@ -27,10 +27,11 @@ export const routes: Routes = [
     path: 'glossaire/lieux',
     component: LocationPageComponent,
   },
-  {
-    path: 'news-page',
-    component: NewsPageComponent,
-  },
+  { path: 'news', component: NewsPageComponent },
+  // Ajoutez d'autres routes ici
+  { path: '', redirectTo: '/news', pathMatch: 'full' }, // Redirection par défaut vers 'news'
+  { path: '**', redirectTo: '/news', pathMatch: 'full' } // Redirection pour les routes non trouvées
+  ,
   {
     path: 'carousel',
     component: CarouselComponent,

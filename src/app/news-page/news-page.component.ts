@@ -13,28 +13,21 @@ import { FooterComponent } from '../components/footer/footer.component';
   styleUrls: ['./news-page.component.scss']
 })
 export class NewsPageComponent {
-  private apiUrl = '';
   slides = [
-    { image: 'assets/news1.jpg', title: 'News Title 1', description: 'Lorem ipsum dolor sit amet. Sit autem nemo in minus quas nam itaque minima sed dicta atque.' },
-    { image: 'assets/news2.jpg', title: 'News Title 2', description: 'Lorem ipsum dolor sit amet. Sit autem nemo in minus quas nam itaque minima sed dicta atque.' },
-    { image: 'assets/news3.jpg', title: 'News Title 3', description: 'Lorem ipsum dolor sit amet. Sit autem nemo in minus quas nam itaque minima sed dicta atque.' }
+    {
+      image: 'assets/pictures/Image article.png',
+      title: 'Slide 1 Title',
+      description: 'Description for Slide 1'
+    },
+    {
+      image: 'assets/pictures/Blop.png',
+      title: 'Slide 2 Title',
+      description: 'Description for Slide 2'
+    },
+    {
+      image: 'assets/background_pictures/register.jpg',
+      title: 'Slide 3 Title',
+      description: 'Description for Slide 3'
+    }
   ];
-  newsItems: NewsItem[] = [];
-
-  constructor(private http: HttpClient) {
-    this.getNews().subscribe(news => this.newsItems = news);
-  }
-
-  getNews(): Observable<NewsItem[]> {
-    return this.http.get<NewsItem[]>(this.apiUrl);
-  }
 }
-
-interface NewsItem {
-  id: number;
-  title: string;
-  content: string;
-  imageUrl: string;
-}
-
-
