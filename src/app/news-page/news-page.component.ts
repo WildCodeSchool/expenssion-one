@@ -16,18 +16,18 @@ export class NewsPageComponent {
   slides = [
     {
       image: 'assets/pictures/Image article.png',
-      title: 'Slide 1 Title',
-      description: 'Description for Slide 1'
+      title: 'Slide 1 Titre',
+      description: 'Description du Slide 1'
     },
     {
-      image: 'assets/pictures/Blop.png',
-      title: 'Slide 2 Title',
-      description: 'Description for Slide 2'
+      image: '/assets/background_pictures/glossary_background.png',
+      title: 'Slide 2 Titre',
+      description: 'Description du Slide 2'
     },
     {
       image: 'assets/background_pictures/register.jpg',
-      title: 'Slide 3 Title',
-      description: 'Description for Slide 3'
+      title: 'Slide 3 Titre',
+      description: 'Description du Slide 3'
     }
   ];
 }
