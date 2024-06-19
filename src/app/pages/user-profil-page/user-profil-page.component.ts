@@ -29,7 +29,7 @@ export class UserProfilPageComponent {
     plugins: [dayGridPlugin, timeGridPlugin],
     events: [
       { title: 'Game day', date: '2024-06-20' },
-      { title: 'Game day', date: '2024-06-21' }
+      { title: 'Fête de la musique', date: '2024-06-21' }
     ],
     height: "40vh"
        };

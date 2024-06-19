@@ -182,18 +182,35 @@
         }
     }
 
+        // @media screen and (max-width: 768px) {
+        //     .profil-parameters-container {
+    
+        //         .biography-container,
+        //         .personnal-information-container,
+        //         .pseudo-display-container,
+        //         .change-password-container,
+        //         .notification-container,
+        //         .visibility-profil-container,
+        //         .delete-account-container {
+        //             form {
+        //                 fieldset {
+        //                     display: block;
+    
+        //                     label {
+        //                         display: block;
+        //                         margin-bottom: 5px;
+        //                     }
+    
+        //                     input,
+        //                     textarea {
+        //                         width: 100%;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+
+
       
 }
-
-  @media screen and (max-width: 1278px) {
-
-      
-              fieldset {
-                display: block;
-                border: none;
-                margin-bottom: 15px;
-
-              }
-
-
-  }
