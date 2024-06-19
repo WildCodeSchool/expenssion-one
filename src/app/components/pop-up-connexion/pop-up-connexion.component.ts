@@ -1,24 +1,29 @@
-import { Component, Input } from '@angular/core';
-import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { Component, Input, inject } from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialog, MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { Login } from '../../model/login.model';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-popup',
   standalone: true,
-  imports: [MatDialogModule, MatButtonModule, FormsModule, RouterOutlet],
+  imports: [MatDialogModule, MatButtonModule, FormsModule, RouterOutlet,RouterLink],
   templateUrl: './pop-up-connexion.component.html',
   styleUrl: './pop-up-connexion.component.scss'
 })
 export class PopupComponent {
-  @Input() isPopUpDisplay:boolean=false;
   login:Login=new Login("","");
   url:String="../../../assets/background_pictures/logo_blop_10001.png";
 
-  displayData()
-  {
-    console.log(this.login.login  + " " + this.login.password);
+  @Input() dialogData :any=inject(MAT_DIALOG_DATA)
+  router=inject(Router)
+
+  constructor(private dialogRef: MatDialogRef<PopupComponent>){
   }
+
+  onClose() {
+    this.dialogRef.close();
+  }
+  
 }

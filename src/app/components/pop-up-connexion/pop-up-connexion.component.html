@@ -1,3 +1,4 @@
+<button  class="btn btn-primary"(click)="onClose()">X</button>
 <form>
     <div class="container">
         <div class="connect">
@@ -14,8 +15,8 @@
           </label>
         </div>
 
-        <div>
-          <input id="login" name="login" type="text" class="inputLogin" [(ngModel)] = "login.login" [ngModelOptions]="{standalone: true}"/>
+        <div class="inputLogin">
+          <input id="login" name="login" type="text"  [(ngModel)] = "login.login" [ngModelOptions]="{standalone: true}"/>
         </div>
 
         <div>
@@ -24,15 +25,15 @@
           </label>
         </div>
 
-        <div>
-          <input id="password" name="password" type="text" class="inputLogin" [(ngModel)] = "login.password" [ngModelOptions]="{standalone: true}"/>
+        <div class="inputLogin">
+          <input id="password" name="password" type="text"  [(ngModel)] = "login.password" [ngModelOptions]="{standalone: true}"/>
         </div>
 
         <div class="forgot-password">
             Mot de passe oublié ?
         </div>
         
-        <button (click)="displayData()" class = "connectButton">Connexion</button>
-        <button class = "registerButton">Inscription</button>
+        <button class = "connectButton">Connexion</button>
+        <button class = "registerButton" (click)="onClose()" routerLink="inscription">Inscription</button>
     </div>
 </form>
