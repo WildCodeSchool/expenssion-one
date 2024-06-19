@@ -1,19 +1,21 @@
-$mainColor: #282828; //$mainDarkColor
-$textColor: #ffffff; //$mainLightColor
+//colors elements
+$mainColor: #282828;
+$textLightColor: #ffffff; //$mainLightColor
+$textColor: black;
 // $colorHeadFoot: #412121;
 
+//imports fonts
 @import url("https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 
-//font-styles
+//font-family-variables
 $contentFont: "Inika", sans-serif;
 $subTitleFont: "Cinzel", sans-serif;
 $fontBoldStyle: bold;
 
 //text-decoration
 $borderCardBreed: 2px solid black;
-$contentFont: "Inter", sans-serif;
 $globalPaddingTop: 160px;
 
 //for glossary
