@@ -2,7 +2,7 @@
 {"name":"Pile ou Face",
 "url":"http://example.image",
 "jobs":[],
-"skill":[],
+"skills":[],
 "content":[
 "Les Pil ou Face sont des puissants mages, iels se font un malin plaisir à semer la confusion en toutes situations. Depuis leur plus tendre enfance, iels se sont toujours cherché sans jamais trouver leur véritable voie.",
 "Toutefois guidé par une apparition, un maître, les préceptes d'une croyance ou encore un violent choc passé, iels ont compris.",
@@ -17,7 +17,7 @@
 {"name":"Empoisonneur",
 "url":"http://example.image",
 "jobs":[],
-"skill":[],
+"skills":[],
 "content":[
     "Les Empoisonneur Né, sont des érudits et ce, qu’ iels décident de faire le bien ou le mal en ce monde. Iels ont de solides connaissances en anatomie,en herboristerie, ainsi que dans le maniement des outils médicaux.",
     "Dans la caste des Empoisonneurs Né, on distingue beaucoup de bon élèves de divers académie qui se sentant bridé par l’éducation on opté pour les pratiques plus sombres. D’autres moin nombreux, on été initié à cet art par de dangereux exilé de toute hiérarchie sociale. D’autres encore se sont focalisés sur ces obscures pratiques alchimiques en vue d’une vengeance qui serait grandiose le temps venu.",
@@ -34,7 +34,7 @@
 {"name":"Brasseur non-conforme",
 "url":"http://example.image",
 "jobs":[],
-"skill":[],
+"skills":[],
 "content":[
     "Les Brasseur non-conforme sont de nobles aventuriers du palais et de l’ivresse. Iels sont créatifs et ce depuis leur premières expériences à base de lait et de sève divers lors d’une enfance relativement mouvementée.",
      "L'industrie du brassage de boissons alcoolisées est en plein essor et ce depuis de nombreuses années. Bon nombre d'académies renommées en on dailleur fait leur spécialité d’étude.",
@@ -53,7 +53,7 @@
 {"name":"Mage de renom",
 "url":"http://example.image",
 "jobs":[],
-"skill":[],
+"skills":[],
 "content":["Les Mage de renom sont incontestablement des érudit, iels sont de brillant intellectuel et de grand stratège. Même enfants, iels dominaient leur camarade par une intelligence accrue.",
 "Sorti major de promotion et apparaissant comme le haut du panier  dans les divers académie des royaumes, iels sont reconnus dans l'ensemble des édifices administratifs.",
 "Les académies en question ne sont pas gratuites, et sont parmi les établissements plus chers, iels ont donc dû faire face à la jalousie des basses gens sans le sous.",
@@ -71,7 +71,7 @@
 {"name":"Traqueur sauvage",
 "url":"http://example.image",
 "jobs":[],
-"skill":[],
+"skills":[],
 "content":["Les traqueur sauvages ont senti dès leur jeune âge, l'appelle de la forêt. Pendant que les autres enfants se rendaient dans des établissement éducatif ou ou aidaient leurs parents au diverses tâches familiales , ils arpentaient les bois en quête de découvertes.",
 "Iels ont toujours été un peu isolés de par leur attrait pour les animaux sauvages et leur code vestimentaire précaire.",
 "Rapidement délaissées par leur proches, par honte ou dégoût, iels se sont fait seul et ce aux prix de quelques sacrifices.",
@@ -88,7 +88,7 @@
 {"name":"Chevalier Frappe-Tonnerre",
 "url":"http://example.image",
 "jobs":[],
-"skill":[
+"skills":[
     {"name":"Éclairé","caracteristic":"Intelligence","description":"Enchante une armes au corps à corps , l’armes foudroie le sol lors de son impacte sur 8mr"},
     {"name":"Brise fuite","caracteristic":"Dextérité","description":"Une armes a distance fait trébucher la cible et empêche alors sa fuite"},
     {"name":"Frappe approximative","caracteristic":"Force","description":"la cible ayant L’armes enchanté obtient pour 1 heure un bonus de force de +2"}
@@ -109,7 +109,7 @@
 {"name":"Grand charlatan",
 "url":"http://example.image",
 "jobs":[],
-"skill":[{"name":"Piège maison","caracteristic":"Dextérité","description":"Vous fabriquez un piège improvisé mais efficace"},
+"skills":[{"name":"Piège maison","caracteristic":"Dextérité","description":"Vous fabriquez un piège improvisé mais efficace"},
 {"name":"Analyse et dépose ","caracteristic":"Dextérité","description":"Vous identifiez et démonter avec précaution un piège"},
 {"name":"Offre trompeuse","caracteristic":"Addiction","description":"Vous offrez un ver d'alcool à une cible, si elle le boit,votre jet de dextérité pour un vol à la tire obtient un bonus de +3"}],
 "content":[
@@ -128,7 +128,7 @@
 {"name":"Mage élémentaire",
 "url":"http://example.image",
 "jobs":[],
-"skill":[{"name":"Poing de feu","caracteristic":"Intelligence","description":"Vous enflammez votre poing et lancer une boule de feu"},
+"skills":[{"name":"Poing de feu","caracteristic":"Intelligence","description":"Vous enflammez votre poing et lancer une boule de feu"},
 {"name":"Basier intérieur","caracteristic":"Intelligence","description":"Vous vous enflammer, votre prochain jet de dé stat sera doublé"},
 {"name":"Fracas des flots","caracteristic":"Intelligence","description":"Vous crée une vague de 2m de haut a partir d’une moindre goutte"}
 ],
@@ -150,7 +150,7 @@
 {"name":"Ignoble célébrité",
 "url":"http://example.image",
 "jobs":[],
-"skill":[{"name":"Fausse note","caracteristic":"Charisme","description":"Vous produisez un son aigue, assourdissant ou cible ou la revigorant"},
+"skills":[{"name":"Fausse note","caracteristic":"Charisme","description":"Vous produisez un son aigue, assourdissant ou cible ou la revigorant"},
 {"name":"Immondice sonor","caracteristic":"Charisme","description":"Vous jouez un air affreux, les cibles se concentre sur vous pour stoppez le massacre"},
 {"name":"Mélodie douteuse","caracteristic":"Charisme","description":"Une bonne mélodie s'accompagne souvent de percussion, pour remédier à cela, vous frapper 5 coups en rythme et ce en une action"}
 ],
@@ -171,7 +171,7 @@
 {"name":"Chevalier d’extase",
 "url":"http://example.image",
 "jobs":[],
-"skill":[
+"skills":[
 {"name":"Riposte","caracteristic":"Force","description":"Permet de frapper en riposte d’une parade ou d’un coup infligé"},
 {"name":"Rigueur et Honneur","caracteristic":"Rapidité","description":"Vous prenez l'initiative et parez le coup porté à un allié"},
 {"name":"Posture du rempart","caracteristic":"Constitution","description":"Vous prenez la posture de l’élite du Rempart de la haine, tout autres milicien se plie à votre cause"}
