@@ -10,7 +10,7 @@
     "speed": 6,
     "languages": ["Commun"],
     "number_additional_language": 2,
-    "url": "assets/races-pictures/prankster-fairy-race-profile.jpg"
+    "url": "assets/races-pictures/human-race-profile.jpg"
   },
   {
     "name": "Nains",
@@ -23,7 +23,7 @@
     "speed": 5,
     "languages": ["Nain"],
     "number_additional_language": 2,
-    "url": "assets/races-pictures/dwarf_race_profile.jpg"
+    "url": "assets/races-pictures/dwarf-race-profile.jpg"
   },
   {
     "name": "Semi",
@@ -36,7 +36,7 @@
     "speed": 7,
     "languages": ["Commun", " Bestial"],
     "number_additional_language": 1,
-    "url": "assets/races-pictures/prankster-fairy-race-profile.jpg"
+    "url": "assets/races-pictures/semi-race-profile.jpg"
   },
   {
     "name": "Gobelin solaire",
@@ -49,7 +49,7 @@
     "speed": 5,
     "languages": ["Commun", " Gobelin Nouveau"],
     "number_additional_language": 1,
-    "url": "http://example.image"
+    "url": "assets/races-pictures/solar-gobelin-race.jpg"
   },
   {
     "name": "Gobelin lunaire",
@@ -62,7 +62,7 @@
     "speed": 6,
     "languages": ["Commun", " Gobelin Ancien", " Minérale"],
     "number_additional_language": 1,
-    "url": "assets/races-pictures/prankster-fairy-race-profile.jpg"
+    "url": "assets/races-pictures/lunar-goblin-race-profile.jpg"
   },
   {
     "name": "Fée farceuse",
@@ -75,7 +75,7 @@
     "speed": 7,
     "languages": ["Commun", " Féérique", " Forestier"],
     "number_additional_language": 1,
-    "url": "assets/races-pictures/prankster-fairy-race-profile.jpg"
+    "url": "assets/races-pictures/pranker-fairy-race.jpg"
   },
   {
     "name": "Troll difforme",
@@ -114,6 +114,6 @@
     "speed": 9,
     "languages": ["Commun", " Angélique"],
     "number_additional_language": 2,
-    "url": "http://example.image"
+    "url": "assets/races-pictures/exarus-race-profile.jpg"
   }
 ]

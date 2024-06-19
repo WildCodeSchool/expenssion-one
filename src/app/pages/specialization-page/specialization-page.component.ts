@@ -7,13 +7,14 @@ import { Specialization } from '../../model/specialization/specialization';
   standalone: true,
   imports: [],
   templateUrl: './specialization-page.component.html',
-  styleUrl: './specialization-page.component.scss'
+  styleUrl: './specialization-page.component.scss',
 })
 export class SpecializationPageComponent {
-  apiDataService=inject(ApiDataService)
-  specializations:Specialization[]=[];
-  ngOnInit(){
-    this.apiDataService.getSpecialization().subscribe(x=>this.specializations=x)
+  apiDataService = inject(ApiDataService);
+  specializations: Specialization[] = [];
+  ngOnInit() {
+    this.apiDataService
+      .getSpecialization()
+      .subscribe((x) => (this.specializations = x));
   }
-
 }

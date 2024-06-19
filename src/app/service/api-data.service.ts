@@ -12,8 +12,8 @@ export class ApiDataService {
 
   constructor() {}
 
-  getSpecialization(): Observable<Specialization> {
-    return this.http.get<Specialization>('assets/data/specialization.json');
+  getSpecialization(): Observable<Specialization[]> {
+    return this.http.get<Specialization[]>('assets/data/specialization.json');
   }
 
   getRaces(): Observable<Race[]> {

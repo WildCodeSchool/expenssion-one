@@ -1,81 +1,89 @@
 @use "../../../import" as *;
 
-.list-breed-container {
+.breed-container {
   width: 100%;
   height: auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  font-size: 1rem;
-  gap: 1.2rem 0;
+  flex-direction: column;
+  align-items: center;
   background-image: url("../../../assets/background_pictures/race-page.jpg");
   background-size: contain;
   background-position: center center;
   background-attachment: fixed;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  color: $mainColor;
 
-  .picture-profile-race-container {
-    width: 30%;
-    height: 100%;
-    justify-self: center;
-    img {
-      width: 100%;
-      // height: 100%;
-      border-radius: 10px;
-      object-fit: contain;
-      border: $borderCardBreed;
-    }
-  }
-
-  .card-profile-race-model {
-    width: 55%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 1.5rem 3rem;
-    border: $borderCardBreed;
-    background-image: none;
-    background-color: #a16a5f;
-    // opacity: 70%;
-
-    .title-container {
-      position: relative;
-      width: 50%;
-      .breed-title {
-        font-family: $subTitleFont;
-        font-weight: $fontBoldStyle;
-        font-size: 30px;
-      }
-      svg {
-        position: absolute;
-        top: -25px;
-        left: -40px;
-      }
-    }
-
-    .bold-title {
-      font-weight: $fontBoldStyle;
-    }
-  }
-}
-.list-breed-container:nth-of-type(even) {
-  flex-direction: row-reverse;
-}
-//responsive image au-dessus
-
-@media (max-width: 968px) {
   .list-breed-container {
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1rem;
+    gap: 1.2rem 0;
+    margin: 0;
+    padding: 0;
+    color: $mainColor;
+
+    .picture-profile-race-container {
+      width: 30%;
+      height: 100%;
+      justify-self: center;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        object-fit: contain;
+        border: $borderCardBreed;
+      }
+    }
+
+    .card-profile-race-model {
+      width: 55%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 1.5rem 3rem;
+      border: $borderCardBreed;
+      background-image: none;
+      // background-color: #a16a5f;
+
+      // opacity: 70%;
+
+      .title-container {
+        position: relative;
+        width: 50%;
+        .breed-title {
+          font-family: $subTitleFont;
+          font-weight: $fontBoldStyle;
+          font-size: 30px;
+          color: $mainColor;
+        }
+        svg {
+          position: absolute;
+          top: -25px;
+          left: -40px;
+        }
+      }
+
+      .bold-title {
+        font-weight: $fontBoldStyle;
+      }
+    }
   }
-  .picture-profile-race-container {
-    width: 55%;
+  .list-breed-container:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+  //responsive image au-dessus
+
+  @media (max-width: 968px) {
+    .list-breed-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .picture-profile-race-container {
+      width: 55%;
+    }
   }
 }
