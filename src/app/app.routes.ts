@@ -8,7 +8,7 @@ import { RulesPageComponent } from './pages/rules-page/rules-page.component';
 
 export const routes: Routes = [
   {
-    path: 'home',
+    path: 'accueil',
     component: HomePageComponent,
   },
   {
@@ -17,7 +17,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/accueil',
     pathMatch: 'full',
   },
   {
