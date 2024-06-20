@@ -62,11 +62,9 @@
           font-size: 30px;
           color: $textLightColor;
           position: relative;
-          // à tester avec solution pseudo élements ::after & ::before
-          // text-align: center;
           padding: 20px 20px;
         }
-        //autre solution pour placer droites perpendiculaires décoratives
+        //placer les droites perpendiculaires décoratives
         .breed-title::before,
         .breed-title::after {
           content: "";
@@ -93,12 +91,18 @@
         color: $textColor;
       }
       .breed-description {
-        margin-top: 1.5rem;
+        margin-top: 2rem;
         font-family: $contentFont;
         color: $textColor;
+        .description {
+          margin-top: 20px;
+        }
         .racial-trait {
           margin-top: 20px;
         }
+      }
+      .breed-statistics {
+        margin-top: 20px;
       }
     }
   }
@@ -122,9 +126,6 @@
         padding: 1.5rem;
         .breed-description {
           margin-top: 3rem;
-        }
-        .breed-statistics {
-          margin-top: 20px;
         }
       }
     }
