@@ -1,5 +1,6 @@
 @use "../../../import" as *;
 // @use "../../styles/glossary.scss";
+$titleUnderline: 40px;
 
 .breed-container {
   width: 100%;
@@ -77,6 +78,7 @@
         width: 100%;
         .breed-title {
           width: max-content;
+          max-width: calc(100% - $titleUnderline);
           font-family: $subTitleFont;
           font-weight: $fontBoldStyle;
           font-size: 30px;
@@ -96,11 +98,11 @@
           width: 2px;
           height: 110px;
           right: 0;
-          top: -5px; /* Ajustez cette valeur selon vos besoins */
+          bottom: 5px; /* Ajustez cette valeur selon vos besoins */
         }
 
         .breed-title::after {
-          width: calc(100% + 40px); //ajuster 50px
+          width: calc(100% + $titleUnderline); //ajuster 50px
           height: 2px;
           left: 0; // à ajuster
           bottom: 0;
@@ -131,7 +133,7 @@
   }
 
   //responsive image au-dessus
-  @media (max-width: 968px) {
+  @media screen and (max-width: 968px) {
     .breed-introduction {
       padding: 1rem 1.5rem;
     }
@@ -147,8 +149,10 @@
       .card-profile-race-model {
         width: 80%;
         padding: 1.5rem;
-        .breed-title {
-          font-size: 25px !important;
+        .title-container {
+          .breed-title {
+            font-size: 25px;
+          }
         }
         .breed-description {
           margin-top: 3rem;
