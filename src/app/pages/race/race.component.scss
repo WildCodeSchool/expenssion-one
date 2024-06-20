@@ -32,6 +32,12 @@ $titleUnderline: 40px;
       color: $textLightColor;
       margin: 25px 0 25px 0;
     }
+    .title-introduction::before,
+    .title-introduction::after {
+      content: "";
+      position: absolute;
+      background: $textLightColor;
+    }
   }
 
   .list-breed-container {
@@ -98,7 +104,7 @@ $titleUnderline: 40px;
           width: 2px;
           height: 110px;
           right: 0;
-          bottom: 5px; /* Ajustez cette valeur selon vos besoins */
+          bottom: -25px; /* Ajustez cette valeur selon vos besoins */
         }
 
         .breed-title::after {
