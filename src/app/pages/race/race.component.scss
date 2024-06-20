@@ -12,6 +12,26 @@
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+  padding-top: 10%;
+  padding-bottom: 4%;
+
+  .breed-introduction {
+    width: 85%;
+    text-align: center;
+    margin: 50px 50px;
+    border: $borderCardBreed;
+    border-radius: 10px;
+    background-color: #a16a5f80;
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 3rem;
+    font-size: 1.1rem;
+
+    h2 {
+      font-family: $subTitleFont;
+      color: $textLightColor;
+      margin: 25px 0 25px 0;
+    }
+  }
 
   .list-breed-container {
     width: 100%;
@@ -21,7 +41,7 @@
     justify-content: center;
     font-size: 1.1rem;
     gap: 1.2rem 0;
-    margin: 0 0 50px 0;
+    margin-bottom: 50px;
     padding: 0;
     color: $textColor;
 
@@ -91,7 +111,7 @@
         color: $textColor;
       }
       .breed-description {
-        margin-top: 2rem;
+        // margin-top: 2rem;
         font-family: $contentFont;
         color: $textColor;
         .description {
@@ -112,6 +132,9 @@
 
   //responsive image au-dessus
   @media (max-width: 968px) {
+    .breed-introduction {
+      padding: 1rem 1.5rem;
+    }
     .list-breed-container {
       display: flex;
       flex-direction: column;
@@ -124,6 +147,9 @@
       .card-profile-race-model {
         width: 80%;
         padding: 1.5rem;
+        .breed-title {
+          font-size: 25px !important;
+        }
         .breed-description {
           margin-top: 3rem;
         }

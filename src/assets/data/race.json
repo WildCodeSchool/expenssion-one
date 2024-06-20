@@ -88,7 +88,7 @@
     "speed": 6,
     "languages": ["commun"],
     "number_additional_language": 3,
-    "url": "http://example.image"
+    "url": "assets/races-pictures/troll-race.jpg"
   },
   {
     "name": "Zarga",
@@ -101,7 +101,7 @@
     "speed": 7,
     "languages": ["Commun", " Bestial"],
     "number_additional_language": 1,
-    "url": "http://example.image"
+    "url": "assets/races-pictures/zorga-race.jpg"
   },
   {
     "name": "Exarus",
