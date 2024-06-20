@@ -50,11 +50,13 @@
       background-image: none;
       background-color: #a16a5f80;
       border-radius: 10px;
+      backdrop-filter: blur(10px);
 
       .title-container {
         position: relative;
         width: 100%;
         .breed-title {
+          width: max-content;
           font-family: $subTitleFont;
           font-weight: $fontBoldStyle;
           font-size: 30px;
@@ -62,23 +64,41 @@
           position: relative;
           // à tester avec solution pseudo élements ::after & ::before
           // text-align: center;
-          padding: 0 20px;
+          padding: 20px 20px;
         }
-        // svg {
-        //   position: absolute;
-        //   top: -25px;
-        //   left: -40px;
-        // }
+        //autre solution pour placer droites perpendiculaires décoratives
+        .breed-title::before,
+        .breed-title::after {
+          content: "";
+          position: absolute;
+          background: $textLightColor;
+        }
+
+        .breed-title::before {
+          width: 2px;
+          height: 110px;
+          right: 0;
+          top: -5px; /* Ajustez cette valeur selon vos besoins */
+        }
+
+        .breed-title::after {
+          width: calc(100% + 40px); //ajuster 50px
+          height: 2px;
+          left: 0; // à ajuster
+          bottom: 0;
+        }
       }
       .bold-title {
         font-weight: $fontBoldStyle;
         color: $textColor;
       }
-      .breed-description,
-      .racial-trait,
-      .breed-statistics {
+      .breed-description {
+        margin-top: 1.5rem;
         font-family: $contentFont;
         color: $textColor;
+        .racial-trait {
+          margin-top: 20px;
+        }
       }
     }
   }
@@ -92,6 +112,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 0;
       .picture-profile-race-container {
         width: 80%;
         height: 100%;
@@ -99,29 +120,13 @@
       .card-profile-race-model {
         width: 80%;
         padding: 1.5rem;
+        .breed-description {
+          margin-top: 3rem;
+        }
+        .breed-statistics {
+          margin-top: 20px;
+        }
       }
     }
   }
 }
-//autre solution pour placer droites perpendiculaires décoratives
-// .breed-title::before,
-// .breed-title::after {
-//   content: "";
-//   position: absolute;
-//   background: black;
-// }
-
-// .breed-title::before {
-//   width: 2px;
-//   height: 109px;
-//   left: 0;
-//   top: -30px; /* Ajustez cette valeur selon vos besoins */
-// }
-
-// .breed-title::after {
-//   width: 100%;
-//   height: 2px;
-//   left: 0;
-//   top: 50%;
-//   transform: translateY(-50%);
-// }

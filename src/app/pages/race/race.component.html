@@ -25,35 +25,10 @@
     <section class="card-profile-race-model">
       <div class="title-container">
         <h2 class="breed-title">{{ race.name }}</h2>
-        <!-- implémentation à refaire: problème d'adaptation à la taille du title -->
-        <svg
-          width="230"
-          height="109"
-          viewBox="0 0 230 109"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line
-            x1="-8.74228e-08"
-            y1="74"
-            x2="230"
-            y2="74"
-            stroke="black"
-            stroke-width="2"
-          />
-          <line
-            x1="187"
-            y1="-4.37114e-08"
-            x2="187"
-            y2="109"
-            stroke="black"
-            stroke-width="2"
-          />
-        </svg>
       </div>
       <!-- création d'une div complémtaire pour contenir les paragraphes et le texte en responsive -->
-      <div>
-        <p class="breed-description">{{ race.description }}</p>
+      <div class="breed-description">
+        <p class="description">{{ race.description }}</p>
         <p class="racial-trait">
           <span class="bold-title">Traits raciaux :</span>
           {{ race.racial_trait }}
