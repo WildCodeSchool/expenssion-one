@@ -110,7 +110,7 @@ $fontSizeMobile: 25px;
       .title-container {
         position: relative;
         width: 100%;
-        // margin-bottom: 20px;
+        margin-bottom: $marginOneSide;
         .breed-title {
           width: max-content;
           max-width: calc(100% - $titleUnderline);
@@ -195,6 +195,9 @@ $fontSizeMobile: 25px;
         }
         .breed-description {
           margin-top: 3rem;
+          .description {
+            margin-top: 0;
+          }
         }
       }
     }
