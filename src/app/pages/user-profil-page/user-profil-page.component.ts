@@ -39,7 +39,6 @@ export class UserProfilPageComponent {
 
   ngOnInit(){
     this.userService.getUserData().subscribe(x=>{this.user=x
-      console.log(this.user)
     this.character}
     )
     

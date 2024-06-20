@@ -6,7 +6,6 @@
     flex-direction: column;
     padding-bottom: 50px;
 
-
     button {
             background-color: #303133;/* Couleur de fond */
             color: white;/* Couleur du texte */
@@ -45,18 +44,15 @@
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
         .top-parameters-container {
             display: flex;
             align-items: center;
-
             .parameters-logo {
                 height: 100px;
                 img {
                     width: 15%;
                 }
             }
-
             h1 {
                 margin-left: 20px;
                 color: #fff;
@@ -64,9 +60,7 @@
             }
         }
 
-        
         .profil-parameters-container {
-
             .profil-picture-container {
                 display: flex;
                 flex-direction: column;

@@ -14,9 +14,10 @@ export class AuthentificationService {
   constructor() { }
 
   http=inject(HttpClient)
-  url=environment.apiUrl
-  private isLoginSubject: BehaviorSubject<any> = new BehaviorSubject<boolean>(typeof localStorage !== 'undefined'&& localStorage.getItem('token')!==null )
 
+  url=environment.apiUrl
+
+  private isLoginSubject: BehaviorSubject<any> = new BehaviorSubject<boolean>(typeof localStorage !== 'undefined'&& localStorage.getItem('token')!==null )
   isLogin$: Observable<any> = this.isLoginSubject.asObservable();
 
 
@@ -30,18 +31,13 @@ login(username: string, password: string): Observable<any> {
 
     }
 
-  logout():void{
-      localStorage.removeItem('token')
-  }
 
 changePassword(password: string): Observable<any> {
-
       const body = { password };
-      return this.http.post(this.url+'/changePassword', body).pipe(map((x:any)=>x.message));
+      return this.http.post(this.url+'/changePassword', body);
     }
 
 deleteAccount(password:string):Observable<any>{
-  console.log('delete')
   const params = new HttpParams().set('password',password)
   return this.http.put(this.url+'/deleteAccount',{},{params})
 }
@@ -67,10 +63,6 @@ register(user: User): Observable<any> {
 }
 
 
-getUserData(): Observable<any> {
-
-  return this.http.get(this.url+'/user/');
-}
 
 
 

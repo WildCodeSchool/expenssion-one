@@ -51,9 +51,8 @@ export class RegisterPageComponent {
   }
 
   onSubmit(): void {
-    console.log("ici")
+
     if (this.registerForm.valid) {
-      console.log('Form Submitted!', this.registerForm.value);
       this.user=new User(
         this.registerForm.value.pseudo ,
         this.registerForm.value.lastName,
@@ -62,7 +61,6 @@ export class RegisterPageComponent {
         this.registerForm.value.emailAdress,
         this.registerForm.value.birthDate,
       )
-      console.log("la")
       this.authetificationService.register(this.user).subscribe()
       this.router.navigateByUrl('/')
 
