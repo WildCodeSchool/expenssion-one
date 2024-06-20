@@ -29,12 +29,8 @@ export const routes: Routes = [
     component: LocationPageComponent,
   },
   {
-    path: 'glossaire/anecdoticSecrets',
-    component: AnecdoticSecretsPageComponent,
-  },
-  {
-    path: 'glossaire/primordialSecrets',
+    path: 'glossaire/secrets',
     component: PrimordialSecretsPageComponent,
-  },
+  }
 ];
 
