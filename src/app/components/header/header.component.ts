@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute, RouterLink, RouterOutlet,Router } from '@angular/router';
+import {RouterLink, RouterOutlet,Router } from '@angular/router';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import { PopupComponent } from '../pop-up-connexion/pop-up-connexion.component';
@@ -24,18 +24,6 @@ export class HeaderComponent {
 
   router=inject(Router)
   constructor(public dialog: MatDialog) {}
-
-
-
-
-
-  ngOnInit(): void {
-
-
-  }
-
-
-
 
 
   openDialogGame() {

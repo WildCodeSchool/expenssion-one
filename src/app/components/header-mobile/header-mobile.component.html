@@ -21,7 +21,14 @@
 
        
         <div class="connection-container">
-          <button (click)="openDialog()"><img class="connection-logo" src="assets/pictures/Connexion.png" alt="Connection"></button>
+            @if((isLogin$| async) ===true){
+            <img routerLink="/profil" class="connection-logo" src="assets/pictures/Connexion.png" alt="profil">
+            <img (click)="onLogout()" class="connection-logo" src="assets/pictures/log-out-button.svg" alt="LO">           
+            }
+            @else {
+            <img (click)="openDialogConnection()" class="connection-logo" src="assets/pictures/Connexion.png" alt="Connection">
+            }
+
         </div>
   
   
@@ -32,27 +39,27 @@
   @if(isMobileSideNavOpen){
     <div class="sidenav">
         <ul>
-            <a routerLink="home"><li>Création De Personnage</li></a>
+            <a (click)="toggle()" routerLink="home"><li>Création De Personnage</li></a>
             <li>
               Jeu
               <ul class="submenu">
-                <a routerLink="home"><li>Introduction</li></a>
-                <a routerLink="home"><li>Règles</li></a>
+                <a (click)="toggle()" routerLink="home"><li>Introduction</li></a>
+                <a (click)="toggle()"  routerLink="home"><li>Règles</li></a>
               </ul>
             </li>
             <li>
               Glossaire
               <ul class="submenu">
-                <a routerLink="home"><li>Races</li></a>
-                <a routerLink="glossaire/classes"><li>Classes</li></a>
-                <a routerLink="home"><li>Secrets</li></a>
-                <a routerLink="home"><li>Croyances</li></a>
-                <a routerLink="glossaire/lieux"><li>Lieux</li></a>
+                <a (click)="toggle()" routerLink="home"><li>Races</li></a>
+                <a (click)="toggle()" routerLink="glossaire/classes"><li>Classes</li></a>
+                <a (click)="toggle()" routerLink="home"><li>Secrets</li></a>
+                <a (click)="toggle()" routerLink="home"><li>Croyances</li></a>
+                <a (click)="toggle()" routerLink="glossaire/lieux"><li>Lieux</li></a>
               </ul>
             </li>
   
-            <a routerLink="home"><li routerLink="home">News</li></a>
-            <a routerLink="home"><li routerLink="home">Studio</li></a>
+            <a (click)="toggle()" routerLink="home"><li routerLink="home">News</li></a>
+            <a (click)="toggle()" routerLink="home"><li routerLink="home">Studio</li></a>
           </ul>
 
       </div>

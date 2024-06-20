@@ -40,10 +40,12 @@ $header_height:80px;
     .connection-container{
       margin-top: 12px;
       margin-right: 10px;
-      .connection-logo{
-        justify-content: center;
-        align-items: center;
-      }
+      .connection-logo {
+          justify-content: center;
+          align-items: center;
+          height: 53px;
+          width: 53px;
+        }
     }
   } 
 }

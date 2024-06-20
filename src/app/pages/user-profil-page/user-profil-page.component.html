@@ -1,25 +1,30 @@
 <section class="background-image">
 
     <div class="user-resume-container">
-        <div class="user-resume-container-top">
-            <div class="user-resume-container-top-title">
-                <h2>Profil</h2>
-            </div>
-            <div class="user-resume-container-top-picture">
+
+        <div class="user-resume-top-container">
+            <h2>Profil</h2>
+            <button class="parameters-button"><img routerLink="parametres" src="/assets/pictures/parameters.png"></button>
+        </div>
+   
+        <div class="user-info-container">
+            <div class="profil-picture">
                 <img src="/assets/pictures/Connexion.png">
             </div>
+            <div class="personnal-info">
+                <p>Pseudo: {{user?.pseudo}}</p>
+                <p>Biographie: {{user?.biography}}</p>
+            </div>        
         </div>
-        <div class="user-info-container">
-            <button class="parameters-button"><img routerLink="parametres"  src="/assets/pictures/parameters.png"></button>
-            <p>Pseudo: {{user?.pseudo}}</p>
-            <p>Biographie: {{user?.biography}}</p>
+    </div>
+
+    <div class="characters-container">
+
+        <div class="character-top-container">
+            <h2>Personnages</h2>
+            <button class="add-character-button"><img (click)="addCharacter()" src="/assets/pictures/add-button.svg"></button>
         </div>
 
-    </div>
-    <div class="characters-container">
-        <div class="character-top-container"><h2>Personnages</h2>
-        <button class="add-character-button"><img (click)="addCharacter()" src="/assets/pictures/add-button.svg"></button>
-        </div>
         <div class="list-character-container">
             <div class="grid-character-container">
                 @for(character of user?.characters ;track character){
