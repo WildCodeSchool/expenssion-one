@@ -12,14 +12,15 @@ export const routes: Routes = [
     component: HomePageComponent,
   },
   {
-    path: 'inscription',
-    component: RegisterPageComponent,
-  },
-  {
     path: '',
     redirectTo: '/accueil',
     pathMatch: 'full',
   },
+  {
+    path: 'inscription',
+    component: RegisterPageComponent,
+  },
+  
   {
     path: 'glossaire/classes',
     component: SpecializationPageComponent,
