@@ -5,7 +5,6 @@ import { SpecializationPageComponent } from './pages/specialization-page/special
 import { LocationPageComponent } from './pages/location-page/location-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { NewsPageComponent } from './news-page/news-page.component';
-import { CarouselComponent } from './carousel/carousel.component';
 
 export const routes: Routes = [
   {
