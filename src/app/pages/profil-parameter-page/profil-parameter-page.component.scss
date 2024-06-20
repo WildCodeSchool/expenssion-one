@@ -114,7 +114,7 @@
                         border: none;
                         margin-bottom: 15px;
                         align-items: center;
-                        //display: grid;
+                        display: grid;
                         grid-template-columns: 1fr 5fr;
                         gap:50px;
 
@@ -181,36 +181,11 @@
             }
         }
     }
-
-        // @media screen and (max-width: 768px) {
-        //     .profil-parameters-container {
-    
-        //         .biography-container,
-        //         .personnal-information-container,
-        //         .pseudo-display-container,
-        //         .change-password-container,
-        //         .notification-container,
-        //         .visibility-profil-container,
-        //         .delete-account-container {
-        //             form {
-        //                 fieldset {
-        //                     display: block;
-    
-        //                     label {
-        //                         display: block;
-        //                         margin-bottom: 5px;
-        //                     }
-    
-        //                     input,
-        //                     textarea {
-        //                         width: 100%;
-        //                     }
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
-
-
       
 }
+
+ @media screen and (max-width: 1200px) {
+fieldset{
+    display: block !important;
+   }
+ }
