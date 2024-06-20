@@ -37,13 +37,10 @@ export const routes: Routes = [
     path: 'glossaire/lieux',
     component: LocationPageComponent,
   },
-S03_US44_News_page
-  { path: 'news', component: NewsPageComponent },
-  { path: '', redirectTo: '/news', pathMatch: 'full' },
-  { path: '**', redirectTo: '/news', pathMatch: 'full' } 
-  {
-    path: 'carousel',
-    component: CarouselComponent,
+  { 
+    path: 'news', 
+    component: NewsPageComponent 
   },
+
   ];
 
