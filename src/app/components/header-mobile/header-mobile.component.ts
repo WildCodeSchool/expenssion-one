@@ -27,9 +27,11 @@ export class HeaderMobileComponent {
   }
 
   constructor(public dialog: MatDialog) {}
+  
   openDialog() {
     const dialogRef = this.dialog.open(PopupComponent, {maxWidth:"100vw"
-    })};
+    })
+    };
 
 
     openDialogConnection() {
@@ -42,4 +44,6 @@ export class HeaderMobileComponent {
     this.authentificationService.removeToken();
     this.router.navigateByUrl("/")
   }
+
+
 }

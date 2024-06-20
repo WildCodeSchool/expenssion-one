@@ -1,3 +1,4 @@
+
 import { Component, Inject, Input, inject } from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialog, MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
@@ -5,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { Login } from '../../model/login.model';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { AuthentificationService } from '../../service/authentification/authentification.service';
+
 
 @Component({
   selector: 'app-popup',
@@ -14,11 +16,11 @@ import { AuthentificationService } from '../../service/authentification/authenti
   styleUrl: './pop-up-connexion.component.scss'
 })
 export class PopupComponent {
-  @Input() isPopUpDisplay:boolean=false;
   login:Login=new Login("","");
   url:String="../../../assets/background_pictures/logo_blop_10001.png";
 
   @Input() dialogData :any=inject(MAT_DIALOG_DATA)
+
   authentificationService=inject(AuthentificationService)
   router=inject(Router)
 
@@ -27,6 +29,7 @@ export class PopupComponent {
 
   onClose() {
     this.dialogRef.close();
+
   }
 
 

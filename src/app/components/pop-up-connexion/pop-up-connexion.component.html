@@ -1,6 +1,11 @@
 <button  class="btn btn-primary"(click)="onClose()">X</button>
 <form>
     <div class="container">
+      <div class="buttonHeader">
+          <button class="buttonDispose" (click)="onClose()"><img class="buttonContent" src="assets/pictures/CloseButton.png"></button>
+      </div>
+
+      <div class="containerFlex">
         <div class="connect">
             SE CONNECTER
         </div>
@@ -33,7 +38,11 @@
             Mot de passe oublié ?
         </div>
         
+
         <button (click)="onLogin(login.login,login.password)" class = "connectButton">Connexion</button>
         <button class = "registerButton" (click)="onClose()" routerLink="inscription">Inscription</button>
+
+      </div>
+
     </div>
 </form>

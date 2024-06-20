@@ -27,6 +27,7 @@ export const routes: Routes = [
     component: SpecializationPageComponent,
   }, 
   {
+
     path: 'glossaire/lieux',
     component: LocationPageComponent,
   },
