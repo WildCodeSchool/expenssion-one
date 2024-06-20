@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { PopupComponent } from '../pop-up-connexion/pop-up-connexion.component';
 
 @Component({
   selector: 'app-header-mobile',
@@ -13,16 +15,17 @@ import { Router } from '@angular/router';
 export class HeaderMobileComponent {
 
   isMobileSideNavOpen:boolean=false
-
   toggle(){
     this.isMobileSideNavOpen=!this.isMobileSideNavOpen;
-
   }
 
-  constructor(private router: Router) {}
+  router = inject(Router);
 
   navigateToSection(sectionId: string) {
     this.router.navigate(['/regles'], { fragment: sectionId });
   }
 
+  constructor(public dialog: MatDialog) {}
+  openDialog() {
+    const dialogRef = this.dialog.open(PopupComponent)};
 }
