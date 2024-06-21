@@ -1,12 +1,12 @@
 @use "../../../import" as *;
-// @use "../../styles/glossary.scss";
+
 $titleUnderline: 40px;
 $border-radius: 10px;
 $marginGlobal: 25px 0 25px 0;
 $marginOneSide: 20px;
 $fontSizeMobile: 25px;
 
-.breed-container {
+.breed-main-container {
   width: 100%;
   height: auto;
   display: flex;
@@ -40,6 +40,7 @@ $fontSizeMobile: 25px;
       margin: $marginGlobal;
       padding: 20px 20px;
       line-height: 1.3;
+      font-size: ;
       font-family: $subTitleFont;
       color: $textLightColor;
       position: relative;
@@ -68,7 +69,7 @@ $fontSizeMobile: 25px;
     }
   }
 
-  .list-breed-container {
+  .card-breed-container {
     width: 100%;
     height: 100%;
     display: flex;
@@ -149,7 +150,6 @@ $fontSizeMobile: 25px;
         color: $textColor;
       }
       .breed-description {
-        // margin-top: 2rem;
         font-family: $contentFont;
         color: $textColor;
         .description {

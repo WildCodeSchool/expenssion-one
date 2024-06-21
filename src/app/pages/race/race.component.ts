@@ -19,7 +19,7 @@ export class RaceComponent {
   ngOnInit(): void {
     this.ApiDataService.getRaces().subscribe((response: Race[]) => {
       //Affecte les données récupérées à la propriété 'races'/and display data race.json from api-service
-      this.races = response; //parseInt()?
+      this.races = response;
     });
   }
 }

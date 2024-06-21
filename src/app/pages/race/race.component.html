@@ -1,6 +1,6 @@
-<div class="breed-container">
+<div class="breed-main-container">
   <section class="breed-introduction">
-    <h2 class="title-introduction">Résumé des races</h2>
+    <h1 class="title-introduction">Résumé des races</h1>
     <p>
       L’univers d’ Expenssion-One est basé sur quatre races primaires et six
       races secondaires. Lors de la création du monde, seules quatre races
@@ -20,7 +20,7 @@
   </section>
 
   @for (race of races; track race) {
-  <div class="list-breed-container">
+  <div class="card-breed-container">
     <section class="picture-profile-race-container">
       <img [src]="race.url" alt="{{ race.name }}" />
     </section>
