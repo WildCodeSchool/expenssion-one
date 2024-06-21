@@ -31,31 +31,30 @@
 
   @if(isMobileSideNavOpen){
     <div class="sidenav">
-        <ul>
+      <ul>
             <li><a routerLink="accueil">Création De Personnage</a></li>
             <li>
               Jeu
               <ul class="submenu">
                 <li><a routerLink="regles">Introduction</a></li>
                 <li><a routerLink="regles" fragment="reglesdujeu">Règles</a></li>
-              </ul>
-            </li>
-            <li>
-              Glossaire
-              <ul class="submenu">
-                <li><a routerLink="home">Races</a></li>
-                <li><a routerLink="glossaire/classes">Classes</a></li>
-                <li><a routerLink="home">Secrets</a></li>
-                <li><a routerLink="home">Croyances</a></li>
-                <li><a routerLink="glossaire/lieux">Lieux</a></li>
-              </ul>
-            </li>
-  
-            <li><a routerLink="home">News</a></li>
-            <li><a routerLink="home">Studio</a></li>
           </ul>
-
-      </div>
+        </li>
+        <li>
+          Glossaire
+          <ul class="submenu">
+            <li><a routerLink="home">Races</a></li>
+            <li><a routerLink="glossaire/classes">Classes</a></li>
+            <li><a routerLink="home">Les Secrets</a></li>
+            <li><a routerLink="home">Croyances</a></li>
+            <li><a routerLink="glossaire/lieux">Lieux</a></li>
+          </ul>
+        </li>
+        <li><a routerLink="news">News</a></li>
+        <li><a routerLink="home">Studio</a></li>
+      </ul>
+    </div>
+    
   }
 
 
