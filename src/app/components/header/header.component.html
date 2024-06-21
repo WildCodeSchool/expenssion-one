@@ -20,7 +20,7 @@
                 <li><a routerLink="glossaire/races">Races</a></li>
                 <li><a routerLink="glossaire/classes">Classes</a></li>
                 <li><a routerLink="glossaire/secrets">Secrets</a></li>
-                <li><a routerLink="home">Croyances</a></li>
+                <li><a routerLink="accueil">Croyances</a></li>
                 <li><a routerLink="glossaire/lieux">Lieux</a></li>
               </ul>
             </li>
@@ -29,24 +29,29 @@
         <div class="navbar-right">
           <ul>
             <li><a routerLink="news">News</a></li>
-            <li><a routerLink="home">Studio</a></li>
+            <li><a routerLink="accueil">Studio</a></li>
           </ul>
         </div>
       </div>
       
       <div class="connection-container">
-        <a routerLink="home"
-          ><img
-            class="connection-logo"
-            src="assets/pictures/Connexion.png"
-            alt="Connection"
-        /></a>
+        @if((isLogin$| async) ===true){
+          <a routerLink="/profil"><img  class="connection-logo" src="assets/pictures/Connexion.png" alt="profil"></a>
+          <button (click)="onLogout()"><img class="connection-logo" src="assets/pictures/log-out-button.svg" alt="LO"></button>
+        }
+        @else {
+          <button (click)="openDialogConnection()"><img  class="connection-logo" src="assets/pictures/Connexion.png" alt="Connection"></button>
+        }
       </div>
     </div>
   </nav>
   <div class="play-button">
-    <button (click)="openDialog()">
-      <img class="image-play-container" src="assets/pictures/jouer.png" />
-    </button>
+    @if((isLogin$| async) ===true){
+        <a routerLink="/inscription"><img class="image-play-container"   src="assets/pictures/jouer.png" alt="profil"></a>
+
+    }
+    @else{
+          <button (click)="openDialogGame()"><img class="image-play-container" src="assets/pictures/jouer.png"></button>
+    }
   </div>
 </header>

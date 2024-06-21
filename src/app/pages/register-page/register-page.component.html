@@ -1,5 +1,5 @@
-<body>
-    <form class="register-form">
+<div class="register-container">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="register-form">
         <h1>INSCRIPTION</h1>
 
         <label for="name">Nom *</label>
@@ -64,5 +64,5 @@
         </div>
 
         <button id="register-button" type="submit">S'INSCRIRE</button>
-    </form>
-</body>
+</form>
+</div>

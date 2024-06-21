@@ -1,12 +1,15 @@
+
+
 html,
 #back {
     height: 100%;
     margin: 0;
     padding: 0;
+    min-height: calc(100vh - 130px );
 }
 
 #back {
-    background-image: url('/assets/background_pictures/register.jpg');
+    background-image: url('/assets/background_pictures/paper-background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

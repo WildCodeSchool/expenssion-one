@@ -1,14 +1,22 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { Component, inject } from '@angular/core';
+import { FormBuilder, FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
+import { User } from '../../model/user/user';
+import { AuthenticationService } from '../../service/authentication/authentification.service';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-register-page',
   standalone: true,
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './register-page.component.html',
   styleUrl: './register-page.component.scss'
 })
 export class RegisterPageComponent {
   registerForm: FormGroup;
+  user?:User;
+  router=inject(Router)
+
+  authetificationService=inject(AuthenticationService)
 
   constructor(private fb: FormBuilder) {
     this.registerForm = this.fb.group({
@@ -18,10 +26,11 @@ export class RegisterPageComponent {
       pseudo: ['', [Validators.required]],
       emailAdress: ['', [Validators.required, Validators.email]],
       confirmationMail: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(8), this.passwordValidator]],
+      password: ['', [Validators.required, Validators.minLength(8)]],
       confirmationMotDePasse: ['', [Validators.required]]
     }, { validators: this.emailMatchValidator });
   }
+
 
   passwordValidator(control: FormControl): { [key: string]: boolean } | null {
     const value = control.value;
@@ -42,10 +51,20 @@ export class RegisterPageComponent {
   }
 
   onSubmit(): void {
+
     if (this.registerForm.valid) {
-      console.log('Form Submitted!', this.registerForm.value);
+      this.user=new User(
+        this.registerForm.value.pseudo ,
+        this.registerForm.value.lastName,
+        this.registerForm.value.name,
+        this.registerForm.value.password,
+        this.registerForm.value.emailAdress,
+        this.registerForm.value.birthDate,
+      )
+      this.authetificationService.register(this.user).subscribe()
+      this.router.navigateByUrl('/')
+
     } else {
-      console.log('Form is invalid');
     }
   }
 }

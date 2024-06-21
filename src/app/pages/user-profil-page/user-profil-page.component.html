@@ -1,0 +1,62 @@
+<section class="background-image">
+
+    <div class="user-resume-container">
+
+        <div class="user-resume-top-container">
+            <h1>Profil</h1>
+            <button class="parameters-button"><img routerLink="parametres" src="/assets/pictures/parameters.png"></button>
+        </div>
+   
+        <div class="user-info-container">
+            <div class="profil-picture">
+                <img src="/assets/pictures/Connexion.png">
+            </div>
+            <div class="personnal-info">
+                <p>Pseudo: {{user?.pseudo}}</p>
+                <p>Biographie: {{user?.biography}}</p>
+            </div>        
+        </div>
+    </div>
+
+    <div class="characters-container">
+
+        <div class="character-top-container">
+            <h1>Personnages</h1>
+            <button (click)="addCharacter()"  class="add-character-button"><img src="/assets/pictures/add-button.svg"></button>
+        </div>
+
+        <div class="list-character-container">
+            <div class="grid-character-container">
+                @for(character of user?.characters ;track character){
+                <img src="/assets/pictures/Connexion.png">
+                }
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <div class="calendar-container">
+            <div class="calendar-top">
+                <h1>Calendrier</h1>
+            </div>         
+            <div class="calendar">
+                <full-calendar [options]="calendarOptions"></full-calendar>
+            </div>
+        </div>
+
+        <div class="friends-container">
+            <div class="friends-top-container">
+                <h1>Amis</h1>
+            </div>
+            <div class="list-friends-container">
+                <div class="grid-friends-container">
+                    @for(friend of user?.friends;track friend){
+                    <img [src]="friend.profilPictureUrl">
+                    }              
+                </div>
+            </div>          
+    </div>
+
+    
+</section>

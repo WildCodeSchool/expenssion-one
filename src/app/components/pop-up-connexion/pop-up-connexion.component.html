@@ -30,16 +30,18 @@
         </div>
 
         <div class="inputLogin">
-          <input id="password" name="password" type="text"  [(ngModel)] = "login.password" [ngModelOptions]="{standalone: true}"/>
+          <input id="password" name="password" type="password"  [(ngModel)] = "login.password" [ngModelOptions]="{standalone: true}"/>
         </div>
 
         <div class="forgot-password">
             Mot de passe oublié ?
         </div>
         
-        <button class = "connectButton">Connexion</button>
+
+        <button (click)="onLogin(login.login,login.password)" class = "connectButton">Connexion</button>
         <button class = "registerButton" (click)="onClose()" routerLink="inscription">Inscription</button>
 
       </div>
+
     </div>
 </form>
