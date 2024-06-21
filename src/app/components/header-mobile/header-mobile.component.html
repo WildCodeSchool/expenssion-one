@@ -16,7 +16,7 @@
 
 
       <div class="logo">
-        <a routerLink="home"><img class="logo-image" src="assets/pictures/Blop.png" alt="Logo"></a>
+        <a routerLink="accueil" (click)="isMobileSideNavOpen=false"><img class="logo-image" src="assets/pictures/Blop.png" alt="Logo"></a>
       </div>
 
 
@@ -27,7 +27,7 @@
             alt="LO"></button>
         }
         @else {
-        <button (click)="openDialogConnection()"><img class="connection-logo" src="assets/pictures/Connexion.png"
+        <button (click)="openDialogConnection();isMobileSideNavOpen=false"><img class="connection-logo" src="assets/pictures/Connexion.png"
             alt="Connection"></button>
         }
       </div>
@@ -38,27 +38,27 @@
 @if(isMobileSideNavOpen){
 <div class="sidenav">
   <ul>
-    <li><button (click)="toggle()"><a routerLink="home">Création De Personnage</a></button></li>
+    <li><a (click)="isMobileSideNavOpen=false" routerLink="accueil">Création De Personnage</a></li>
     <li>
       Jeu
       <ul class="submenu">
-        <li><button (click)="toggle()"><a routerLink="regles">Introduction</a></button></li>
-        <li><button (click)="toggle()"><a routerLink="regles" fragment="reglesdujeu">Règles</a></button></li>
+        <li><a (click)="isMobileSideNavOpen=false" routerLink="regles">Introduction</a></li>
+        <li><a (click)="isMobileSideNavOpen=false" routerLink="regles" fragment="reglesdujeu">Règles</a></li>
       </ul>
     </li>
     <li>
       Glossaire
       <ul class="submenu">
-        <li><button (click)="toggle()"><a routerLink="glossaire/race">Races</a></button></li>
-        <li><button (click)="toggle()"><a routerLink="glossaire/classes">Classes</a></button></li>
-        <li><button (click)="toggle()"><a routerLink="glossaire/secrets">Secrets</a></button></li>
-        <li><button (click)="toggle()"><a routerLink="home">Croyances</a></button></li>
-        <li><button (click)="toggle()"><a routerLink="glossaire/lieux">Lieux</a></button></li>
+        <li><a (click)="isMobileSideNavOpen=false" routerLink="glossaire/races">Races</a></li>
+        <li><a (click)="isMobileSideNavOpen=false" routerLink="glossaire/classes">Classes</a></li>
+        <li><a (click)="isMobileSideNavOpen=false" routerLink="glossaire/secrets">Secrets</a></li>
+        <li><a (click)="isMobileSideNavOpen=false" routerLink="accueil">Croyances</a></li>
+        <li><a (click)="isMobileSideNavOpen=false" routerLink="glossaire/lieux">Lieux</a></li>
       </ul>
     </li>
 
-    <li><button (click)="toggle()"><a routerLink="news">News</a></button>
-    <li><button (click)="toggle()"><a routerLink="home">Studio</a></button>
+    <li><a (click)="isMobileSideNavOpen=false" routerLink="news">News</a></li>
+    <li><a (click)="isMobileSideNavOpen=false"routerLink="accueil">Studio</a></li>
   </ul>
 
 </div>

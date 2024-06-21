@@ -24,7 +24,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/accueil',
+    redirectTo: 'accueil',
     pathMatch: 'full',
   },
   {
@@ -69,8 +69,6 @@ export const routes: Routes = [
     redirectTo: 'acceuil',
     pathMatch: 'full',
   },
-  }
-
 ];
   
   
