@@ -21,7 +21,7 @@
 
        
         <div class="connection-container">
-          <a routerLink="home"><img class="connection-logo" src="assets/pictures/Connexion.png" alt="Connection"></a>
+          <button (click)="openDialog()"><img class="connection-logo" src="assets/pictures/Connexion.png" alt="Connection"></button>
         </div>
   
   
@@ -32,12 +32,12 @@
   @if(isMobileSideNavOpen){
     <div class="sidenav">
         <ul>
-            <a routerLink="home"><li>Création De Personnage</li></a>
+            <li><a routerLink="accueil">Création De Personnage</a></li>
             <li>
               Jeu
               <ul class="submenu">
-                <a routerLink="home"><li>Introduction</li></a>
-                <a routerLink="home"><li>Règles</li></a>
+                <li><a routerLink="regles">Introduction</a></li>
+                <li><a routerLink="regles" fragment="reglesdujeu">Règles</a></li>
               </ul>
             </li>
             <li>
@@ -51,8 +51,8 @@
               </ul>
             </li>
   
-            <a routerLink="home"><li routerLink="home">News</li></a>
-            <a routerLink="home"><li routerLink="home">Studio</li></a>
+            <li><a routerLink="home">News</a></li>
+            <li><a routerLink="home">Studio</a></li>
           </ul>
 
       </div>
