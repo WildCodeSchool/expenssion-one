@@ -164,7 +164,7 @@ $fontSizeMobile: 25px;
       }
     }
   }
-  .list-breed-container:nth-of-type(even) {
+  .card-breed-container:nth-of-type(even) {
     flex-direction: row-reverse;
   }
 
@@ -176,7 +176,7 @@ $fontSizeMobile: 25px;
         font-size: $fontSizeMobile;
       }
     }
-    .list-breed-container {
+    .card-breed-container {
       display: flex;
       flex-direction: column;
       align-items: center;

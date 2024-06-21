@@ -2,12 +2,12 @@ import { Routes } from '@angular/router';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { RaceComponent } from './pages/race/race.component';
 import { PopupComponent } from './components/pop-up-connexion/pop-up-connexion.component';
-import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
-import { LocationPageComponent } from './pages/location-page/location-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { PrimordialSecretsPageComponent } from './pages/primordial-secrets-page/primordial-secrets-page.component';
 import { NewsPageComponent } from './news-page/news-page.component';
 import { RulesPageComponent } from './pages/rules-page/rules-page.component';
+import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
+import { LocationPageComponent } from './pages/location-page/location-page.component';
 
 export const routes: Routes = [
   {
@@ -23,7 +23,6 @@ export const routes: Routes = [
     redirectTo: '/accueil',
     pathMatch: 'full',
   },
-
   {
     path: 'glossaire/races',
     component: RaceComponent,
@@ -40,14 +39,10 @@ export const routes: Routes = [
     path: 'glossaire/lieux',
     component: LocationPageComponent,
   },
-  
-  { path: 'news', component: NewsPageComponent },
   { 
     path: 'news', 
     component: NewsPageComponent 
   },
-
-  ];
   {
     path: 'glossaire/secrets',
     component: PrimordialSecretsPageComponent,
@@ -55,5 +50,5 @@ export const routes: Routes = [
   {
     path: 'regles',
     component: RulesPageComponent,
-  },
+  }
 ];

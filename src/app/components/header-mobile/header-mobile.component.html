@@ -10,17 +10,10 @@
           }
         </button>
       </div>
-<<<<<<< HEAD
-
       <div class="logo">
-        <a routerLink="home"
-          ><img class="logo-image" src="assets/pictures/Blop.png" alt="Logo"
-        /></a>
+        <a routerLink="home">
+          <img class="logo-image" src="assets/pictures/Blop.png" alt="Logo"/></a>
       </div>
-=======
-    </nav>
-  </header>
-
   @if(isMobileSideNavOpen){
     <div class="sidenav">
       <ul>
@@ -51,9 +44,9 @@
         <li>
           Glossaire
           <ul class="submenu">
-            <li><a routerLink="home">Races</a></li>
+            <li><a routerLink="glossaire/races">Races</a></li>
             <li><a routerLink="glossaire/classes">Classes</a></li>
-            <li><a routerLink="home">Les Secrets</a></li>
+            <li><a routerLink="home">Secrets</a></li>
             <li><a routerLink="home">Croyances</a></li>
             <li><a routerLink="glossaire/lieux">Lieux</a></li>
           </ul>
@@ -62,10 +55,7 @@
         <li><a routerLink="home">Studio</a></li>
       </ul>
     </div>
-    
   }
->>>>>>> 14efe1ba54ff201eff0dc8219ce11f44207e4647
-
       <div class="connection-container">
         <button (click)="openDialog()">
           <img
@@ -79,31 +69,3 @@
   </nav>
 </header>
 
-@if(isMobileSideNavOpen){
-<div class="sidenav">
-  <ul>
-    <li>
-    <a routerLink="home">Création De Personnage</a>
-  </li>
-      Jeu
-      <ul class="submenu">
-        <li><a routerLink="home">Introduction</a></li>
-        <li><a routerLink="home">Règles</a></li>
-      </ul>
-    </li>
-    <li>
-      Glossaire
-      <ul class="submenu">
-        <li><a routerLink="glossaire/races">Races</a></li>
-        <li><a routerLink="glossaire/classes">Classes</a></li>
-        <li><a routerLink="home">Secrets</a></li>
-        <li><a routerLink="home">Croyances</a></li>
-        <li><a routerLink="glossaire/lieux">Lieux</a></li>
-      </ul>
-    </li>
-
-    <li><a routerLink="home">News</a></li>
-    <li><a routerLink="home">Studio</a></li>
-  </ul>
-</div>
-}
