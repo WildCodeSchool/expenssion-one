@@ -5,7 +5,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { Login } from '../../model/login.model';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
-import { AuthentificationService } from '../../service/authentification/authentification.service';
+import { AuthenticationService } from '../../service/authentication/authentification.service';
 
 
 @Component({
@@ -21,7 +21,7 @@ export class PopupComponent {
 
   @Input() dialogData :any=inject(MAT_DIALOG_DATA)
 
-  authentificationService=inject(AuthentificationService)
+  authenticationService=inject(AuthenticationService)
   router=inject(Router)
 
   constructor(private dialogRef: MatDialogRef<PopupComponent>){
@@ -37,11 +37,10 @@ export class PopupComponent {
    
 
   onLogin(username:string,password:string):void {
-    this.authentificationService.login(username,password).subscribe(
+    this.authenticationService.login(username,password).subscribe(
       (response: any) => {
-        console.log(response)
         if (response.access_token) {
-          this.authentificationService.setToken(response.access_token);
+          this.authenticationService.setToken(response.access_token);
           this.dialogRef.close();
           if(this.dialogData==="game"){
           this.router.navigateByUrl('/inscription');
@@ -49,13 +48,9 @@ export class PopupComponent {
         this.onClose()
  
         } else {
-          // Handle login error
-          console.error('Login failed:', response.message);
         }
       },
       (error) => {
-        // Handle login error
-        console.error('Login failed:', error);
       },
     );
   }

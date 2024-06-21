@@ -3,7 +3,7 @@ import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { PopupComponent } from '../pop-up-connexion/pop-up-connexion.component';
-import { AuthentificationService } from '../../service/authentification/authentification.service';
+import { AuthenticationService } from '../../service/authentication/authentification.service';
 import { Observable } from 'rxjs';
 @Component({
   selector: 'app-header-mobile',
@@ -14,10 +14,10 @@ import { Observable } from 'rxjs';
 })
 export class HeaderMobileComponent {
 
-  authentificationService=inject(AuthentificationService)
+  authenticationService=inject(AuthenticationService)
 
 
-  isLogin$:Observable<Boolean>=this.authentificationService.isLogin$
+  isLogin$:Observable<Boolean>=this.authenticationService.isLogin$
   router=inject(Router)
   isMobileSideNavOpen:boolean=false
 
@@ -41,7 +41,7 @@ export class HeaderMobileComponent {
   }
 
   onLogout():void{
-    this.authentificationService.removeToken();
+    this.authenticationService.removeToken();
     this.router.navigateByUrl("/")
   }
 

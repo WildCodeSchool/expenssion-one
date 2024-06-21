@@ -4,7 +4,7 @@ import {RouterLink, RouterOutlet,Router } from '@angular/router';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import { PopupComponent } from '../pop-up-connexion/pop-up-connexion.component';
-import { AuthentificationService } from '../../service/authentification/authentification.service';
+import { AuthenticationService } from '../../service/authentication/authentification.service';
 import { Observable } from 'rxjs';
 
 
@@ -18,9 +18,9 @@ import { Observable } from 'rxjs';
 export class HeaderComponent {
 
   isPopUpDisplay:boolean=false;
-  authentificationService=inject(AuthentificationService)
+  authenticationService=inject(AuthenticationService)
 
-  isLogin$:Observable<Boolean>=this.authentificationService.isLogin$
+  isLogin$:Observable<Boolean>=this.authenticationService.isLogin$
 
   router=inject(Router)
   constructor(public dialog: MatDialog) {}
@@ -40,7 +40,7 @@ export class HeaderComponent {
   }
 
   onLogout():void{
-    this.authentificationService.removeToken();
+    this.authenticationService.removeToken();
     this.router.navigateByUrl("/")
   }
 

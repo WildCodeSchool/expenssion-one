@@ -10,39 +10,39 @@
             <li class="game-button">
               Jeu
               <ul class="submenu">
-                <a routerLink="home"><li>Introduction</li></a>
-                <a routerLink="home"><li>Règles</li></a>
+                <li><a routerLink="home">Introduction</a></li>
+                <li><a routerLink="home">Règles</a></li>
               </ul>
             </li>
             <li>
               Glossaire
               <ul class="submenu">
-                <a routerLink="home"><li>Races</li></a>
-                <a routerLink="glossaire/classes"><li>Classes</li></a>
-                <a routerLink="home"><li>Secrets</li></a>
-                <a routerLink="home"><li>Croyances</li></a>
-                <a routerLink="glossaire/lieux"><li>Lieux</li></a>
+                <li><a routerLink="home">Races</a></li>
+                <li><a routerLink="glossaire/classes">Classes</a></li>
+                <li><a routerLink="home">Secrets</a></li>
+                <li><a routerLink="home">Croyances</a></li>
+                <li><a routerLink="glossaire/lieux">Lieux</a></li>
               </ul>
             </li>
           </ul>
         </div>
         <div class="navbar-right">
           <ul>
-            <a routerLink="home"><li routerLink="home">News</li></a>
-            <a routerLink="home"><li routerLink="home">Studio</li></a>
+            <li><a routerLink="home">News</a></li>
+            <li><a routerLink="home">Studio</a></li>
           </ul>
         </div>
       </div>
 
       <div class="connection-container">
         @if((isLogin$| async) ===true){
-          <img routerLink="/profil" class="connection-logo" src="assets/pictures/Connexion.png" alt="profil">
-          <img (click)="onLogout()" class="connection-logo" src="assets/pictures/log-out-button.svg" alt="LO">
+          <a routerLink="/profil"><img  class="connection-logo" src="assets/pictures/Connexion.png" alt="profil"></a>
+          <button (click)="onLogout()"><img class="connection-logo" src="assets/pictures/log-out-button.svg" alt="LO"></button>
 
 
         }
         @else {
-          <img (click)="openDialogConnection()" class="connection-logo" src="assets/pictures/Connexion.png" alt="Connection">
+          <button (click)="openDialogConnection()"><img  class="connection-logo" src="assets/pictures/Connexion.png" alt="Connection"></button>
         }
       </div>
     </div>

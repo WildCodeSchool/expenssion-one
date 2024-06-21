@@ -3,7 +3,7 @@
     <div class="user-resume-container">
 
         <div class="user-resume-top-container">
-            <h2>Profil</h2>
+            <h1>Profil</h1>
             <button class="parameters-button"><img routerLink="parametres" src="/assets/pictures/parameters.png"></button>
         </div>
    
@@ -21,8 +21,8 @@
     <div class="characters-container">
 
         <div class="character-top-container">
-            <h2>Personnages</h2>
-            <button class="add-character-button"><img (click)="addCharacter()" src="/assets/pictures/add-button.svg"></button>
+            <h1>Personnages</h1>
+            <button (click)="addCharacter()"  class="add-character-button"><img src="/assets/pictures/add-button.svg"></button>
         </div>
 
         <div class="list-character-container">
@@ -38,7 +38,7 @@
 
     <div class="calendar-container">
             <div class="calendar-top">
-                <h2>Calendrier</h2>
+                <h1>Calendrier</h1>
             </div>         
             <div class="calendar">
                 <full-calendar [options]="calendarOptions"></full-calendar>
@@ -47,7 +47,7 @@
 
         <div class="friends-container">
             <div class="friends-top-container">
-                <h2>Amis</h2>
+                <h1>Amis</h1>
             </div>
             <div class="list-friends-container">
                 <div class="grid-friends-container">

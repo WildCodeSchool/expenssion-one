@@ -5,13 +5,13 @@ import { SpecializationPageComponent } from './pages/specialization-page/special
 import { LocationPageComponent } from './pages/location-page/location-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { UserProfilPageComponent } from './pages/user-profil-page/user-profil-page.component';
-import { AuthentificationGuard } from './guards/authentification.guard';
+import { AuthenticationGuard } from './guards/authentification.guard';
 import { ProfilParameterPageComponent } from './pages/profil-parameter-page/profil-parameter-page.component';
 
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'accueil',
     component: HomePageComponent,
   },
   {
@@ -33,15 +33,15 @@ export const routes: Routes = [
   },
   {
     path: 'profil',
-    component: UserProfilPageComponent,canActivate:[AuthentificationGuard],
+    component: UserProfilPageComponent,canActivate:[AuthenticationGuard],
   },
     {
     path: 'profil/parametres',
-    component: ProfilParameterPageComponent,canActivate:[AuthentificationGuard],
+    component: ProfilParameterPageComponent,canActivate:[AuthenticationGuard],
   },
   {
     path: '**',
-    redirectTo: '',
+    redirectTo: 'acceuil',
     pathMatch: 'full',
   },
 ];

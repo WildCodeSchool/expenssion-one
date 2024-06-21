@@ -22,16 +22,13 @@
        
         <div class="connection-container">
             @if((isLogin$| async) ===true){
-            <img routerLink="/profil" class="connection-logo" src="assets/pictures/Connexion.png" alt="profil">
-            <img (click)="onLogout()" class="connection-logo" src="assets/pictures/log-out-button.svg" alt="LO">           
+            <a routerLink="/profil"><img class="connection-logo" src="assets/pictures/Connexion.png" alt="profil"></a>
+            <button (click)="onLogout()"><img class="connection-logo" src="assets/pictures/log-out-button.svg" alt="LO"></button>           
             }
             @else {
-            <img (click)="openDialogConnection()" class="connection-logo" src="assets/pictures/Connexion.png" alt="Connection">
+              <button (click)="openDialogConnection()"><img  class="connection-logo" src="assets/pictures/Connexion.png" alt="Connection"></button>
             }
-
-        </div>
-  
-  
+        </div> 
       </div>
     </nav>
   </header>
@@ -39,27 +36,27 @@
   @if(isMobileSideNavOpen){
     <div class="sidenav">
         <ul>
-            <a (click)="toggle()" routerLink="home"><li>Création De Personnage</li></a>
+            <li><button (click)="toggle()"><a  routerLink="home">Création De Personnage</a></button></li>
             <li>
               Jeu
               <ul class="submenu">
-                <a (click)="toggle()" routerLink="home"><li>Introduction</li></a>
-                <a (click)="toggle()"  routerLink="home"><li>Règles</li></a>
+                <li></li><a (click)="toggle()" routerLink="home"><li>Introduction</li></a>
+                <li></li><a (click)="toggle()"  routerLink="home"><li>Règles</li></a>
               </ul>
             </li>
             <li>
               Glossaire
               <ul class="submenu">
-                <a (click)="toggle()" routerLink="home"><li>Races</li></a>
-                <a (click)="toggle()" routerLink="glossaire/classes"><li>Classes</li></a>
-                <a (click)="toggle()" routerLink="home"><li>Secrets</li></a>
-                <a (click)="toggle()" routerLink="home"><li>Croyances</li></a>
-                <a (click)="toggle()" routerLink="glossaire/lieux"><li>Lieux</li></a>
+                <li><button (click)="toggle()"><a routerLink="home">Races</a></button></li>
+                <li><button (click)="toggle()"><a routerLink="glossaire/classes">Classes</a></button></li>
+                <li><button (click)="toggle()"><a routerLink="home">Secrets</a></button></li>
+                <li><button (click)="toggle()"><a routerLink="home">Croyances</a></button></li>
+                <li><button (click)="toggle()"><a routerLink="glossaire/lieux">Lieux</a></button></li>
               </ul>
             </li>
   
-            <a (click)="toggle()" routerLink="home"><li routerLink="home">News</li></a>
-            <a (click)="toggle()" routerLink="home"><li routerLink="home">Studio</li></a>
+            <li><button (click)="toggle()"><a  routerLink="home">News</a></button>
+            <li><button (click)="toggle()"><a  routerLink="home">Studio</a></button>
           </ul>
 
       </div>

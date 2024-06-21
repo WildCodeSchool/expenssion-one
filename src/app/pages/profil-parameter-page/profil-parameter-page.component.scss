@@ -7,29 +7,29 @@
     padding-bottom: 50px;
 
     button {
-            background-color: #303133;/* Couleur de fond */
-            color: white;/* Couleur du texte */
-            border: none;/* Pas de bordure */
-            padding: 10px 20px;/* Espacement intérieur */
-            font-size: 16px;/* Taille de la police */
-            font-weight: bold;/* Poids de la police */
-            border-radius: 5px;/* Coins arrondis */
-            cursor: pointer;/* Curseur en forme de main au survol */
-            transition: background-color 0.3s, transform 0.2s;/* Transition pour la couleur de fond et la transformation */
+            background-color: #303133;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
     
             &:hover {
-                background-color: #0056b3;/* Couleur de fond au survol */
-                transform: scale(1.05);/* Légère augmentation de la taille au survol */
+                background-color: #0056b3;
+                transform: scale(1.05);
             }
     
             &:active {
-                background-color: #004494;/* Couleur de fond lors du clic */
-                transform: scale(1);/* Réinitialisation de la taille */
+                background-color: #004494;
+                transform: scale(1);
             }
     
             &:focus {
-                outline: none;/* Suppression du contour par défaut */
-                box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);/* Ombre pour indiquer le focus */
+                outline: none;
+                box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
             }
         }
    

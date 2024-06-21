@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { User } from '../../model/user/user';
-import { AuthentificationService } from '../../service/authentification/authentification.service';
+import { AuthenticationService } from '../../service/authentication/authentification.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -16,7 +16,7 @@ export class RegisterPageComponent {
   user?:User;
   router=inject(Router)
 
-  authetificationService=inject(AuthentificationService)
+  authetificationService=inject(AuthenticationService)
 
   constructor(private fb: FormBuilder) {
     this.registerForm = this.fb.group({
@@ -65,7 +65,6 @@ export class RegisterPageComponent {
       this.router.navigateByUrl('/')
 
     } else {
-      console.log('Form is invalid');
     }
   }
 }
