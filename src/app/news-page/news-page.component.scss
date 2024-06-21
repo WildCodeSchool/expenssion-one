@@ -1,4 +1,4 @@
-@use "../../import" as *;
+//@use "../../import" as *;
 
 html,
 #back {
@@ -24,10 +24,30 @@ html,
     flex: 1;
 }
 
+.news-container h1 {
+    color: whitesmoke; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 2.5em;
+    text-align: center;
+    animation: fadeIn 2s;
+    margin-top: 110px;
+    font-family: 'Lobster', cursive;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .carousel {
     width: 100%;
     max-width: 800px;
     margin-bottom: 20px;
+    margin-top: -5%;
 }
 
 .news-content {
@@ -65,3 +85,5 @@ html,
 .news-text p {
     margin: 10px 0 0;
 }
+
+
