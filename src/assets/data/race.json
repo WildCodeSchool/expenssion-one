@@ -7,11 +7,10 @@
     "max_age": 90,
     "min_height": 150,
     "max_height": 190,
-    "min_speed": 6,
-    "max_speed": 6,
-    "languages": [{ "name": "commun" }],
+    "speed": 6,
+    "languages": ["Commun"],
     "number_additional_language": 2,
-    "url": "http://example.image"
+    "url": "assets/races-pictures/human-race-profile.jpg"
   },
   {
     "name": "Nains",
@@ -21,11 +20,10 @@
     "max_age": 120,
     "min_height": 130,
     "max_height": 150,
-    "min_speed": 5,
-    "max_speed": 5,
-    "languages": [{ "name": "Nain" }],
+    "speed": 5,
+    "languages": ["Nain"],
     "number_additional_language": 2,
-    "url": "http://example.image"
+    "url": "assets/races-pictures/dwarf-race-profile.jpg"
   },
   {
     "name": "Semi",
@@ -35,11 +33,10 @@
     "max_age": 110,
     "min_height": 90,
     "max_height": 210,
-    "min_speed": 5,
-    "max_speed": 9,
-    "languages": [{ "name": "commun" }, { "name": "bestial" }],
+    "speed": 7,
+    "languages": ["Commun", " Bestial"],
     "number_additional_language": 1,
-    "url": "http://example.image"
+    "url": "assets/races-pictures/semi-race-profile.jpg"
   },
   {
     "name": "Gobelin solaire",
@@ -49,11 +46,10 @@
     "max_age": 120,
     "min_height": 110,
     "max_height": 150,
-    "min_speed": 5,
-    "max_speed": 5,
-    "languages": [{ "name": "commun" }, { "name": "Gobelin Nouveau" }],
+    "speed": 5,
+    "languages": ["Commun", " Gobelin Nouveau"],
     "number_additional_language": 1,
-    "url": "http://example.image"
+    "url": "assets/races-pictures/solar-gobelin-race.jpg"
   },
   {
     "name": "Gobelin lunaire",
@@ -63,15 +59,10 @@
     "max_age": 90,
     "min_height": 90,
     "max_height": 120,
-    "min_speed": 6,
-    "max_speed": 6,
-    "languages": [
-      { "name": "commun" },
-      { "name": "Gobelin Ancien" },
-      { "name": "Minérale" }
-    ],
+    "speed": 6,
+    "languages": ["Commun", " Gobelin Ancien", " Minérale"],
     "number_additional_language": 1,
-    "url": "http://example.image"
+    "url": "assets/races-pictures/lunar-goblin-race-profile.jpg"
   },
   {
     "name": "Fée farceuse",
@@ -81,15 +72,10 @@
     "max_age": 135,
     "min_height": 160,
     "max_height": 190,
-    "min_speed": 7,
-    "max_speed": 7,
-    "languages": [
-      { "name": "commun" },
-      { "name": "Féérique" },
-      { "name": "Forestier" }
-    ],
+    "speed": 7,
+    "languages": ["Commun", " Féérique", " Forestier"],
     "number_additional_language": 1,
-    "url": "http://example.image"
+    "url": "assets/races-pictures/pranker-fairy-race.jpg"
   },
   {
     "name": "Troll difforme",
@@ -99,11 +85,10 @@
     "max_age": 90,
     "min_height": 180,
     "max_height": 230,
-    "min_speed": 6,
-    "max_speed": 6,
-    "languages": [{ "name": "commun" }],
+    "speed": 6,
+    "languages": ["commun"],
     "number_additional_language": 3,
-    "url": "http://example.image"
+    "url": "assets/races-pictures/troll-race.jpg"
   },
   {
     "name": "Zarga",
@@ -113,11 +98,10 @@
     "max_age": 95,
     "min_height": 130,
     "max_height": 180,
-    "min_speed": 7,
-    "max_speed": 7,
-    "languages": [{ "name": "commun" }, { "name": "bestial" }],
+    "speed": 7,
+    "languages": ["Commun", " Bestial"],
     "number_additional_language": 1,
-    "url": "http://example.image"
+    "url": "assets/races-pictures/zorga-race.jpg"
   },
   {
     "name": "Exarus",
@@ -127,10 +111,9 @@
     "max_age": 90,
     "min_height": 150,
     "max_height": 200,
-    "min_speed": 9,
-    "max_speed": 9,
-    "languages": [{ "name": "commun" }, { "name": "Angélique" }],
+    "speed": 9,
+    "languages": ["Commun", " Angélique"],
     "number_additional_language": 2,
-    "url": "http://example.image"
+    "url": "assets/races-pictures/exarus-race-profile.jpg"
   }
 ]
