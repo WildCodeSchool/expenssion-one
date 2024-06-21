@@ -2,7 +2,7 @@
 @use "../../styles/glossary.scss";
 
 .location_content {
-  color: $textColor;
+  color: $textLightColor;
   padding-left: $glossaryPaddingLeftDesktop;
   padding-right: $glossaryPaddingRightDesktop;
 }
@@ -20,11 +20,13 @@ h2 {
 h3,
 h4 {
   font-family: "Inika";
-  font-size: larger;
+  font-size: x-large;
 }
 
 p {
+  font-size: larger;
   font-family: "Inika";
+  line-height: 1.5;
 }
 
 .worldmap {

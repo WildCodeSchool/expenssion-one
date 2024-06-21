@@ -1,5 +1,3 @@
-//@use "../../import" as *;
-
 html,
 #back {
     height: 100%;
@@ -22,16 +20,15 @@ html,
     align-items: center;
     padding: 20px;
     flex: 1;
-}
-
-.news-container h1 {
-    color: whitesmoke; 
+    h1 {
+        color: rgb(59, 30, 16); 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-size: 2.5em;
     text-align: center;
     animation: fadeIn 2s;
     margin-top: 110px;
-    font-family: 'Lobster', cursive;
+    font-family: "Cinzel";
+    }
 }
 
 @keyframes fadeIn {
@@ -80,10 +77,13 @@ html,
 .news-text h2 {
     margin: 0;
     font-size: 1.5em;
+    font-family: "Cinzel";
 }
 
 .news-text p {
     margin: 10px 0 0;
+    font-family: "Inika";
+    font-size: large;
 }
 
 

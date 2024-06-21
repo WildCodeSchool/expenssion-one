@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { RaceComponent } from './pages/race/race.component';
-import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
+
 import { LocationPageComponent } from './pages/location-page/location-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { UserProfilPageComponent } from './pages/user-profil-page/user-profil-page.component';
@@ -10,6 +10,8 @@ import { ProfilParameterPageComponent } from './pages/profil-parameter-page/prof
 import { PrimordialSecretsPageComponent } from './pages/primordial-secrets-page/primordial-secrets-page.component';
 import { NewsPageComponent } from './news-page/news-page.component';
 import { RulesPageComponent } from './pages/rules-page/rules-page.component';
+import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
+
 
 export const routes: Routes = [
   {
@@ -25,7 +27,6 @@ export const routes: Routes = [
     redirectTo: '/accueil',
     pathMatch: 'full',
   },
-
   {
     path: 'glossaire/races',
     component: RaceComponent,
@@ -39,10 +40,15 @@ export const routes: Routes = [
     path: 'glossaire/lieux',
     component: LocationPageComponent,
   },
-  {
+    {
     path: 'glossaire/secrets',
     component: PrimordialSecretsPageComponent,
   },
+  { 
+    path: 'news', 
+    component: NewsPageComponent 
+  },
+
   {
     path: 'regles',
     component: RulesPageComponent,
@@ -63,6 +69,8 @@ export const routes: Routes = [
     redirectTo: 'acceuil',
     pathMatch: 'full',
   },
+  }
+
 ];
   
   
