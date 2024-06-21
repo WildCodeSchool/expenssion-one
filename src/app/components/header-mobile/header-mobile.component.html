@@ -1,59 +1,16 @@
 <header class="header" [ngClass]="{ 'blur-background': isMobileSideNavOpen }">
   <nav class="navbar">
     <div class="navbar-container">
+
       <div class="burger-button-container">
         <button (click)="toggle()" class="burger-button">
           @if(isMobileSideNavOpen){
-          <img src="assets/pictures/close.svg" class="large-icon" img />
-          } @else{
-          <img src="assets/pictures/burger-menu.svg" class="large-icon" img />
+          <img src="assets/pictures/close.svg" class="large-icon" img>
           }
-        </button>
-      </div>
-      <div class="logo">
-        <a routerLink="home">
-          <img class="logo-image" src="assets/pictures/Blop.png" alt="Logo"/></a>
-      </div>
-  @if(isMobileSideNavOpen){
-    <div class="sidenav">
-      <ul>
-            <li><a routerLink="accueil">Création De Personnage</a></li>
-            <li>
-              Jeu
-              <ul class="submenu">
-                <li><a routerLink="regles">Introduction</a></li>
-                <li><a routerLink="regles" fragment="reglesdujeu">Règles</a></li>
-              </ul>
-            </li>
-            <li>
-              Glossaire
-              <ul class="submenu">
-                <li><a routerLink="home">Races</a></li>
-                <li><a routerLink="glossaire/classes">Classes</a></li>
-                <li><a routerLink="glossaire/secrets">Secrets</a></li>
-                <li><a routerLink="home">Croyances</a></li>
-                <li><a routerLink="glossaire/lieux">Lieux</a></li>
-              </ul>
-            </li>
-  
-            <li><a routerLink="home">News</a></li>
-            <li><a routerLink="home">Studio</a></li>
+          @else{
+          <img src="assets/pictures/burger-menu.svg" class="large-icon" img>
+          }
 
-          </ul>
-        <li>
-          Glossaire
-          <ul class="submenu">
-            <li><a routerLink="glossaire/races">Races</a></li>
-            <li><a routerLink="glossaire/classes">Classes</a></li>
-            <li><a routerLink="home">Secrets</a></li>
-            <li><a routerLink="home">Croyances</a></li>
-            <li><a routerLink="glossaire/lieux">Lieux</a></li>
-          </ul>
-        </li>
-        <li><a routerLink="news">News</a></li>
-        <li><a routerLink="home">Studio</a></li>
-    </div>
-  }
       <div class="connection-container">
         <button (click)="openDialog()">
           <img
@@ -63,7 +20,53 @@
           />
         </button>
       </div>
+
+
+      <div class="logo">
+        <a routerLink="home"><img class="logo-image" src="assets/pictures/Blop.png" alt="Logo"></a>
+      </div>
+
+
+      <div class="connection-container">
+        @if((isLogin$| async) ===true){
+        <a routerLink="/profil"><img class="connection-logo" src="assets/pictures/Connexion.png" alt="profil"></a>
+        <button (click)="onLogout()"><img class="connection-logo" src="assets/pictures/log-out-button.svg"
+            alt="LO"></button>
+        }
+        @else {
+        <button (click)="openDialogConnection()"><img class="connection-logo" src="assets/pictures/Connexion.png"
+            alt="Connection"></button>
+        }
+      </div>
     </div>
   </nav>
 </header>
 
+@if(isMobileSideNavOpen){
+<div class="sidenav">
+  <ul>
+    <li><button (click)="toggle()"><a routerLink="home">Création De Personnage</a></button></li>
+    <li>
+      Jeu
+      <ul class="submenu">
+        <li><button (click)="toggle()"><a routerLink="regles">Introduction</a></button></li>
+        <li><button (click)="toggle()"><a routerLink="regles" fragment="reglesdujeu">Règles</a></button></li>
+      </ul>
+    </li>
+    <li>
+      Glossaire
+      <ul class="submenu">
+        <li><button (click)="toggle()"><a routerLink="glossaire/race">Races</a></button></li>
+        <li><button (click)="toggle()"><a routerLink="glossaire/classes">Classes</a></button></li>
+        <li><button (click)="toggle()"><a routerLink="glossaire/secrets">Secrets</a></button></li>
+        <li><button (click)="toggle()"><a routerLink="home">Croyances</a></button></li>
+        <li><button (click)="toggle()"><a routerLink="glossaire/lieux">Lieux</a></button></li>
+      </ul>
+    </li>
+
+    <li><button (click)="toggle()"><a routerLink="news">News</a></button>
+    <li><button (click)="toggle()"><a routerLink="home">Studio</a></button>
+  </ul>
+
+</div>
+}

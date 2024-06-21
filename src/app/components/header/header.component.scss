@@ -18,7 +18,8 @@ $ul_gap: 80px;
     .logo {
       margin-left:10px;
       .logo-image {
-        height: 75px;
+        width : 53px;
+        height: auto;
       }
     }
 
@@ -58,11 +59,14 @@ $ul_gap: 80px;
     }
 
     .connection-container{
+      display: block;
       margin-top: 10px;
       margin-right: 10px;
       .connection-logo{
         justify-content: center;
         align-items: center;
+        height: 53px;
+        width: 53px;
       }
     }
   }

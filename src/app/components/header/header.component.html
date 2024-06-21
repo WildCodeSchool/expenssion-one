@@ -35,18 +35,17 @@
       </div>
       
       <div class="connection-container">
-        <a routerLink="home"
-          ><img
-            class="connection-logo"
-            src="assets/pictures/Connexion.png"
-            alt="Connection"
-        /></a>
+        @if((isLogin$| async) ===true){
+          <a routerLink="/profil"><img  class="connection-logo" src="assets/pictures/Connexion.png" alt="profil"></a>
+          <button (click)="onLogout()"><img class="connection-logo" src="assets/pictures/log-out-button.svg" alt="LO"></button>
+        }
+        @else {
+          <button (click)="openDialogConnection()"><img  class="connection-logo" src="assets/pictures/Connexion.png" alt="Connection"></button>
+        }
       </div>
     </div>
   </nav>
   <div class="play-button">
-    <button (click)="openDialog()">
-      <img class="image-play-container" src="assets/pictures/jouer.png" />
-    </button>
+    <button (click)="openDialogGame()"><img class="image-play-container" src="assets/pictures/jouer.png"></button>
   </div>
 </header>

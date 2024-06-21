@@ -1,27 +1,48 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { Router } from '@angular/router';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import {RouterLink, RouterOutlet,Router } from '@angular/router';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import { PopupComponent } from '../pop-up-connexion/pop-up-connexion.component';
+import { AuthenticationService } from '../../service/authentication/authentification.service';
+import { Observable } from 'rxjs';
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule,RouterLink, MatDialogModule, MatButtonModule],
+  imports: [CommonModule,RouterLink, MatDialogModule, MatButtonModule,RouterOutlet],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
 
   isPopUpDisplay:boolean=false;
+  authenticationService=inject(AuthenticationService)
 
+  isLogin$:Observable<Boolean>=this.authenticationService.isLogin$
+
+  router=inject(Router)
   constructor(public dialog: MatDialog) {}
-  openDialog() {
-    const dialogRef = this.dialog.open(PopupComponent);
 
+
+  openDialogGame() {
+    const dialogRef = this.dialog.open(PopupComponent, {maxWidth:"100vw",
+      data:"game"
+    });
     dialogRef.afterClosed().subscribe(result => {});
   }
+
+  openDialogConnection() {
+    const dialogRef = this.dialog.open(PopupComponent, {maxWidth:"100vw",
+    });
+    dialogRef.afterClosed().subscribe(result => {});
+  }
+
+  onLogout():void{
+    this.authenticationService.removeToken();
+    this.router.navigateByUrl("/")
+  }
+
+
 }
