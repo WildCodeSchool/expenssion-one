@@ -17,8 +17,8 @@
             <li>
               Glossaire
               <ul class="submenu">
-                <li><a routerLink="home">Races</a></li>
-                <li><a routerLink="glossaire/classes">Classes</a></li>
+                <li><a routerLink="glossaire/races">Races</a></li>
+                <li><a routerLink="glossaire/classes">Classes</a></li
                 <li><a routerLink="glossaire/secrets">Secrets</a></li>
                 <li><a routerLink="home">Croyances</a></li>
                 <li><a routerLink="glossaire/lieux">Lieux</a></li>
@@ -28,20 +28,25 @@
         </div>
         <div class="navbar-right">
           <ul>
-            <li><a routerLink="news">News</a></li>
+            <li><a routerLink="home">News</a></li>
             <li><a routerLink="home">Studio</a></li>
           </ul>
         </div>
       </div>
       
       <div class="connection-container">
-        <a routerLink="home"><img class="connection-logo" src="assets/pictures/Connexion.png" alt="Connection"></a>
+        <a routerLink="home"
+          ><img
+            class="connection-logo"
+            src="assets/pictures/Connexion.png"
+            alt="Connection"
+        /></a>
       </div>
     </div>
   </nav>
   <div class="play-button">
-    <button (click)="openDialog()"><img class="image-play-container" src="assets/pictures/jouer.png"></button>
+    <button (click)="openDialog()">
+      <img class="image-play-container" src="assets/pictures/jouer.png" />
+    </button>
   </div>
 </header>
-
-

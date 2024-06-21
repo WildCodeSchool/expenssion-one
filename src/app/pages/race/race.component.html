@@ -1,0 +1,59 @@
+<div class="breed-main-container">
+  <section class="breed-introduction">
+    <h1 class="title-introduction">Résumé des races</h1>
+    <p>
+      L’univers d’ Expenssion-One est basé sur quatre races primaires et six
+      races secondaires. Lors de la création du monde, seules quatre races
+      furent créées par les dieux d’Astris.  <br />Les Humains représentaient la
+      majorité et devaient faire prospérer la terre ferme. <br />Les Zargas
+      devaient protéger les fonds marins ainsi que leurs habitants, tandis que
+      les Gobelins devaient eux protéger les grottes et fractures terrestres. 
+      <br />Les Anges devaient eux protéger les cieux et les îles volantes. Le
+      rôle des gobelins était primordial, car les sols des royaumes contiennent
+      bon nombre de ressources dont, le Deraris, un minerais magique condensé
+      hautement radioactif. <br />Mais les Humains, ont fait preuve d'intérêt
+      sans borne pour la puissance du Déraris, et son extraction abusive a alors
+      provoqué des transformations physiques chez plusieurs d’entre-eux.  En
+      découla des distinctions raciales dûes à de nouveaux traits physiques; les
+      races secondaires étaient nées.
+    </p>
+  </section>
+
+  @for (race of races; track race) {
+  <div class="card-breed-container">
+    <section class="picture-profile-race-container">
+      <img [src]="race.url" alt="{{ race.name }}" />
+    </section>
+    <section class="card-profile-race-model">
+      <div class="title-container">
+        <h2 class="breed-title">{{ race.name }}</h2>
+      </div>
+      <!-- création d'une div complémtaire pour contenir les paragraphes et le texte en responsive -->
+      <div class="breed-description">
+        <p class="description">{{ race.description }}</p>
+        <p class="racial-trait">
+          <span class="bold-title">Traits raciaux :</span>
+          {{ race.racial_trait }}
+        </p>
+      </div>
+      <ul class="breed-statistics">
+        <li>
+          <span class="bold-title">Âge :</span> {{ race.min_age }} -
+          {{ race.max_age }}
+        </li>
+        <li>
+          <span class="bold-title">Taille :</span> {{ race.min_height }} -
+          {{ race.max_height }}
+        </li>
+        <li><span class="bold-title">Vitesse :</span> {{ race.speed }}</li>
+        <li>
+          <span class="bold-title">Langues :</span> {{ race.languages }}, +{{
+            race.number_additional_language
+          }}
+          autre(s)
+        </li>
+      </ul>
+    </section>
+  </div>
+  }
+</div>
