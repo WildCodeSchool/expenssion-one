@@ -16,7 +16,7 @@
 
 
       <div class="logo">
-        <a routerLink="home"><img class="logo-image" src="assets/pictures/Blop.png" alt="Logo"></a>
+        <button (click)="isMobileSideNavOpen=false"><a routerLink="accueil"><img class="logo-image" src="assets/pictures/Blop.png" alt="Logo"></a></button>
       </div>
 
 
@@ -27,7 +27,7 @@
             alt="LO"></button>
         }
         @else {
-        <button (click)="openDialogConnection()"><img class="connection-logo" src="assets/pictures/Connexion.png"
+        <button (click)="openDialogConnection();isMobileSideNavOpen=false"><img class="connection-logo" src="assets/pictures/Connexion.png"
             alt="Connection"></button>
         }
       </div>
@@ -38,27 +38,27 @@
 @if(isMobileSideNavOpen){
 <div class="sidenav">
   <ul>
-    <li><button (click)="toggle()"><a routerLink="home">Création De Personnage</a></button></li>
+    <li><button (click)="isMobileSideNavOpen=false"><a routerLink="accueil">Création De Personnage</a></button></li>
     <li>
       Jeu
       <ul class="submenu">
-        <li><button (click)="toggle()"><a routerLink="regles">Introduction</a></button></li>
-        <li><button (click)="toggle()"><a routerLink="regles" fragment="reglesdujeu">Règles</a></button></li>
+        <li><button (click)="isMobileSideNavOpen=false"><a routerLink="regles">Introduction</a></button></li>
+        <li><button (click)="isMobileSideNavOpen=false"><a routerLink="regles" fragment="reglesdujeu">Règles</a></button></li>
       </ul>
     </li>
     <li>
       Glossaire
       <ul class="submenu">
-        <li><button (click)="toggle()"><a routerLink="glossaire/race">Races</a></button></li>
-        <li><button (click)="toggle()"><a routerLink="glossaire/classes">Classes</a></button></li>
-        <li><button (click)="toggle()"><a routerLink="glossaire/secrets">Secrets</a></button></li>
-        <li><button (click)="toggle()"><a routerLink="home">Croyances</a></button></li>
-        <li><button (click)="toggle()"><a routerLink="glossaire/lieux">Lieux</a></button></li>
+        <li><button (click)="isMobileSideNavOpen=false"><a routerLink="glossaire/races">Races</a></button></li>
+        <li><button (click)="isMobileSideNavOpen=false"><a routerLink="glossaire/classes">Classes</a></button></li>
+        <li><button (click)="isMobileSideNavOpen=false"><a routerLink="glossaire/secrets">Secrets</a></button></li>
+        <li><button (click)="isMobileSideNavOpen=false"><a routerLink="accueil">Croyances</a></button></li>
+        <li><button (click)="isMobileSideNavOpen=false"><a routerLink="glossaire/lieux">Lieux</a></button></li>
       </ul>
     </li>
 
-    <li><button (click)="toggle()"><a routerLink="news">News</a></button>
-    <li><button (click)="toggle()"><a routerLink="home">Studio</a></button>
+    <li><button (click)="isMobileSideNavOpen=false"><a routerLink="news">News</a></button>
+    <li><button (click)="isMobileSideNavOpen=false"><a routerLink="accueil">Studio</a></button>
   </ul>
 
 </div>
