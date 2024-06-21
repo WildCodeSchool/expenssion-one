@@ -15,7 +15,7 @@
     background: url('../../../assets/background_pictures/connexion_responsive.jpeg');
     min-height: 600px;
     width: 60vh;
-    height: 100%;
+    height: 25vw;
     min-width: 350px;
   }
   .containerFlex {
@@ -82,8 +82,9 @@
     .container{
       min-width: none;
       min-height: none;
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
+
     }
   }
 
