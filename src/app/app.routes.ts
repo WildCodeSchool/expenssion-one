@@ -4,22 +4,24 @@ import { PopupComponent } from './components/pop-up-connexion/pop-up-connexion.c
 import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
 import { LocationPageComponent } from './pages/location-page/location-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
+import { RulesPageComponent } from './pages/rules-page/rules-page.component';
 
 
 export const routes: Routes = [
   {
-    path: 'home',
+    path: 'accueil',
     component: HomePageComponent,
+  },
+  {
+    path: '',
+    redirectTo: '/accueil',
+    pathMatch: 'full',
   },
   {
     path: 'inscription',
     component: RegisterPageComponent,
   },
-  {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full',
-  },
+  
   {
     path: 'connexion',
     component: PopupComponent
@@ -29,12 +31,12 @@ export const routes: Routes = [
     component: SpecializationPageComponent,
   }, 
   {
-    path: 'lieux',
-    component: LocationPageComponent
-  },
-  {
     path: 'glossaire/lieux',
     component: LocationPageComponent,
+  },
+  {
+    path: 'regles',
+    component: RulesPageComponent,
   },
 ];
 

@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { Router } from '@angular/router';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import { PopupComponent } from '../pop-up-connexion/pop-up-connexion.component';
 
@@ -16,11 +17,10 @@ import { PopupComponent } from '../pop-up-connexion/pop-up-connexion.component';
 export class HeaderComponent {
 
   isPopUpDisplay:boolean=false;
+
   constructor(public dialog: MatDialog) {}
   openDialog() {
     const dialogRef = this.dialog.open(PopupComponent);
-
-    
 
     dialogRef.afterClosed().subscribe(result => {});
   }
