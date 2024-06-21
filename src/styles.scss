@@ -83,6 +83,11 @@ $angular-17-project-template-theme: mat.define-light-theme((
   font-family: $contentFont;
   font-weight: inherit;
   font-size: inherit;
+  scroll-behavior: smooth !important;
+}
+
+html {
+  scroll-behavior: smooth !important;
 }
 
 a,

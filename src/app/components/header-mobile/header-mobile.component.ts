@@ -19,12 +19,6 @@ export class HeaderMobileComponent {
     this.isMobileSideNavOpen=!this.isMobileSideNavOpen;
   }
 
-  router = inject(Router);
-
-  navigateToSection(sectionId: string) {
-    this.router.navigate(['/regles'], { fragment: sectionId });
-  }
-
   constructor(public dialog: MatDialog) {}
   openDialog() {
     const dialogRef = this.dialog.open(PopupComponent)};

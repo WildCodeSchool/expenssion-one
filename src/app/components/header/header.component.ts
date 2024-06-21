@@ -16,18 +16,11 @@ import { PopupComponent } from '../pop-up-connexion/pop-up-connexion.component';
 })
 export class HeaderComponent {
 
-  router = inject(Router);
-
-  navigateToSection(sectionId: string) {
-    this.router.navigate(['/regles'], { fragment: sectionId });
-  }
   isPopUpDisplay:boolean=false;
 
   constructor(public dialog: MatDialog) {}
   openDialog() {
     const dialogRef = this.dialog.open(PopupComponent);
-
-    
 
     dialogRef.afterClosed().subscribe(result => {});
   }
