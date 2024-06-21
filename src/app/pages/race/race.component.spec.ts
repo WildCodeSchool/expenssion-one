@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LocationPageComponent } from './location-page.component';
+import { RaceComponent } from './race.component';
 
-describe('LocationPageComponent', () => {
-  let component: LocationPageComponent;
-  let fixture: ComponentFixture<LocationPageComponent>;
+describe('RaceComponent', () => {
+  let component: RaceComponent;
+  let fixture: ComponentFixture<RaceComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LocationPageComponent]
+      imports: [RaceComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(LocationPageComponent);
+    fixture = TestBed.createComponent(RaceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
