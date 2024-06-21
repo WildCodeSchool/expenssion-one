@@ -1,13 +1,27 @@
+//colors elements
 $mainColor: #282828;
-$textColor: #ffffff;
-$contentFont: "Inter", sans-serif;
-$globalPaddingTop: 160px;
+$textLightColor: #ffffff;
+$textColor: black;
+
+//imports fonts
 @import url("https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap'); // BIG TITLE
-@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap'); //text glossary,
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"); // BIG TITLE
+@import url("https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap"); //text glossary,
+@import url("https://fonts.googleapis.com/css2?family=Norican&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
 
+//font-family-variables
+$contentFont: "Inika", sans-serif;
+$subTitleFont: "Cinzel", sans-serif;
+$fontBoldStyle: bold;
+$contentFont: "Inter", sans-serif;
+$globalPaddingTop: 130px;
 
-//for glossary 
+//text-decoration
+$borderCardBreed: 2px solid black;
+$globalPaddingTop: 160px;
+
+//for glossary
 $glossaryPaddingLeftDesktop: 5%;
 $glossaryPaddingRightDesktop: 5%;
 $glossaryPaddingLeftMobile: 5%;

@@ -1,61 +1,71 @@
-<header class="header"  [ngClass]="{ 'blur-background': isMobileSideNavOpen }">
-    <nav class="navbar">
-      <div class="navbar-container">
-
-        <div class="burger-button-container">
-            <button (click)="toggle()" class="burger-button">
-              @if(isMobileSideNavOpen){
-                <img src="assets/pictures/close.svg" class="large-icon" img> 
-              }
-              @else{
-                <img src="assets/pictures/burger-menu.svg" class="large-icon" img> 
-              }
-                 
-            </button>        
-          </div>
-
-
-        <div class="logo">
-          <a routerLink="home"><img class="logo-image" src="assets/pictures/Blop.png" alt="Logo"></a>
-        </div>
-
-       
-        <div class="connection-container">
-          <a routerLink="home"><img class="connection-logo" src="assets/pictures/Connexion.png" alt="Connection"></a>
-        </div>
-  
-  
+<header class="header" [ngClass]="{ 'blur-background': isMobileSideNavOpen }">
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="burger-button-container">
+        <button (click)="toggle()" class="burger-button">
+          @if(isMobileSideNavOpen){
+          <img src="assets/pictures/close.svg" class="large-icon" img />
+          } @else{
+          <img src="assets/pictures/burger-menu.svg" class="large-icon" img />
+          }
+        </button>
       </div>
-    </nav>
-  </header>
-
+      <div class="logo">
+        <a routerLink="home">
+          <img class="logo-image" src="assets/pictures/Blop.png" alt="Logo"/></a>
+      </div>
   @if(isMobileSideNavOpen){
     <div class="sidenav">
-        <ul>
-            <a routerLink="home"><li>Création De Personnage</li></a>
+      <ul>
+            <li><a routerLink="accueil">Création De Personnage</a></li>
             <li>
               Jeu
               <ul class="submenu">
-                <a routerLink="home"><li>Introduction</li></a>
-                <a routerLink="home"><li>Règles</li></a>
+                <li><a routerLink="regles">Introduction</a></li>
+                <li><a routerLink="regles" fragment="reglesdujeu">Règles</a></li>
               </ul>
             </li>
             <li>
               Glossaire
               <ul class="submenu">
-                <a routerLink="home"><li>Races</li></a>
-                <a routerLink="glossaire/classes"><li>Classes</li></a>
-                <a routerLink="home"><li>Les Secrets</li></a>
-                <a routerLink="home"><li>Croyances</li></a>
-                <a routerLink="glossaire/lieux"><li>Lieux</li></a>
+                <li><a routerLink="home">Races</a></li>
+                <li><a routerLink="glossaire/classes">Classes</a></li>
+                <li><a routerLink="glossaire/secrets">Secrets</a></li>
+                <li><a routerLink="home">Croyances</a></li>
+                <li><a routerLink="glossaire/lieux">Lieux</a></li>
               </ul>
             </li>
   
-            <a routerLink="home"><li routerLink="home">News</li></a>
-            <a routerLink="home"><li routerLink="home">Studio</li></a>
+            <li><a routerLink="home">News</a></li>
+            <li><a routerLink="home">Studio</a></li>
+
           </ul>
-
-      </div>
+        </li>
+        <li>
+          Glossaire
+          <ul class="submenu">
+            <li><a routerLink="glossaire/races">Races</a></li>
+            <li><a routerLink="glossaire/classes">Classes</a></li>
+            <li><a routerLink="home">Secrets</a></li>
+            <li><a routerLink="home">Croyances</a></li>
+            <li><a routerLink="glossaire/lieux">Lieux</a></li>
+          </ul>
+        </li>
+        <li><a routerLink="news">News</a></li>
+        <li><a routerLink="home">Studio</a></li>
+      </ul>
+    </div>
   }
-
+      <div class="connection-container">
+        <button (click)="openDialog()">
+          <img
+            class="connection-logo"
+            src="assets/pictures/Connexion.png"
+            alt="Connection"
+          />
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
 
