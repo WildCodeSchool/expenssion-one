@@ -2,7 +2,9 @@
   <nav class="navbar">
     <div class="navbar-container">
       <div class="logo">
-        <a routerLink="home"><img class="logo-image" src="assets/pictures/Blop.png" alt="Logo"></a>
+        <a routerLink="home"
+          ><img class="logo-image" src="assets/pictures/Blop.png" alt="Logo"
+        /></a>
       </div>
       <div class="navbar-center">
         <div class="navbar-left">
@@ -17,7 +19,7 @@
             <li>
               Glossaire
               <ul class="submenu">
-                <a routerLink="home"><li>Races</li></a>
+                <a routerLink="glossaire/races"><li>Races</li></a>
                 <a routerLink="glossaire/classes"><li>Classes</li></a>
                 <a routerLink="home"><li>Les Secrets</li></a>
                 <a routerLink="home"><li>Croyances</li></a>
@@ -35,13 +37,18 @@
       </div>
 
       <div class="connection-container">
-        <a routerLink="home"><img class="connection-logo" src="assets/pictures/Connexion.png" alt="Connection"></a>
+        <a routerLink="home"
+          ><img
+            class="connection-logo"
+            src="assets/pictures/Connexion.png"
+            alt="Connection"
+        /></a>
       </div>
     </div>
   </nav>
   <div class="play-button">
-    <button (click)="openDialog()"><img class="image-play-container" src="assets/pictures/jouer.png"></button>
+    <button (click)="openDialog()">
+      <img class="image-play-container" src="assets/pictures/jouer.png" />
+    </button>
   </div>
 </header>
-
-
