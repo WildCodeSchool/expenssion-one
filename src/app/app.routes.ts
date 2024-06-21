@@ -35,18 +35,14 @@ export const routes: Routes = [
     path: 'glossaire/lieux',
     component: LocationPageComponent,
   },
-  
-  { path: 'news', component: NewsPageComponent },
   { 
     path: 'news', 
     component: NewsPageComponent 
   },
-
-  ];
   {
     path: 'regles',
     component: RulesPageComponent,
-  },
+  }
 ];
 
 
