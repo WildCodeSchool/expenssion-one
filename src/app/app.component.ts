@@ -31,5 +31,5 @@ export class AppComponent {
     this.breakpointObserver.observe(Object.values(this.breakpoints)).subscribe((state: BreakpointState) => {
       this.isMobile = state.breakpoints[this.breakpoints.mobile]});
       
-    }
+  }
 }

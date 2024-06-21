@@ -5,6 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { PopupComponent } from '../pop-up-connexion/pop-up-connexion.component';
 import { AuthenticationService } from '../../service/authentication/authentification.service';
 import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-header-mobile',
   standalone: true,
