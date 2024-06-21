@@ -3,7 +3,6 @@
 
 .location_content {
   color: $textColor;
-  padding-top: $globalPaddingTop;
   padding-left: $glossaryPaddingLeftDesktop;
   padding-right: $glossaryPaddingRightDesktop;
 }
@@ -43,7 +42,6 @@ img {
 @media screen and (max-width: 768px) {
   .location_content {
     color: $textColor;
-    padding-top: 100px;
   }
 
   img {
