@@ -1,0 +1,98 @@
+@use "../../../import" as *;
+@use "../../styles/glossary.scss";
+
+
+.specialization-container{
+  display: block;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; 
+  padding-left: $glossaryPaddingLeftDesktop; 
+  padding-right: $glossaryPaddingRightDesktop;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+.title-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:40px;
+  padding-bottom: 50px;
+  h1{
+      
+  }
+  .image-specialization {
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 4px solid #000;
+      object-fit: cover;
+    }
+  }
+}
+
+.contents-container{
+
+}
+.skills-container{
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+table {
+width: 100%;
+border-collapse: collapse;
+border: 2px solid rgb(140 140 140);
+font-family: sans-serif;
+font-size: 0.8rem;
+letter-spacing: 1px;
+}
+
+caption {
+caption-side: bottom;
+padding: 10px;
+font-weight: bold;
+}
+
+thead,
+tfoot {
+background-color: rgb(228 240 245);
+}
+
+th,
+td {
+border: 1px solid rgb(160 160 160);
+padding: 8px 10px;
+}
+
+td:last-of-type {
+text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .specialization-container {
+    padding-left: $glossaryPaddingRightMobile;
+    padding-right: $glossaryPaddingRightMobile;
+
+    .image-specialization {
+      img {
+        width: 50px;
+        height: 50px;
+        border: 2px solid #000;
+      }
+    }
+  }
+}
+
+
