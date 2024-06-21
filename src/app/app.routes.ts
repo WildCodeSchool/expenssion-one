@@ -39,7 +39,8 @@ export const routes: Routes = [
   {
     path: 'glossaire/secrets',
     component: PrimordialSecretsPageComponent,
-  }
+  },
+  {
     path: 'regles',
     component: RulesPageComponent,
   },
