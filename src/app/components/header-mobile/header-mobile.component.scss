@@ -1,12 +1,9 @@
 $header_height:80px;
-.blur-background {
-  backdrop-filter: blur(4px);
-} 
 .header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
   left: 0;
   
   .burger-button-container{
@@ -48,22 +45,58 @@ $header_height:80px;
         }
     }
   } 
+    .navbar-container-open {
+      display: flex;
+      width: 100%;
+      align-items: flex-start;
+      justify-content: space-between;
+      height: $header_height;
+      .logo {
+          margin-left: 10px;
+      
+          .logo-image {
+            height: 75px;
+          }
+        }
+      
+        .connection-container {
+          margin-top: 12px;
+          margin-right: 10px;
+      
+          .connection-logo {
+            justify-content: center;
+            align-items: center;
+            height: 53px;
+            width: 53px;
+          }
+        }
+    }
 }
 
 .sidenav {
     position: fixed;
-    padding-top: 100px;
+    
     padding-left: 20px;
-    top: $header_height;
+    top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     background-color: rgba(51, 50, 50, 0.7);
     backdrop-filter: blur(4px);
-    z-index: 2;
+    z-index: 1;
     color: white;
-    font-size: 2rem;
-    line-height: 3rem;
+    line-height: 2rem;
+    padding-top: 50px;
+    font-size: 20px;
+    .sidenav-container{
+      padding-top: $header_height;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+    }
 
     ul{
       margin-left: 25px;
@@ -75,10 +108,16 @@ $header_height:80px;
     }
   }
 
-     @media screen and (max-height: 830px) {
+     @media screen and (max-height: 550px) {
       .sidenav{
-              padding-top: 0;
+   
+              
               font-size: 20px;
               line-height: 1.2rem;
+              .sidenav-container{
+               
+                justify-content: center;
+              }
       }
      }
+
