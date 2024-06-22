@@ -1,0 +1,43 @@
+<div class="breed-main-container">
+    <section class="breed-introduction">
+      <h1 class="title-introduction">Résumé des croyances</h1>
+    </section>
+  
+    @for (belief of beliefs; track belief) {
+    <div class="card-breed-container">
+      <!-- <section class="picture-profile-race-container">
+        <img [src]="race.url" alt="{{ race.name }}" />
+      </section> -->
+      <section class="card-profile-race-model">
+        <div class="title-container">
+          <h2 class="breed-title">{{ belief.name }}</h2>
+        </div>
+        <!-- création d'une div complémtaire pour contenir les paragraphes et le texte en responsive -->
+        <div class="breed-description">
+            @for (description of belief.description; track description) {
+          <p class="description">{{ description }}</p><br/>
+            }
+        </div>
+        
+        <!-- <ul class="breed-statistics">
+          <li>
+            <span class="bold-title">Âge :</span> {{ race.min_age }} -
+            {{ race.max_age }}
+          </li>
+          <li>
+            <span class="bold-title">Taille :</span> {{ race.min_height }} -
+            {{ race.max_height }}
+          </li>
+          <li><span class="bold-title">Vitesse :</span> {{ race.speed }}</li>
+          <li>
+            <span class="bold-title">Langues :</span> {{ race.languages }}, +{{
+              race.number_additional_language
+            }}
+            autre(s)
+          </li>
+        </ul> -->
+      </section>
+    </div>
+    }
+  </div>
+  

@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/internal/Observable';
 import { Race } from '../model/race/race';
 import { Continent } from '../model/continent/continent';
 import { Secret } from '../model/secret/secret';
+import { Belief } from '../model/belief/belief';
 @Injectable({
   providedIn: 'root',
 })
@@ -30,5 +31,9 @@ export class ApiDataService {
 
   getPrimordialSecrets():Observable<Secret[]>{
     return this.http.get<Secret[]>('assets/data/primordialSecrets.json')
+  }
+
+  getBeliefs():Observable<Belief[]>{
+    return this.http.get<Belief[]>('assets/data/belief.json')
   }
 }
