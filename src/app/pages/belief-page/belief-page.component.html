@@ -1,6 +1,6 @@
 <div class="breed-main-container">
     <section class="breed-introduction">
-      <h1 class="title-introduction">Résumé des croyances</h1>
+      <h1 class="breed-title title">Résumé des croyances</h1>
     </section>
   
     @for (belief of beliefs; track belief) {
@@ -15,27 +15,54 @@
         <!-- création d'une div complémtaire pour contenir les paragraphes et le texte en responsive -->
         <div class="breed-description">
             @for (description of belief.description; track description) {
-          <p class="description">{{ description }}</p><br/>
+          <p class="description">{{ description }}</p>
             }
         </div>
-        
-        <!-- <ul class="breed-statistics">
-          <li>
-            <span class="bold-title">Âge :</span> {{ race.min_age }} -
-            {{ race.max_age }}
-          </li>
-          <li>
-            <span class="bold-title">Taille :</span> {{ race.min_height }} -
-            {{ race.max_height }}
-          </li>
-          <li><span class="bold-title">Vitesse :</span> {{ race.speed }}</li>
-          <li>
-            <span class="bold-title">Langues :</span> {{ race.languages }}, +{{
-              race.number_additional_language
-            }}
-            autre(s)
-          </li>
-        </ul> -->
+            @for(divinity of belief.divinities;track divinity)
+            {
+              <ul class="breed-statistics">
+                <h2 class="divinity">{{ divinity.name }}</h2>
+                <li>
+                  <span class="bold-title">Titre :</span> {{ divinity.title }}
+                </li>
+                <li>
+                  <span class="bold-title">Genre :</span> {{ divinity.gender }}
+                </li>
+                <li>
+                  <span class="bold-title">Effet :</span> {{ divinity.effet }}
+                </li>
+                <li>
+                  <span class="bold-title">Force :</span> {{ divinity.strength }}
+                </li>
+                <li>
+                  <span class="bold-title">Dexterité :</span> {{ divinity.dexterity }}
+                </li>
+                <li>
+                  <span class="bold-title">Constitution :</span> {{ divinity.constitution }}
+                </li>
+                <li>
+                  <span class="bold-title">Intelligence :</span> {{ divinity.intelligence }}
+                </li>
+                <li>
+                  <span class="bold-title">Royaume :</span> {{ divinity.wisdom }}
+                </li>
+                <li>
+                  <span class="bold-title">Charisme :</span> {{ divinity.charisma }}
+                </li>
+                <li>
+                  <span class="bold-title">Armure :</span> {{ divinity.armor }}
+                </li>
+                <li>
+                  <span class="bold-title">Addiction :</span> {{ divinity.addiction }}
+                </li>
+                <li>
+                  <span class="bold-title">Vitesse :</span> {{ divinity.speed }}
+                </li>
+                <li>
+                  <span class="bold-title">Perception :</span> {{ divinity.perception }}
+                </li>
+              </ul>
+      }
       </section>
     </div>
     }
