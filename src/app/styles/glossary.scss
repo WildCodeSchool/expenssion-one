@@ -1,16 +1,22 @@
 @use "../../_import.scss" as *;
 
 .background-image {
-  background-image: url("/assets/background_pictures/glossary_background.png");
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-image: url("/assets/background_pictures/background_specialization.jpg");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
   padding-top: $globalPaddingTop;
+  padding-bottom: 50px;
   color: #d6d5bf;
+
+    /* Apply the blur effect */
+
+
 
   .title {
     font-family: "Cinzel";

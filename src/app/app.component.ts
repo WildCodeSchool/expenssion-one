@@ -20,7 +20,7 @@ import { FooterComponent } from './components/footer/footer.component';
 export class AppComponent {
   title = 'Expenssion One';
   private breakpoints = {
-    mobile: '(max-width: 768px)',
+    mobile: '(max-width: 850px)',
   }
 
   breakpointObserver = inject(BreakpointObserver)

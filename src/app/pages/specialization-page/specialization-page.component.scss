@@ -2,7 +2,16 @@
 @use "../../styles/glossary.scss";
 
 
+
+.specialization-list{
+
+
+
+  font-family: $contentFont;
+    color:rgb(255, 255, 255);
+}
 .specialization-container{
+    background-color: rgb(0, 0, 0, 0.5);
   display: block;
   flex-direction: row;
   justify-content: center;
@@ -11,6 +20,7 @@
   padding-right: $glossaryPaddingRightDesktop;
   padding-top: 50px;
   padding-bottom: 10px;
+  
 
 }
 .title-container{
@@ -20,7 +30,7 @@
   gap:40px;
   padding-bottom: 50px;
   h1{
-      
+      font-family: $subTitleFont;
   }
   .image-specialization {
     img {
@@ -46,7 +56,6 @@ table {
 width: 100%;
 border-collapse: collapse;
 border: 2px solid rgb(140 140 140);
-font-family: sans-serif;
 font-size: 0.8rem;
 letter-spacing: 1px;
 }
@@ -59,7 +68,7 @@ font-weight: bold;
 
 thead,
 tfoot {
-background-color: rgb(228 240 245);
+  background-color: rgb(0,0,0,0.3);
 }
 
 th,
@@ -69,10 +78,17 @@ padding: 8px 10px;
 }
 
 td:last-of-type {
-text-align: center;
+
 }
 
 @media screen and (max-width: 768px) {
+
+  th,
+    td {
+      word-break: break-all;
+      hyphens: auto;
+      overflow-wrap: break-word;
+    }
   h1 {
     font-size: 20px;
   }
