@@ -4,23 +4,20 @@
 
 
 .specialization-list{
-
-
-
+  padding-top: $globalPaddingTop;
+  padding-bottom: 50px;
   font-family: $contentFont;
-    color:rgb(255, 255, 255);
+  color:rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0, 0.5);
 }
 .specialization-container{
-    background-color: rgb(0, 0, 0, 0.5);
+  
   display: block;
   flex-direction: row;
   justify-content: center;
   align-items: center; 
   padding-left: $glossaryPaddingLeftDesktop; 
   padding-right: $glossaryPaddingRightDesktop;
-  padding-top: 50px;
-  padding-bottom: 10px;
-  
 
 }
 .title-container{
