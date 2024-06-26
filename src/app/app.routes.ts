@@ -7,7 +7,7 @@ import { RegisterPageComponent } from './pages/register-page/register-page.compo
 import { UserProfilPageComponent } from './pages/user-profil-page/user-profil-page.component';
 import { AuthenticationGuard } from './guards/authentification.guard';
 import { ProfilParameterPageComponent } from './pages/profil-parameter-page/profil-parameter-page.component';
-import { PrimordialSecretsPageComponent } from './pages/primordial-secrets-page/primordial-secrets-page.component';
+import { SecretsPageComponent } from './pages/secrets-page/secrets-page.component';
 import { NewsPageComponent } from './news-page/news-page.component';
 import { RulesPageComponent } from './pages/rules-page/rules-page.component';
 import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
@@ -24,7 +24,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/accueil',
+    redirectTo: 'accueil',
     pathMatch: 'full',
   },
   {
@@ -42,7 +42,7 @@ export const routes: Routes = [
   },
     {
     path: 'glossaire/secrets',
-    component: PrimordialSecretsPageComponent,
+    component: SecretsPageComponent,
   },
   { 
     path: 'news', 
@@ -69,8 +69,6 @@ export const routes: Routes = [
     redirectTo: 'acceuil',
     pathMatch: 'full',
   },
-  }
-
 ];
   
   
