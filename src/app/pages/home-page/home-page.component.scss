@@ -34,7 +34,7 @@ h2 {
     margin-top: 2rem;
     font-size: 30px;
     font-family: $subTitleFont;
-    font-weight: bold;
+    font-weight: $fontBoldStyle;
 }
 
 @media screen and (max-width: 768px) {
