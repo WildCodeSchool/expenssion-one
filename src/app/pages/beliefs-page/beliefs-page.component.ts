@@ -1,25 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ApiDataService } from '../../service/api-data.service';
-import { Race } from '../../model/race/race';
+import { Belief } from '../../model/belief/belief';
 
 @Component({
-  selector: 'app-race',
+  selector: 'app-beliefs-page',
   standalone: true,
   imports: [],
-  templateUrl: './race.component.html',
-  styleUrl: './race.component.scss',
+  templateUrl: './beliefs-page.component.html',
+  styleUrl: './beliefs-page.component.scss',
 })
-export class RaceComponent {
-  //déclare une propriété 'races' de type array objects 'Race'
+export class BeliefsPageComponent {
+  //déclare une propriété 'beliefs' de type array objects 'Belief'
   //Initialisation avec un array vide pour éviter les erreurs avant chargement des données
-  races: Race[] = [];
+  beliefs: Belief[] = [];
 
   constructor(private ApiDataService: ApiDataService) {}
   //Appel du service pour get data.race.json à l'initialisation du composant
   ngOnInit(): void {
-    this.ApiDataService.getRaces().subscribe((response: Race[]) => {
+    this.ApiDataService.getBeliefs().subscribe((response: Belief[]) => {
       //Affecte les données récupérées à la propriété 'races'/and display data race.json from api-service
-      this.races = response;
+      this.beliefs = response;
     });
   }
 }
