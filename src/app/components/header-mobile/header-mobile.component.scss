@@ -1,5 +1,7 @@
+@use "../../../import" as *;
 $header_height:80px;
 .header {
+  font-family: $subTitleFont;
   position: fixed;
   top: 0;
   width: 100%;

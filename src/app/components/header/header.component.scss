@@ -1,3 +1,4 @@
+@use "../../../import" as *;
 $play-button-width: 200px;
 $ul_gap: 80px;
 
@@ -5,8 +6,11 @@ $ul_gap: 80px;
   position: fixed;
   top: 0;
   width: 100%;
+
   z-index: 1;
   left: 0;
+  font-family: $subTitleFont;
+  font-size: 1.3rem;
 
   .navbar-container {
     display: flex;
@@ -16,73 +20,85 @@ $ul_gap: 80px;
     justify-content: space-between;
 
     .logo {
-      margin-left:10px;
+      width: 100px;
+      margin-left:20px;
+      margin-top: 5px;
+      a{
+        display: flex;
       .logo-image {
+        align-items: center;
+        justify-content: center;
         width : 53px;
-        height: auto;
+
       }
+    }
     }
 
     .navbar-center {
       display: flex;
       align-items: flex-start;
+      justify-content: space-between;
       gap: $play-button-width;
       padding: 1.5rem 0;
-      margin-top: 7px;
       color: white;
-    }
 
-    .navbar-left {
-      margin-right: 5vw;
-
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex; 
-        gap: $ul_gap;
-      }
-
-      li {
-        ul.submenu {
-          list-style: none;
-          padding-top: 50px;
-          display: none;
-          width: 10px;
-        }
-        &:hover {
-          ul.submenu {
-            display: block;
+      .navbar-right {
+        margin-left: 5vw;
+      
+          ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: $ul_gap;
           }
         }
-      }
+      
+        .navbar-left {
+          margin-right: 5vw;
+          ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: $ul_gap;
+          }
+      
+          li {
+            ul.submenu {
+              list-style: none;
+              padding-top: 50px;
+              display: none;
+              width: 10px;
+            }
+      
+            &:hover {
+              ul.submenu {
+                display: block;
+              }
+            }
+          }
+        }
+
+
     }
 
+
     .connection-container{
-      display: block;
+      display: flex;
+      width: 100px;
       margin-top: 10px;
-      margin-right: 10px;
+      margin-right: 20px;
+      justify-content: right;
+      align-items: center;
       .connection-logo{
-        justify-content: center;
-        align-items: center;
         height: 53px;
         width: 53px;
       }
     }
   }
 
-  .navbar-right {
-    display: flex;
-    margin-left: 5vw;
-
-    ul {
-      padding: 0;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      gap:$ul_gap;
-    }
-  }
+  
 
   .play-button {
     position: fixed;
@@ -99,4 +115,27 @@ $ul_gap: 80px;
       height: 125px;
     }
   }
+
+    @media screen and (max-width: 967px) {
+      font-size: 1rem;
+      .navbar-center{
+        gap:150px !important;
+      }
+
+      .navbar-left{
+        ul{
+          gap: 20px !important;
+        }
+      }
+
+      .navbar-right {
+    
+
+        ul {
+          gap: 20px !important;
+        }
+      }
+
+
+    }
 }
