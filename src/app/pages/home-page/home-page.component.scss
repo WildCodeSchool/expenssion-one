@@ -21,17 +21,20 @@ section {
 h1,
 h2 {
     text-align: center;
-    font-family: "Kaisei Decol", serif;
     width: 100%;
 }
 
 h1 {
     font-size: 70px;
     font-weight: 500;
+    font-family: $mainTitle;
 }
 
 h2 {
-    font-size: larger;
+    margin-top: 2rem;
+    font-size: 30px;
+    font-family: $subTitleFont;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 768px) {
