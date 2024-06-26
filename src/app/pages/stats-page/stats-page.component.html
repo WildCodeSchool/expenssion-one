@@ -1,0 +1,22 @@
+<div class="background-image">
+    <div class = "content-page">
+      <div class="selectStats">
+        <h1 class="title">Statistiques </h1>
+        <h2>Répartissez vos 5 points </h2>
+
+        @for(stat of statistiques; track stat)
+        {
+          <div class="stat">
+            <div style="width:150px">{{stat.name}}</div> 
+            <div class="circle"><button class="content">-</button></div>
+            <div style="margin-left:50px;width:70px;">{{stat.score}}</div>
+            <div class="circle"><button class="content">+</button></div>
+          </div>
+        };
+      </div>
+
+      <div class="modifying">
+        <p>Lancer vos dés 20 pour obtenir le niveau de chacune de vos statistiques </p>
+      </div>
+    </div>
+  </div>
