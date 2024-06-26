@@ -1,0 +1,110 @@
+@use "../../../import" as *;
+
+.background-image {
+    background-image: url(../../../assets/background_pictures/paper-background.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: $globalPaddingTop;
+    padding-left: $glossaryPaddingLeftDesktop;
+    padding-right: $glossaryPaddingRightDesktop;
+    padding-bottom: 2rem;
+}
+
+#intro, #preface, #acknowledgement, #teaser, #rules-title {
+    text-align: center;
+}
+
+h3, p {
+    margin-bottom: 1rem;
+}
+
+h1, h2 {
+    font-family: "Cinzel";
+    margin-bottom: 2rem;
+}
+
+h2 {
+    margin-top: 3.2rem;
+}
+
+h3 {
+    font-size: x-large;
+    font-family: "Inika"
+}
+
+p {
+    font-size: larger;
+    font-family: "Inika";
+    line-height: 1.5;
+}
+
+img {
+    height: 150px;
+    width: auto;
+}
+
+#rules-title {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+#acknowledgement {
+    margin-bottom: 10rem;
+}
+
+#preface {
+    margin-top: 4rem;
+}
+
+#intro-title {
+    margin-bottom: 3rem;
+}
+
+#reglesdujeu, .teaser-text-end {
+    margin: 0;
+}
+
+.thanks {
+    text-align: end;
+}
+
+.teaser-text, .teaser-text-end {
+    font-size: xx-large;
+    font-family: "Norican";
+}
+
+.comment {
+    font-family: "Crimson Text", serif;
+    font-style: italic;
+    font-size: x-large;
+    margin-bottom: 0;
+}
+
+.example, .example-title {
+    font-family: "Crimson Text", serif;
+    font-style: italic;
+    font-size: x-large;
+    color: rgb(88, 11, 11);
+}
+
+.example-title {
+    margin: 0;
+    text-decoration: underline;
+}
+
+#endline {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+
+   img {
+    height : 100px;
+    width: auto;
+   }
+}

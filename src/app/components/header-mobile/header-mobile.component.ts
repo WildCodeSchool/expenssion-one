@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { PopupComponent } from '../pop-up-connexion/pop-up-connexion.component';
+
 @Component({
   selector: 'app-header-mobile',
   standalone: true,

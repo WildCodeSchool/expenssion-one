@@ -5,21 +5,24 @@ import { SpecializationPageComponent } from './pages/specialization-page/special
 import { LocationPageComponent } from './pages/location-page/location-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { NewsPageComponent } from './news-page/news-page.component';
+import { RulesPageComponent } from './pages/rules-page/rules-page.component';
+
 
 export const routes: Routes = [
   {
-    path: 'home',
+    path: 'accueil',
     component: HomePageComponent,
+  },
+  {
+    path: '',
+    redirectTo: '/accueil',
+    pathMatch: 'full',
   },
   {
     path: 'inscription',
     component: RegisterPageComponent,
   },
-  {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full',
-  },
+  
   {
     path: 'connexion',
     component: PopupComponent
@@ -28,10 +31,6 @@ export const routes: Routes = [
     path: 'glossaire/classes',
     component: SpecializationPageComponent,
   }, 
-  {
-    path: 'lieux',
-    component: LocationPageComponent
-  },
   {
     path: 'glossaire/lieux',
     component: LocationPageComponent,
@@ -44,4 +43,10 @@ export const routes: Routes = [
   },
 
   ];
+  {
+    path: 'regles',
+    component: RulesPageComponent,
+  },
+];
+
 
