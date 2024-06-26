@@ -9,11 +9,17 @@ $textColor: black;
 @import url("https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap"); //text glossary,
 @import url("https://fonts.googleapis.com/css2?family=Norican&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+@font-face {
+    font-family: "Cenobyte";
+    src: url(assets/fonts/cenobyte.ttf) format("truetype");
+}
 
 //font-family-variables
 $contentFont: "Inika", sans-serif;
 $subTitleFont: "Cinzel", sans-serif;
 $fontBoldStyle: bold;
+$mainTitle: "Cenobyte";
+
 
 
 $globalPaddingTop: 160px;
