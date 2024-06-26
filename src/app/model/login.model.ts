@@ -1,4 +1,4 @@
 export class Login
 {
-    constructor(public login:String, public password:String) {}
+    constructor(public login:string, public password:string) {}
 }

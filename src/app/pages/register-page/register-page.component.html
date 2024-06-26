@@ -1,0 +1,68 @@
+<div class="register-container">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="register-form">
+        <h1>INSCRIPTION</h1>
+
+        <label for="name">Nom *</label>
+        <input id="name" formControlName="name" type="text" required title="Veuillez entrer votre nom.">
+
+        <label for="lastName">Prénom *</label>
+        <input id="lastName" formControlName="lastName" type="text" required title="Veuillez entrer votre prénom.">
+
+        <label for="birthDate">Date de naissance *</label>
+        <input id="birthDate" formControlName="birthDate" type="date" required
+            title="Veuillez entrer votre date de naissance.">
+
+        <label for="pseudo">Pseudo *</label>
+        <input id="pseudo" formControlName="pseudo" type="text" required title="Veuillez entrer votre pseudo.">
+
+        <label for="Mail">Adresse mail *</label>
+        <input id="Mail" formControlName="emailAdress" type="email" required
+            title="Veuillez entrer votre adresse mail.">
+
+        <label for="confirmationAdresseMail">Confirmation adresse mail *</label>
+        <input id="confirmationMail" formControlName="confirmationMail" type="email" required
+            title="Veuillez confirmer votre adresse mail.">
+
+        <label for="password">Mot de passe * (8 caractères min, num, maj, spé)</label>
+        <input id="password" formControlName="password" type="password" required
+            title="Veuillez entrer un mot de passe.">
+
+        <label for="confirmationPassword">Confirmation du mot de passe *</label>
+        <input id="confirmationPassword" formControlName="confirmationMotDePasse" type="password" required
+            title="Veuillez confirmer votre mot de passe.">
+        <div class="cgu-container">
+            <input type="checkbox" id="toggle-cgu" />
+            <label for="toggle-cgu" class="cgu-button">
+                <span class="cgu-title">CGU</span>
+                <div class="cgu-content">
+                    Les conditions générales d'utilisation (CGU) sont le document contractuel qui définit les modalités
+                    d'utilisation des services proposés par le site à ses utilisateurs. Voici un exemple de contenu qui
+                    peut
+                    défiler à l'intérieur du bouton...
+                    Les conditions générales d'utilisation (CGU) sont le document contractuel qui définit les modalités
+                    d'utilisation des services proposés par le site à ses utilisateurs. Voici un exemple de contenu qui
+                    peut
+                    défiler à l'intérieur du bouton...
+                    Les conditions générales d'utilisation (CGU) sont le document contractuel qui définit les modalités
+                    d'utilisation des services proposés par le site à ses utilisateurs. Voici un exemple de contenu qui
+                    peut
+                    défiler à l'intérieur du bouton...
+                    Les conditions générales d'utilisation (CGU) sont le document contractuel qui définit les modalités
+                    d'utilisation des services proposés par le site à ses utilisateurs. Voici un exemple de contenu qui
+                    peut
+                    défiler à l'intérieur du bouton...
+                    Les conditions générales d'utilisation (CGU) sont le document contractuel qui définit les modalités
+                    d'utilisation des services proposés par le site à ses utilisateurs. Voici un exemple de contenu qui
+                    peut
+                    défiler à l'intérieur du bouton...
+                    Les conditions générales d'utilisation (CGU) sont le document contractuel qui définit les modalités
+                    d'utilisation des services proposés par le site à ses utilisateurs. Voici un exemple de contenu qui
+                    peut
+                    défiler à l'intérieur du bouton...
+                </div>
+            </label>
+        </div>
+
+        <button id="register-button" type="submit">S'INSCRIRE</button>
+</form>
+</div>

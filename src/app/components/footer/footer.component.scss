@@ -2,12 +2,13 @@
 
 .footer {
   background-color: $mainColor;
-  color: $textColor;
+  color: $textLightColor; //$mainDarkColor
   font-family: $contentFont;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5;
   width: 100%;
+  height: $footerHeight;
   height: 8.1rem;
   bottom: 0;
 

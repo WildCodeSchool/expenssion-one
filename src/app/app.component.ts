@@ -7,6 +7,7 @@ import { FooterComponent } from './components/footer/footer.component';
 
 
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -24,10 +25,11 @@ export class AppComponent {
 
   breakpointObserver = inject(BreakpointObserver)
   isMobile: boolean = false;
+  
 
   ngOnInit() {
     this.breakpointObserver.observe(Object.values(this.breakpoints)).subscribe((state: BreakpointState) => {
-      this.isMobile = state.breakpoints[this.breakpoints.mobile];
-    });
+      this.isMobile = state.breakpoints[this.breakpoints.mobile]});
+      
   }
 }
