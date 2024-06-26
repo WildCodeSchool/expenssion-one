@@ -1,7 +1,18 @@
 @use "../../../import" as *;
-@use "../../styles/glossary.scss";
 
 
+.background-image {
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-image: url("/assets/background_pictures/background_specialization.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  color: #d6d5bf;
+}
 
 .specialization-list{
   padding-top: $globalPaddingTop;
