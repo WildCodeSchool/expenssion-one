@@ -29,7 +29,6 @@ $glossaryPaddingLeftMobile: 5%;
 $glossaryPaddingRightMobile: 5%;
 
 //mixin for decorate ours titles
-//don't forget to put your parent element in position:relative
 //importe la mixin avec @include underline-title
 // si besoin de changer des valeurs
 //déclare de nouveau &::before{width: 3px}, &::after{height: 5px} ,
