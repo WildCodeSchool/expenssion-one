@@ -36,11 +36,14 @@ export const routes: Routes = [
     component: LocationPageComponent,
   },
   
-  { path: 'news', component: NewsPageComponent },
   { 
     path: 'news', 
     component: NewsPageComponent 
   },
+
+  {
+    path: 'rules-page',
+    component: RulesPageComponent  }
 
   ];
 
