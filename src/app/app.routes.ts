@@ -4,7 +4,7 @@ import { PopupComponent } from './components/pop-up-connexion/pop-up-connexion.c
 import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
 import { LocationPageComponent } from './pages/location-page/location-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
-import { NewsPageComponent } from './news-page/news-page.component';
+import { NewsPageComponent } from './pages/news-page/news-page.component';
 import { RulesPageComponent } from './pages/rules-page/rules-page.component';
 
 
@@ -43,10 +43,6 @@ export const routes: Routes = [
   },
 
   ];
-  {
-    path: 'regles',
-    component: RulesPageComponent,
-  },
-];
+
 
 
