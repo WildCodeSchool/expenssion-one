@@ -13,16 +13,17 @@ section {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 90vh;
     width: 100%;
     padding: 1em;
+    background-color: rgba(245, 146, 146, 0.2);
 }
 
 h1,
 h2 {
     text-align: center;
     width: 100%;
-	text-shadow: 0px 2px 2px rgb(247, 225, 203);
+	text-shadow: 2px 2px 2px $mainColor;
 }
 
 h1 {
@@ -32,8 +33,9 @@ h1 {
 }
 
 h2 {
-    margin-top: 2rem;
+    margin-top: 4rem;
     font-size: 30px;
+    color: white;
     font-family: $subTitleFont;
     font-weight: $fontBoldStyle;
 }
