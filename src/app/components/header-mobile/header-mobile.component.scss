@@ -1,7 +1,7 @@
 @use "../../../import" as *;
 $header_height:80px;
 .header {
-  font-family: $subTitleFont;
+
   position: fixed;
   top: 0;
   width: 100%;
@@ -22,6 +22,8 @@ $header_height:80px;
   }
   
   .navbar-container {
+    font-family: $subTitleFont;
+    font-weight: $fontBoldStyle;
     display: flex;
     background-color: rgba(51, 50, 50, 0.7);
     width: 100%;

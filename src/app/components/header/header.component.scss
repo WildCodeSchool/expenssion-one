@@ -9,10 +9,11 @@ $ul_gap: 80px;
 
   z-index: 1;
   left: 0;
-  font-family: $subTitleFont;
   font-size: 1.3rem;
 
   .navbar-container {
+    font-family: $subTitleFont;
+    font-weight: $fontBoldStyle;
     display: flex;
     background-color: rgba(51, 50, 50, 0.7);
     width: 100%;
@@ -35,15 +36,16 @@ $ul_gap: 80px;
     }
 
     .navbar-center {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
+      display: grid;
       gap: $play-button-width;
+      grid-template-columns:1fr 1fr ;
+      grid-template-rows: 1fr;
       padding: 1.5rem 0;
       color: white;
 
+
       .navbar-right {
-        margin-left: 5vw;
+        margin-left: 5vw !important;
       
           ul {
             padding: 0;
@@ -65,6 +67,15 @@ $ul_gap: 80px;
           }
       
           li {
+            .gear-menu{
+              display:flex;
+              .gear-menu-image{
+                margin-top:-2px ;
+                margin-right: 5px;
+                height: 30px;
+                width: 30px;
+              }
+            }
             ul.submenu {
               list-style: none;
               padding-top: 50px;
@@ -91,10 +102,37 @@ $ul_gap: 80px;
       margin-right: 20px;
       justify-content: right;
       align-items: center;
-      .connection-logo{
-        height: 53px;
-        width: 53px;
+      .connection-image{
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+        img {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 1;
+            grid-row-end: 1 ;
+          }
+          .avatar{
+            z-index: 2;
+            height: 40px;
+            width: 40px;
+
+          }
+          .avatar-gear{
+            z-index: 1;
+          
+            height: 53px;
+              width: 53px;
+          }
+      
+
       }
+      .logout-image{
+        height: 53px;
+          width: 53px;
+        
+      }
+      
     }
   }
 
@@ -116,8 +154,16 @@ $ul_gap: 80px;
     }
   }
 
-    @media screen and (max-width: 967px) {
-      font-size: 1rem;
+    @media screen and (max-width: 1080px) {
+      font-size: 1.2rem;
+
+  
+      
+          .gear-menu-image {
+           
+            height: 20px;
+            width: 20px;
+          }
       .navbar-center{
         gap:150px !important;
       }
@@ -138,4 +184,32 @@ $ul_gap: 80px;
 
 
     }
+
+    @media screen and (max-width: 900px) {
+      font-size: 1rem;
+      .gear-menu-image {
+      
+          height: 15px !important;
+          width: 15px !important;
+        }
+
+
+
+    }
+
+    @media screen and (max-width: 900px) {
+      font-size: 0.8rem;
+      .navbar-center{
+        margin-top: 5px;
+      }
+      .gear-menu-image {
+      
+         margin-top: 1px !important;
+        }
+
+
+
+    }
+
+            
 }
