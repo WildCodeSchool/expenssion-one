@@ -16,7 +16,7 @@ section {
     height: 90vh;
     width: 100%;
     padding: 1em;
-    background-color: rgba(245, 146, 146, 0.2);
+    background-color: rgba(218, 154, 154, 0.2);
 }
 
 h1,
@@ -30,6 +30,13 @@ h1 {
     font-size: 70px;
     font-weight: 500;
     font-family: $mainTitle;
+    @include underline-title;
+    &::before{
+        width: 3.5px;
+    }
+    &::after{
+        height: 3.5px;
+    }
 }
 
 h2 {
