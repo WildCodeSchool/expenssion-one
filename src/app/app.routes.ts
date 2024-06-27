@@ -8,9 +8,10 @@ import { UserProfilPageComponent } from './pages/user-profil-page/user-profil-pa
 import { AuthenticationGuard } from './guards/authentification.guard';
 import { ProfilParameterPageComponent } from './pages/profil-parameter-page/profil-parameter-page.component';
 import { SecretsPageComponent } from './pages/secrets-page/secrets-page.component';
-import { NewsPageComponent } from './news-page/news-page.component';
+import { NewsPageComponent } from './pages/news-page/news-page.component';
 import { RulesPageComponent } from './pages/rules-page/rules-page.component';
 import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
+import { NewsCharacterComponent } from './pages/news-character/news-character.component';
 
 
 export const routes: Routes = [
@@ -64,6 +65,12 @@ export const routes: Routes = [
    { 
     path: 'news', component: NewsPageComponent 
   },
+
+  { 
+    path: 'Character', component: NewsCharacterComponent 
+  },
+
+
   {
     path: '**',
     redirectTo: 'acceuil',
