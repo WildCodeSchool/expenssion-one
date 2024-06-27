@@ -2,61 +2,56 @@
   <nav class="navbar">
 
     <div class="navbar-container">
+      <div  [ngClass]="isMobileSideNavOpen ? 'navbar-container-open':'navbar-container'">
+        <div class="burger-button-container">
+          <button (click)="toggle()" class="burger-button">
+            @if(isMobileSideNavOpen){
+            <img src="assets/pictures/close.svg" class="large-icon" img />
+            } @else{
+            <img src="assets/pictures/burger-menu.svg" class="large-icon" img />
+            }
+          </button>
+        </div>
 
-    <div  [ngClass]="isMobileSideNavOpen ? 'navbar-container-open':'navbar-container'">
+        <div class="logo">
+          <a routerLink="accueil" (click)="isMobileSideNavOpen = false"
+            ><img class="logo-image" src="assets/pictures/Blop.png" alt="Logo"
+          /></a>
+        </div>
 
-      <div class="burger-button-container">
-        <button (click)="toggle()" class="burger-button">
-          @if(isMobileSideNavOpen){
-          <img src="assets/pictures/close.svg" class="large-icon" img />
-          } @else{
-          <img src="assets/pictures/burger-menu.svg" class="large-icon" img />
+        <div class="connection-container">
+          @if((isLogin$| async) ===true){
+          <a routerLink="/profil"
+            ><img
+              class="connection-logo"
+              src="assets/pictures/Connexion.png"
+              alt="profil"
+          /></a>
+          <button (click)="onLogout()">
+            <img
+              class="connection-logo"
+              src="assets/pictures/log-out-button.svg"
+              alt="LO"
+            />
+          </button>
+          } @else {
+          <button (click)="openDialogConnection(); isMobileSideNavOpen = false">
+            <img
+              class="connection-logo"
+              src="assets/pictures/Connexion.png"
+              alt="Connection"
+            />
+          </button>
+            <a routerLink="/profil">
+              <div class="connection-image">
+                <img class="avatar" src="assets/pictures/Connexion.png" alt="profil">
+                <img class="avatar-gear" src="assets/pictures/headerGearProfil.png">
+              </div>
+            </a>
+          <button (click)="onLogout()"><img class="logout-image" src="assets/pictures/log-out-button.svg"
+              alt="LO"></button>
           }
-        </button>
-      </div>
-
-      <div class="logo">
-        <a routerLink="accueil" (click)="isMobileSideNavOpen = false"
-          ><img class="logo-image" src="assets/pictures/Blop.png" alt="Logo"
-        /></a>
-      </div>
-
-      <div class="connection-container">
-        @if((isLogin$| async) ===true){
-        <a routerLink="/profil"
-          ><img
-            class="connection-logo"
-            src="assets/pictures/Connexion.png"
-            alt="profil"
-        /></a>
-        <button (click)="onLogout()">
-          <img
-            class="connection-logo"
-            src="assets/pictures/log-out-button.svg"
-            alt="LO"
-          />
-        </button>
-        } @else {
-        <button (click)="openDialogConnection(); isMobileSideNavOpen = false">
-          <img
-            class="connection-logo"
-            src="assets/pictures/Connexion.png"
-            alt="Connection"
-          />
-        </button>
-          <a routerLink="/profil">
-            <div class="connection-image">
-              <img class="avatar" src="assets/pictures/Connexion.png" alt="profil">
-              <img class="avatar-gear" src="assets/pictures/headerGearProfil.png">
-            </div>
-          </a>
-        <button (click)="onLogout()"><img class="logout-image" src="assets/pictures/log-out-button.svg"
-            alt="LO"></button>
-        }
-        @else {
-        <button (click)="openDialogConnection();isMobileSideNavOpen=false"><img class="connection-logo" src="assets/pictures/Connexion.png"
-            alt="Connection"></button>
-        }
+        </div>
       </div>
     </div>
   </nav>
@@ -70,16 +65,16 @@
         >Création De Personnage</a
       >
     </li>
-  <div class="sidenav-container">
+  <ul class="sidenav-container">
     <ul>
-        <li><a (click)="isMobileSideNavOpen=false" routerLink="accueil">Création De Personnage</a></li>
-        <li>
+      <li><a (click)="isMobileSideNavOpen=false" routerLink="accueil">Création De Personnage</a></li>
+      <li>
           Jeu
-          <ul class="submenu">
-            <li><a (click)="isMobileSideNavOpen=false" routerLink="regles">Introduction</a></li>
-            <li><a (click)="isMobileSideNavOpen=false" routerLink="regles" fragment="reglesdujeu">Règles</a></li>
-          </ul>
-        </li>
+        <ul class="submenu">
+          <li><a (click)="isMobileSideNavOpen=false" routerLink="regles">Introduction</a></li>
+          <li><a (click)="isMobileSideNavOpen=false" routerLink="regles" fragment="reglesdujeu">Règles</a></li>
+        </ul>
+      </li>
         <li>
           Glossaire
           <ul class="submenu">
@@ -90,9 +85,9 @@
             <li><a (click)="isMobileSideNavOpen=false" routerLink="glossaire/lieux">Lieux</a></li>
           </ul>
         </li>
-              <li><a (click)="isMobileSideNavOpen=false" routerLink="news">News</a></li>
+       <li><a (click)="isMobileSideNavOpen=false" routerLink="news">News</a></li>
         <li><a (click)="isMobileSideNavOpen=false" routerLink="construction">Studio</a></li>
-      </ul>
+    </ul>
     <li><a (click)="isMobileSideNavOpen=false" routerLink="accueil">Création De Personnage</a></li>
     <li>
       Jeu
@@ -156,7 +151,5 @@
       <a (click)="isMobileSideNavOpen = false" routerLink="accueil">Studio</a>
     </li>
   </ul>
-
-  </div>
 </div>
 }

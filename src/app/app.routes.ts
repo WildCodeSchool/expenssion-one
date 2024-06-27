@@ -16,7 +16,6 @@ import { BeliefsPageComponent } from './pages/beliefs-page/beliefs-page.componen
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { ConstructionPageComponent } from './pages/construction-page/construction-page.component';
 
-
 export const routes: Routes = [
   {
     path: 'accueil',
@@ -28,13 +27,12 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
-
     path: 'regles',
     component: RulesPageComponent,
-
+  },
+  {
     path: 'inscription',
     component: RegisterPageComponent,
-
   },
   {
     path: 'glossaire/races',
@@ -72,15 +70,15 @@ export const routes: Routes = [
   },
   {
     path: 'construction',
-    component: ConstructionPageComponent
+    component: ConstructionPageComponent,
   },
-  { 
-    path: 'erreur', 
-    component: ErrorPageComponent 
+  {
+    path: 'erreur',
+    component: ErrorPageComponent,
   },
   {
     path: '**',
     redirectTo: 'erreur',
     pathMatch: 'full',
-  }
+  },
 ];
