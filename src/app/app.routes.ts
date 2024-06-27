@@ -10,6 +10,7 @@ import { SecretsPageComponent } from './pages/secrets-page/secrets-page.componen
 import { NewsPageComponent } from './news-page/news-page.component';
 import { RulesPageComponent } from './pages/rules-page/rules-page.component';
 import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
+import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { ConstructionPageComponent } from './pages/construction-page/construction-page.component';
 
 export const routes: Routes = [
@@ -58,7 +59,7 @@ export const routes: Routes = [
     path: 'profil/parametres',
     component: ProfilParameterPageComponent,canActivate:[AuthenticationGuard],
   },
-   { 
+  { 
     path: 'news', 
     component: NewsPageComponent 
   },
@@ -66,9 +67,13 @@ export const routes: Routes = [
     path: 'construction',
     component: ConstructionPageComponent
   },
+  { 
+    path: 'erreur', 
+    component: ErrorPageComponent 
+  },
   {
     path: '**',
-    redirectTo: 'accueil',
+    redirectTo: 'erreur',
     pathMatch: 'full',
   },
 ];
