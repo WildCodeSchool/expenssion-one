@@ -188,7 +188,7 @@ $ul_gap: 80px;
     @media screen and (max-width: 900px) {
       font-size: 1rem;
       .gear-menu-image {
-      
+        margin-top: 4px !important;
           height: 15px !important;
           width: 15px !important;
         }
@@ -197,7 +197,7 @@ $ul_gap: 80px;
 
     }
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 800px) {
       font-size: 0.8rem;
       .navbar-center{
         margin-top: 5px;
