@@ -1,22 +1,26 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+
 @Component({
-  selector: 'app-news-character',
-  standalone: true,
-  imports: [CommonModule],
+  selector: 'app-character-selection',
   templateUrl: './news-character.component.html',
-  styleUrl: './news-character.component.scss'
+  styleUrls: ['./news-character.component.scss']
 })
 export class NewsCharacterComponent {
-  slots = Array(12).fill(null); 
+  @ViewChild('slotsWrapper', { static: true }) slotsWrapper!: ElementRef;
 
-  scrollSlotsDown() {
-    const slotsContainer = document.querySelector('.character-slots-container');
-    if (slotsContainer) {
-      slotsContainer.scrollBy({
-        top: 100,
+  scroll(direction: string) {
+    const scrollAmount = 100;
+    if (direction === 'up') {
+      this.slotsWrapper.nativeElement.scrollBy({
+        top: -scrollAmount,
+        behavior: 'smooth'
+      });
+    } else if (direction === 'down') {
+      this.slotsWrapper.nativeElement.scrollBy({
+        top: scrollAmount,
         behavior: 'smooth'
       });
     }
   }
 }
+
