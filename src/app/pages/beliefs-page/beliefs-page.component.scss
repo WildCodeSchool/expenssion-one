@@ -22,11 +22,16 @@ $background-color: #bf8e5280;
     font-family: $subTitleFont;
     font-weight: $fontBoldStyle;
   }
+  .cult-title {
+    margin-top: 3rem;
+  }
+
   .content-description {
     background-color: #bf8e5250;
     backdrop-filter: blur(5px);
     border-radius: 10px;
     padding: 1.5rem 3rem;
+    margin: 2rem 0 2rem 0;
     font-size: 1.1rem;
   }
   .main-title {
@@ -44,6 +49,17 @@ $background-color: #bf8e5280;
     justify-items: center;
     width: 100%;
     height: auto;
+    margin-top: 2rem;
+    .style-li {
+      width: 50%;
+      min-width: 400px;
+      border: 2px solid black;
+      border-radius: 10px;
+      background-color: #dbbc8699;
+      padding: 0 2rem 2.5rem 2rem;
+      margin-top: 3rem;
+      backdrop-filter: blur(5px);
+    }
 
     .divinities-title {
       font-size: 1.5rem;
@@ -58,18 +74,18 @@ $background-color: #bf8e5280;
   .bold-title {
     font-weight: bold;
   }
+
+  @media screen and (max-width: 900px) {
+    padding: 0 1.5rem 2rem 1.5rem;
+    .style-li {
+      max-width: 350px !important;
+      min-width: none !important;
+    }
+  }
   @media screen and (max-width: 768px) {
     .divinities-description-container {
       display: grid;
       grid-template-columns: 1fr;
     }
-  }
-  .style-li {
-    border: 2px solid black;
-    border-radius: 10px;
-    background-color: #dbbc8699;
-    padding: 0 2rem 2.5rem 2rem;
-    margin-top: 3rem;
-    backdrop-filter: blur(5px);
   }
 }
