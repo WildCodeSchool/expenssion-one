@@ -10,7 +10,8 @@ import { ProfilParameterPageComponent } from './pages/profil-parameter-page/prof
 import { SecretsPageComponent } from './pages/secrets-page/secrets-page.component';
 import { RulesPageComponent } from './pages/rules-page/rules-page.component';
 import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
-
+import { ErrorPageComponent } from './pages/error-page/error-page.component';
+import { ConstructionPageComponent } from './pages/construction-page/construction-page.component';
 
 export const routes: Routes = [
   {
@@ -18,13 +19,13 @@ export const routes: Routes = [
     component: HomePageComponent,
   },
   {
-    path: 'inscription',
-    component: RegisterPageComponent,
-  },
-  {
     path: '',
     redirectTo: 'accueil',
     pathMatch: 'full',
+  },
+  {
+    path: 'inscription',
+    component: RegisterPageComponent,
   },
   {
     path: 'glossaire/races',
@@ -35,7 +36,6 @@ export const routes: Routes = [
     component: SpecializationPageComponent,
   }, 
   {
-
     path: 'glossaire/lieux',
     component: LocationPageComponent,
   },
@@ -59,9 +59,21 @@ export const routes: Routes = [
     path: 'profil/parametres',
     component: ProfilParameterPageComponent,canActivate:[AuthenticationGuard],
   },
+  
   {
     path: '**',
     redirectTo: 'accueil',
+  {
+    path: 'construction',
+    component: ConstructionPageComponent
+  },
+  { 
+    path: 'erreur', 
+    component: ErrorPageComponent 
+  },
+  {
+    path: '**',
+    redirectTo: 'erreur',
     pathMatch: 'full',
   }
 ];
