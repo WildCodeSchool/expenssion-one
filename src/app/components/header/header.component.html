@@ -9,8 +9,10 @@
       <div class="navbar-center">
         <div class="navbar-left">
           <ul>
-            <li class="game-button">
-              Jeu
+            <li>
+              <div class="gear-menu">
+                <img class="gear-menu-image" src="assets/pictures/headerGear.png"> Jeu
+              </div>
               <ul class="submenu">
                 <li>
                   <a routerLink="regles" fragment="introduction"
@@ -23,7 +25,10 @@
               </ul>
             </li>
             <li>
-              Glossaire
+              <div class="gear-menu">
+                <img class="gear-menu-image" src="assets/pictures/headerGear.png"> Glossaire
+              </div>
+              
               <ul class="submenu">
                 <li><a routerLink="glossaire/races">Races</a></li>
                 <li><a routerLink="glossaire/classes">Classes</a></li>
@@ -37,13 +42,14 @@
         <div class="navbar-right">
           <ul>
             <li><a routerLink="news">News</a></li>
-            <li><a routerLink="accueil">Studio</a></li>
+            <li><a routerLink="construction">Studio</a></li>
           </ul>
         </div>
       </div>
 
       <div class="connection-container">
         @if((isLogin$| async) ===true){
+
         <a routerLink="/profil"
           ><img
             class="connection-logo"
@@ -65,6 +71,17 @@
             alt="Connection"
           />
         </button>
+
+          <a routerLink="/profil">
+            <div class="connection-image">
+              <img class="avatar" src="assets/pictures/Connexion.png" alt="profil">
+              <img class="avatar-gear" src="assets/pictures/headerGearProfil.png">
+            </div>
+        </a>
+          <button (click)="onLogout()"><img class="logout-image" src="assets/pictures/log-out-button.svg" alt="LO"></button>
+        }
+        @else {
+          <button (click)="openDialogConnection()"><img  class="connection-logo" src="assets/pictures/Connexion.png" alt="Connection"></button>
         }
       </div>
     </div>
@@ -77,7 +94,6 @@
         src="assets/pictures/jouer.png"
         alt="profil"
     /></a>
-
     } @else{
     <button (click)="openDialogGame()">
       <img class="image-play-container" src="assets/pictures/jouer.png" />

@@ -1,6 +1,10 @@
-<header class="header" [ngClass]="{ 'blur-background': isMobileSideNavOpen }">
+<header class="header">
   <nav class="navbar">
+
     <div class="navbar-container">
+
+    <div  [ngClass]="isMobileSideNavOpen ? 'navbar-container-open':'navbar-container'">
+
       <div class="burger-button-container">
         <button (click)="toggle()" class="burger-button">
           @if(isMobileSideNavOpen){
@@ -40,6 +44,18 @@
             alt="Connection"
           />
         </button>
+          <a routerLink="/profil">
+            <div class="connection-image">
+              <img class="avatar" src="assets/pictures/Connexion.png" alt="profil">
+              <img class="avatar-gear" src="assets/pictures/headerGearProfil.png">
+            </div>
+          </a>
+        <button (click)="onLogout()"><img class="logout-image" src="assets/pictures/log-out-button.svg"
+            alt="LO"></button>
+        }
+        @else {
+        <button (click)="openDialogConnection();isMobileSideNavOpen=false"><img class="connection-logo" src="assets/pictures/Connexion.png"
+            alt="Connection"></button>
         }
       </div>
     </div>
@@ -54,6 +70,30 @@
         >Création De Personnage</a
       >
     </li>
+  <div class="sidenav-container">
+    <ul>
+        <li><a (click)="isMobileSideNavOpen=false" routerLink="accueil">Création De Personnage</a></li>
+        <li>
+          Jeu
+          <ul class="submenu">
+            <li><a (click)="isMobileSideNavOpen=false" routerLink="regles">Introduction</a></li>
+            <li><a (click)="isMobileSideNavOpen=false" routerLink="regles" fragment="reglesdujeu">Règles</a></li>
+          </ul>
+        </li>
+        <li>
+          Glossaire
+          <ul class="submenu">
+            <li><a (click)="isMobileSideNavOpen=false" routerLink="glossaire/races">Races</a></li>
+            <li><a (click)="isMobileSideNavOpen=false" routerLink="glossaire/classes">Classes</a></li>
+            <li><a (click)="isMobileSideNavOpen=false" routerLink="glossaire/secrets">Secrets</a></li>
+            <li><a (click)="isMobileSideNavOpen=false" routerLink="glossaire/croyances">Croyances</a></li>
+            <li><a (click)="isMobileSideNavOpen=false" routerLink="glossaire/lieux">Lieux</a></li>
+          </ul>
+        </li>
+              <li><a (click)="isMobileSideNavOpen=false" routerLink="news">News</a></li>
+        <li><a (click)="isMobileSideNavOpen=false" routerLink="construction">Studio</a></li>
+      </ul>
+    <li><a (click)="isMobileSideNavOpen=false" routerLink="accueil">Création De Personnage</a></li>
     <li>
       Jeu
       <ul class="submenu">
@@ -111,11 +151,12 @@
         </li>
       </ul>
     </li>
-
     <li><a (click)="isMobileSideNavOpen = false" routerLink="news">News</a></li>
     <li>
       <a (click)="isMobileSideNavOpen = false" routerLink="accueil">Studio</a>
     </li>
   </ul>
+
+  </div>
 </div>
 }
