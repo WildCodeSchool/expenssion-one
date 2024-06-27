@@ -1,1 +1,75 @@
 @use "../../../import" as *;
+
+$background-color: #bf8e5280;
+
+.beliefs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../../assets/background_pictures/beliefs.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  padding: 10rem 3rem;
+  font-family: $contentFont;
+
+  .main-title,
+  .cult-title,
+  .intro-divinities,
+  .divinities-title {
+    font-family: $subTitleFont;
+    font-weight: $fontBoldStyle;
+  }
+  .content-description {
+    background-color: #bf8e5250;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 1.5rem 3rem;
+    font-size: 1.1rem;
+  }
+  .main-title {
+    @include underline-title;
+  }
+  .intro-divinities {
+    font-size: 2rem;
+    @include underline-title;
+  }
+  .divinities-description-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: auto;
+
+    .divinities-title {
+      font-size: 1.5rem;
+      width: 100%;
+      text-align: center;
+    }
+    .divinities-identity {
+      text-align: center;
+      padding-top: 1.3rem;
+    }
+  }
+  .bold-title {
+    font-weight: bold;
+  }
+  @media screen and (max-width: 768px) {
+    .divinities-description-container {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+  .style-li {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #dbbc8699;
+    padding: 0 2rem 2.5rem 2rem;
+    margin-top: 3rem;
+    backdrop-filter: blur(5px);
+  }
+}
