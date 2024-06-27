@@ -1,6 +1,7 @@
 @use "../../../import" as *;
 
 $background-color: #bf8e5280;
+$border-radius: 10px;
 
 .beliefs {
   display: flex;
@@ -27,9 +28,9 @@ $background-color: #bf8e5280;
   }
 
   .content-description {
-    background-color: #bf8e5250;
+    background-color: #dbbc8699;
     backdrop-filter: blur(5px);
-    border-radius: 10px;
+    border-radius: $border-radius;
     padding: 1.5rem 3rem;
     margin: 2rem 0 2rem 0;
     font-size: 1.1rem;
@@ -39,24 +40,26 @@ $background-color: #bf8e5280;
   }
   .intro-divinities {
     font-size: 2rem;
+    margin-top: 3rem;
     @include underline-title;
   }
   .divinities-description-container {
+    width: 100%;
+    height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
     justify-items: center;
-    width: 100%;
-    height: auto;
     margin-top: 2rem;
+    padding: 0 2rem;
     .style-li {
       width: 50%;
       min-width: 400px;
       border: 2px solid black;
-      border-radius: 10px;
+      border-radius: $border-radius;
       background-color: #dbbc8699;
-      padding: 0 2rem 2.5rem 2rem;
+      padding: 2rem 2rem 2.5rem 2rem;
       margin-top: 3rem;
       backdrop-filter: blur(5px);
     }
@@ -79,7 +82,7 @@ $background-color: #bf8e5280;
     padding: 0 1.5rem 2rem 1.5rem;
     .style-li {
       max-width: 350px !important;
-      min-width: none !important;
+      // min-width: none !important;
     }
   }
   @media screen and (max-width: 768px) {
