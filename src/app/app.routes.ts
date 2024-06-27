@@ -48,7 +48,7 @@ export const routes: Routes = [
     component: NewsPageComponent 
   },
   {
-    path: 'rules-page',
+    path: 'regles',
     component: RulesPageComponent  
   },
   {
