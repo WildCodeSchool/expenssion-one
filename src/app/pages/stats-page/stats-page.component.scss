@@ -11,78 +11,6 @@
     justify-content:center;
 }
 
-.gridBox{
-    display:grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 10px;
-    margin-top:2%;
-}
-
-.addiction
-{
-    grid-column:1;
-    grid-row:1;
-}
-
-.charisme
-{
-    grid-column:2;
-    grid-row:1;
-}
-
-.constitution
-{
-    grid-column:3;
-    grid-row:1;
-}
-
-.dexterite
-{
-    grid-column:4;
-    grid-row:1;
-}
-
-.force
-{
-    grid-column:5;
-    grid-row:1;
-}
-
-.intelligence
-{
-    grid-column:1;
-    grid-row:2;
-}
-
-.perception
-{
-    grid-column:1;
-    grid-row:2;
-}
-
-.rapidite
-{
-    grid-column:2;
-    grid-row:2;
-}
-
-.sagesse
-{
-    grid-column:3;
-    grid-row:2;
-}
-
-.survie
-{
-    grid-column:4;
-    grid-row:2;
-}
-
-
-
-
-
 .background-image
 {
   background-image: url(../../../assets/background_pictures/backgorund_stat.jpg);
@@ -140,6 +68,16 @@
     
 }
 
+@media screen and (max-width: 768px) {
+    .selectStats {
+        margin-top: 100px;
+    }
+    .content-page{
+        justify-content: center;
+        align-items:center;
+    }
+  }
+
 .modifying
 {
     width:1500px;
@@ -159,7 +97,7 @@
     align-items:center;
     text-align: center;
     background-color: #DDB375;
-    color:white;
+    color:black;
     border-radius: 5px;
     width:70px;
     height:30px;
