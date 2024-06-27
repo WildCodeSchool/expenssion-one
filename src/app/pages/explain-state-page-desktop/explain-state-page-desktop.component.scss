@@ -1,0 +1,61 @@
+@use "../../../import" as *;
+
+.flexRow{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top:2%;
+}
+
+.modifying
+{
+    width:760px;
+    height:600px;
+    background-color:#202229;
+    margin-bottom:12%;
+    margin-left:6%;
+    margin-right:6%;
+    border-radius: 10px;
+    color:white;
+    font-size:13px;
+}
+
+h1{
+    font-size:25px;
+}
+
+h2{
+    font-size:20px;
+    color: white;
+    text-align:center;
+}
+
+.title
+{
+    color:white;
+    text-align: center;
+    margin-top : 5%
+}
+
+h2
+{
+    margin-top:5%;
+    margin-bottom:5%;
+}
+
+.modifyTitle
+{
+    text-align: center;
+    margin-top : 2%;
+}
+
+.stat{
+    display:flex;
+    flex-direction:row;
+    color:white;
+    height: 40px;
+}
+button
+{
+    margin-top:0%;
+}

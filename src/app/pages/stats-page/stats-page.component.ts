@@ -2,22 +2,22 @@ import { Component, inject } from '@angular/core';
 import { Statistiques } from '../../model/stats/statistiques';
 import { ApiDataService } from '../../service/api-data.service';
 import { NgFor } from '@angular/common';
+import { ExternalExpr } from '@angular/compiler';
+import { ExplainStatePageDesktopComponent } from '../explain-state-page-desktop/explain-state-page-desktop.component';
 
 @Component({
   selector: 'app-stats-page',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, ExplainStatePageDesktopComponent],
   templateUrl: './stats-page.component.html',
   styleUrl: './stats-page.component.scss'
 })
 export class StatsPageComponent {
   statistiques:Statistiques[] = [];
 
-  points:number = 5;
+  points!:number;
 
   apiService = inject(ApiDataService);
-
-
 
   modifyScore(score:number):number{
     if(score == 20 || score == 19)
@@ -43,8 +43,34 @@ export class StatsPageComponent {
     return score;
   }
 
+  scoreDown(name:String)
+  {
+    if(this.points < 5)
+    {
+      for(let i = 0; i < this.statistiques.length; i++)
+      {
+        if(this.statistiques[i].name === name)
+          this.statistiques[i].score -= 1;
+      }
+      this.points++;
+    }
+  }
+  scoreUp(name:String)
+  {
+    if(this.points > 0)
+    {
+      for(let i = 0; i < this.statistiques.length; i++)
+        {
+          if(this.statistiques[i].name === name)
+            this.statistiques[i].score += 1;
+        }
+      this.points--;
+    }
+  }
+
   ngOnInit()
   {
+    this.points = 5;
     this.apiService.getStatistiques().subscribe(
       statistiques => {
         this.statistiques = statistiques

@@ -1,3 +1,5 @@
+@use "../../../import" as *;
+
 .circle{
     height: 30px;
     width: 30px;
@@ -8,6 +10,76 @@
     align-items: center;
     justify-content:center;
 }
+
+.gridBox{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-top:2%;
+}
+
+.addiction
+{
+    grid-column:1;
+    grid-row:1;
+}
+
+.charisme
+{
+    grid-column:2;
+    grid-row:1;
+}
+
+.constitution
+{
+    grid-column:3;
+    grid-row:1;
+}
+
+.dexterite
+{
+    grid-column:4;
+    grid-row:1;
+}
+
+.force
+{
+    grid-column:5;
+    grid-row:1;
+}
+
+.intelligence
+{
+    grid-column:1;
+    grid-row:2;
+}
+
+.perception
+{
+    grid-column:1;
+    grid-row:2;
+}
+
+.rapidite
+{
+    grid-column:2;
+    grid-row:2;
+}
+
+.sagesse
+{
+    grid-column:3;
+    grid-row:2;
+}
+
+.survie
+{
+    grid-column:4;
+    grid-row:2;
+}
+
+
 
 
 
@@ -20,9 +92,36 @@
 {
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
+.statPage{
+    margin-top:7%;
+}
+
+.statScore {
+    margin-left:50px;
+    width:70px;
+}
+
+.statName {
+    width:150px;
+}
+
+.displayValidationButton{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+@media screen and (max-width: 768px) {
+    .content-page
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+  }
 
 .content
 {
@@ -31,9 +130,9 @@
 
 .selectStats {
     width:400px;
-    height:662px;
+    height:600px;
     background-color:#202229;
-    margin-top: 12%;
+    margin-top: 7%;
     margin-bottom:12%;
     margin-left:6%;
     padding-left:2%;
@@ -43,15 +142,27 @@
 
 .modifying
 {
-    width:500px;
-    height:662px;
+    width:1500px;
+    height:700px;
     background-color:#202229;
-    margin-top: 12%;
+    margin-top: 7%;
     margin-bottom:12%;
     margin-left:6%;
-    margin-right:6%;
     border-radius: 10px;
     color:white;
+    font-size:20px;
+}
+
+.validationButton
+{
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    background-color: #DDB375;
+    color:white;
+    border-radius: 5px;
+    width:70px;
+    height:30px;
 }
 
 h1{
@@ -68,20 +179,34 @@ h2{
 {
     color:white;
     text-align: center;
+    margin-top : 5%
+}
+
+h2
+{
+    margin-top:5%;
+    margin-bottom:5%;
+}
+
+.modifyTitle
+{
+    text-align: center;
+    margin-top : 2%;
+}
+
+.modifyScore
+{
+    text-align: center;
+    margin-top : 2%;
 }
 
 .stat{
     display:flex;
     flex-direction:row;
     color:white;
+    height: 40px;
 }
 button
 {
     margin-top:0%;
-}
-
-.circle{
-    display:flex;
-    align-items: center;
-    justify-content: center;
 }
