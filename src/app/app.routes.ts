@@ -31,7 +31,6 @@ export const routes: Routes = [
     path: 'regles',
     component: RulesPageComponent,
   },
-
   {
     path: 'glossaire/races',
     component: RaceComponent,

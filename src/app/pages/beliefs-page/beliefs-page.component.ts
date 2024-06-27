@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { ApiDataService } from '../../service/api-data.service';
 import { Belief } from '../../model/belief/belief';
 
 @Component({
   selector: 'app-beliefs-page',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './beliefs-page.component.html',
   styleUrl: './beliefs-page.component.scss',
 })
@@ -15,7 +16,7 @@ export class BeliefsPageComponent {
   beliefs: Belief[] = [];
 
   constructor(private ApiDataService: ApiDataService) {}
-  //Appel du service pour get data.race.json à l'initialisation du composant
+  //Appel du service pour get data.belief.json à l'initialisation du composant
   ngOnInit(): void {
     this.ApiDataService.getBeliefs().subscribe((response: Belief[]) => {
       //Affecte les données récupérées à la propriété 'races'/and display data race.json from api-service

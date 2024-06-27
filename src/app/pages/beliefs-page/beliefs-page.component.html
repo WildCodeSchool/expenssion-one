@@ -1,1 +1,36 @@
-<p>beliefs-page works!</p>
+@for(belief of beliefs; track belief){
+<section class="beliefs">
+  <div class="beliefs-description-container">
+    <h1 class="bold-title">{{ belief.cult }}</h1>
+  </div>
+  <div>
+    <img src="" alt="" />
+    <p>{{ belief.description }}</p>
+  </div>
+  <ul>
+    @for(divinity of belief.divinities; track divinity){
+
+    <li class="divinities-description container">
+      <h2 class="bold-title">{{ divinity.name }} :</h2>
+
+      <ul>
+        <li>{{ divinity.title }}</li>
+        <li>{{ divinity.gender }}</li>
+        <li>{{ divinity.effect }}</li>
+        <li>{{ divinity.strength }}</li>
+        <li>{{ divinity.dexterity }}</li>
+        <li>{{ divinity.constitution }}</li>
+        <li>{{ divinity.intelligence }}</li>
+        <li>{{ divinity.wisdom }}</li>
+        <li>{{ divinity.charisma }}</li>
+        <li>{{ divinity.armor }}</li>
+        <li>{{ divinity.addiction }}</li>
+        <li><span class="bold-title">Vitesse :</span> {{ divinity.speed }}</li>
+        <li>{{ divinity.perception }}</li>
+      </ul>
+    </li>
+    }
+  </ul>
+</section>
+
+}
