@@ -1,6 +1,18 @@
 @use "../../../import" as *;
-@use "../../styles/user-profil.scss";
+
+
+
 .background-image{
+    background-image: url("/assets/background_pictures/user_profil_background.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: calc(100vh - $footerHeight);
+    padding-top: $globalPaddingTop;
+    color: #d6d5bf;
     display: grid;
     grid-template-columns: 3fr 7fr;
     padding-left: 10%;
