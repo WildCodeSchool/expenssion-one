@@ -1,9 +1,19 @@
 @use "../../../import" as *;
 
 .background-image {
+    background-image: url("/assets/background_pictures/user_profil_background.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: calc(100vh - $footerHeight);
+    padding-top: $globalPaddingTop;
     display: flex;
     flex-direction: column;
     padding-bottom: 50px;
+        font-family: 'Inika';
 
     button {
             background-color: #303133;
