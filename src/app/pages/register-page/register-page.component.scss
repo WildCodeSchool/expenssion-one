@@ -25,7 +25,7 @@
     text-align: center;
     margin-bottom: 20px;
     font-size: 35px;
-    font-family: 'Cinzel', cursive;
+    font-family: 'Cinzel';
     color: white;
 }
 
@@ -55,6 +55,10 @@
     align-self: center;
     text-align: center;
     margin-top: 20px;
+}
+
+input {
+    color: #000000;
 }
 
 .cgu-button {
