@@ -28,14 +28,24 @@ h1, h2 {
   font-family: $subTitleFont;
 }
 
+h2 {
+  font-size: 40px;
+  margin-top: 2rem;
+}
+
 h3,
 h4 {
   font-family: $contentFont;
   font-size: x-large;
+  margin-top: 2rem;
 }
 
 h4 {
   text-decoration: underline;
+}
+
+.continent-description {
+  text-align: center;
 }
 
 p {

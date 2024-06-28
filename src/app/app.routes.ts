@@ -12,6 +12,7 @@ import { NewsPageComponent } from './pages/news-page/news-page.component';
 import { RulesPageComponent } from './pages/rules-page/rules-page.component';
 import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
 import { NewsCharacterComponent } from './pages/news-character/news-character.component';
+import { SecretSelectionPageComponent } from './pages/secret-selection-page/secret-selection-page.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { ConstructionPageComponent } from './pages/construction-page/construction-page.component';
 
@@ -62,10 +63,6 @@ export const routes: Routes = [
     path: 'profil/parametres',
     component: ProfilParameterPageComponent,canActivate:[AuthenticationGuard],
   },
-  
-  {
-    path: '**',
-    redirectTo: 'accueil',
   {
     path: 'construction',
     component: ConstructionPageComponent
@@ -76,9 +73,13 @@ export const routes: Routes = [
   },
 
   { 
-    path: 'Character', component: NewsCharacterComponent 
+    path: 'Ajout/Perso', component: NewsCharacterComponent 
   },
 
+      {
+    path: 'creationPersonnage/secrets',
+    component: SecretSelectionPageComponent,
+  },
 
   {
     path: '**',
