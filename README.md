@@ -25,3 +25,22 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+#Run the project in developpement
+create environement.development.ts like the environement.ts file with personnal values
+to run specifique enviroment use ng serve --configuration=development (by default development)
+add configutation in angular.json example :  
+"configurations": {
+...
+"development": {
+"fileReplacements": [
+{
+"replace": "src/environments/environment.ts",
+"with": "src/environments/environment.development.ts"
+}
+],
+…
+}
+...
+}
+read more about configuration on https://angular.dev/tools/cli/environments
