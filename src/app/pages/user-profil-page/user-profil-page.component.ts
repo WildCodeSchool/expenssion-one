@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { User } from '../../model/user/user';
 import { RouterLink } from '@angular/router';
 import { UserService } from '../../service/user/user.service';
-import { CharacterService } from '../../service/character/character.service';
+import { CharacterService } from '../character/character.service';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { CalendarOptions } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin
