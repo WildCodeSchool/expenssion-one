@@ -40,7 +40,20 @@
   gap:40px;
   padding-bottom: 50px;
   h1{
-      font-family: $subTitleFont;
+    font-family: $subTitleFont;
+    @include underline-title;
+    &::before,
+      &::after {
+     background: white;
+      }
+      &::before {
+        width: 6px
+      }
+      &::after {
+        height: 6px
+      }
+
+    
   }
   .image-specialization {
     img {
