@@ -59,10 +59,6 @@ export const routes: Routes = [
     path: 'profil/parametres',
     component: ProfilParameterPageComponent,canActivate:[AuthenticationGuard],
   },
-  
-  {
-    path: '**',
-    redirectTo: 'accueil',
   {
     path: 'construction',
     component: ConstructionPageComponent
