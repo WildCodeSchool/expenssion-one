@@ -15,7 +15,7 @@ export class SecretSelectionPageComponent {
   secretService=inject(SecretService)
   isGenerate:boolean=false
   isReset:boolean=false
-  annecdoticSecret:Secret=new Secret(0,"Virginie aime pas Camille");
+  annecdoticSecret:Secret=new Secret(0,"");
   primordialSecret:Secret=new Secret(1,"")
 
   initializeSecrets(){
