@@ -17,7 +17,6 @@
 .specialization-list{
   padding-top: $globalPaddingTop;
   padding-bottom: 50px;
-  font-family: $contentFont;
   font-size: 1.5rem;
   color:rgb(255, 255, 255);
   background-color: rgb(0, 0, 0, 0.5);
@@ -66,9 +65,6 @@
   }
 }
 
-.contents-container{
-
-}
 .skills-container{
   align-items: center;
   justify-content: center;
@@ -99,8 +95,15 @@ border: 1px solid rgb(160 160 160);
 padding: 8px 10px;
 }
 
-td:last-of-type {
+.description, .jobs {
+  font-family: $subTitleFont;
 
+}
+
+p {
+    font-size: 18px;
+    font-family: $contentFont;
+    line-height: 1.5;
 }
 
 @media screen and (max-width: 768px) {
@@ -116,7 +119,7 @@ td:last-of-type {
   }
 
   h2 {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .specialization-container {
