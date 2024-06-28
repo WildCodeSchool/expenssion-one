@@ -3,7 +3,7 @@
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    padding-top: 200px;
+    padding-top: 160px;
     height: 100%;
     width: 100%;
     min-height: 100vh;
@@ -19,13 +19,12 @@
     padding: 20px;
     color: white;
     position: relative;
-    z-index: 1;
 }
 
 .register-form h1 {
     text-align: center;
     margin-bottom: 20px;
-    font-size: larger;
+    font-size: 35px;
     font-family: 'Cinzel', cursive;
     color: white;
 }
