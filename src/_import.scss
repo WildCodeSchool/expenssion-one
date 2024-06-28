@@ -9,17 +9,22 @@ $textColor: black;
 @import url("https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap"); //text glossary,
 @import url("https://fonts.googleapis.com/css2?family=Norican&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+@font-face {
+    font-family: "Cenobyte";
+    src: url(assets/fonts/cenobyte.ttf) format("truetype");
+}
 
 //font-family-variables
 $contentFont: "Inika", sans-serif;
 $subTitleFont: "Cinzel", sans-serif;
 $fontBoldStyle: bold;
-$contentFont: "Inter", sans-serif;
+$mainTitle: "Cenobyte";
+
+
 
 $globalPaddingTop: 160px;
 $footerHeight: 130px;
-
-
+$headerHeight: 130px;
 
 //text-decoration
 $borderCardBreed: 2px solid black;
@@ -30,3 +35,43 @@ $glossaryPaddingLeftDesktop: 5%;
 $glossaryPaddingRightDesktop: 5%;
 $glossaryPaddingLeftMobile: 5%;
 $glossaryPaddingRightMobile: 5%;
+
+//mixin for decorate ours titles
+//don't forget to put your parent element in position:relative
+//importe la mixin avec @include underline-title
+// si besoin de changer des valeurs
+//déclare de nouveau &::before{width: 3px}, &::after{height: 5px} ,
+//dans lesquelles tu changeras les valeurs respectives width(before)
+//et height à ta convenance exemple: &::before{width: 3px}, &::after{height: 5px}
+//Ne rien changer dans la mixin du fichier _imports.css, sinon ça pète tout
+//Et prenez les 2 variables $titleUnderline et $marginGlobal
+
+$titleUnderline: 40px;
+$marginGlobal: 25px 0 25px 0;
+
+@mixin underline-title {
+  width: max-content;
+  max-width: calc(100% - $titleUnderline);
+  padding: 20px 20px;
+  margin: $marginGlobal;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background: $textColor;
+  }
+  &::before {
+    width: 2px;
+    height: calc(100% + 25px);
+    right: 0;
+    bottom: -25px;
+  }
+  &::after {
+    width: calc(100% + 40px);
+    height: 2px;
+    left: 0;
+    bottom: 0;
+  }
+}

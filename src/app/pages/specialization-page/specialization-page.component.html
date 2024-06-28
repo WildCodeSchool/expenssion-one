@@ -1,9 +1,9 @@
 <section class="background-image">
-    <ul>
+    <ul class="specialization-list">
         @for(specialization of specializations;track specialization){
         <li class="specialization-container">
             <div class="title-container">
-                <h1 class="title">{{specialization.name}}</h1>
+                <h1 class="underline-title">{{specialization.name}}</h1>
                 <div class="image-specialization">
                     <img [src]="specialization.url">
                 </div>
@@ -11,7 +11,7 @@
 
 
             <div class="contents-container">
-                <h2 class="text-description">Description:</h2>
+                <h2 class="description">Description :</h2>
                 <br>
                 @for(content of specialization.content;track content){
                 <p class="text-description">
@@ -22,7 +22,7 @@
             </div>
 
             <div class="jobs-container">
-                <h2 class="text-description">Métiers:</h2>
+                <h2 class="jobs">Métiers :</h2>
                 <br>
                 <ul>
                     @for(job of specialization.jobs;track job){

@@ -1,3 +1,4 @@
+@use "../../../import" as *;
 $play-button-width: 200px;
 $ul_gap: 80px;
 
@@ -5,10 +6,14 @@ $ul_gap: 80px;
   position: fixed;
   top: 0;
   width: 100%;
+
   z-index: 1;
   left: 0;
+  font-size: 1.3rem;
 
   .navbar-container {
+    font-family: $subTitleFont;
+    font-weight: $fontBoldStyle;
     display: flex;
     background-color: rgba(51, 50, 50, 0.7);
     width: 100%;
@@ -16,73 +21,122 @@ $ul_gap: 80px;
     justify-content: space-between;
 
     .logo {
-      margin-left:10px;
+      width: 100px;
+      margin-left:20px;
+      margin-top: 5px;
+      a{
+        display: flex;
       .logo-image {
-        width : 53px;
-        height: auto;
+        align-items: center;
+        justify-content: center;
+        width : 65px;
+
       }
+    }
     }
 
     .navbar-center {
-      display: flex;
-      align-items: flex-start;
+      display: grid;
       gap: $play-button-width;
+      grid-template-columns:1fr 1fr ;
+      grid-template-rows: 1fr;
       padding: 1.5rem 0;
-      margin-top: 7px;
       color: white;
-    }
 
-    .navbar-left {
-      margin-right: 5vw;
 
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex; 
-        gap: $ul_gap;
-      }
-
-      li {
-        ul.submenu {
-          list-style: none;
-          padding-top: 50px;
-          display: none;
-          width: 10px;
-        }
-        &:hover {
-          ul.submenu {
-            display: block;
+      .navbar-right {
+        margin-left: 5vw !important;
+      
+          ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: $ul_gap;
           }
         }
-      }
+      
+        .navbar-left {
+          margin-right: 5vw;
+          ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: $ul_gap;
+          }
+      
+          li {
+            .gear-menu{
+              display:flex;
+              .gear-menu-image{
+                margin-top:-2px ;
+                margin-right: 5px;
+                height: 30px;
+                width: 30px;
+              }
+            }
+            ul.submenu {
+              list-style: none;
+              padding-top: 50px;
+              display: none;
+              width: 10px;
+            }
+      
+            &:hover {
+              ul.submenu {
+                display: block;
+              }
+            }
+          }
+        }
+
+
     }
+
 
     .connection-container{
-      display: block;
-      margin-top: 10px;
-      margin-right: 10px;
-      .connection-logo{
-        justify-content: center;
-        align-items: center;
-        height: 53px;
-        width: 53px;
-      }
-    }
-  }
-
-  .navbar-right {
-    display: flex;
-    margin-left: 5vw;
-
-    ul {
-      padding: 0;
-      margin: 0;
       display: flex;
+      width: 100px;
+      margin-top: 10px;
+      margin-right: 20px;
+      justify-content: right;
       align-items: center;
-      gap:$ul_gap;
+      .connection-image{
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+        img {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 1;
+            grid-row-end: 1 ;
+          }
+          .avatar{
+            z-index: 2;
+            height: 40px;
+            width: 40px;
+
+          }
+          .avatar-gear{
+            z-index: 1;
+          
+            height: 53px;
+              width: 53px;
+          }
+      
+
+      }
+      .logout-image{
+        height: 53px;
+          width: 53px;
+        
+      }
+      
     }
   }
+
+  
 
   .play-button {
     position: fixed;
@@ -99,4 +153,63 @@ $ul_gap: 80px;
       height: 125px;
     }
   }
+
+    @media screen and (max-width: 1080px) {
+      font-size: 1.2rem;
+
+  
+      
+          .gear-menu-image {
+           
+            height: 20px;
+            width: 20px;
+          }
+      .navbar-center{
+        gap:150px !important;
+      }
+
+      .navbar-left{
+        ul{
+          gap: 20px !important;
+        }
+      }
+
+      .navbar-right {
+    
+
+        ul {
+          gap: 20px !important;
+        }
+      }
+
+
+    }
+
+    @media screen and (max-width: 900px) {
+      font-size: 1rem;
+      .gear-menu-image {
+        margin-top: 4px !important;
+          height: 15px !important;
+          width: 15px !important;
+        }
+
+
+
+    }
+
+    @media screen and (max-width: 800px) {
+      font-size: 0.8rem;
+      .navbar-center{
+        margin-top: 5px;
+      }
+      .gear-menu-image {
+      
+         margin-top: 1px !important;
+        }
+
+
+
+    }
+
+            
 }

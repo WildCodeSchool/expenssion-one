@@ -1,7 +1,7 @@
 @use "../../../import" as *;
 
 .background_image {
-    background-image: url("../../../assets/background_pictures/home_page_background.png");
+    background-image: url("../../../assets/background_pictures/main_background.jpg");
     background-size: cover;
     background-position: center center;
     width: 100%;
@@ -13,31 +13,43 @@ section {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 90vh;
     width: 100%;
     padding: 1em;
+    background-color: rgba(218, 154, 154, 0.2);
 }
 
 h1,
 h2 {
     text-align: center;
-    font-family: "Kaisei Decol", serif;
     width: 100%;
+	text-shadow: 2px 2px 2px $mainColor;
 }
 
 h1 {
     font-size: 70px;
     font-weight: 500;
+    font-family: $mainTitle;
+    @include underline-title;
+    &::before{
+        width: 3.5px;
+    }
+    &::after{
+        height: 3.5px;
+    }
 }
 
 h2 {
-    font-size: larger;
+    margin-top: 4rem;
+    font-size: 30px;
+    color: white;
+    font-family: $subTitleFont;
+    font-weight: $fontBoldStyle;
 }
 
 @media screen and (max-width: 768px) {
-
     h1 {
-        font-size: 50px;
+        font-size: 35px;
     }
 
     h2 {
