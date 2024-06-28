@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { Statistiques } from '../../model/stats/statistiques';
+import { Statistics } from '../../model/stats/statistics';
 import { ApiDataService } from '../../service/api-data.service';
 import { NgFor } from '@angular/common';
 import { ExternalExpr } from '@angular/compiler';
@@ -13,7 +13,7 @@ import { ExplainStatePageDesktopComponent } from '../explain-state-page-desktop/
   styleUrl: './stats-page.component.scss'
 })
 export class StatsPageComponent {
-  statistiques:Statistiques[] = [];
+  statistiques:Statistics[] = [];
 
   points!:number;
 
@@ -71,7 +71,7 @@ export class StatsPageComponent {
   ngOnInit()
   {
     this.points = 5;
-    this.apiService.getStatistiques().subscribe(
+    this.apiService.getStatistics().subscribe(
       statistiques => {
         this.statistiques = statistiques
         for(let i = 0; i < 10; i++)

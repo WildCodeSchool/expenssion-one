@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/internal/Observable';
 import { Race } from '../model/race/race';
 import { Continent } from '../model/continent/continent';
 import { Secret } from '../model/secret/secret';
-import { Statistiques } from '../model/stats/statistiques';
+import { Statistics } from '../model/stats/statistics';
 @Injectable({
   providedIn: 'root',
 })
@@ -14,8 +14,8 @@ export class ApiDataService {
 
   constructor() {}
 
-  getStatistiques(): Observable<Statistiques[]> {
-    return this.http.get<Statistiques[]>('assets/data/statistics.json');
+  getStatistics(): Observable<Statistics[]> {
+    return this.http.get<Statistics[]>('assets/data/statistics.json');
   }
 
 
