@@ -1,52 +1,69 @@
 <section class="beliefs">
   <h1 class="main-title">Les Croyances</h1>
-  @for(belief of beliefs; track belief){
-  <div class="beliefs-description-container">
-    <h2 class="cult-title bold-title">{{ belief.cult }}</h2>
-  </div>
-  <div class="content-description">
-    <p>{{ belief.description }}</p>
-  </div>
-  <h3 class="intro-divinities bold-title">Les Divinités Du Royaume</h3>
+  <ul class="beliefs-loop-container">
+    @for(belief of beliefs; track belief){
+    <li>
+      <div class="beliefs-description-container">
+        <h2 class="cult-title bold-title">{{ belief.cult }}</h2>
+      </div>
+      <div class="content-description">
+        <p>{{ belief.description }}</p>
+      </div>
+      <h3 class="intro-divinities bold-title">Les Divinités Du Royaume</h3>
 
-  <ul class="divinities-description-container">
-    @for(divinity of belief.divinities; track divinity){
-    <li class="style-li">
-      <h4 class="divinities-title bold-title">
-        {{ divinity.name }} : {{ divinity.title }}
-      </h4>
-      <ul class="divinities-identity">
-        <li><span class="bold-title">Genre : </span>{{ divinity.gender }}</li>
-        <li>
-          <span class="bold-title">Effet(s) : </span>{{ divinity.effect }}
+      <ul class="divinities-description-container">
+        @for(divinity of belief.divinities; track divinity){
+        <li class="style-li">
+          <h4 class="divinities-title bold-title">
+            {{ divinity.name }} : {{ divinity.title }}
+          </h4>
+          <ul class="divinities-identity">
+            <li>
+              <span class="bold-title">Genre : </span>{{ divinity.gender }}
+            </li>
+            <li>
+              <span class="bold-title">Effet(s) : </span>{{ divinity.effect }}
+            </li>
+            <li>
+              <span class="bold-title">Force : </span>{{ divinity.strength }}
+            </li>
+            <li>
+              <span class="bold-title">Dextérité : </span
+              >{{ divinity.dexterity }}
+            </li>
+            <li>
+              <span class="bold-title">Constitution : </span
+              >{{ divinity.constitution }}
+            </li>
+            <li>
+              <span class="bold-title">Intelligence : </span
+              >{{ divinity.intelligence }}
+            </li>
+            <li>
+              <span class="bold-title">Sagesse : </span>{{ divinity.wisdom }}
+            </li>
+            <li>
+              <span class="bold-title">Charisme : </span>{{ divinity.charisma }}
+            </li>
+            <li>
+              <span class="bold-title">Armure : </span>{{ divinity.armor }}
+            </li>
+            <li>
+              <span class="bold-title">Addiction : </span
+              >{{ divinity.addiction }}
+            </li>
+            <li>
+              <span class="bold-title">Vitesse : </span> {{ divinity.speed }}
+            </li>
+            <li>
+              <span class="bold-title">Perception : </span
+              >{{ divinity.perception }}
+            </li>
+          </ul>
         </li>
-        <li><span class="bold-title">Force : </span>{{ divinity.strength }}</li>
-        <li>
-          <span class="bold-title">Dextérité : </span>{{ divinity.dexterity }}
-        </li>
-        <li>
-          <span class="bold-title">Constitution : </span
-          >{{ divinity.constitution }}
-        </li>
-        <li>
-          <span class="bold-title">Intelligence : </span
-          >{{ divinity.intelligence }}
-        </li>
-        <li><span class="bold-title">Sagesse : </span>{{ divinity.wisdom }}</li>
-        <li>
-          <span class="bold-title">Charisme : </span>{{ divinity.charisma }}
-        </li>
-        <li><span class="bold-title">Armure : </span>{{ divinity.armor }}</li>
-        <li>
-          <span class="bold-title">Addiction : </span>{{ divinity.addiction }}
-        </li>
-        <li><span class="bold-title">Vitesse : </span> {{ divinity.speed }}</li>
-        <li>
-          <span class="bold-title">Perception : </span>{{ divinity.perception }}
-        </li>
+        }
       </ul>
     </li>
     }
   </ul>
-  }
 </section>

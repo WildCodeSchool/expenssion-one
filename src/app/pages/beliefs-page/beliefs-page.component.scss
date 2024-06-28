@@ -9,11 +9,11 @@ $border-radius: 10px;
   justify-content: center;
   align-items: center;
   background-image: url(../../../assets/background_pictures/beliefs.jpg);
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
-  padding: 10rem 3rem;
+  padding: $globalPaddingTop 5%;
   font-family: $contentFont;
 
   .main-title,
@@ -22,26 +22,32 @@ $border-radius: 10px;
   .divinities-title {
     font-family: $subTitleFont;
     font-weight: $fontBoldStyle;
+    text-align: center;
+    margin: 3rem 0;
   }
-  .cult-title {
-    margin-top: 3rem;
+  .main-title {
+    @include underline-title;
   }
 
+  .beliefs-loop-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .content-description {
     background-color: #dbbc8699;
     backdrop-filter: blur(5px);
     border-radius: $border-radius;
     padding: 1.5rem 3rem;
-    margin: 2rem 0 2rem 0;
+    margin: 2rem 2.5rem 3.5rem 2.5rem;
     font-size: 1.1rem;
-  }
-  .main-title {
-    @include underline-title;
   }
   .intro-divinities {
     font-size: 2rem;
-    margin-top: 3rem;
     @include underline-title;
+    margin: 25px auto;
   }
   .divinities-description-container {
     width: 100%;
@@ -51,7 +57,7 @@ $border-radius: 10px;
     gap: 3rem;
     align-items: center;
     justify-items: center;
-    margin-top: 2rem;
+    margin: 2rem 0 rem 0;
     padding: 0 2rem;
     .style-li {
       width: 50%;
@@ -79,12 +85,12 @@ $border-radius: 10px;
   }
 
   @media screen and (max-width: 900px) {
-    padding: 0 1.5rem 2rem 1.5rem;
-    .style-li {
-      max-width: 350px !important;
-    }
   }
+
   @media screen and (max-width: 768px) {
+    .cult-title {
+      font-size: 25px;
+    }
     .divinities-description-container {
       display: grid;
       grid-template-columns: 1fr;

@@ -11,7 +11,11 @@
           <ul>
             <li>
               <div class="gear-menu">
-                <img class="gear-menu-image" src="assets/pictures/headerGear.png"> Jeu
+                <img
+                  class="gear-menu-image"
+                  src="assets/pictures/headerGear.png"
+                />
+                Jeu
               </div>
               <ul class="submenu">
                 <li>
@@ -26,9 +30,13 @@
             </li>
             <li>
               <div class="gear-menu">
-                <img class="gear-menu-image" src="assets/pictures/headerGear.png"> Glossaire
+                <img
+                  class="gear-menu-image"
+                  src="assets/pictures/headerGear.png"
+                />
+                Glossaire
               </div>
-              
+
               <ul class="submenu">
                 <li><a routerLink="glossaire/races">Races</a></li>
                 <li><a routerLink="glossaire/classes">Classes</a></li>
@@ -72,16 +80,26 @@
           />
         </button>
 
-          <a routerLink="/profil">
-            <div class="connection-image">
-              <img class="avatar" src="assets/pictures/Connexion.png" alt="profil">
-              <img class="avatar-gear" src="assets/pictures/headerGearProfil.png">
-            </div>
+        <a routerLink="/profil">
+          <div class="connection-image">
+            <img
+              class="avatar"
+              src="assets/pictures/Connexion.png"
+              alt="profil"
+            />
+            <img
+              class="avatar-gear"
+              src="assets/pictures/headerGearProfil.png"
+            />
+          </div>
         </a>
-          <button (click)="onLogout()"><img class="logout-image" src="assets/pictures/log-out-button.svg" alt="LO"></button>
-        }
-        @else {
-          <button (click)="openDialogConnection()"><img  class="connection-logo" src="assets/pictures/Connexion.png" alt="Connection"></button>
+        <button (click)="onLogout()">
+          <img
+            class="logout-image"
+            src="assets/pictures/log-out-button.svg"
+            alt="LO"
+          />
+        </button>
         }
       </div>
     </div>
