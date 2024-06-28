@@ -13,7 +13,7 @@
 
 .container {
     background: url('../../../assets/background_pictures/connexion_responsive.jpeg');
-    min-height: 600px;
+    min-height: 700px;
     width: 60vh;
     height: 25vw;
     min-width: 350px;
@@ -26,55 +26,63 @@
   }
   .formatText
   {
-    font-family: 'Inter';
+    font-family: 'Inika';
     font-weight: 400;
-    font-size: 10px;
+    font-size: 25px;
     color: #000000;
     align-items: center;
     justify-content: center;
   }
 
   .connect {
-    margin-top:5%;
+    font-size: 25px;
+    font-family:'Cinzel';
   }
   
   .forgot-password {
     text-decoration-line: underline;
-    font-family: 'Inter';
+    font-family: 'Inika';
     font-weight: 400;
-    font-size: 10px;
+    font-size: 25px;
     color: #000000;
     margin-top:5px;
   }
   .inputLogin{
     justify-content: center;
-    height: 30px;
+    height: 50px;
     width: 80%;
-    border-radius: 50px;
+    border-radius: 10px;
     background-color: white;
+    font-size: 25px;
+    padding-left:1%;
+    padding-top:2%
   }
   .connectButton{
     margin-top: 5%;
-    height: 30px;
+    height: 50px;
     width: 80%;
-    border-radius: 50px;
+    border-radius: 10px;
     background-color:black;
     color: white;
+    font-size: 25px;
+    font-family:'Cinzel';
   }
 
   .registerButton{
     margin-top: 5%;
-    height: 30px;
+    height: 50px;
     width: 80%;
-    border-radius: 50px;
+    border-radius: 10px;
     background-color:#625B5B;
     color: white;
+    font-size: 25px;
+    font-family:'Cinzel';
   }
   
   .logo {
     .logo-content {
-      height: 75px;
-      width:75px;
+      height:150px;
+      width:150px;
     }
   }
 
