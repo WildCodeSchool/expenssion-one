@@ -68,6 +68,7 @@ export const routes: Routes = [
   {
     path: '**',
     redirectTo: 'accueil',
+  },
   {
     path: 'construction',
     component: ConstructionPageComponent

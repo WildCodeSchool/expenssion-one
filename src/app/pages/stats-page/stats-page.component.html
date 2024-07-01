@@ -1,19 +1,23 @@
-<div class="background-image">
+<section class="background-image">
     <div class = "content-page">
 
       <div class="selectStats">
         <h1 class="title">Statistiques </h1>
         <h2>Répartissez vos {{points}} points </h2>
 
+        <ul>
         @for(stat of statistiques; track stat)
         {
-          <div class="stat">
-            <div class="statName">{{stat.name}}</div> 
-            <div class="circle"><button class="content" (click)="scoreDown(stat.name)">-</button></div>
-            <div class="statScore">{{stat.score}}</div>
-            <div class="circle"><button (click)="scoreUp(stat.name)" class="content">+</button></div>
-          </div>
+          <li>
+            <div class="stat">
+              <div class="statName">{{stat.name}}</div> 
+              <div class="circle"><button class="content" (click)="scoreDown(stat.name)">-</button></div>
+              <div class="statScore">{{stat.score}}</div>
+              <div class="circle"><button (click)="scoreUp(stat.name)" class="content">+</button></div>
+            </div>
+          </li>
         }
+        </ul>
         <div class="displayValidationButton"><button class="validationButton">Valider</button></div>
       </div>
 
@@ -23,7 +27,7 @@
 
 
      </div>
-</div>
+</section>
 
       
   
