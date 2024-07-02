@@ -22,7 +22,7 @@
   margin-left: 2%;
   border-radius: 10px;
   text-align: center;
-  position: relative; 
+  position: relative;
 }
 
 .add-character {
@@ -52,9 +52,10 @@
   background-color: #b58652;
 }
 
-span {
+h1 {
   color: white;
   font-family: "Cinzel";
+  font-size: 30px;
 }
 
 .new-character-button {
@@ -78,7 +79,7 @@ span {
   align-items: center;
   width: 35%;
   height: 80%;
-  overflow-y: hidden; 
+  overflow-y: hidden;
   padding: 20px;
   position: relative;
 }
@@ -92,9 +93,9 @@ span {
 
 .character-slots {
   display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .slot-column {
@@ -104,8 +105,8 @@ span {
 }
 
 .slot {
-  width: 150px; 
-  height: 140px; 
+  width: 150px;
+  height: 140px;
   background-color: rgba(0, 0, 0, 0.5);
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
@@ -133,38 +134,96 @@ span {
 
 @media (max-width: 768px) {
   .character-selection-container {
-      flex-direction: column;
-      justify-content: center;
-      position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px; 
   }
 
-  .selection-box-container {
-      width: 80%;
-      position: absolute;
-      top: 100%;
+  .selection-box {
+    width: 90%; 
+    height: 50%;
+    margin-top: -200px;
+    box-sizing: border-box; 
   }
 
   .character-slots-container {
-      width: 100%;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    order: -1; 
+    padding: 0;
+    margin-top: -150px;
+  }
+
+  .slots-wrapper {
+    width: 100%; 
+    flex-direction: row;
+    justify-content: center;
+    overflow-x: hidden; 
+    padding: 10px 0; 
   }
 
   .character-slots {
-      flex-direction: column;
+    flex-direction: row; 
+    gap: 10px;
+    justify-content: center; 
+  }
+
+  .slot-column {
+    flex-direction: row; 
+    gap: 10px;
   }
 
   .slot {
-      width: 80px; 
-      height: 80px;
+    width: 100px;
+    height: 100px; 
+    margin: 5px;
   }
 
-  .character-selection-container {
-      background-position: center top; 
+
+
+  .scroll-arrow {
+    cursor: pointer;
+    color: #d4a373;
+    font-size: 24px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    transform: rotate(0deg); /* Reset any rotation */
   }
-  
-  @media (min-width: 769px) {
-      .character-selection-container {
-          background-position: fixed; 
-      }
+
+  .scroll-arrow.up {
+    transform: rotate(-90deg); /* Rotate to point left */
+  }
+
+  .scroll-arrow.down {
+    transform: rotate(-90deg); /* Rotate to point right */
+  }
+
+  .add-character {
+    top: 20px;
+    left: 20px; 
+  }
+
+  .add-button {
+    width: 20px;
+    height: 20px;
+    font-size: 24px;
+  }
+
+  h1 {
+    font-size: 14px; 
+  }
+
+  .new-character-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px; 
   }
 }
 
