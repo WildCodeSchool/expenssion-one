@@ -6,4 +6,12 @@
     background-position: center center;
     width: 100%;
     height: calc(100vh - $footerHeight);
+
+    .location_container {
+        background-color: #202229;
+        filter: opacity(80%);
+        margin-top: calc(100vh - $headerHeight);
+        color: white;
+    }
 }
+
