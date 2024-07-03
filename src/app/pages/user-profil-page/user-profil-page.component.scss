@@ -1,313 +1,273 @@
 @use "../../../import" as *;
 
+.background-image {
+  background-image: url("/assets/background_pictures/user_profil_background.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: calc(100vh - $footerHeight);
+  padding-top: $globalPaddingTop;
+  color: #d6d5bf;
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 50px;
+  padding-top: $globalPaddingTop;
+  gap: 50px;
+  font-family: "Inika";
 
+  h1 {
+    font-family: "Cinzel";
+  }
 
-.background-image{
-    background-image: url("/assets/background_pictures/user_profil_background.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: calc(100vh - $footerHeight);
-    padding-top: $globalPaddingTop;
-    color: #d6d5bf;
-    display: grid;
-    grid-template-columns: 3fr 7fr;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-bottom: 50px;
-    padding-top:$globalPaddingTop;
-    gap:50px;
-    font-family: 'Inika';
+  .characters-container,
+  .user-resume-container,
+  .calendar-container,
+  .friends-container {
+    border: 2px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+  }
 
-    h1{
-        font-family: 'Cinzel';
+  .user-resume-container {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    .user-resume-top-container {
+      display: flex;
+      padding: 10px;
+      justify-content: space-between;
+      align-items: center;
+      h1 {
+        margin: 0 auto;
+        padding-left: 60px;
+      }
+
+      .parameters-button {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+    .user-info-container {
+      height: 100%;
+
+      padding-left: 10px;
+      padding-top: 10px;
+      display: flex;
+      flex-direction: column;
+
+      .profil-picture {
+        height: 80%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        img {
+          border-radius: 50%;
+          border: 4px solid #000;
+          object-fit: cover;
+        }
+      }
+      .personnal-info {
+        padding-left: 20px;
+        margin-top: 25px;
+        padding-bottom: 25px;
+      }
+    }
+  }
+
+  .characters-container {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+
+    .character-top-container {
+      display: flex;
+      padding: 10px;
+      justify-content: space-between;
+      align-items: center;
+
+      .add-character-button {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      h1 {
+        margin: 0 auto;
+        // padding-left: 60px;
+      }
     }
 
+    .list-character-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .grid-character-container {
+        justify-content: center;
+        align-items: center;
+        padding: 10px 50px 10px 50px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 50px;
+        width: 100%;
+        height: 100%;
 
-        .characters-container,
-        .user-resume-container,
-        .calendar-container,
-        .friends-container {
-            border: 2px;
-            display: flex;
-            flex-direction: column;
-            background-color: rgb(0, 0, 0, 0.5);
-            backdrop-filter: blur(4px);
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-            border-radius: 20px;
-
+        img {
+          width: 100%;
+          border-radius: 50%;
+          border: 4px solid #000;
+          object-fit: cover;
         }
-   
-        .user-resume-container{
-            grid-column-start: 1;
-            grid-column-end: 1;
-            grid-row-start: 1;
-            grid-row-end: 1;
-            .user-resume-top-container {
-                display: flex;
-                padding: 10px;
-                justify-content: space-between;
-                align-items: center;
-                h1 {
-                        margin: 0 auto;
-                        padding-left: 60px;
-                    }
-                
-                .parameters-button{
-                    height: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    img{
-                        width: 50px;
-                        height: 50px;
-                    }              
-                }
-
-            }
-            .user-info-container{
-                height: 100%;
-     
-                padding-left: 10px;
-                padding-top:10px ;
-                display: flex;
-                flex-direction: column;
-                
-                .profil-picture {
-                    height: 80%;
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
-
-                    img {
-
-                        border-radius: 50%;
-                        border: 4px solid #000;
-                        object-fit: cover;
-                    }
-                }
-                .personnal-info{
-                    padding-left: 20px;
-                    margin-top:25px;
-                    padding-bottom: 25px;
-                }
-            }
-        }
-            
-            
-        
-        
-
-        .characters-container {
-            grid-column-start: 2;
-            grid-column-end: 2;
-            grid-row-start: 1;
-            grid-row-end: 1;
-           
-
-            .character-top-container {
-                display: flex;
-                padding: 10px;
-                justify-content: space-between;
-                align-items: center;
-
-                .add-character-button {
-                    height: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                    img {
-                        width: 50px;
-                        height: 50px;
-                    }
-                }
-
-                h1 {
-                    margin: 0 auto;
-                    padding-left: 60px;
-                }
-
-            }
-
-            .list-character-container {
-                flex: 1;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                .grid-character-container {
-                    justify-content: center;
-                    align-items: center;
-                    padding: 10px 50px 10px 50px;
-                    display: grid;
-                    grid-template-columns: repeat(5, 1fr);
-                    gap: 50px;
-                    width: 100%;
-                    height: 100%;
-
-                    img {
-                        width: 100%;
-                        border-radius: 50%;
-                        border: 4px solid #000;
-                        object-fit: cover;
-                    }
-                }
-            }
-
-
-
-        }
-
-        .calendar-container{
-            grid-column-start: 1;
-            grid-column-end: 1;
-            grid-row-start: 2;
-            grid-row-end: 2;
-            .calendar-top {
-                padding-top: 10px;
-                flex: 0 0 auto;
-                    h1 {
-                        display: flex;
-                        justify-content: center;
-                    }
-                }
-            .calendar{
-                display: flex;
-                flex-direction: column;
-                padding: 30px;
-            }
-           
-
-        }
-
-        .friends-container{
-            grid-column-start:2;
-            grid-column-end: 2;
-            grid-row-start: 2;
-            grid-row-end: 2;
-            display: flex;
-            flex-direction: column;
-            
-
-        
-        .friends-top-container{
-            padding-top: 10px;
-            text-align: center;
-        }
-            .list-friends-container {
-                flex: 1;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                .grid-friends-container {
-                    justify-content: center;
-                    align-items: center;
-                    padding: 10px 50px 10px 50px;
-                    display: grid;
-                    grid-template-columns: repeat(5, 1fr);
-                    grid-template-rows: repeat(2, 1fr);
-                    gap: 50px;
-                    img {
-                        border-radius: 50%;
-                        border: 4px solid #000;
-                        object-fit: cover;
-                    }
-                }
-            }
-
+      }
     }
+  }
 
-        
+  .calendar-container {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    .calendar-top {
+      padding-top: 10px;
+      flex: 0 0 auto;
+      h1 {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .calendar {
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+    }
+  }
+
+  .friends-container {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    display: flex;
+    flex-direction: column;
+
+    .friends-top-container {
+      padding-top: 10px;
+      text-align: center;
+    }
+    .list-friends-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .grid-friends-container {
+        justify-content: center;
+        align-items: center;
+        padding: 10px 50px 10px 50px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 50px;
+        img {
+          border-radius: 50%;
+          border: 4px solid #000;
+          object-fit: cover;
+        }
+      }
+    }
+  }
 }
 
+@media screen and (max-width: 1632px) {
+  .background-image {
+    grid-template-columns: 5fr 7fr;
+    padding-left: 2%;
+    padding-right: 2%;
 
-
- @media screen and (max-width: 1632px) {
-
-     .background-image {
-         grid-template-columns: 5fr 7fr;
-         padding-left: 2%;
-         padding-right: 2%;
-
-         .list-character-container {
-             .grid-character-container {
-                 gap: 25px;
-             }
-         }
-
-     }
- }
-
- @media screen and (max-width: 1200px) {
-
-     .background-image {
-         grid-template-columns: 6fr 7fr;
-         padding-left: 2%;
-         padding-right: 2%;
-
-         .list-character-container {
-             .grid-character-container {
-                 gap: 25px;
-             }
-         }
-
-     }
- }
-
-
-  @media screen and (max-width: 900px) {
-
-      .background-image {
-          grid-template-columns: 7fr 7fr;
-          padding-left: 2%;
-          padding-right: 2%;
-          gap:5px;
-
-          .list-character-container {
-              .grid-character-container {
-                  gap: 25px;
-              }
-          }
-
+    .list-character-container {
+      .grid-character-container {
+        gap: 25px;
       }
+    }
   }
+}
 
- @media screen and (max-width: 700px) {
+@media screen and (max-width: 1200px) {
+  .background-image {
+    grid-template-columns: 6fr 7fr;
+    padding-left: 2%;
+    padding-right: 2%;
 
-     .background-image {
-         display: flex ;
-         flex-direction: column ;
-
-         .list-character-container {
-             .grid-character-container {
-                 gap: 10px;
-             }
-         }
-
-     }
- }
-
-  @media screen and (max-width: 500px) {
-
-      .background-image {
-            padding-left: 1%;
-            padding-right: 1%;
-          display: flex;
-          flex-direction: column;
-
-          .list-character-container {
-              .grid-character-container {
-                  gap: 10px;
-              }
-          }
-
+    .list-character-container {
+      .grid-character-container {
+        gap: 25px;
       }
+    }
   }
+}
 
-       
-    
+@media screen and (max-width: 900px) {
+  .background-image {
+    grid-template-columns: 7fr 7fr;
+    padding-left: 2%;
+    padding-right: 2%;
+    gap: 5px;
 
+    .list-character-container {
+      .grid-character-container {
+        gap: 25px;
+      }
+    }
+  }
+}
 
+@media screen and (max-width: 700px) {
+  .background-image {
+    display: flex;
+    flex-direction: column;
+
+    .list-character-container {
+      .grid-character-container {
+        gap: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .background-image {
+    padding-left: 1%;
+    padding-right: 1%;
+    display: flex;
+    flex-direction: column;
+
+    .list-character-container {
+      .grid-character-container {
+        gap: 10px;
+      }
+    }
+  }
+}
