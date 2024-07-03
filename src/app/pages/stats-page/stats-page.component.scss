@@ -1,0 +1,150 @@
+@use "../../../import" as *;
+
+.circle{
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    background-color:#DDB375;
+    color: black;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.background-image
+{
+  background-image: url(../../../assets/background_pictures/backgorund_stat.jpg);
+}
+
+.content-page
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.statPage{
+    margin-top:7%;
+}
+
+.statScore {
+    margin-left:50px;
+    width:70px;
+}
+
+.statName {
+    width:150px;
+}
+
+.displayValidationButton{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+@media screen and (max-width: 768px) {
+    .content-page
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+  }
+
+.content
+{
+    font-size: 20px;
+}
+
+.selectStats {
+    width:400px;
+    height:600px;
+    background-color:#202229;
+    margin-top: 7%;
+    margin-bottom:12%;
+    margin-left:6%;
+    padding-left:2%;
+    border-radius: 10px;
+    
+}
+
+@media screen and (max-width: 768px) {
+    .selectStats {
+        margin-top: 100px;
+    }
+    .content-page{
+        justify-content: center;
+        align-items:center;
+    }
+  }
+
+.modifying
+{
+    width:1500px;
+    height:700px;
+    background-color:#202229;
+    margin-top: 7%;
+    margin-bottom:12%;
+    margin-left:6%;
+    border-radius: 10px;
+    color:white;
+    font-size:20px;
+}
+
+.validationButton
+{
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    background-color: #DDB375;
+    color:black;
+    border-radius: 5px;
+    width:70px;
+    height:30px;
+}
+
+h1{
+    font-size:25px;
+}
+
+h2{
+    font-size:20px;
+    color: white;
+    text-align:center;
+}
+
+.title
+{
+    color:white;
+    text-align: center;
+    margin-top : 5%
+}
+
+h2
+{
+    margin-top:5%;
+    margin-bottom:5%;
+}
+
+.modifyTitle
+{
+    text-align: center;
+    margin-top : 2%;
+}
+
+.modifyScore
+{
+    text-align: center;
+    margin-top : 2%;
+}
+
+.stat{
+    display:flex;
+    flex-direction:row;
+    color:white;
+    height: 40px;
+}
+button
+{
+    margin-top:0%;
+}
