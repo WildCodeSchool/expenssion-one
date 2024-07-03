@@ -10,9 +10,14 @@ import { ProfilParameterPageComponent } from './pages/profil-parameter-page/prof
 import { SecretsPageComponent } from './pages/secrets-page/secrets-page.component';
 import { RulesPageComponent } from './pages/rules-page/rules-page.component';
 import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
+<<<<<<< HEAD
 
 import { BeliefsPageComponent } from './pages/beliefs-page/beliefs-page.component';
 
+=======
+import { StatsPageComponent } from './pages/stats-page/stats-page.component';
+import { SecretSelectionPageComponent } from './pages/secret-selection-page/secret-selection-page.component';
+>>>>>>> 16b833bff38b32af691b28df969ef278f291a2c2
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { ConstructionPageComponent } from './pages/construction-page/construction-page.component';
 
@@ -50,6 +55,10 @@ export const routes: Routes = [
     path: 'glossaire/lieux',
     component: LocationPageComponent,
   },
+  { 
+    path: 'stats', 
+    component: StatsPageComponent 
+  },
   {
     path: 'glossaire/croyances',
     component: BeliefsPageComponent,
@@ -64,10 +73,13 @@ export const routes: Routes = [
     component: ProfilParameterPageComponent,
     canActivate: [AuthenticationGuard],
   },
+<<<<<<< HEAD
   {
     path: 'news',
     component: NewsPageComponent,
   },
+=======
+>>>>>>> 16b833bff38b32af691b28df969ef278f291a2c2
   {
     path: 'construction',
     component: ConstructionPageComponent,
@@ -75,6 +87,10 @@ export const routes: Routes = [
   {
     path: 'erreur',
     component: ErrorPageComponent,
+  },
+      {
+    path: 'creationPersonnage/secrets',
+    component: SecretSelectionPageComponent,
   },
   {
     path: '**',
