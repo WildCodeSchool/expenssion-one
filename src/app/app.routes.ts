@@ -13,6 +13,7 @@ import { SpecializationPageComponent } from './pages/specialization-page/special
 import { SecretSelectionPageComponent } from './pages/secret-selection-page/secret-selection-page.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { ConstructionPageComponent } from './pages/construction-page/construction-page.component';
+import { LocationSelectionPageComponent } from './pages/location-selection-page/location-selection-page.component';
 
 export const routes: Routes = [
   {
@@ -68,9 +69,13 @@ export const routes: Routes = [
     path: 'erreur', 
     component: ErrorPageComponent 
   },
-      {
+  {
     path: 'creationPersonnage/secrets',
     component: SecretSelectionPageComponent,
+  },
+  {
+    path: 'creationPersonnage/lieux',
+    component: LocationSelectionPageComponent,
   },
   {
     path: '**',
