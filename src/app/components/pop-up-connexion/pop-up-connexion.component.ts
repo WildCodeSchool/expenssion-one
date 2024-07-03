@@ -37,6 +37,8 @@ export class PopupComponent {
    
 
   onLogin(username:string,password:string):void {
+     this.authenticationService.setToken("a")
+     this.dialogRef.close();
     this.authenticationService.login(username,password).subscribe(
       (response: any) => {
         if (response.access_token) {
