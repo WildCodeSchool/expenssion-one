@@ -13,6 +13,7 @@ import { SpecializationPageComponent } from './pages/specialization-page/special
 
 import { BeliefsPageComponent } from './pages/beliefs-page/beliefs-page.component';
 
+import { NewsCharacterComponent } from './pages/news-character/news-character.component';
 import { StatsPageComponent } from './pages/stats-page/stats-page.component';
 import { SecretSelectionPageComponent } from './pages/secret-selection-page/secret-selection-page.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
@@ -53,12 +54,13 @@ export const routes: Routes = [
     component: LocationPageComponent,
   },
   {
-    path: 'stats',
-    component: StatsPageComponent,
-  },
-  {
     path: 'glossaire/croyances',
     component: BeliefsPageComponent,
+  },
+
+  {
+    path: 'stats',
+    component: StatsPageComponent,
   },
   {
     path: 'profil',
@@ -82,10 +84,17 @@ export const routes: Routes = [
     path: 'erreur',
     component: ErrorPageComponent,
   },
+
+  {
+    path: 'Ajout/Perso',
+    component: NewsCharacterComponent,
+  },
+
   {
     path: 'creationPersonnage/secrets',
     component: SecretSelectionPageComponent,
   },
+
   {
     path: '**',
     redirectTo: 'erreur',
