@@ -19,5 +19,6 @@ export class LocationSelectionPageComponent {
 
   onMouseEnter() {
     console.log("mouse enter");
+    
   }
 }
