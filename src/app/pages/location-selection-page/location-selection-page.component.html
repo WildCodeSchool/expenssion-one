@@ -10,23 +10,5 @@
         </div>
             <button (click)="goBack()">Retour</button>
     </section>
-    <section class="world_map_container">
-        <h1>Carte du monde</h1>
-        <img src="../assets/pictures/WorldMap.svg" alt="WorldMap" usemap="#worldmap">
-        <map name="worldmap">
-            <area shape="circle" coords="240,120,70" alt="norta" onclick="onClick()" (mouseenter)="onMouseEnterNorta()" (mouseleave)="onMouseLeaveNorta()">
-            <area shape="circle" coords="380,120,30" alt="nelm" onclick="onClick()" (mouseenter)="onMouseEnterNelm()" (mouseleave)="onMouseLeaveNelm()">
-        </map>
-        <div class="show_continent_description">
-            @if (norta == true) {
-                <h2>Norta</h2>
-                <p>Le continent de Norta est partagé en Trois Royaumes, représentés par une capitale, où réside un.e Roi/ Reine.</p>
-            }
-            @if (nelm == true) {
-                <h2>Nelm</h2>
-                <p>Le continent de Nelm est partagé en Neuf Royaumes, huit d'entre eux sont représentés par une capitale, où réside un.e Roi/ Reine.</p>
-            }
-        </div>
-        <button>Valider</button>
-    </section>
+    <app-world-map></app-world-map>
 </div>

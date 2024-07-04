@@ -8,6 +8,7 @@
     height: calc(100vh - $footerHeight);
     display: flex;
     justify-content: space-between;
+    justify-items: center;
 
     .location_container {
             background-color: #202229;
@@ -20,7 +21,7 @@
             text-align: center;
             padding: 1rem;
             padding-bottom: 2rem;
-            width: 35vw;
+            width: 25vw;
             display: grid;
 
             h2 {
@@ -33,6 +34,7 @@
                 font-size: larger;
                 font-family: $contentFont;
                 line-height: 1.5;
+                margin-bottom: 2rem;
             }
 
             .birth_place {
@@ -57,84 +59,13 @@
                 cursor: pointer;
             }
         }
-
-    .world_map_container {
-            background-color: #202229;
-            filter: opacity(90%);
-            margin-top: $globalPaddingTop;
-            margin-bottom: 2rem;
-            border-radius: 10px;
-            color: white;
-            margin-right: 8%;
-            margin-left: 8%;
-            text-align: center;
-            padding: 1rem;
-            width: 65vw;
-            display: grid;
-            padding-bottom: 2rem;
-
-            h1 {
-                font-family: $subTitleFont;
-                font-size: 40px;
-                margin-bottom: 2rem;
-                font-weight: 600;
-            }
-
-            img {
-                filter: opacity(100%);
-                width: 550px;
-                height: auto;
-                justify-self: center;
-                border-radius: 10px;
-                grid-column: 1fr;
-            }
-
-            area {
-                cursor: pointer;
-            }
-
-            .show_continent_description {
-                grid-column: 2fr;
-                height: 11rem;
-            }
-
-            h2 {
-                font-family: $subTitleFont;
-                font-size: 40px;
-                margin-bottom: 1rem;
-                margin-top: 1rem;
-            }
-
-            p {
-                font-size: larger;
-                font-family: $contentFont;
-                line-height: 1.5;
-            }
-
-            button {
-                background-color: #DDB375;
-                width: 11rem;
-                height: 2.5rem;
-                border-radius: 10px;
-                justify-self: center;
-                color: black;
-                font-size: larger;
-                font-family: $contentFont;
-                line-height: 1.5;
-                cursor: pointer;
-                align-self: flex-end;
-                justify-self: center;
-                grid-column: 1fr;
-            }
-    }
-
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
 
     .background_image {
         flex-direction: column;
-        justify-content: center;
+        justify-items: center;
 
     
         .location_container {
