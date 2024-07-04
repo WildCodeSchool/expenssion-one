@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/internal/Observable';
 import { Race } from '../model/race/race';
 import { Continent } from '../model/continent/continent';
 import { Secret } from '../model/secret/secret';
+import { Belief } from '../model/belief/belief';
 import { Statistics } from '../model/stats/statistics';
 @Injectable({
   providedIn: 'root',
@@ -18,7 +19,6 @@ export class ApiDataService {
     return this.http.get<Statistics[]>('assets/data/statistics.json');
   }
 
-
   getSpecialization(): Observable<Specialization[]> {
     return this.http.get<Specialization[]>('assets/data/specialization.json');
   }
@@ -26,15 +26,20 @@ export class ApiDataService {
   getRaces(): Observable<Race[]> {
     return this.http.get<Race[]>('assets/data/race.json');
   }
+
+  getBeliefs(): Observable<Belief[]> {
+    return this.http.get<Belief[]>('assets/data/belief.json');
+  }
+
   getContinents(): Observable<Continent[]> {
     return this.http.get<Continent[]>('assets/data/continents.json');
   }
 
-  getAnecdoticSecrets():Observable<Secret[]>{
-    return this.http.get<Secret[]>('assets/data/anecdoticSecrets.json')
+  getAnecdoticSecrets(): Observable<Secret[]> {
+    return this.http.get<Secret[]>('assets/data/anecdoticSecrets.json');
   }
 
-  getPrimordialSecrets():Observable<Secret[]>{
-    return this.http.get<Secret[]>('assets/data/primordialSecrets.json')
+  getPrimordialSecrets(): Observable<Secret[]> {
+    return this.http.get<Secret[]>('assets/data/primordialSecrets.json');
   }
 }
