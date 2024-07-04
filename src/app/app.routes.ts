@@ -11,6 +11,7 @@ import { SecretsPageComponent } from './pages/secrets-page/secrets-page.componen
 import { RulesPageComponent } from './pages/rules-page/rules-page.component';
 import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
 import { NewsCharacterComponent } from './pages/news-character/news-character.component';
+import { StatsPageComponent } from './pages/stats-page/stats-page.component';
 import { SecretSelectionPageComponent } from './pages/secret-selection-page/secret-selection-page.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { ConstructionPageComponent } from './pages/construction-page/construction-page.component';
@@ -49,6 +50,10 @@ export const routes: Routes = [
   { 
     path: 'news', 
     component: NewsPageComponent 
+  },
+  { 
+    path: 'stats', 
+    component: StatsPageComponent 
   },
   {
     path: 'regles',
