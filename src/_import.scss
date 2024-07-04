@@ -10,17 +10,15 @@ $textColor: black;
 @import url("https://fonts.googleapis.com/css2?family=Norican&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
 @font-face {
-    font-family: "Cenobyte";
-    src: url(assets/fonts/cenobyte.ttf) format("truetype");
+  font-family: "Cenobyte";
+  src: url(assets/fonts/cenobyte.ttf) format("truetype");
 }
 
 //font-family-variables
-$contentFont: "Inika", sans-serif;
-$subTitleFont: "Cinzel", sans-serif;
-$fontBoldStyle: bold;
 $mainTitle: "Cenobyte";
-
-
+$subTitleFont: "Cinzel", sans-serif;
+$contentFont: "Inika", sans-serif;
+$fontBoldStyle: bold;
 
 $globalPaddingTop: 160px;
 $footerHeight: 130px;
@@ -36,7 +34,7 @@ $glossaryPaddingRightDesktop: 5%;
 $glossaryPaddingLeftMobile: 5%;
 $glossaryPaddingRightMobile: 5%;
 
-// mixin for decorate ours titles
+// MIXIN for decorate ours titles
 // importe la mixin avec @include underline-title
 // si besoin de changer des valeurs
 // déclare de nouveau &::before{width: 3px}, &::after{height: 5px} ,

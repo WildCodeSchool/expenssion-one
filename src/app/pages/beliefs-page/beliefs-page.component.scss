@@ -23,18 +23,23 @@ $border-radius: 10px;
     font-family: $subTitleFont;
     font-weight: $fontBoldStyle;
     text-align: center;
-    margin: 3rem 0;
-  }
-  .main-title {
-    @include underline-title;
   }
 
-  .beliefs-loop-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .main-title {
+    margin: 3rem 0;
+    @include underline-title;
+    &::before {
+      width: 3px;
+    }
+    &::after {
+      height: 3px;
+    }
+  }
+
+  .cult-title {
+    margin: 3rem 0;
+    text-decoration: underline;
+    text-decoration-style: dotted;
   }
   .content-description {
     background-color: #dbbc8699;
@@ -46,50 +51,65 @@ $border-radius: 10px;
   }
   .intro-divinities {
     font-size: 2rem;
-    @include underline-title;
+    // @include underline-title;
     margin: 25px auto;
   }
   .divinities-description-container {
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 3rem;
     align-items: center;
     justify-items: center;
     margin: 2rem 0rem 1rem 0;
     padding: 0 2rem;
     .style-li {
-      width: 50%;
-      min-width: 400px;
+      width: 95%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       border: 2px solid black;
       border-radius: $border-radius;
-      background-color: #dbbc8699;
       padding: 2rem 2rem 2.5rem 2rem;
       margin-top: 3rem;
+      background-color: #dbbc8699;
       backdrop-filter: blur(5px);
+      .divinities-title {
+        font-size: 1.5rem;
+        width: 100%;
+        text-align: center;
+      }
+      h5 {
+        font-family: $subTitleFont;
+        font-weight: 800;
+        font-size: 1.2rem;
+      }
     }
 
-    .divinities-title {
-      font-size: 1.5rem;
-      width: 100%;
-      text-align: center;
-    }
     .divinities-identity {
       text-align: center;
       padding-top: 1.3rem;
+      color: $textColor;
+      .identity-color {
+        color: $textColor;
+      }
     }
   }
   .bold-title {
     font-weight: bold;
   }
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 992px) {
+    .divinities-description-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
   }
-
   @media screen and (max-width: 768px) {
-    .cult-title {
-      font-size: 25px;
+    .cult-title .intro-divinities {
+      font-size: 10px;
     }
     .divinities-description-container {
       display: grid;

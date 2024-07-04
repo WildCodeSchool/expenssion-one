@@ -15,48 +15,56 @@
         @for(divinity of belief.divinities; track divinity){
         <li class="style-li">
           <h4 class="divinities-title bold-title">
-            {{ divinity.name }} : {{ divinity.title }}
+            {{ divinity.name }}
           </h4>
+          <h5>{{ divinity.title }}</h5>
           <ul class="divinities-identity">
-            <li>
-              <span class="bold-title">Genre : </span>{{ divinity.gender }}
+            <li class="identity-color">
+              <span class="identity-color bold-title">Genre : </span
+              >{{ divinity.gender }}
             </li>
             <li>
-              <span class="bold-title">Effet(s) : </span>{{ divinity.effect }}
+              <span class="identity-color bold-title">Effet(s) : </span
+              >{{ divinity.effect }}
             </li>
             <li>
-              <span class="bold-title">Force : </span>{{ divinity.strength }}
+              <span class="identity-color bold-title">Force : </span
+              >{{ divinity.strength }}
             </li>
             <li>
-              <span class="bold-title">Dextérité : </span
+              <span class="identity-color bold-title">Dextérité : </span
               >{{ divinity.dexterity }}
             </li>
             <li>
-              <span class="bold-title">Constitution : </span
+              <span class="identity-color bold-title">Constitution : </span
               >{{ divinity.constitution }}
             </li>
             <li>
-              <span class="bold-title">Intelligence : </span
+              <span class="identity-color bold-title">Intelligence : </span
               >{{ divinity.intelligence }}
             </li>
             <li>
-              <span class="bold-title">Sagesse : </span>{{ divinity.wisdom }}
+              <span class="identity-color bold-title">Sagesse : </span
+              >{{ divinity.wisdom }}
             </li>
             <li>
-              <span class="bold-title">Charisme : </span>{{ divinity.charisma }}
+              <span class="identity-color bold-title">Charisme : </span
+              >{{ divinity.charisma }}
             </li>
             <li>
-              <span class="bold-title">Armure : </span>{{ divinity.armor }}
+              <span class="identity-color bold-title">Armure : </span
+              >{{ divinity.armor }}
             </li>
             <li>
-              <span class="bold-title">Addiction : </span
+              <span class="identity-color bold-title">Addiction : </span
               >{{ divinity.addiction }}
             </li>
             <li>
-              <span class="bold-title">Vitesse : </span> {{ divinity.speed }}
+              <span class="identity-color bold-title">Vitesse : </span>
+              {{ divinity.speed }}
             </li>
             <li>
-              <span class="bold-title">Perception : </span
+              <span class="identity-color bold-title">Perception : </span
               >{{ divinity.perception }}
             </li>
           </ul>
