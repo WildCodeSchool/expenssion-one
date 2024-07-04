@@ -13,12 +13,27 @@ export class LocationSelectionPageComponent {
 
   constructor(private location: Location) { }
 
-  goBack() {
+  norta: boolean = false;
+  nelm: boolean = false;
+
+  goBack(): void {
     this.location.back();
   }
 
-  onMouseEnter() {
-    console.log("mouse enter");
-    
+  onMouseEnterNorta(): void {
+    this.norta = true;
   }
+
+  onMouseLeaveNorta(): void {
+    this.norta = false;
+  }
+
+  onMouseEnterNelm(): void {
+    this.nelm = true;
+  }
+
+  onMouseLeaveNelm(): void {
+    this.nelm = false;
+  }
+
 }

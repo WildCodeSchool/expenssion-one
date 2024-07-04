@@ -70,6 +70,8 @@
             text-align: center;
             padding: 1rem;
             width: 65vw;
+            display: grid;
+            padding-bottom: 2rem;
 
             h1 {
                 font-family: $subTitleFont;
@@ -80,13 +82,49 @@
 
             img {
                 filter: opacity(100%);
-                width: 30vw;
+                width: 550px;
                 height: auto;
+                justify-self: center;
                 border-radius: 10px;
+                grid-column: 1fr;
             }
 
             area {
                 cursor: pointer;
+            }
+
+            .show_continent_description {
+                grid-column: 2fr;
+                height: 11rem;
+            }
+
+            h2 {
+                font-family: $subTitleFont;
+                font-size: 40px;
+                margin-bottom: 1rem;
+                margin-top: 1rem;
+            }
+
+            p {
+                font-size: larger;
+                font-family: $contentFont;
+                line-height: 1.5;
+            }
+
+            button {
+                background-color: #DDB375;
+                width: 11rem;
+                height: 2.5rem;
+                border-radius: 10px;
+                justify-self: center;
+                color: black;
+                font-size: larger;
+                font-family: $contentFont;
+                line-height: 1.5;
+                cursor: pointer;
+                align-self: flex-end;
+                justify-self: center;
+                grid-column: 1fr;
             }
     }
 
