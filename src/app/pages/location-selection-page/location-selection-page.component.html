@@ -1,7 +1,20 @@
 <div class="background_image">
-    <div class="location_container">
-        <h1>Lieu d'origine</h1>
-        <h2>Lieu de résidence</h2>
-        <button>Retour</button>
-    </div>
+    <section class="location_container">
+        <div class="birth_place">
+            <h2>Lieu d'origine</h2>
+            <p>Choisissez votre lieu d'origine</p>
+        </div>
+        <div class="living_place">
+            <h2>Lieu de résidence</h2>
+        <p>Choisissez votre lieu de résidence</p>
+        </div>
+            <button (click)="goBack()">Retour</button>
+    </section>
+    <section class="world_map_container">
+        <h1>Carte du monde</h1>
+        <img src="../assets/pictures/WorldMap.svg" alt="WorldMap" usemap="#worldmap">
+        <map name="worldmap">
+            <area shape="circle" coords="240,120,70" alt="nelm" routerLink="/glossaire/lieux" (mouseenter)="onMouseEnter()">
+        </map>
+    </section>
 </div>
