@@ -3,18 +3,18 @@
 .world_map_container {
     background-color: #202229;
     filter: opacity(90%);
-    margin: $globalPaddingTop 0 2rem 0;
+    margin: 2rem 0 2rem 0;
     border-radius: 10px;
     color: white;
-    margin-right: 20%;
-    margin-left: 8%;
+    margin-right: 10vw;
+    margin-left: 10vw;
     text-align: center;
     padding: 1rem;
-    width: 50vw;
+    width: 80vw;
     display: grid;
     padding-bottom: 2rem;
     position: relative;
-    right: 12vw;
+    right: 0;
     justify-content: center;
 
     h1 {
@@ -26,7 +26,7 @@
 
     .world_map {
         filter: opacity(100%);
-        width: 550px;
+        width: 300px;
         height: auto;
         justify-self: center;
         border-radius: 10px;
@@ -43,7 +43,7 @@
 
     .show_continent_description {
         grid-column: 2fr;
-        height: 11rem;
+        height: 14rem;
     }
 
     h2 {
@@ -57,7 +57,6 @@
         font-size: larger;
         font-family: $contentFont;
         line-height: 1.5;
-        min-width: 500px;
     }
 
     button {
@@ -77,22 +76,11 @@
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 400px) {
 
     .world_map_container {
-        margin-top: 2rem;
-        width: 80%;
-        position: relative;
-        right: 0;
-        margin-left: 10vw;
-        margin-right: 10vw;
-    }
-
-    .world_map {
-        width: 300px;
-
-        img {
-            width: 100%;
-        }
+        width: 90vw;
+        margin-right: 5vw;
+        margin-left: 5vw;
     }
 }

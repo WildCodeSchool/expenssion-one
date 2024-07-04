@@ -15,6 +15,7 @@ import { SecretSelectionPageComponent } from './pages/secret-selection-page/secr
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { ConstructionPageComponent } from './pages/construction-page/construction-page.component';
 import { LocationSelectionPageComponent } from './pages/location-selection-page/location-selection-page.component';
+import { NortaMapComponent } from './components/norta-map/norta-map.component';
 
 export const routes: Routes = [
   {
@@ -81,6 +82,10 @@ export const routes: Routes = [
   {
     path: 'creationPersonnage/lieux',
     component: LocationSelectionPageComponent,
+  },
+  {
+    path: 'norta',
+    component: NortaMapComponent
   },
   {
     path: '**',

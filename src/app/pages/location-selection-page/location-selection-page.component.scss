@@ -4,8 +4,8 @@
     background-image: url("../../../assets/background_pictures/backgorund_stat.jpg");
     background-size: cover;
     background-position: center center;
-    width: 100%;
-    height: calc(100vh - $footerHeight);
+    background-attachment: fixed;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     justify-items: center;
@@ -61,7 +61,7 @@
         }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 401px) and (max-width: 1200px) {
 
     .background_image {
         flex-direction: column;
@@ -71,11 +71,25 @@
         .location_container {
             margin-right: 8%;
             width: 80%;
+            margin-left: 10vw;
+            margin-right: 10vw;
         }
+    }
+}
 
-        .world_map_container {
-            margin-top: 2rem;
-            width: 80%;
+@media screen and (max-width: 400px) {
+
+
+    .background_image {
+        flex-direction: column;
+        justify-items: center;
+
+    
+        .location_container {
+            margin-right: 8%;
+            width: 90%;
+            margin-left: 5vw;
+            margin-right: 5vw;
         }
     }
 }

@@ -1,23 +1,19 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-world-map',
+  selector: 'app-world-map-mobile',
   standalone: true,
   imports: [],
-  templateUrl: './world-map.component.html',
-  styleUrl: './world-map.component.scss'
+  templateUrl: './world-map-mobile.component.html',
+  styleUrl: './world-map-mobile.component.scss'
 })
-export class WorldMapComponent {
+export class WorldMapMobileComponent {
+
   norta: boolean = false;
   nelm: boolean = false;
   isClickedNorta: boolean = false;
   isClickedNelm: boolean = false;
-  conditionNorta: boolean = false;
-  conditionNelm: boolean = false;
   
-  constructor (private router: Router) {};
-
   onMouseEnterNorta(): void {
     if(!this.isClickedNorta) {
       this.norta = true;
@@ -57,7 +53,6 @@ export class WorldMapComponent {
     this.norta = true;
     this.isClickedNelm = false;
     this.nelm = false;
-    this.conditionNorta = true;
   }
 
   onClickNelm(): void {
@@ -65,24 +60,6 @@ export class WorldMapComponent {
     this.nelm = true;
     this.isClickedNorta = false;
     this.norta = false;
-    this.conditionNelm = true;
   }
-
-  selectKingdom(): void {
-    if (this.conditionNorta) {
-    this.selectNorta();
-    }
-    if (this.conditionNelm) {
-    this.selectNelm();
-    }
-  }
-
-  selectNorta() {
-    this.router.navigate(['/norta']);
-  }
-
-  selectNelm () {
-    this.router.navigate(['/component-one']);
-  }
-
 }
+

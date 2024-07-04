@@ -10,5 +10,10 @@
         </div>
             <button (click)="goBack()">Retour</button>
     </section>
-    <app-world-map></app-world-map>
+    @if(isMobile){
+        <app-world-map-mobile></app-world-map-mobile>
+        } @else{
+        <app-world-map></app-world-map>
+        }
+    
 </div>
