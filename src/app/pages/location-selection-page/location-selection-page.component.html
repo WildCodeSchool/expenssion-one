@@ -12,7 +12,9 @@
     </section>
     @if(isMobile){
         <app-world-map-mobile></app-world-map-mobile>
-        } @else{
+        }
+        @if (selectNorta()) {}
+        @else{
         <app-world-map></app-world-map>
         }
     
