@@ -1,7 +1,15 @@
-//colors elements
+//Colors elements
 $mainColor: #282828;
 $textLightColor: #ffffff;
 $textColor: black;
+
+//Background-color Création Personnage
+$background-color: #202229e6;
+
+//Text-decoration - Style //
+$borderCardBreed: 2px solid black;
+$globalPaddingTop: 160px;
+$border-radius: 10px;
 
 //imports fonts
 @import url("https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap");
@@ -13,27 +21,23 @@ $textColor: black;
   font-family: "Cenobyte";
   src: url(assets/fonts/cenobyte.ttf) format("truetype");
 }
-
 //font-family-variables
 $mainTitle: "Cenobyte";
 $subTitleFont: "Cinzel", sans-serif;
 $contentFont: "Inika", sans-serif;
 $fontBoldStyle: bold;
 
-$globalPaddingTop: 160px;
+//Height
 $footerHeight: 130px;
 $headerHeight: 130px;
 
-//text-decoration
-$borderCardBreed: 2px solid black;
-$globalPaddingTop: 160px;
-
-//for glossary
+//Padding  for glossary
 $glossaryPaddingLeftDesktop: 5%;
 $glossaryPaddingRightDesktop: 5%;
 $glossaryPaddingLeftMobile: 5%;
 $glossaryPaddingRightMobile: 5%;
 
+////////////////
 // MIXIN for decorate ours titles
 // importe la mixin avec @include underline-title
 // si besoin de changer des valeurs

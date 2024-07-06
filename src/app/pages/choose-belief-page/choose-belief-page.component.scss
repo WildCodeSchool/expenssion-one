@@ -1,0 +1,56 @@
+@use "../../../import" as *;
+
+$background-color: #202229e6;
+
+.global-content {
+  background-image: url(../../../assets/background_pictures/background_stat.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  padding: $globalPaddingTop 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  height: calc(100vh - $footerHeight); //peut faire péter
+
+  .place-content,
+  .belief-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .place-content {
+    width: 35%;
+    height: 100%;
+    background-color: $background-color;
+    border: 2px solid $background-color;
+    border-radius: $border-radius;
+  }
+
+  .belief-content {
+    width: 60%;
+    height: 100%;
+    background-color: $background-color;
+    border: 2px solid $background-color;
+    border-radius: $border-radius;
+  }
+  .main-title,
+  .sub-title {
+    font-family: $subTitleFont;
+    font-size: 1.6rem;
+    color: $textLightColor;
+  }
+  span {
+    padding-left: 20px;
+
+    path {
+      :fill {
+        color: white;
+      }
+    }
+  }
+}
