@@ -20,30 +20,31 @@
 
             <div class="pseudo-display-container">
 
-                <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+                <form #myForm="ngForm" (ngSubmit)="updateDisplayPseudo(user.pseudoDisplay)">
                 
                 
                     <fieldset>
                 
                         <label for="firstname-field">Pseudo affiché: </label>
                         <div>
-                            <input id="firstname-field" name="firstname" type="text" [(ngModel)]="user.pseudo" #pseudo="ngModel" required
+                            <input id="firstname-field" name="firstname" type="text" [(ngModel)]="user.pseudoDisplay" #pseudo="ngModel" required
                                 minlength="3" maxlength="15">
                             <small>Entrez votre pseudo qui sera affiché en jeu.</small>
                         </div>
 
                         
                     </fieldset>
+                    <div class="button-container">
+                        <button type="submit">Sauvegarder</button>
+                    </div>
                 </form>
-                <div class="button-container">
-                    <button type="submit">Sauvegarder</button>
-                </div>
+                
               
 
 
             </div>
             <div class="biography-container">
-                <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+                <form #myForm="ngForm" (ngSubmit)="updateBiography(user.biography)">
                 
                 
                     <fieldset>
@@ -63,7 +64,7 @@
 
             </div>
             <div class="personnal-information-container">
-                <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+                <form #myForm="ngForm" (ngSubmit)="updatePersonalData(user.firstname,user.lastname,user.email,user.dateOfBirth)">
 
                    
                     <fieldset>
@@ -108,23 +109,23 @@
 
             </div>
             <div class="change-password-container">              
-                <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+                <form #myForm="ngForm" (ngSubmit)="changePassword(actualPassword.value, newPassword.value)">
                     <fieldset>
                         <label for="actual-password-field">Mot de passe actuel: </label>
                         <div>
-                            <input id="actual-password-field" name="actualPassword" type="password" (ngModel)="user.lastname" #actualPassword="ngModel">
+                            <input id="actual-password-field" name="actualPassword" type="password"  #actualPassword>
                         </div>
                     </fieldset>
                     <fieldset>
                         <label for="new-password-field">Nouveau mot de passe: </label>
                         <div>
-                            <input id="new-password-field" name="newPassword" type="password" (ngModel)="user.lastname" #newPassword="ngModel">
+                            <input id="new-password-field" name="newPassword" type="password"  #newPassword>
                         </div>
                     </fieldset>
                     <fieldset>
                         <label for="actual-password-field">Confirmation de mot de passe: </label>
                         <div>
-                            <input id="actual-password-field" name="confirmationNewPassword" type="password" (ngModel)="user.lastname"#confirmationActualPassword="ngModel">
+                            <input id="actual-password-field" name="confirmationNewPassword" type="password" #confirmationActualPassword>
                         </div>
                     </fieldset>
                     <div class="button-container">
@@ -136,32 +137,49 @@
             </div>
 
             <div class="notification-container">
-                <form>
+                <form #myForm="ngForm" (ngSubmit)="updatepamarater(user.isPublic,user.isNewletters)">
                     <fieldset>
                         <label for="actual-password-field">Paramètres notifdications: </label>
                         <div>
-                            <mat-slide-toggle [checked]="user.isNewletters"></mat-slide-toggle>
+                            <mat-slide-toggle name="isNewsletters" [(ngModel)]="user.isNewletters"></mat-slide-toggle>
                         </div>
                     </fieldset>
                     <fieldset>
                         <label for="actual-password-field">Paramètres de visibilité: </label>
                         <div>
-                            <mat-slide-toggle [checked]="user.isNewletters"></mat-slide-toggle>
+                            <mat-slide-toggle  name="isPublic" [(ngModel)]="user.isPublic"></mat-slide-toggle>
                         </div>
                     </fieldset>
+                    <div class="button-container">
+                        <button type="submit">Sauvegarder</button>
+                    </div>
                 </form>
-                                <div class="button-container">
-                                    <button type="submit">Sauvegarder</button>
-                                </div>
+                                
                 
                 
                 
             </div>
 
             <div class="delete-account-container">
-                <button>Supprimer mon compte</button>
-            </div>
+                <button (click)="isDelete=true">Supprimer mon compte</button>
+                @if(isDelete){
+                <div class="delete-account-confirmation-container">
+                    <form #myForm="ngForm" (ngSubmit)="deleteUser(actualPassword.value)">
+                        <fieldset>
+                            <label for="actual-password-field">Mot de passe actuel: </label>
+                            <div>
+                                <input id="actual-password-field" name="actualPassword" type="password" #actualPassword>
+                            </div>
+                        </fieldset>
+                        <div class="button-container">
+                            <button type="submit">Confirmer la suppression</button>
+                        </div>
+                    </form>
+                </div>
+                }
 
+            </div>
+           
         </div>
 
     </div>

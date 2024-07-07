@@ -5,20 +5,21 @@ export class User {
 
     id?:string;
     pseudo!:string;
-    lastname!:String;
+    pseudoDisplay!:string;
+    lastname!:string;
     firstname!:string;
     password!:string;
     email!:string;
     dateOfBirth!:string;
 
-    isNewletters?:boolean;
-    isPublic?:boolean;
+    isNewletters!:boolean;
+    isPublic!:boolean;
    
-    biography?:string;
-    profilPictureUrl?:string;
+    biography!:string;
+    profilPictureUrl!:string;
     
-    friends?:Friend[];
-    characters?:Character[];
+    friends!:Friend[];
+    characters!:Character[];
 
     constructor(
         pseudo: string,
