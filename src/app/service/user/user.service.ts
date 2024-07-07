@@ -22,7 +22,8 @@ export class UserService {
 
 deleteUser(password:string): Observable<string> {
   const params = new HttpParams().set('password',password)
-  return this.http.delete<string>(this.url+'/delete',{params})
+   const options = { params, responseType: 'text' as 'json' };
+  return this.http.delete<string>(this.url+'/delete', options);
 }
 
 updatePersonalData(firstname:string,lastname:string,email:string,dateOfBirth:string): Observable<User> {

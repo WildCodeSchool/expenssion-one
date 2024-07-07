@@ -17,6 +17,7 @@ import { UserService } from '../../service/user/user.service';
 export class ProfilParameterPageComponent {
 
   isDelete:boolean=false;
+  iserror:boolean=false;
    userService=inject(UserService)
    authentificationService=inject(AuthenticationService)
    router=inject(Router)
@@ -31,9 +32,14 @@ export class ProfilParameterPageComponent {
 
     deleteUser(password:string):void{
       this.userService.deleteUser(password).subscribe(x=>{
-        console.log(x)
-      this.router.navigate(['/accueil'])
+      if(x=="User deleted"){
+        this.router.navigate(['/accueil'])
       this.authentificationService.removeToken()
+      }
+      else{
+        this.iserror=true
+      }
+      
       }
 
       )
