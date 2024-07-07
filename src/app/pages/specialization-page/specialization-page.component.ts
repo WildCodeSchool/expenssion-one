@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { ApiDataService } from '../../service/api-data.service';
 import { Specialization } from '../../model/specialization/specialization';
+import { SpecializationService } from '../../service/specialization.service';
 
 @Component({
   selector: 'app-specialization-page',
@@ -10,10 +10,12 @@ import { Specialization } from '../../model/specialization/specialization';
   styleUrl: './specialization-page.component.scss'
 })
 export class SpecializationPageComponent {
-  apiDataService=inject(ApiDataService)
+  specializationService=inject(SpecializationService)
   specializations:Specialization[]=[];
   ngOnInit(){
-    this.apiDataService.getSpecialization().subscribe(x=>this.specializations=x)
+    this.specializationService.getAllSpecialization().subscribe(x=>{
+      console.log(x)
+      this.specializations=x})
   }
 
 }
