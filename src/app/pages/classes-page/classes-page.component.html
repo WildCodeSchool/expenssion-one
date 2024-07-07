@@ -1,0 +1,51 @@
+<section class="background-image">
+    <div class = "content-page">
+
+      <div class="selectStats">
+        <h1 class="title">Statistiques </h1>
+        <h2>Répartissez vos {{points}} points </h2>
+
+        <ul>
+        @for(stat of statistiques; track stat)
+        {
+          <li>
+            <div class="stat">
+              <div class="statName">{{stat.name}}</div> 
+              <div class="circle"><button class="content">-</button></div>
+              <div class="statScore">{{stat.score}}</div>
+              <div class="circle"><button class="content">+</button></div>
+            </div>
+          </li>
+        }
+        </ul>
+        <div class="displayValidationButton"><button class="validationButton">Valider</button></div>
+      </div>
+
+      <div class="statPage">
+        <div class="modifying"  >
+            <div class="flexClasses">
+               <div class="circleClasses"><button class="content" (click)="decrementCount()"><</button></div>
+                @for(filters of filterClasses; track filters)
+                {
+                  <div class="flexPic">
+                    <button (click)="changePic(filters.name)"><img [ngStyle] = "{'border-color': selectedClass.name === filters.name ? '#DDB375' : 'black'}"   style="height:50px;width:50px;border-radius:50px;border-style:solid;" src="{{filters.url}}"/></button>
+                    <div>{{filters.name}}</div>
+                  </div>
+                }
+                <div class="circleClasses"><button class="content" (click)="incrementCount()">></button></div>
+            </div>
+            @for(content of selectedClass.content;track content){
+              <p class="text-description">
+                  {{content}}
+              </p>
+            }
+        </div>
+      </div>
+
+
+     </div>
+</section>
+
+      
+  
+
