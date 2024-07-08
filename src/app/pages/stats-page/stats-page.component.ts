@@ -102,7 +102,7 @@ export class StatsPageComponent {
           {
             
             this.statistiques[i].differential = 0;
-            this.statistiques[i].score = 1;
+            this.statistiques[i].score = 0;
             this.statistiques[i].hidden = true;
           }
       }

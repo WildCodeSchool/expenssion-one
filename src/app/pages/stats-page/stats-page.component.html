@@ -11,15 +11,18 @@
         {
           <li>
             <div class="stat">
-              <div class="statName">{{stat.name}}</div>
-                <div class="circle">
-                  @if(!stat.hidden)
+              <div class="statName" style="margin-top:2%;">{{stat.name}}</div>
+                  @if(!stat.hidden && stat.score > 0)
                   {
-                  <button class="content" (click)="scoreDown(stat.name)">-</button>
+                  <button class="content" (click)="scoreDown(stat.name)"><div class="circle">-</div></button>
                   }
-                </div>
-              <div class="statScore" [style.color]="stat.score === 1 ? 'Red' : 'White'">{{stat.score}}</div>
+                
+              <div class="statScore" style="margin-top:2%;" [style.color]="stat.score === 1 ? 'Red' : 'White'">{{stat.score}}</div>
+              @if(points > 0)
+              {
               <button (click)="scoreUp(stat.name)" class="content"><div class="circle">+</div></button>
+              }
+              
               <button class="reset-button" (click)="generateScore(stat)">
                 <img src="assets/pictures/dice.svg" alt="reset">
             </button>
