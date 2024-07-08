@@ -48,7 +48,7 @@ export class ClassesPageComponent {
   incrementCount()
   {
     this.count++;
-    for(let i  = (0 + this.count); i < (4+this.count); i++)
+    for(let i  = (0 + this.count); i < (3+this.count); i++)
       {
         this.filterClasses[i-this.count] = this.classes[i];
       }
@@ -62,7 +62,7 @@ export class ClassesPageComponent {
     if(this.count > 0)
     {
       this.count--;
-      for(let i  = (0 + this.count); i < (4+this.count); i++)
+      for(let i  = (0 + this.count); i < (3+this.count); i++)
       {
         this.filterClasses[i-this.count] = this.classes[i];
       }
@@ -89,7 +89,7 @@ export class ClassesPageComponent {
       classes => 
         {
           this.classes = classes;
-          for(let i  = 0; i < 4; i++)
+          for(let i  = 0; i < 3; i++)
           {
             this.filterClasses[i] = this.classes[i];
           }
