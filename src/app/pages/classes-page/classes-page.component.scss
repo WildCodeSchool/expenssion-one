@@ -45,7 +45,17 @@
 }
 
 .statPage{
-    margin-top:7%;
+    background-color: #202229;
+    filter: opacity(90%);
+    margin: $globalPaddingTop 0 2rem 0;
+    border-radius: 10px;
+    color: white;
+    margin-right: 20%;
+    margin-left: 8%;
+    text-align: center;
+    padding: 1rem;
+    width: 50vw;
+    padding-bottom: 2rem;
 }
 
 .statScore {
@@ -61,6 +71,7 @@
     display:flex;
     align-items:center;
     justify-content:center;
+    margin-top:2%;
 }
 
 @media screen and (max-width: 768px) {
@@ -76,28 +87,19 @@
 {
     font-size: 20px;
 }
-// .buttonRight
-// {
-//     margin-left:90%;
-//     margin-top:5%;
-//     margin-bottom:5%;
-// }
-// .buttonLeft
-// {
-//     margin-left:5%;
-//     margin-top:5%;
-// }
 
 .selectStats {
-    width:400px;
-    height:600px;
-    background-color:#202229;
-    margin-top: 11%;
-    margin-bottom:12%;
-    margin-left:6%;
-    padding-left:2%;
-    border-radius: 10px;
-    
+    background-color: #202229;
+            filter: opacity(90%);
+            margin-top: $globalPaddingTop;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            color: white;
+            margin-left: 8%;
+            text-align: center;
+            padding: 1rem;
+            padding-bottom: 2rem;
+            width: 25vw;
 }
 
 @media screen and (max-width: 768px) {
@@ -189,13 +191,63 @@ h2
     color:white;
     font-size:13px;
 }
+.location_container {
+    background-color: #202229;
+    filter: opacity(90%);
+    margin-top: $globalPaddingTop;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    color: white;
+    margin-left: 8%;
+    text-align: center;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    width: 25vw;
+    display: grid;
+
+    h2 {
+        font-family: $subTitleFont;
+        font-size: 40px;
+        margin-bottom: 2rem;
+    }
+
+    p {
+        font-size: larger;
+        font-family: $contentFont;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+    }
+
+    .birth_place {
+        grid-column: 1fr;
+    }
+
+    .living_place {
+        grid-column: 1fr;
+    }
+
+    button {
+        align-self: flex-end;
+        background-color: #DDB375;
+        width: 11rem;
+        height: 2.5rem;
+        border-radius: 10px;
+        justify-self: center;
+        color: black;
+        font-size: larger;
+        font-family: $contentFont;
+        line-height: 1.5;
+        cursor: pointer;
+    }
+}
+
 .flexClasses
 {
     display:flex;
     flex-direction: row;
     justify-content: space-around;
     margin-top:2%;
-    
+    padding-bottom:2%;
 }
 .flexPic
 {

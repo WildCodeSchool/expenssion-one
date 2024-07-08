@@ -1,6 +1,5 @@
 <section class="background-image">
     <div class = "content-page">
-
       <div class="selectStats">
         <h1 class="title">Statistiques </h1>
         <h2>Répartissez vos {{points}} points </h2>
@@ -16,18 +15,17 @@
           </li>
         }
         </ul>
-        <div class="displayValidationButton"><button class="validationButton">Valider</button></div>
+        
       </div>
 
       <div class="statPage">
-        <div class="modifying"  >
-          
-          
+        <!-- <div class="modifying"  >  -->
+          <h1 class="title">Sélection des classes</h1>
             <div class="flexClasses">
               <button class="content" class="buttonLeft" (click)="decrementCount()"><div class="circleClasses"><</div></button>
                 @for(filters of filterClasses; track filters)
                 {
-                  <div class="flexPic">
+                  <div class="flexPic" style="width:40%">
                     <button (click)="changePic(filters.name)"><img [ngStyle] = "{'border-color': selectedClass.name === filters.name ? '#DDB375' : 'black'}"   style="height:50px;width:50px;border-radius:50px;border-style:solid;" src="{{filters.url}}"/></button>
                     <div>{{filters.name}}</div>
                   </div>
@@ -40,7 +38,8 @@
                   {{description}}
               </p>
             }
-        </div>
+            <div class="displayValidationButton"><button class="validationButton">Valider</button></div>
+        <!-- </div> -->
       </div>
 
 

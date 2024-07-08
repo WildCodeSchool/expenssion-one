@@ -3,6 +3,7 @@ import { Statistics } from '../../model/stats/statistics';
 import { ApiDataService } from '../../service/api-data.service';
 import { Specialization } from '../../model/specialization/specialization';
 import { NgFor, NgStyle } from '@angular/common';
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-classes-page',
@@ -71,8 +72,17 @@ export class ClassesPageComponent {
     this.selectedClass = this.classes[index - 1];
   }
 
+  private breakpoints = {
+    mobile: '(max-width: 768px)',
+  }
+
+  breakpointObserver = inject(BreakpointObserver)
+  isMobile: boolean = false;
+
   ngOnInit()
   {
+    this.breakpointObserver.observe(Object.values(this.breakpoints)).subscribe((state: BreakpointState) => {
+    this.isMobile = state.breakpoints[this.breakpoints.mobile]});
     this.points = 5;
     this.selectedClass = new Specialization();
     this.apiService.getSpecialization().subscribe(

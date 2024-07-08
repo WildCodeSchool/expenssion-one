@@ -3,12 +3,11 @@ import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { WorldMapComponent } from '../../components/world-map/world-map.component';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
-import { WorldMapMobileComponent } from '../../components/world-map-mobile/world-map-mobile.component';
 
 @Component({
   selector: 'app-location-selection-page',
   standalone: true,
-  imports: [RouterLink, WorldMapComponent, WorldMapMobileComponent],
+  imports: [RouterLink, WorldMapComponent],
   templateUrl: './location-selection-page.component.html',
   styleUrl: './location-selection-page.component.scss'
 })
