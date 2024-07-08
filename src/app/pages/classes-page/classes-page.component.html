@@ -11,9 +11,7 @@
           <li>
             <div class="stat">
               <div class="statName">{{stat.name}}</div> 
-              <div class="circle"><button class="content">-</button></div>
               <div class="statScore">{{stat.score}}</div>
-              <div class="circle"><button class="content">+</button></div>
             </div>
           </li>
         }
@@ -34,9 +32,9 @@
                 }
                 <div class="circleClasses"><button class="content" (click)="incrementCount()">></button></div>
             </div>
-            @for(content of selectedClass.content;track content){
+            @for(description of selectedClass.content;track description){
               <p class="text-description">
-                  {{content}}
+                  {{description}}
               </p>
             }
         </div>

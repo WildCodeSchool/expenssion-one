@@ -28,8 +28,20 @@ export class ClassesPageComponent {
 
   changePic(name:String)
   {
-    console.log(name);
     this.selectedClass = this.classes.filter(p => p.name === name)[0];
+  }
+
+  getIndexFromSelected():number
+  {
+    let index = 0;
+     for(let i = 0; i < this.classes.length; i++)
+     {
+      if(this.classes[i].name == this.selectedClass.name)
+      {
+        index = i;
+      }
+     }
+     return index;
   }
 
   incrementCount()
@@ -39,6 +51,9 @@ export class ClassesPageComponent {
       {
         this.filterClasses[i-this.count] = this.classes[i];
       }
+      let index = this.getIndexFromSelected();
+      if(index + 1 < this.classes.length)
+      this.selectedClass = this.classes[index + 1];
   }
 
   decrementCount()
@@ -51,11 +66,15 @@ export class ClassesPageComponent {
         this.filterClasses[i-this.count] = this.classes[i];
       }
     }
+    let index = this.getIndexFromSelected();
+    if(index - 1 > 0)
+    this.selectedClass = this.classes[index - 1];
   }
 
   ngOnInit()
   {
     this.points = 5;
+    this.selectedClass = new Specialization();
     this.apiService.getSpecialization().subscribe(
       classes => 
         {
