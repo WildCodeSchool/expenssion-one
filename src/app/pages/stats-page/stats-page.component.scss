@@ -1,5 +1,31 @@
 @use "../../../import" as *;
 
+.flexRow {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 150px);
+    li {
+        margin-top:2%;
+        margin-bottom:2%;
+    }
+}
+
+.addiction {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.charism {
+    grid-row:1;
+    grid-column:2;
+}
+
+.constitution {
+    grid-row:1;
+    grid-column:3;
+}
+
+
 .circle{
     height: 30px;
     width: 30px;
