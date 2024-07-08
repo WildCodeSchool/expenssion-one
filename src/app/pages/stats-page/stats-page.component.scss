@@ -14,6 +14,10 @@
 .background-image
 {
   background-image: url(../../../assets/background_pictures/backgorund_stat.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 .content-page

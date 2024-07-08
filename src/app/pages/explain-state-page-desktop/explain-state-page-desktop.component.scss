@@ -2,8 +2,8 @@
 
 .flexRow{
     display:grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 100px 100px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 100px);
     margin-top:2%;
 }
 
@@ -12,49 +12,56 @@
   grid-row: 1;
 }
 
+.displayCaracteristics {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    text-align:center;
+}
+
 .charism {
   grid-column: 2;
   grid-row: 1;
 }
 
 .constitution {
-  grid-column: 3;
-  grid-row: 1;
+  grid-column: 1;
+  grid-row: 2;
 }
 
 .dexterity {
-    grid-column: 4;
-    grid-row: 1;
-}
-
-.strength {
-    grid-column: 5;
-    grid-row: 1;
-}
-
-.intelligence {
-    grid-column: 1;
-    grid-row: 2;
-}
-
-.perception {
     grid-column: 2;
     grid-row: 2;
 }
 
+.strength {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.intelligence {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.perception {
+    grid-column: 1;
+    grid-row: 4;
+}
+
 .speed {
-    grid-column: 3;
-    grid-row: 2;
+    grid-column: 2;
+    grid-row: 4;
 }
 
 .wisdom {
-    grid-column: 4;
-    grid-row: 2;
+    grid-column: 1;
+    grid-row: 5;
 }
 
 .survival {
-    grid-column: 5;
-    grid-row: 2;
+    grid-column: 2;
+    grid-row: 5;
 }
 
 
