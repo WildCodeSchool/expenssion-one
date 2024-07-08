@@ -20,6 +20,13 @@ export class StatsPageComponent {
 
   apiService = inject(ApiDataService);
 
+  generateScore(stat:Statistics){
+    const max = 20;
+    let score = Math.round(Math.random()*max);
+    if(score >= 18) score = Math.round(score/2);
+    this.statistiques.filter(x => x.name === stat.name)[0].score = score;
+  }
+
   modifyScore(score:number):number{
     if(score == 20 || score == 19)
       score += 5;
@@ -93,12 +100,10 @@ export class StatsPageComponent {
         this.statistiques = statistiques
         for(let i = 0; i < 10; i++)
           {
-            const max = 20;
+            
             this.statistiques[i].differential = 0;
-            let score = Math.round(Math.random()*max);
-            if(score >= 18) score = Math.round(score/2);
-              this.statistiques[i].score = score;
-              this.statistiques[i].hidden = true;
+            this.statistiques[i].score = 1;
+            this.statistiques[i].hidden = true;
           }
       }
     )

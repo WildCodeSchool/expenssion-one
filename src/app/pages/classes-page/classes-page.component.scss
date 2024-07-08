@@ -11,13 +11,23 @@
     justify-content:center;
 }
 
-.reset-button img{
-    height: 60px;
-    width: 60px;
-    margin-bottom:2%;
+.text-description{
+    margin : 2% 5% 0 5%;
 }
 
-
+.circleClasses{
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    background-color:#DDB375;
+    color: black;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    margin-top:8%;
+    justify-content: center;
+    align-items: center;
+}
 
 .background-image
 {
@@ -32,11 +42,11 @@
 {
     display:flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding-bottom:7%;
 }
 
-.statPage{
+.selectClass{
     background-color: #202229;
     filter: opacity(90%);
     margin: $globalPaddingTop 0 2rem 0;
@@ -63,6 +73,7 @@
     display:flex;
     align-items:center;
     justify-content:center;
+    margin-top:2%;
 }
 
 .content
@@ -72,26 +83,19 @@
 
 .selectStats {
     background-color: #202229;
-    filter: opacity(90%);
-    margin-top: $globalPaddingTop;
-    margin-bottom: 2rem;
-    border-radius: 10px;
-    color: $textLightColor;
-    margin-left: 8%;
-    text-align: center;
-    padding: 1rem;
-    padding-bottom: 2rem;
-    width: 25vw;
-    
+            filter: opacity(90%);
+            margin-top: $globalPaddingTop;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            color: $textLightColor;
+            margin-left: 8%;
+            text-align: center;
+            padding: 1rem;
+            padding-bottom: 2rem;
+            width: 25vw;
 }
 
-p {
-    margin-top:2%;
-    margin-bottom:2%;
-}
-
-
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .selectStats {
         margin-top: 100px;
         width: 90vw;
@@ -104,7 +108,7 @@ p {
         flex-direction: column;
         justify-content: space-between;
     }
-    .statPage {
+    .selectClass {
         width: 90vw;
         margin-right: 5vw;
         margin-left: 5vw;
@@ -113,14 +117,15 @@ p {
 
 .modifying
 {
-    width:1500px;
+    width:1000px;
     height:700px;
     background-color:#202229;
     margin-top: 7%;
     margin-bottom:12%;
-    margin-left:6%;
+    margin-left:20%;
+    margin-right:20%;
     border-radius: 10px;
-    color:white;
+    color:$textLightColor;
     font-size:20px;
 }
 
@@ -142,13 +147,13 @@ h1{
 
 h2{
     font-size:20px;
-    color: white;
+    color: $textLightColor;
     text-align:center;
 }
 
 .title
 {
-    color:white;
+    color:$textLightColor;
     text-align: center;
     margin-top : 5%
 }
@@ -174,17 +179,39 @@ h2
 .stat{
     display:flex;
     flex-direction:row;
-    color:white;
+    color:$textLightColor;
     height: 40px;
+}
+.modifying
+{
+    margin:0 6% 12% 6%;
+    width:760px;
+    height:600px;
+    background-color:#202229;
+    border-radius: 10px;
+    color:$textLightColor;
+    font-size:13px;
+}
+
+
+.flexClasses
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top:2%;
+    padding-bottom:2%;
+}
+.flexPic
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top:5%;
 }
 button
 {
     margin-top:0%;
 }
-
-// .displayCaracteristics
-// {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-// }

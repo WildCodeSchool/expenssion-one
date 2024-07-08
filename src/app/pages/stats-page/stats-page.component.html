@@ -3,7 +3,8 @@
 
       <div class="selectStats">
         <h1 class="title">Statistiques </h1>
-        <h2>Répartissez vos {{points}} points </h2>
+        <p>Lancer vos dés 20 pour obtenir le niveau de chacune de vos statistiques <br/>
+        puis répartissez vos {{points}} points </p>
 
         <ul>
         @for(stat of statistiques; track stat)
@@ -17,8 +18,11 @@
                   <button class="content" (click)="scoreDown(stat.name)">-</button>
                   }
                 </div>
-              <div class="statScore">{{stat.score}}</div>
+              <div class="statScore" [style.color]="stat.score === 1 ? 'Red' : 'White'">{{stat.score}}</div>
               <button (click)="scoreUp(stat.name)" class="content"><div class="circle">+</div></button>
+              <button class="reset-button" (click)="generateScore(stat)">
+                <img src="assets/pictures/dice.svg" alt="reset">
+            </button>
             </div>
           </li>
         }
@@ -27,7 +31,132 @@
       </div>
 
       <div class="statPage">
-      <app-explain-state-page-desktop></app-explain-state-page-desktop>
+        
+    <h1 class="modifyTitle">Explicatif des statistiques par mots clés</h1>
+
+      <ul class="flexRow">
+      <!-- <div style="display:flex;align-items:center;justify-content:space-evenly;flex-direction:row;"> -->
+        <li class="addiction">
+          <div class="displayCaracteristics">
+          <h2>ADDICTION</h2>
+          <ul>
+            <li>Substance addictive</li>
+            <li>Jeux</li>
+            <li>Avarice</li>
+          </ul>
+          </div>
+        </li>
+
+        
+        <li class="charism">
+          <div class="displayCaracteristics">
+          <h2>CHARISME</h2>
+          <ul>
+            <li>Image auprès des autres</li>
+            <li>Auration</li>
+            <li>Mentir</li>
+            <li>Convaincre</li>
+          </ul>
+          </div>
+        </li>
+      <!-- </div> -->
+
+        <li class="constitution">
+          <div class="displayCaracteristics">
+          <h2>CONSTITUTION</h2>
+          <ul>
+            <li>Stature</li>
+            <li>Résistance</li>
+            <li>Résistance magique</li>
+          </ul>
+          </div>
+        </li>
+
+        <li class="dexterity">
+          <div class="displayCaracteristics">
+          <h2>DEXTERITE</h2>
+          <ul>
+            <li>Précision</li>
+            <li>Lancer</li>
+            <li>Médecine manuelle</li>
+            <li>Artisanant</li>
+          </ul>
+          </div>
+        </li>
+
+        <li class="strength">
+          <div class="displayCaracteristics">
+          <h2>FORCE</h2>
+          <ul>
+            <li>Force brute</li>
+            <li>Corps à corps</li>
+            <li>Soulever</li>
+          </ul>
+          </div>
+        </li>
+
+        <li class="intelligence">
+          <div class="displayCaracteristics">
+          <h2>INTELLIGENCE</h2>
+          <ul>
+            <li>Compréhension</li>
+            <li>Apprentissage</li>
+            <li>Stratégie</li>
+          </ul>
+          </div>
+        </li>
+
+        <li class="perception">
+          <div class="displayCaracteristics">
+          <h2>PERCEPTION</h2>
+          <ul>
+            <li>5 sens connus</li>
+            <li>6eme sens connu</li>
+          </ul>
+          </div>
+        </li>
+
+        <li class="speed">
+          <div class="displayCaracteristics">
+          <h2>RAPIDITE</h2>
+          <ul>
+            <li>Courir</li>
+            <li>Bondir</li>
+            <li>Initiative</li>
+            <li>Rapidité d'exécution</li>
+          </ul>
+          </div>
+        </li>
+
+        <li class="wisdom">
+          <div class="displayCaracteristics">
+          <h2>SAGESSE</h2>
+          <ul>
+            <li>Esprit</li>
+            <li>Sante mentale</li>
+            <li>Emotition</li>
+          </ul>
+          </div>
+        </li>
+
+        <li class="survival">
+          <div class="displayCaracteristics">
+          <h2>SURVIE</h2>
+          <ul>
+            <li>Résistance environnement hostile</li>
+            <li>Capacité de survité</li>
+            <li>Prise de repères</li>
+            <li>Anticipation</li>
+          </ul>
+          </div>
+        </li>
+      </ul>
+
+    <h2 class="modifyScore">Modificateur du score</h2>
+    <p>On modifie le score en fonction de sa valeur<br/>
+    20-19 : (+5) 18-17 : (+4) 16-15 : (+3) 14-13 : (+2) 12-11 : (+1) 10 : 0<br/>
+    09-08 : (-1) 07-06 : (-2) 05-04 : (-3) 03-02 : (-4) 01 : (-5)</p>
+      <!-- <app-explain-state-page-desktop></app-explain-state-page-desktop> -->
       </div>
 
 
