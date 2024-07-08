@@ -12,9 +12,7 @@
 }
 
 .text-description{
-    margin-left:5%;
-    margin-right:5%;
-    margin-top:2%;
+    margin : 2% 5% 0 5%;
 }
 
 .circleClasses{
@@ -53,7 +51,7 @@
     filter: opacity(90%);
     margin: $globalPaddingTop 0 2rem 0;
     border-radius: 10px;
-    color: white;
+    color: $textLightColor;
     margin-right: 20%;
     margin-left: 8%;
     text-align: center;
@@ -89,7 +87,7 @@
             margin-top: $globalPaddingTop;
             margin-bottom: 2rem;
             border-radius: 10px;
-            color: white;
+            color: $textLightColor;
             margin-left: 8%;
             text-align: center;
             padding: 1rem;
@@ -105,11 +103,10 @@
         margin-left: 5vw;
     }
     .content-page{
-        justify-content: center;
         align-items:center;
         display:flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
     .selectClass {
         width: 90vw;
@@ -128,7 +125,7 @@
     margin-left:20%;
     margin-right:20%;
     border-radius: 10px;
-    color:white;
+    color:$textLightColor;
     font-size:20px;
 }
 
@@ -150,13 +147,13 @@ h1{
 
 h2{
     font-size:20px;
-    color: white;
+    color: $textLightColor;
     text-align:center;
 }
 
 .title
 {
-    color:white;
+    color:$textLightColor;
     text-align: center;
     margin-top : 5%
 }
@@ -182,19 +179,17 @@ h2
 .stat{
     display:flex;
     flex-direction:row;
-    color:white;
+    color:$textLightColor;
     height: 40px;
 }
 .modifying
 {
+    margin:0 6% 12% 6%;
     width:760px;
     height:600px;
     background-color:#202229;
-    margin-bottom:12%;
-    margin-left:6%;
-    margin-right:6%;
     border-radius: 10px;
-    color:white;
+    color:$textLightColor;
     font-size:13px;
 }
 
