@@ -1,14 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { Statistics } from '../../model/stats/statistics';
 import { ApiDataService } from '../../service/api-data.service';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { ExternalExpr } from '@angular/compiler';
 import { ExplainStatePageDesktopComponent } from '../explain-state-page-desktop/explain-state-page-desktop.component';
 
 @Component({
   selector: 'app-stats-page',
   standalone: true,
-  imports: [NgFor, ExplainStatePageDesktopComponent],
+  imports: [NgFor, ExplainStatePageDesktopComponent, NgIf],
   templateUrl: './stats-page.component.html',
   styleUrl: './stats-page.component.scss'
 })
@@ -16,6 +16,7 @@ export class StatsPageComponent {
   statistiques:Statistics[] = [];
 
   points!:number;
+  isHidden:boolean = true;
 
   apiService = inject(ApiDataService);
 
@@ -50,7 +51,14 @@ export class StatsPageComponent {
       for(let i = 0; i < this.statistiques.length; i++)
       {
         if(this.statistiques[i].name === name)
+        {
           this.statistiques[i].score -= 1;
+          this.statistiques[i].differential -= 1;
+          if(this.statistiques[i].differential > 0) 
+            {
+              this.statistiques[i].hidden = false;
+            }
+        }
       }
       this.points++;
     }
@@ -62,7 +70,15 @@ export class StatsPageComponent {
       for(let i = 0; i < this.statistiques.length; i++)
         {
           if(this.statistiques[i].name === name)
+          {
             this.statistiques[i].score += 1;
+            this.statistiques[i].differential += 1;
+            if(this.statistiques[i].differential > 0) 
+            {
+              this.statistiques[i].hidden = false;
+            }
+            console.log(this.statistiques[i].name + " " + this.statistiques[i].differential);
+          }
         }
       this.points--;
     }
@@ -70,6 +86,7 @@ export class StatsPageComponent {
 
   ngOnInit()
   {
+    
     this.points = 5;
     this.apiService.getStatistics().subscribe(
       statistiques => {
@@ -77,9 +94,11 @@ export class StatsPageComponent {
         for(let i = 0; i < 10; i++)
           {
             const max = 20;
+            this.statistiques[i].differential = 0;
             let score = Math.round(Math.random()*max);
             if(score >= 18) score = Math.round(score/2);
               this.statistiques[i].score = score;
+              this.statistiques[i].hidden = true;
           }
       }
     )

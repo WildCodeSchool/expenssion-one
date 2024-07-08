@@ -11,12 +11,14 @@
           <li>
             <div class="stat">
               <div class="statName">{{stat.name}}</div>
-              @if(stat.differential > 0)
-              { 
-                <div class="circle"><button class="content" (click)="scoreDown(stat.name)">-</button></div>
-              }
+                <div class="circle">
+                  @if(!stat.hidden)
+                  {
+                  <button class="content" (click)="scoreDown(stat.name)">-</button>
+                  }
+                </div>
               <div class="statScore">{{stat.score}}</div>
-              <div class="circle"><button (click)="scoreUp(stat.name)" class="content">+</button></div>
+              <button (click)="scoreUp(stat.name)" class="content"><div class="circle">+</div></button>
             </div>
           </li>
         }
