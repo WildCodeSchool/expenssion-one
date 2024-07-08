@@ -19,6 +19,7 @@ import { SecretSelectionPageComponent } from './pages/secret-selection-page/secr
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { ConstructionPageComponent } from './pages/construction-page/construction-page.component';
 import { ClassesPageComponent } from './pages/classes-page/classes-page.component';
+import { LocationSelectionPageComponent } from './pages/location-selection-page/location-selection-page.component';
 
 export const routes: Routes = [
   {
