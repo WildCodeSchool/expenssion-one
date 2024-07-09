@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { ApiDataService } from '../../service/api-data.service';
 import { Continent } from '../../model/continent/continent';
+import { KingdomService } from '../../service/kingdom/kingdom.service';
 
 @Component({
   selector: 'app-location-page',
@@ -10,12 +10,12 @@ import { Continent } from '../../model/continent/continent';
   styleUrl: './location-page.component.scss'
 })
 export class LocationPageComponent {
-  apiDataService: ApiDataService = inject(ApiDataService);
+  kingdomService = inject(KingdomService);
   continents: Continent[] = [];
 
   constructor() {}
 
   ngOnInit(): void {
-    this.apiDataService.getContinents().subscribe((data) => this.continents = data)
+    this.kingdomService.getAllKingdom().subscribe((data) => this.continents = data)
   }
 }

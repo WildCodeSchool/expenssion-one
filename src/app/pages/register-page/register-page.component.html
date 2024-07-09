@@ -16,7 +16,7 @@
         <input id="pseudo" formControlName="pseudo" type="text" required title="Veuillez entrer votre pseudo.">
 
         <label for="Mail">Adresse mail *</label>
-        <input id="Mail" formControlName="emailAdress" type="email" required
+        <input id="Mail" formControlName="mailAddress" type="email" required
             title="Veuillez entrer votre adresse mail.">
 
         <label for="confirmationAdresseMail">Confirmation adresse mail *</label>
@@ -28,7 +28,7 @@
             title="Veuillez entrer un mot de passe.">
 
         <label for="confirmationPassword">Confirmation du mot de passe *</label>
-        <input id="confirmationPassword" formControlName="confirmationMotDePasse" type="password" required
+        <input id="confirmationPassword" formControlName="passwordConfirmation" type="password" required
             title="Veuillez confirmer votre mot de passe.">
         <div class="cgu-container">
             <input type="checkbox" id="toggle-cgu" />
@@ -62,7 +62,15 @@
                 </div>
             </label>
         </div>
-
+        <div class="checkbox-container">
+            <input id="acceptCGU" formControlName="acceptCGU" type="checkbox" required>
+            <label for="acceptCGU">J'accepte les CGU *</label>
+        </div>
+        
+        <div class="checkbox-container">
+            <input id="isAdult" formControlName="isAdult" type="checkbox" required>
+            <label for="isAdult">Je certifie avoir 18 ans ou plus *</label>
+        </div>
         <button id="register-button" type="submit">S'INSCRIRE</button>
 </form>
 </div>

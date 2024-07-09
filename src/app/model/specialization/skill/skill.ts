@@ -1,6 +1,6 @@
 export class Skill {
     id?:number;
     name!:string;
-    caracteristic!:string ;
+    characteristic!:string ;
     description!:string;
 }

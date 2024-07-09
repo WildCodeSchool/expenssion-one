@@ -1,3 +1,5 @@
+@use "../../../import" as *;
+
 .character-selection-container {
   display: flex;
   flex-direction: row;
@@ -5,21 +7,22 @@
   justify-content: space-between;
   height: 100vh;
   width: 100%;
-  background-image: url('/assets/background_pictures/rusty-morning-view-through-windows 1.png');
+  background-image: url("/assets/background_pictures/rusty-morning-view-through-windows 1.png");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  color: white;
-  font-family: "Cinzel";
+  color: $textLightColor;
+  font-family: $subTitleFont;
 }
 
 .selection-box {
   width: 60%;
   background-color: rgba(32, 34, 41, 0.8);
-  margin-top: 10%;
+  margin-top: 5%;
   padding-top: 15%;
   padding-bottom: 15%;
   margin-left: 2%;
+  align-self: center;
   border-radius: 10px;
   text-align: center;
   position: relative;
@@ -35,7 +38,7 @@
 
 .add-button {
   background-color: #d4a373;
-  color: white;
+  color: $textLightColor;
   border: none;
   border-radius: 50%;
   width: 40px;
@@ -53,20 +56,20 @@
 }
 
 h1 {
-  color: white;
-  font-family: "Cinzel";
+  color: $textLightColor;
+  font-family: $subTitleFont;
   font-size: 30px;
 }
 
 .new-character-button {
   background-color: #d4a373;
-  color: white;
+  color: $textLightColor;
   border: none;
+  margin-top: 2rem;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
-  font-family: "Cinzel";
+  font-family: $subTitleFont;
 }
 
 .new-character-button:hover {
@@ -137,52 +140,54 @@ h1 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 10px; 
+    padding: 10px;
   }
 
   .selection-box {
-    width: 90%; 
+    width: 90%;
     height: 50%;
     margin-top: -240px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    p {
+      margin-top: 4rem;
+    }
   }
 
   .character-slots-container {
     width: 100%;
     flex-direction: row;
     align-items: center;
-    justify-content: center; 
-    order: -1; 
+    justify-content: center;
+    order: -1;
     padding: 0;
     margin-top: -170px;
+    overflow-y: unset;
   }
 
   .slots-wrapper {
-    width: 100%; 
+    width: 100%;
     flex-direction: row;
     justify-content: center;
-    overflow-x: hidden; 
-    padding: 10px 0; 
+    overflow-x: hidden;
+    padding: 10px 0;
   }
 
   .character-slots {
-    flex-direction: row; 
+    flex-direction: row;
     gap: 10px;
-    justify-content: center; 
+    justify-content: center;
   }
 
   .slot-column {
-    flex-direction: row; 
+    flex-direction: row;
     gap: 10px;
   }
 
   .slot {
     width: 100px;
-    height: 100px; 
+    height: 100px;
     margin: 5px;
   }
-
-
 
   .scroll-arrow {
     cursor: pointer;
@@ -207,7 +212,7 @@ h1 {
 
   .add-character {
     top: 20px;
-    left: 20px; 
+    left: 20px;
   }
 
   .add-button {
@@ -217,15 +222,13 @@ h1 {
   }
 
   h1 {
-    font-size: 14px; 
+    font-size: 14px;
   }
 
   .new-character-button {
     padding: 10px 20px;
     margin-top: 10px;
-    font-size: 16px; 
+    font-size: 16px;
+    margin-top: 2rem;
   }
 }
-
-  
-  
