@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
 import { Router } from '@angular/router';
+import { T } from '@fullcalendar/core/internal-common';
 
 @Component({
   selector: 'app-world-map',
@@ -58,6 +59,7 @@ export class WorldMapComponent {
     this.isClickedNelm = false;
     this.nelm = false;
     this.conditionNorta = true;
+    this.selectedContinent = 'norta';
   }
 
   onClickNelm(): void {
@@ -68,21 +70,6 @@ export class WorldMapComponent {
     this.conditionNelm = true;
   }
 
-  selectKingdom(): void {
-    if (this.conditionNorta) {
-    this.selectNorta();
-    }
-    if (this.conditionNelm) {
-    this.selectNelm();
-    }
-  }
-
-  selectNorta() {
-    this.router.navigate(['/norta']);
-  }
-
-  selectNelm () {
-    this.router.navigate(['/component-one']);
-  }
+selectedContinent: string = 'none';
 
 }

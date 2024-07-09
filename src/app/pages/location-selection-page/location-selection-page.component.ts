@@ -23,17 +23,22 @@ export class LocationSelectionPageComponent {
     this.location.back();
   }
 
-  selectNorta() {
-    this.showNortaMap = true;
-  }
-
   private breakpoints = {
     mobile: '(max-width: 768px)',
   }
 
   breakpointObserver = inject(BreakpointObserver)
   isMobile: boolean = false;
-  
+
+  selectKingdom(string: string): void {
+    if (string === 'norta') {
+    this.showNortaMap = true;
+    console.log(this.showNortaMap)
+    }
+    else {
+      console.log("yayoo");
+    }
+  }
 
   ngOnInit() {
     this.breakpointObserver.observe(Object.values(this.breakpoints)).subscribe((state: BreakpointState) => {

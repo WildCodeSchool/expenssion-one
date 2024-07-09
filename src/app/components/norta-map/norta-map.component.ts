@@ -25,17 +25,15 @@ export class NortaMapComponent {
   }
 
   selectedCity?: City= new City();
-
   isClicked: boolean = false;
   
   onHover(cityName: string){
-    this.selectedCity = this.cities.find(city => city.name === cityName)
-    console.log(this.selectedCity)
-    this.isClicked = false;
+      this.selectedCity = this.cities.find(city => city.name === cityName)
+      this.isClicked = false;
   }
 
   onClick(string: string){
-    this.selectedCity = this.norta.find((city:any) => city.name = string)
+    this.selectedCity = this.cities.find(city => city.name = string)
     this.isClicked = true;
   }
 
