@@ -59,7 +59,7 @@ export const routes: Routes = [
   },
 
   {
-    path: 'creaPersonnage/stats',
+    path: 'creationPersonnage/statistiques',
     component: StatsPageComponent,
   },
   {

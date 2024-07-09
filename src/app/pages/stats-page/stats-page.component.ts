@@ -3,12 +3,11 @@ import { Statistics } from '../../model/stats/statistics';
 import { ApiDataService } from '../../service/api-data.service';
 import { NgFor, NgIf } from '@angular/common';
 import { ExternalExpr } from '@angular/compiler';
-import { ExplainStatePageDesktopComponent } from '../explain-state-page-desktop/explain-state-page-desktop.component';
 
 @Component({
   selector: 'app-stats-page',
   standalone: true,
-  imports: [NgFor, ExplainStatePageDesktopComponent, NgIf],
+  imports: [NgFor, NgIf],
   templateUrl: './stats-page.component.html',
   styleUrl: './stats-page.component.scss'
 })
@@ -24,7 +23,7 @@ export class StatsPageComponent {
     const max = 20;
     let score = Math.round(Math.random()*max);
     if(score >= 18) score = Math.round(score/2);
-    this.statistiques.filter(x => x.name === stat.name)[0].score = score;
+    this.statistiques.filter(x => x.name == stat.name)[0].score = score;
   }
 
   modifyScore(score:number):number{
@@ -51,44 +50,32 @@ export class StatsPageComponent {
     return score;
   }
 
-  scoreDown(name:String)
+  scoreDown(index:number)
   {
     if(this.points < 5)
     {
-      for(let i = 0; i < this.statistiques.length; i++)
+      this.statistiques[index].score -= 1;
+      this.statistiques[index].differential -= 1;
+      if(this.statistiques[index].differential > 0) 
       {
-        if(this.statistiques[i].name === name)
-        {
-          this.statistiques[i].score -= 1;
-          this.statistiques[i].differential -= 1;
-          if(this.statistiques[i].differential > 0) 
-            {
-              this.statistiques[i].hidden = false;
-            }
-        }
+        this.statistiques[index].hidden = false;
       }
       this.points++;
     }
   }
-  scoreUp(name:String)
+  scoreUp(index:number)
   {
     if(this.points > 0)
     {
-      for(let i = 0; i < this.statistiques.length; i++)
-        {
-          if(this.statistiques[i].name === name)
-          {
-            this.statistiques[i].score += 1;
-            this.statistiques[i].differential += 1;
-            if(this.statistiques[i].differential > 0) 
-            {
-              this.statistiques[i].hidden = false;
-            }
-            console.log(this.statistiques[i].name + " " + this.statistiques[i].differential);
-          }
-        }
-      this.points--;
+      this.statistiques[index].score += 1;
+      this.statistiques[index].differential += 1;
+      if(this.statistiques[index].differential > 0) 
+      {
+        this.statistiques[index].hidden = false;
+      }
     }
+      this.points--;
+    
   }
 
   ngOnInit()
