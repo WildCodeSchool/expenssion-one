@@ -32,9 +32,9 @@
                 <button class="content" class="buttonRight" (click)="incrementCount()"><div class="circleClasses">></div></button>
             </div>
             
-            @for(description of selectedClass.content;track description){
+            @for(description of selectedClass.contents;track description){
               <p class="text-description">
-                  {{description}}
+                  {{description.contents}}
               </p>
             }
             <div class="displayValidationButton"><button class="validationButton">Valider</button></div>
