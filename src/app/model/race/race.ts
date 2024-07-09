@@ -1,3 +1,5 @@
+import { Language } from "../language/language";
+
 export class Race {
   constructor(
     readonly url: string,
@@ -9,7 +11,7 @@ export class Race {
     readonly min_height: number,
     readonly max_height: number,
     readonly speed: number,
-    readonly languages: string[],
+    readonly languages: Language[],
     readonly number_additional_language: number
   ) {}
 }
