@@ -19,24 +19,29 @@
       </div>
 
       <div class="selectClass">
-          <h1 class="title">Sélection des classes</h1>
+          <h2 class="title">Sélection des classes</h2>
             <div class="flexClasses">
               <button class="content" class="buttonLeft" (click)="decrementCount()"><div class="circleClasses"><</div></button>
+                
+                <ul class="displayPic">
                 @for(filters of filterClasses; track filters)
                 {
-                  <div class="flexPic" style="width:40%">
+                  <li class="flexPic">
                     <button  (click)="changePic(filters.name)"><img class="buttonPic" [ngStyle] = "{'border-color': selectedClass.name === filters.name ? '#DDB375' : 'black'}" src="{{filters.url}}"/></button>
                     <div>{{filters.name}}</div>
-                  </div>
+                  </li>
                 }
+                </ul>
                 <button class="content" class="buttonRight" (click)="incrementCount()"><div class="circleClasses">></div></button>
             </div>
             
+            <ul>
             @for(description of selectedClass.contents;track description){
-              <p class="text-description">
+              <li><p class="text-description">
                   {{description.content}}
-              </p>
+              </p></li>
             }
+            </ul>
             <div class="displayValidationButton"><button class="validationButton">Valider</button></div>
       </div>
 
