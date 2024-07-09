@@ -88,14 +88,10 @@
             <area shape="circle" coords="89,221,10" alt="ducaria">
         </map>
     </div>
-    <div class="show_continent_description">
-        @if (norta == true) {
-            <h2>Norta</h2>
-            <p>Le continent de Norta est partagé en Trois Royaumes, représentés par une capitale, où réside un.e Roi / Reine.</p>
-        }
-        @if (nelm == true) {
-            <h2>Nelm</h2>
-            <p>Le continent de Nelm est partagé en Neuf Royaumes, huit d'entre eux sont représentés par une capitale, où réside un.e Roi / Reine.</p>
+    <div class="show_cities_descriptions">
+        @if (portax == true) {
+            <h2>{{ city.name }}</h2>
+            <p></p>
         }
     </div>
     <button>Valider</button>

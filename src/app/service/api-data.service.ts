@@ -6,10 +6,12 @@ import { Race } from '../model/race/race';
 import { Continent } from '../model/continent/continent';
 import { Secret } from '../model/secret/secret';
 import { Statistics } from '../model/stats/statistics';
+import { City } from '../model/city/city';
 @Injectable({
   providedIn: 'root',
 })
 export class ApiDataService {
+
   private http = inject(HttpClient);
 
   constructor() {}
@@ -17,7 +19,6 @@ export class ApiDataService {
   getStatistics(): Observable<Statistics[]> {
     return this.http.get<Statistics[]>('assets/data/statistics.json');
   }
-
 
   getSpecialization(): Observable<Specialization[]> {
     return this.http.get<Specialization[]>('assets/data/specialization.json');
@@ -28,6 +29,10 @@ export class ApiDataService {
   }
   getContinents(): Observable<Continent[]> {
     return this.http.get<Continent[]>('assets/data/continents.json');
+  }
+
+  getCities(): Observable<City[]> {
+    return this.http.get<City[]>('assets/data/continents.json');
   }
 
   getAnecdoticSecrets():Observable<Secret[]>{
