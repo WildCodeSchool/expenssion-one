@@ -5,7 +5,7 @@
     filter: opacity(90%);
     margin: 2rem 0 2rem 0;
     border-radius: 10px;
-    color: white;
+    color: $textLightColor;
     margin-right: 10vw;
     margin-left: 10vw;
     text-align: center;
@@ -65,7 +65,7 @@
         height: 2.5rem;
         border-radius: 10px;
         justify-self: center;
-        color: black;
+        color: $textColor;
         font-size: larger;
         font-family: $contentFont;
         line-height: 1.5;

@@ -17,7 +17,7 @@
             margin-top: $globalPaddingTop;
             margin-bottom: 2rem;
             border-radius: 10px;
-            color: white;
+            color: $textLightColor;
             margin-left: 8%;
             text-align: center;
             padding: 1rem;
@@ -53,7 +53,7 @@
                 height: 2.5rem;
                 border-radius: 10px;
                 justify-self: center;
-                color: black;
+                color: $textColor;
                 font-size: larger;
                 font-family: $contentFont;
                 line-height: 1.5;

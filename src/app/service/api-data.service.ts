@@ -37,7 +37,6 @@ export class ApiDataService {
     return this.http.get<Continent[]>('assets/data/continents.json');
   }
 
-
   getCities(): Observable<City[]> {
     return this.http.get<City[]>('assets/data/continents.json');
   }
