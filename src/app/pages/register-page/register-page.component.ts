@@ -16,7 +16,7 @@ export class RegisterPageComponent {
   user?: User;
   router = inject(Router);
 
-  authetificationService = inject(AuthenticationService);
+  authentificationService = inject(AuthenticationService);
 
   constructor(private fb: FormBuilder) {
     this.registerForm = this.fb.group({
@@ -24,10 +24,10 @@ export class RegisterPageComponent {
       lastName: ['', [Validators.required]],
       birthDate: ['', [Validators.required]],
       pseudo: ['', [Validators.required]],
-      emailAdress: ['', [Validators.required, Validators.email]],
+      mailAdress: ['', [Validators.required, Validators.email]],
       confirmationMail: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8), this.passwordValidator]],
-      confirmationMotDePasse: ['', [Validators.required]],
+      passwordConfirmation: ['', [Validators.required]],
       acceptCGU: [false, [Validators.requiredTrue]],
       isAdult: [false, [Validators.requiredTrue]]
     }, { validators: this.emailMatchValidator });
@@ -42,10 +42,10 @@ export class RegisterPageComponent {
   }
 
   emailMatchValidator(group: FormGroup): { [key: string]: boolean } | null {
-    if (group.get('emailAdress')?.value !== group.get('confirmationMail')?.value) {
-      return { 'emailMismatch': true };
+    if (group.get('mailAdress')?.value !== group.get('confirmationMail')?.value) {
+      return { 'mailMismatch': true };
     }
-    if (group.get('password')?.value !== group.get('confirmationMotDePasse')?.value) {
+    if (group.get('password')?.value !== group.get('passwordConfirmation')?.value) {
       return { 'passwordMismatch': true };
     }
     return null;
@@ -58,10 +58,10 @@ export class RegisterPageComponent {
         this.registerForm.value.lastName,
         this.registerForm.value.name,
         this.registerForm.value.password,
-        this.registerForm.value.emailAdress,
+        this.registerForm.value.mailAdress,
         this.registerForm.value.birthDate,
       );
-      this.authetificationService.register(this.user).subscribe(() => {
+      this.authentificationService.register(this.user).subscribe(() => {
         this.router.navigateByUrl('/');
       });
     } else {
