@@ -13,10 +13,10 @@ import { Router } from '@angular/router';
 })
 export class RegisterPageComponent {
   registerForm: FormGroup;
-  user?:User;
-  router=inject(Router)
+  user?: User;
+  router = inject(Router);
 
-  authetificationService=inject(AuthenticationService)
+  authetificationService = inject(AuthenticationService);
 
   constructor(private fb: FormBuilder) {
     this.registerForm = this.fb.group({
@@ -26,11 +26,12 @@ export class RegisterPageComponent {
       pseudo: ['', [Validators.required]],
       emailAdress: ['', [Validators.required, Validators.email]],
       confirmationMail: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(8)]],
-      confirmationMotDePasse: ['', [Validators.required]]
+      password: ['', [Validators.required, Validators.minLength(8), this.passwordValidator]],
+      confirmationMotDePasse: ['', [Validators.required]],
+      acceptCGU: [false, [Validators.requiredTrue]],
+      isAdult: [false, [Validators.requiredTrue]]
     }, { validators: this.emailMatchValidator });
   }
-
 
   passwordValidator(control: FormControl): { [key: string]: boolean } | null {
     const value = control.value;
@@ -51,20 +52,20 @@ export class RegisterPageComponent {
   }
 
   onSubmit(): void {
-
     if (this.registerForm.valid) {
-      this.user=new User(
-        this.registerForm.value.pseudo ,
+      this.user = new User(
+        this.registerForm.value.pseudo,
         this.registerForm.value.lastName,
         this.registerForm.value.name,
         this.registerForm.value.password,
         this.registerForm.value.emailAdress,
         this.registerForm.value.birthDate,
-      )
-      this.authetificationService.register(this.user).subscribe()
-      this.router.navigateByUrl('/')
-
+      );
+      this.authetificationService.register(this.user).subscribe(() => {
+        this.router.navigateByUrl('/');
+      });
     } else {
+      // Handle form errors
     }
   }
 }
