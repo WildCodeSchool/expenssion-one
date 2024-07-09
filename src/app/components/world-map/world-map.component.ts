@@ -1,6 +1,5 @@
-import { Component, Input, input } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { T } from '@fullcalendar/core/internal-common';
 
 @Component({
   selector: 'app-world-map',
@@ -16,6 +15,10 @@ export class WorldMapComponent {
   isClickedNelm: boolean = false;
   conditionNorta: boolean = false;
   conditionNelm: boolean = false;
+
+
+  @Output()
+  sendNortaIsDisplayToParent: EventEmitter<boolean> = new EventEmitter();
   
   constructor (private router: Router) {};
 
@@ -60,6 +63,8 @@ export class WorldMapComponent {
     this.nelm = false;
     this.conditionNorta = true;
     this.selectedContinent = 'norta';
+    console.log("envoie") 
+    this.sendNortaIsDisplayToParent.emit(true);
   }
 
   onClickNelm(): void {

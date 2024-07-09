@@ -9,6 +9,7 @@
     display: flex;
     justify-content: space-between;
     justify-items: center;
+    min-height: calc(100vh - $footerHeight);
 
     .location_container {
             background-color: #202229;

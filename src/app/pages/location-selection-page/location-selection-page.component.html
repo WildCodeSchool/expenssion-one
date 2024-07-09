@@ -10,14 +10,18 @@
         </div>
             <button (click)="goBack()">Retour</button>
     </section>
+
+    <div>
+
+        @if(!isNortaDisplay){
+            <app-world-map (sendNortaIsDisplayToParent)="onReceiveIsNortaDisplay($event)"></app-world-map>
+
+           
+        }    
+        @else{
+            <app-norta-map></app-norta-map>
+        }
+    </div>
     
-        <app-norta-map></app-norta-map>
-    
-    @if(isMobile && !showNortaMap){
-        <app-world-map-mobile></app-world-map-mobile>
-    }
-    @else if(!isMobile && !showNortaMap){
-        <app-world-map></app-world-map>
-    }
 
 </div>

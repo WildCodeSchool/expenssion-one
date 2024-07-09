@@ -1,10 +1,10 @@
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { Location } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { WorldMapComponent } from '../../components/world-map/world-map.component';
-import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
-import { WorldMapMobileComponent } from '../../components/world-map-mobile/world-map-mobile.component';
 import { NortaMapComponent } from '../../components/norta-map/norta-map.component';
+import { WorldMapMobileComponent } from '../../components/world-map-mobile/world-map-mobile.component';
+import { WorldMapComponent } from '../../components/world-map/world-map.component';
 
 @Component({
   selector: 'app-location-selection-page',
@@ -15,6 +15,12 @@ import { NortaMapComponent } from '../../components/norta-map/norta-map.componen
 })
 export class LocationSelectionPageComponent {
 
+    isNortaDisplay: boolean | null = null;
+
+    onReceiveIsNortaDisplay(event: boolean): void {
+    this.isNortaDisplay=event;
+    console.log("reçu: " + this.isNortaDisplay);
+  }
   showNortaMap: boolean = false;
 
   constructor(private location: Location) { }
@@ -30,15 +36,7 @@ export class LocationSelectionPageComponent {
   breakpointObserver = inject(BreakpointObserver)
   isMobile: boolean = false;
 
-  selectKingdom(string: string): void {
-    if (string === 'norta') {
-    this.showNortaMap = true;
-    console.log(this.showNortaMap)
-    }
-    else {
-      console.log("yayoo");
-    }
-  }
+
 
   ngOnInit() {
     this.breakpointObserver.observe(Object.values(this.breakpoints)).subscribe((state: BreakpointState) => {
