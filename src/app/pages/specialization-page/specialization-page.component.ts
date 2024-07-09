@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Specialization } from '../../model/specialization/specialization';
-import { SpecializationService } from '../../service/specialization.service';
+import { SpecializationService } from '../../service/specialization/specialization.service';
 
 @Component({
   selector: 'app-specialization-page',

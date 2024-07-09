@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { environment } from '../../../environments/environment.dev';
 import { Observable } from 'rxjs';
+import { environment } from '../../../environments/environment';
 import { Secret } from '../../model/secret/secret';
 
 @Injectable({
@@ -19,11 +19,11 @@ export class SecretService {
   }
 
   getAllPrimordialSecrets():Observable<Secret[]>{
-    return this.http.get<Secret[]>(this.url+"/getAllPrimordialSecrets")
+    return this.http.get<Secret[]>(this.url+"/primordial-secrets/all")
   }
 
-  getAllSecondarySecrets():Observable<Secret[]>{
-    return this.http.get<Secret[]>(this.url+"/getAllSecondarySecrets")
+  getAllAnecdoticSecrets():Observable<Secret[]>{
+    return this.http.get<Secret[]>(this.url+"/anecdotic-secrets/all")
   }
 
   getCharacterSecrets():Observable<Secret[]>{

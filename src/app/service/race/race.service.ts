@@ -1,23 +1,24 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, inject } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
-import { User } from '../../model/user/user';
+import { Race } from '../../model/race/race';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class RaceService {
 
-
+  
   http=inject(HttpClient)
   url=environment.apiUrl
 
   constructor() { }
 
+      getAllRace():Observable<Race[]>{
+    return this.http.get<Race[]>(this.url+"/races")
+  }
 
-  getUserData(): Observable<User> {
-  return this.http.get<User>(this.url+'/profil');
+
 }
 
-}
