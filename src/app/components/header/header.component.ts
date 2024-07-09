@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { RouterLink, RouterOutlet, Router } from '@angular/router';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
-import { PopupComponent } from '../pop-up-connexion/pop-up-connexion.component';
-import { AuthenticationService } from '../../service/authentication/authentification.service';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { Observable } from 'rxjs';
+import { AuthenticationService } from '../../service/authentication/authentification.service';
+import { PopupComponent } from '../pop-up-connexion/pop-up-connexion.component';
 
 @Component({
   selector: 'app-header',
@@ -43,6 +43,7 @@ export class HeaderComponent {
   }
 
   onLogout(): void {
+    console.log("here")
     this.authenticationService.removeToken();
     this.router.navigateByUrl('/');
   }
