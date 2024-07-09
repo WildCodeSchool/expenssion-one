@@ -1,6 +1,6 @@
 import { Job } from "../job/job";
-import { Skill } from "./skill/skill";
 import { SpecializationContent } from "../specializationContent/specialization-content";
+import { Skill } from "./skill/skill";
 
 export class Specialization {
     id?:number;
@@ -8,6 +8,6 @@ export class Specialization {
     url!: string;
     jobs!: Job[];
     skills?: Skill[];
-    content!: SpecializationContent[];
+    contents!: SpecializationContent[];
     
 }

@@ -12,11 +12,15 @@ import { NgFor } from '@angular/common';
 })
 export class SecretsPageComponent {
   apiService = inject(ApiDataService);
-  secrets:Secret[] = [];
+  primordialSecrets:Secret[] = [];
+  anecdoticSecrets:Secret[] = [];
   ngOnInit()
   {
     this.apiService.getPrimordialSecrets().subscribe(
-      x => this.secrets = x.filter(p => p.description.length > 0)
+      x => this.primordialSecrets = x.filter(p => p.description.length > 0)
+    );
+    this.apiService.getAnecdoticSecrets().subscribe(
+      x => this.anecdoticSecrets = x.filter(p => p.description.length > 0)
     );
   }
 }

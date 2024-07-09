@@ -2,30 +2,46 @@
   <nav class="navbar">
     <div class="navbar-container">
       <div class="logo">
-        <a routerLink="accueil"><img class="logo-image" src="assets/pictures/Blop.png" alt="Logo"></a>
+        <a routerLink="accueil"
+          ><img class="logo-image" src="assets/pictures/Blop.png" alt="Logo"
+        /></a>
       </div>
       <div class="navbar-center">
         <div class="navbar-left">
           <ul>
             <li>
               <div class="gear-menu">
-                <img class="gear-menu-image" src="assets/pictures/headerGear.png"> Jeu
+                <img
+                  class="gear-menu-image"
+                  src="assets/pictures/headerGear.png"
+                />
+                Jeu
               </div>
               <ul class="submenu">
-                <li><a routerLink="regles" fragment="introduction">Introduction</a></li>
-                <li><a routerLink="regles" fragment="reglesdujeu">Règles</a></li>
+                <li>
+                  <a routerLink="regles" fragment="introduction"
+                    >Introduction</a
+                  >
+                </li>
+                <li>
+                  <a routerLink="regles" fragment="reglesdujeu">Règles</a>
+                </li>
               </ul>
             </li>
             <li>
               <div class="gear-menu">
-                <img class="gear-menu-image" src="assets/pictures/headerGear.png"> Glossaire
+                <img
+                  class="gear-menu-image"
+                  src="assets/pictures/headerGear.png"
+                />
+                Glossaire
               </div>
-              
+
               <ul class="submenu">
                 <li><a routerLink="glossaire/races">Races</a></li>
                 <li><a routerLink="glossaire/classes">Classes</a></li>
                 <li><a routerLink="glossaire/secrets">Secrets</a></li>
-                <li><a routerLink="accueil">Croyances</a></li>
+                <li><a routerLink="glossaire/croyances">Croyances</a></li>
                 <li><a routerLink="glossaire/lieux">Lieux</a></li>
               </ul>
             </li>
@@ -38,30 +54,61 @@
           </ul>
         </div>
       </div>
-      
+
       <div class="connection-container">
         @if((isLogin$| async) ===true){
-          <a routerLink="/profil">
-            <div class="connection-image">
-              <img class="avatar" src="assets/pictures/Connexion.png" alt="profil">
-              <img class="avatar-gear" src="assets/pictures/headerGearProfil.png">
-            </div>
+
+        <a routerLink="/profil"
+          ><img
+            class="connection-logo"
+            src="assets/pictures/Connexion.png"
+            alt="profil"
+        /></a>
+        <button (click)="onLogout()">
+          <img
+            class="connection-logo"
+            src="assets/pictures/log-out-button.svg"
+            alt="LO"
+          />
+        </button>
+        } @else {
+
+        <a routerLink="/profil">
+          <div class="connection-image">
+            <img
+              class="avatar"
+              src="assets/pictures/Connexion.png"
+              alt="profil"
+            />
+            <img
+              class="avatar-gear"
+              src="assets/pictures/headerGearProfil.png"
+            />
+          </div>
         </a>
-          <button (click)="onLogout()"><img class="logout-image" src="assets/pictures/log-out-button.svg" alt="LO"></button>
-        }
-        @else {
-          <button (click)="openDialogConnection()"><img  class="connection-logo" src="assets/pictures/Connexion.png" alt="Connection"></button>
+        <button (click)="onLogout()">
+          <img
+            class="logout-image"
+            src="assets/pictures/log-out-button.svg"
+            alt="LO"
+          />
+        </button>
         }
       </div>
     </div>
   </nav>
   <div class="play-button">
     @if((isLogin$| async) ===true){
-        <a routerLink="/inscription"><img class="image-play-container"   src="assets/pictures/jouer.png" alt="profil"></a>
-
-    }
-    @else{
-          <button (click)="openDialogGame()"><img class="image-play-container" src="assets/pictures/jouer.png"></button>
+    <a routerLink="/inscription"
+      ><img
+        class="image-play-container"
+        src="assets/pictures/jouer.png"
+        alt="profil"
+    /></a>
+    } @else{
+    <button (click)="openDialogGame()">
+      <img class="image-play-container" src="assets/pictures/jouer.png" />
+    </button>
     }
   </div>
 </header>

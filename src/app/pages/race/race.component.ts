@@ -10,7 +10,7 @@ import { Race } from '../../model/race/race';
   styleUrl: './race.component.scss',
 })
 export class RaceComponent {
-  //déclare une propriété 'aces' de type array objects 'Race'
+  //déclare une propriété 'races' de type array objects 'Race'
   //Initialisation avec un array vide pour éviter les erreurs avant chargement des données
   races: Race[] = [];
 
