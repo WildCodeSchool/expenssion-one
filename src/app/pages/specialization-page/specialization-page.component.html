@@ -13,9 +13,9 @@
             <div class="contents-container">
                 <h2 class="description">Description :</h2>
                 <br>
-                @for(content of specialization.content;track content){
+                @for(content of specialization.contents;track content){
                 <p class="text-description">
-                    {{content}}
+                    {{content.content}}
                 </p>
                 }
                 <br>
@@ -26,7 +26,7 @@
                 <br>
                 <ul>
                     @for(job of specialization.jobs;track job){
-                    <li>{{job}}</li>
+                    <li>{{job.name}}</li>
                     }
                 </ul>
             </div>
@@ -49,7 +49,7 @@
                         @for(skill of specialization.skills;track skill){
                         <tr>
                             <th scope="row"> {{skill.name}}</th>
-                            <td> {{skill.caracteristic}}</td>
+                            <td> {{skill.characteristic}}</td>
                             <td>{{skill.description}}</td>
                         </tr>
 

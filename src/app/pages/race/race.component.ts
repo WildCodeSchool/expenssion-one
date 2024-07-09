@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ApiDataService } from '../../service/api-data.service';
+import { Component, inject } from '@angular/core';
 import { Race } from '../../model/race/race';
+import { RaceService } from '../../service/race/race.service';
 
 @Component({
   selector: 'app-race',
@@ -10,14 +10,16 @@ import { Race } from '../../model/race/race';
   styleUrl: './race.component.scss',
 })
 export class RaceComponent {
-  //déclare une propriété 'aces' de type array objects 'Race'
+  //déclare une propriété 'races' de type array objects 'Race'
   //Initialisation avec un array vide pour éviter les erreurs avant chargement des données
   races: Race[] = [];
 
-  constructor(private ApiDataService: ApiDataService) {}
+  raceService = inject(RaceService)
+
+  constructor() {}
   //Appel du service pour get data.race.json à l'initialisation du composant
   ngOnInit(): void {
-    this.ApiDataService.getRaces().subscribe((response: Race[]) => {
+    this.raceService.getAllRace().subscribe((response: Race[]) => {
       //Affecte les données récupérées à la propriété 'races'/and display data race.json from api-service
       this.races = response;
     });

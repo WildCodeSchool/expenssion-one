@@ -13,10 +13,10 @@ import { Router } from '@angular/router';
 })
 export class RegisterPageComponent {
   registerForm: FormGroup;
-  user?:User;
-  router=inject(Router)
+  user?: User;
+  router = inject(Router);
 
-  authetificationService=inject(AuthenticationService)
+  authentificationService = inject(AuthenticationService);
 
   constructor(private fb: FormBuilder) {
     this.registerForm = this.fb.group({
@@ -24,13 +24,14 @@ export class RegisterPageComponent {
       lastName: ['', [Validators.required]],
       birthDate: ['', [Validators.required]],
       pseudo: ['', [Validators.required]],
-      emailAdress: ['', [Validators.required, Validators.email]],
+      mailAddress: ['', [Validators.required, Validators.email]],
       confirmationMail: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(8)]],
-      confirmationMotDePasse: ['', [Validators.required]]
+      password: ['', [Validators.required, Validators.minLength(8), this.passwordValidator]],
+      passwordConfirmation: ['', [Validators.required]],
+      acceptCGU: [false, [Validators.requiredTrue]],
+      isAdult: [false, [Validators.requiredTrue]]
     }, { validators: this.emailMatchValidator });
   }
-
 
   passwordValidator(control: FormControl): { [key: string]: boolean } | null {
     const value = control.value;
@@ -41,30 +42,30 @@ export class RegisterPageComponent {
   }
 
   emailMatchValidator(group: FormGroup): { [key: string]: boolean } | null {
-    if (group.get('emailAdress')?.value !== group.get('confirmationMail')?.value) {
-      return { 'emailMismatch': true };
+    if (group.get('mailAddress')?.value !== group.get('confirmationMail')?.value) {
+      return { 'mailMismatch': true };
     }
-    if (group.get('password')?.value !== group.get('confirmationMotDePasse')?.value) {
+    if (group.get('password')?.value !== group.get('passwordConfirmation')?.value) {
       return { 'passwordMismatch': true };
     }
     return null;
   }
 
   onSubmit(): void {
-
     if (this.registerForm.valid) {
-      this.user=new User(
-        this.registerForm.value.pseudo ,
+      this.user = new User(
+        this.registerForm.value.pseudo,
         this.registerForm.value.lastName,
         this.registerForm.value.name,
         this.registerForm.value.password,
-        this.registerForm.value.emailAdress,
+        this.registerForm.value.mailAddress,
         this.registerForm.value.birthDate,
-      )
-      this.authetificationService.register(this.user).subscribe()
-      this.router.navigateByUrl('/')
-
+      );
+      this.authentificationService.register(this.user).subscribe(() => {
+        this.router.navigateByUrl('/');
+      });
     } else {
+      // Handle form errors
     }
   }
 }
