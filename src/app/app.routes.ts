@@ -55,7 +55,7 @@ export const routes: Routes = [
     component: LocationPageComponent,
   },
   { 
-    path: 'classes', 
+    path: 'creaPersonnage/classes', 
     component: ClassesPageComponent 
   },
   {
