@@ -19,11 +19,11 @@ export class SecretService {
   }
 
   getAllPrimordialSecrets():Observable<Secret[]>{
-    return this.http.get<Secret[]>(this.url+"/getAllPrimordialSecrets")
+    return this.http.get<Secret[]>(this.url+"/primordial-secrets/all")
   }
 
-  getAllSecondarySecrets():Observable<Secret[]>{
-    return this.http.get<Secret[]>(this.url+"/getAllSecondarySecrets")
+  getAllAnecdoticSecrets():Observable<Secret[]>{
+    return this.http.get<Secret[]>(this.url+"/anecdotic-secrets/all")
   }
 
   getCharacterSecrets():Observable<Secret[]>{
