@@ -48,11 +48,16 @@
         <li><span class="bold-title">Vitesse :</span> {{ race.speed }}</li>
         <li>
           <span class="bold-title">Langues :</span> 
-          @for(language of race.languages;track language) {
-            {{ language.name }},
-          } +{{
+          <ul>
+            @for(language of race.languages;track language) {
+            <li>{{ language.name }}</li>,
+            }
+          </ul>
+            +{{
             race.number_additional_language
-          }}
+            }}
+          
+          
           autre(s)
         </li>
       </ul>

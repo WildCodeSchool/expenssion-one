@@ -43,7 +43,6 @@ export class HeaderComponent {
   }
 
   onLogout(): void {
-    console.log("here")
     this.authenticationService.removeToken();
     this.router.navigateByUrl('/');
   }
