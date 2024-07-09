@@ -13,6 +13,9 @@
     @if(isMobile){
         <app-world-map-mobile></app-world-map-mobile>
     }
+    @if(showNortaMap) {
+        <app-norta-map></app-norta-map>
+    }
     @else{
         <app-world-map></app-world-map>
     }

@@ -4,20 +4,27 @@ import { RouterLink } from '@angular/router';
 import { WorldMapComponent } from '../../components/world-map/world-map.component';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { WorldMapMobileComponent } from '../../components/world-map-mobile/world-map-mobile.component';
+import { NortaMapComponent } from '../../components/norta-map/norta-map.component';
 
 @Component({
   selector: 'app-location-selection-page',
   standalone: true,
-  imports: [RouterLink, WorldMapComponent, WorldMapMobileComponent],
+  imports: [RouterLink, WorldMapComponent, WorldMapMobileComponent, NortaMapComponent],
   templateUrl: './location-selection-page.component.html',
   styleUrl: './location-selection-page.component.scss'
 })
 export class LocationSelectionPageComponent {
 
+  showNortaMap: boolean = false;
+
   constructor(private location: Location) { }
 
   goBack(): void {
     this.location.back();
+  }
+
+  selectNorta() {
+    this.showNortaMap = true;
   }
 
   private breakpoints = {

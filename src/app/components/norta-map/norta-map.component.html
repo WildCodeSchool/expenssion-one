@@ -4,96 +4,101 @@
     <div class="world_map">
         <img src="../assets/pictures/Norta_map.svg" alt="Norta" usemap="#norta">
         <map name="norta">
-            <area shape="circle" coords="84,40,10" alt="portax">
-            <area shape="circle" coords="134,46,10" alt="mayere">
-            <area shape="circle" coords="176,42,10" alt="quarnicor">
-            <area shape="circle" coords="206,46,10" alt="balumin">
-            <area shape="circle" coords="254,35,10" alt="syras">
-            <area shape="circle" coords="287,38,10" alt="tolmesa">
-            <area shape="circle" coords="330,23,10" alt="nasram">
-            <area shape="circle" coords="225,50,10" alt="uhne">
-            <area shape="circle" coords="144,69,10" alt="mortaru">
-            <area shape="circle" coords="161,88,10" alt="tamur">
-            <area shape="circle" coords="206,96,10" alt="rotam">
-            <area shape="circle" coords="250,97,10" alt="iacchus">
-            <area shape="circle" coords="272,123,10" alt="falas">
-            <area shape="circle" coords="330,91,10" alt="rolmoll">
-            <area shape="circle" coords="372,93,10" alt="malequo">
-            <area shape="circle" coords="314,124,10" alt="roemul">
-            <area shape="circle" coords="386,124,10" alt="arguerar">
-            <area shape="circle" coords="364,138,10" alt="navago">
-            <area shape="circle" coords="459,89,10" alt="tarsseno">
-            <area shape="circle" coords="497,102,10" alt="etalia">
-            <area shape="circle" coords="492,141,10" alt="rastual">
-            <area shape="circle" coords="453,150,10" alt="ostior">
-            <area shape="circle" coords="452,180,10" alt="ostal">
-            <area shape="circle" coords="393,144,10" alt="sarnen">
-            <area shape="circle" coords="396,166,10" alt="halmi">
-            <area shape="circle" coords="404,190,10" alt="talath">
-            <area shape="circle" coords="417,209,10" alt="fanolox">
-            <area shape="circle" coords="420,230,10" alt="taurmon">
-            <area shape="circle" coords="437,249,10" alt="oroduis">
-            <area shape="circle" coords="516,219,10" alt="la-celestale">
-            <area shape="circle" coords="435,269,10" alt="alett">
-            <area shape="circle" coords="449,326,10" alt="noctia">
-            <area shape="circle" coords="497,337,10" alt="sinatre">
-            <area shape="circle" coords="442,392,10" alt="anguerra">
-            <area shape="circle" coords="339,368,10" alt="palormos">
-            <area shape="circle" coords="318,363,10" alt="dornett">
-            <area shape="circle" coords="344,336,10" alt="ralafax">
-            <area shape="circle" coords="367,316,10" alt="arnir">
-            <area shape="circle" coords="377,279,10" alt="mal">
-            <area shape="circle" coords="338,278,10" alt="noctura">
-            <area shape="circle" coords="343,365,10" alt="holmer">
-            <area shape="circle" coords="350,233,10" alt="tripinnath">
-            <area shape="circle" coords="369,191,10" alt="ladminas">
-            <area shape="circle" coords="324,213,10" alt="nortir">
-            <area shape="circle" coords="339,181,10" alt="pyra">
-            <area shape="circle" coords="336,152,10" alt="tovat">
-            <area shape="circle" coords="267,153,10" alt="le-rempart">
-            <area shape="circle" coords="285,171,10" alt="neleyn">
-            <area shape="circle" coords="301,202,10" alt="toffal">
-            <area shape="circle" coords="261,208,10" alt="norshan">
-            <area shape="circle" coords="232,222,10" alt="polax">
-            <area shape="circle" coords="220,254,10" alt="tolered">
-            <area shape="circle" coords="275,279,10" alt="ereden">
-            <area shape="circle" coords="293,326,10" alt="dwaria">
-            <area shape="circle" coords="282,349,10" alt="umere">
-            <area shape="circle" coords="247,326,10" alt="lunaris">
-            <area shape="circle" coords="232,358,10" alt="arnorea">
-            <area shape="circle" coords="212,334,10" alt="rim">
-            <area shape="circle" coords="193,378,10" alt="udrof">
-            <area shape="circle" coords="185,366,10" alt="la-baie-des-morts">
-            <area shape="circle" coords="202,326,10" alt="urdan">
-            <area shape="circle" coords="233,298,10" alt="tyrna">
-            <area shape="circle" coords="199,265,10" alt="rafmen">
-            <area shape="circle" coords="180,285,10" alt="tirifa">
-            <area shape="circle" coords="106,318,10" alt="malto">
-            <area shape="circle" coords="69,314,10" alt="runa">
-            <area shape="circle" coords="56,331,10" alt="infigar">
-            <area shape="circle" coords="51,358,10" alt="polymes">
-            <area shape="circle" coords="87,366,10" alt="talkoss">
-            <area shape="circle" coords="206,214,10" alt="alarya">
-            <area shape="circle" coords="184,203,10" alt="elia">
-            <area shape="circle" coords="190,172,10" alt="orodia">
-            <area shape="circle" coords="217,157,10" alt="balaelle">
-            <area shape="circle" coords="191,121,10" alt="thax">
-            <area shape="circle" coords="185,112,10" alt="meler">
-            <area shape="circle" coords="108,114,10" alt="excala">
-            <area shape="circle" coords="146,126,10" alt="reyes">
-            <area shape="circle" coords="161,153,10" alt="illot">
-            <area shape="circle" coords="84,144,10" alt="nalos">
-            <area shape="circle" coords="149,206,10" alt="thaurlad">
-            <area shape="circle" coords="122,218,10" alt="finarys">
-            <area shape="circle" coords="89,221,10" alt="ducaria">
+            <area shape="circle" coords="84,40,10" alt="portax" (mouseenter)="onHover('Portax')" (mouseleave)="onMouseLeave()" (click)="onClick('Portax')">
+            <area shape="circle" coords="134,46,10" alt="mayere" (mouseenter)="onHover('Mayere')" (mouseleave)="onMouseLeave()" (click)="onClick('Mayere')">
+            <area shape="circle" coords="176,42,10" alt="quarnicor" (mouseenter)="onHover('Quarnicor')" (mouseleave)="onMouseLeave()" (click)="onClick('Quarnicor')">
+            <area shape="circle" coords="206,46,10" alt="balumin" (mouseenter)="onHover('Balumin')" (mouseleave)="onMouseLeave()" (click)="onClick('Balumin')">
+            <area shape="circle" coords="254,35,10" alt="syras" (mouseenter)="onHover('Syras')" (mouseleave)="onMouseLeave()" (click)="onClick('Syras')">
+            <area shape="circle" coords="287,38,10" alt="tolmesa" (mouseenter)="onHover('Tolmesa')" (mouseleave)="onMouseLeave()" (click)="onClick('Tolmesa')">
+            <area shape="circle" coords="330,23,10" alt="nasram" (mouseenter)="onHover('Nasram')" (mouseleave)="onMouseLeave()" (click)="onClick('Nasram')">
+            <area shape="circle" coords="225,50,10" alt="uhne" (mouseenter)="onHover('Uhne')" (mouseleave)="onMouseLeave()" (click)="onClick('Uhne')">
+            <area shape="circle" coords="144,69,10" alt="mortaru" (mouseenter)="onHover('Mortaru')" (mouseleave)="onMouseLeave()" (click)="onClick('Mortaru')">
+            <area shape="circle" coords="161,88,10" alt="tamur" (mouseenter)="onHover('Tamur')" (mouseleave)="onMouseLeave()" (click)="onClick('Tamur')">
+            <area shape="circle" coords="206,96,10" alt="rotam" (mouseenter)="onHover('Rotam')" (mouseleave)="onMouseLeave()" (click)="onClick('Rotam')">
+            <area shape="circle" coords="250,97,10" alt="iacchus" (mouseenter)="onHover('Iacchus')" (mouseleave)="onMouseLeave()" (click)="onClick('Iacchus')">
+            <area shape="circle" coords="272,123,10" alt="falas" (mouseenter)="onHover('Falas')" (mouseleave)="onMouseLeave()" (click)="onClick('Falas')">
+            <area shape="circle" coords="330,91,10" alt="rolmoll" (mouseenter)="onHover('Rolmoll')" (mouseleave)="onMouseLeave()" (click)="onClick('Rolmoll')">
+            <area shape="circle" coords="372,93,10" alt="malequo" (mouseenter)="onHover('Malequo')" (mouseleave)="onMouseLeave()" (click)="onClick('Malequo')">
+            <area shape="circle" coords="314,124,10" alt="roemul" (mouseenter)="onHover('Roemul')" (mouseleave)="onMouseLeave()" (click)="onClick('Roemul')">
+            <area shape="circle" coords="386,124,10" alt="arguerar" (mouseenter)="onHover('Arguerar')" (mouseleave)="onMouseLeave()" (click)="onClick('Arguerar')">
+            <area shape="circle" coords="364,138,10" alt="navago" (mouseenter)="onHover('Navago')" (mouseleave)="onMouseLeave()" (click)="onClick('Navago')">
+            <area shape="circle" coords="459,89,10" alt="tarsseno" (mouseenter)="onHover('Tarsseno')" (mouseleave)="onMouseLeave()" (click)="onClick('Tarsseno')">
+            <area shape="circle" coords="497,102,10" alt="etalia" (mouseenter)="onHover('Etalia')" (mouseleave)="onMouseLeave()" (click)="onClick('Etalia')">
+            <area shape="circle" coords="492,141,10" alt="rastual" (mouseenter)="onHover('Rastual')" (mouseleave)="onMouseLeave()" (click)="onClick('Rastual')">
+            <area shape="circle" coords="453,150,10" alt="ostior" (mouseenter)="onHover('Ostior')" (mouseleave)="onMouseLeave()" (click)="onClick('Ostior')">
+            <area shape="circle" coords="452,180,10" alt="ostal" (mouseenter)="onHover('Ostal')" (mouseleave)="onMouseLeave()" (click)="onClick('Ostal')">
+            <area shape="circle" coords="393,144,10" alt="sarnen" (mouseenter)="onHover('Sarnen')" (mouseleave)="onMouseLeave()" (click)="onClick('Sarnen')">
+            <area shape="circle" coords="396,166,10" alt="halmi" (mouseenter)="onHover('Halmi')" (mouseleave)="onMouseLeave()" (click)="onClick('Halmi')">
+            <area shape="circle" coords="404,190,10" alt="talath" (mouseenter)="onHover('Talath')" (mouseleave)="onMouseLeave()" (click)="onClick('Talath')">
+            <area shape="circle" coords="417,209,10" alt="fanolox" (mouseenter)="onHover('Fanolox')" (mouseleave)="onMouseLeave()" (click)="onClick('Fanolox')">
+            <area shape="circle" coords="420,230,10" alt="taurmon" (mouseenter)="onHover('Taurmon')" (mouseleave)="onMouseLeave()" (click)="onClick('Taurmon')">
+            <area shape="circle" coords="437,249,10" alt="oroduis" (mouseenter)="onHover('Oroduis')" (mouseleave)="onMouseLeave()" (click)="onClick('Oroduis')">
+            <area shape="circle" coords="516,219,10" alt="laCelestale" (mouseenter)="onHover('La Celestale')" (mouseleave)="onMouseLeave()" (click)="onClick('La Celestale')">
+            <area shape="circle" coords="435,269,10" alt="alett" (mouseenter)="onHover('Alett')" (mouseleave)="onMouseLeave()" (click)="onClick('Alett')">
+            <area shape="circle" coords="449,326,10" alt="noctia" (mouseenter)="onHover('Noctia')" (mouseleave)="onMouseLeave()" (click)="onClick('Noctia')">
+            <area shape="circle" coords="497,337,10" alt="sinatre" (mouseenter)="onHover('Sinatre')" (mouseleave)="onMouseLeave()" (click)="onClick('Sinatre')">
+            <area shape="circle" coords="442,392,10" alt="anguerra" (mouseenter)="onHover('Anguerra')" (mouseleave)="onMouseLeave()" (click)="onClick('Anguerra')">
+            <area shape="circle" coords="339,368,10" alt="palormos" (mouseenter)="onHover('Palormos')" (mouseleave)="onMouseLeave()" (click)="onClick('Palormos')">
+            <area shape="circle" coords="318,363,10" alt="dornett" (mouseenter)="onHover('Dornett')" (mouseleave)="onMouseLeave()" (click)="onClick('Dornett')">
+            <area shape="circle" coords="344,336,10" alt="ralafax" (mouseenter)="onHover('Ralafax')" (mouseleave)="onMouseLeave()" (click)="onClick('Ralafax')">
+            <area shape="circle" coords="367,316,10" alt="arnir" (mouseenter)="onHover('Arnir')" (mouseleave)="onMouseLeave()" (click)="onClick('Arnir')">
+            <area shape="circle" coords="377,279,10" alt="mal" (mouseenter)="onHover('Mal')" (mouseleave)="onMouseLeave()" (click)="onClick('Mal')">
+            <area shape="circle" coords="338,278,10" alt="noctura" (mouseenter)="onHover('Noctura')" (mouseleave)="onMouseLeave()" (click)="onClick('Noctura')">
+            <area shape="circle" coords="343,365,10" alt="holmer" (mouseenter)="onHover('Holmer')" (mouseleave)="onMouseLeave()" (click)="onClick('Holmer')">
+            <area shape="circle" coords="350,233,10" alt="tripinnath" (mouseenter)="onHover('Tripinnath')" (mouseleave)="onMouseLeave()" (click)="onClick('Tripinnath')">
+            <area shape="circle" coords="369,191,10" alt="ladminas" (mouseenter)="onHover('Ladminas')" (mouseleave)="onMouseLeave()" (click)="onClick('Ladminas')">
+            <area shape="circle" coords="324,213,10" alt="nortir" (mouseenter)="onHover('Nortir')" (mouseleave)="onMouseLeave()" (click)="onClick('Nortir')">
+            <area shape="circle" coords="339,181,10" alt="pyra" (mouseenter)="onHover('Pyra')" (mouseleave)="onMouseLeave()" (click)="onClick('Pyra')">
+            <area shape="circle" coords="336,152,10" alt="tovat" (mouseenter)="onHover('Tovat')" (mouseleave)="onMouseLeave()" (click)="onClick('Tovat')">
+            <area shape="circle" coords="267,153,10" alt="leRempart" (mouseenter)="onHover('Le Rempart')" (mouseleave)="onMouseLeave()" (click)="onClick('Le Rempart')">
+            <area shape="circle" coords="285,171,10" alt="neleyn" (mouseenter)="onHover('Neleyn')" (mouseleave)="onMouseLeave()" (click)="onClick('Neleyn')">
+            <area shape="circle" coords="301,202,10" alt="toffal" (mouseenter)="onHover('Toffal')" (mouseleave)="onMouseLeave()" (click)="onClick('Toffal')">
+            <area shape="circle" coords="261,208,10" alt="norshan" (mouseenter)="onHover('Norshan')" (mouseleave)="onMouseLeave()" (click)="onClick('Norshan')">
+            <area shape="circle" coords="232,222,10" alt="polax" (mouseenter)="onHover('Polax')" (mouseleave)="onMouseLeave()" (click)="onClick('Polax')">
+            <area shape="circle" coords="220,254,10" alt="tolered" (mouseenter)="onHover('Tolered')" (mouseleave)="onMouseLeave()" (click)="onClick('Tolered')">
+            <area shape="circle" coords="275,279,10" alt="ereden" (mouseenter)="onHover('Ereden')" (mouseleave)="onMouseLeave()" (click)="onClick('Ereden')">
+            <area shape="circle" coords="293,326,10" alt="dwaria" (mouseenter)="onHover('Dwaria')" (mouseleave)="onMouseLeave()" (click)="onClick('Dwaria')">
+            <area shape="circle" coords="282,349,10" alt="umere" (mouseenter)="onHover('Umere')" (mouseleave)="onMouseLeave()" (click)="onClick('Umere')">
+            <area shape="circle" coords="247,326,10" alt="lunaris" (mouseenter)="onHover('Lunaris')" (mouseleave)="onMouseLeave()" (click)="onClick('Lunaris')">
+            <area shape="circle" coords="232,358,10" alt="arnorea" (mouseenter)="onHover('Arnorea')" (mouseleave)="onMouseLeave()" (click)="onClick('Arnorea')">
+            <area shape="circle" coords="212,334,10" alt="rim" (mouseenter)="onHover('Rim')" (mouseleave)="onMouseLeave()" (click)="onClick('Rim')">
+            <area shape="circle" coords="193,378,10" alt="udrof" (mouseenter)="onHover('Udrof')" (mouseleave)="onMouseLeave()" (click)="onClick('Udrof')">
+            <area shape="circle" coords="185,366,10" alt="laBaieDesMorts" (mouseenter)="onHover('La Baie Des Morts')" (mouseleave)="onMouseLeave()" (click)="onClick('La Baie Des Morts')">
+            <area shape="circle" coords="202,326,10" alt="urdan" (mouseenter)="onHover('Urdan')" (mouseleave)="onMouseLeave()" (click)="onClick('Urdan')">
+            <area shape="circle" coords="233,298,10" alt="tyrna" (mouseenter)="onHover('Tyrna')" (mouseleave)="onMouseLeave()" (click)="onClick('Tyrna')">
+            <area shape="circle" coords="199,265,10" alt="rafmen" (mouseenter)="onHover('Rafmen')" (mouseleave)="onMouseLeave()" (click)="onClick('Rafmen')">
+            <area shape="circle" coords="180,285,10" alt="tirifa" (mouseenter)="onHover('Tirifa')" (mouseleave)="onMouseLeave()" (click)="onClick('Tirifa')">
+            <area shape="circle" coords="106,318,10" alt="malto" (mouseenter)="onHover('Malto')" (mouseleave)="onMouseLeave()" (click)="onClick('Malto')">
+            <area shape="circle" coords="69,314,10" alt="runa" (mouseenter)="onHover('Runa')" (mouseleave)="onMouseLeave()" (click)="onClick('Runa')">
+            <area shape="circle" coords="56,331,10" alt="infigar" (mouseenter)="onHover('Infigar')" (mouseleave)="onMouseLeave()" (click)="onClick('Infigar')">
+            <area shape="circle" coords="51,358,10" alt="polymes" (mouseenter)="onHover('Polymes')" (mouseleave)="onMouseLeave()" (click)="onClick('Polymes')">
+            <area shape="circle" coords="87,366,10" alt="talkoss" (mouseenter)="onHover('Talkoss')" (mouseleave)="onMouseLeave()" (click)="onClick('Talkoss')">
+            <area shape="circle" coords="206,214,10" alt="alarya" (mouseenter)="onHover('Alarya')" (mouseleave)="onMouseLeave()" (click)="onClick('Alarya')">
+            <area shape="circle" coords="184,203,10" alt="elia" (mouseenter)="onHover('Elia')" (mouseleave)="onMouseLeave()" (click)="onClick('Elia')">
+            <area shape="circle" coords="190,172,10" alt="orodia" (mouseenter)="onHover('Orodia')" (mouseleave)="onMouseLeave()" (click)="onClick('Orodia')">
+            <area shape="circle" coords="217,157,10" alt="balaelle" (mouseenter)="onHover('Balaelle')" (mouseleave)="onMouseLeave()" (click)="onClick('Balaelle')">
+            <area shape="circle" coords="191,121,10" alt="thax" (mouseenter)="onHover('Thax')" (mouseleave)="onMouseLeave()" (click)="onClick('Thax')">
+            <area shape="circle" coords="185,112,10" alt="meler" (mouseenter)="onHover('Meler')" (mouseleave)="onMouseLeave()" (click)="onClick('Meler')">
+            <area shape="circle" coords="108,114,10" alt="excala" (mouseenter)="onHover('Excala')" (mouseleave)="onMouseLeave()" (click)="onClick('Excala')">
+            <area shape="circle" coords="146,126,10" alt="reyes" (mouseenter)="onHover('Reyes')" (mouseleave)="onMouseLeave()" (click)="onClick('Reyes')">
+            <area shape="circle" coords="161,153,10" alt="illot" (mouseenter)="onHover('Illot')" (mouseleave)="onMouseLeave()" (click)="onClick('Illot')">
+            <area shape="circle" coords="84,144,10" alt="nalos" (mouseenter)="onHover('Nalos')" (mouseleave)="onMouseLeave()" (click)="onClick('Nalos')">
+            <area shape="circle" coords="149,206,10" alt="thaurlad" (mouseenter)="onHover('Thaurlad')" (mouseleave)="onMouseLeave()" (click)="onClick('Thaurlad')">
+            <area shape="circle" coords="122,218,10" alt="finarys" (mouseenter)="onHover('Finarys')" (mouseleave)="onMouseLeave()" (click)="onClick('Finarys')">
+            <area shape="circle" coords="89,221,10" alt="ducaria" (mouseenter)="onHover('Ducaria')" (mouseleave)="onMouseLeave()" (click)="onClick('Ducaria')">
         </map>
     </div>
     <div class="show_cities_descriptions">
-        @if (portax == true) {
-            <h2>{{ city.name }}</h2>
-            <p></p>
+        @if (selectedCity) {
+            <h2>{{ selectedCity.name }}</h2>
+            <p>{{ selectedCity.description }}</p>
         }
     </div>
-    <button>Valider</button>
+    <div class="buttons">
+        <button>Retour</button>
+        <button>Lieu d'origine</button>
+        <button>Lieu de résidence</button>
+    </div>
+   
 </section>
 </div>

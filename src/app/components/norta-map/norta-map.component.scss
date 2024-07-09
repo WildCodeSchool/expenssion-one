@@ -41,7 +41,7 @@
         cursor: pointer;
     }
 
-    .show_continent_description {
+    .show_cities_descriptions {
         grid-column: 2fr;
         height: 11rem;
     }
@@ -74,7 +74,10 @@
         align-self: flex-end;
         justify-self: center;
         grid-column: 1fr;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
+
 }
 
 @media screen and (max-width: 1200px) {
