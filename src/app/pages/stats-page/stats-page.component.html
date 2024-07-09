@@ -1,9 +1,9 @@
 <section class="background-image">
     <div class = "content-page">
 
-      <div class="selectStats" style="margin-bottom:6%;">
+      <div class="selectStats">
         <h1 class="title">Statistiques </h1>
-        <p style="margin-bottom:6%;">Lancer vos dés 20 pour obtenir le niveau de chacune de vos statistiques <br/>
+        <p class="pStat">Lancer vos dés 20 pour obtenir le niveau de chacune de vos statistiques <br/>
         puis répartissez vos {{points}} points </p>
 
         <ul>
@@ -11,20 +11,20 @@
         {
           <li>
             <div class="stat">
-              <div class="statName" style="margin-top:2%;">{{stat.name}}</div>
+              <div class="statName">{{stat.name}}</div>
                   @if(!stat.hidden && stat.score > 0)
                   {
                   <button class="content" (click)="scoreDown(stat.name)"><div class="circle">-</div></button>
                   }
                   @if(stat.hidden || stat.score == 0)
                   {
-                    <button style="visibility:hidden;" class="content" (click)="scoreDown(stat.name)"><div class="circle">-</div></button>
+                    <button class="content hiddenButton" (click)="scoreDown(stat.name)"><div class="circle">-</div></button>
                   }
                 
-              <div class="statScore" style="margin-top:2%;" [style.color]="stat.score === 1 ? 'Red' : 'White'">{{stat.score}}</div>
+              <div class="statScore" [style.color]="stat.score === 1 ? 'Red' : 'White'">{{stat.score}}</div>
               @if(points > 0)
               {
-              <button (click)="scoreUp(stat.name)" class="content"><div class="circle">+</div></button>
+              <button (click)="scoreUp(stat.name)" class="content"><div class="circle plus">+</div></button>
               }
               
               <button class="reset-button" (click)="generateScore(stat)">
@@ -64,7 +64,6 @@
           </ul>
           </div>
         </li>
-      <!-- </div> -->
 
         <li class="constitution">
           <div class="displayCaracteristics">
@@ -172,7 +171,6 @@
     <li>03-02 : (-4)</li>
     <li>01 : (-5)</li>
   </ul>
-      <!-- <app-explain-state-page-desktop></app-explain-state-page-desktop> -->
       </div>
 
 

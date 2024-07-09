@@ -7,15 +7,9 @@
     font-size:12px;
     width:50vw;
     li {
-        margin-top:2%;
-        margin-bottom:2%;
+        margin:2% 0 2% 0;
     }
 }
-
-// .title
-// {
-//     margin-top: 25%;
-// }
 
 .titleStat
 {
@@ -47,15 +41,38 @@
     grid-column:5;
 }
 
+.intelligence {
+    grid-row:2;
+    grid-column:1;
+}
+
+.perception {
+    grid-row:2;
+    grid-column:2;
+}
+
+.speed {
+    grid-row:2;
+    grid-column:3;
+}
+
+.wisdom {
+    grid-row:2;
+    grid-column:4;
+}
+
+.survival {
+    grid-row:2;
+    grid-column:5;
+}
 
 .circle{
     height: 30px;
     width: 30px;
     border-radius: 30px;
     background-color:#DDB375;
-    color: black;
+    color:$textColor;
     display:flex;
-    // align-items: center;
     justify-content:center;
 }
 
@@ -81,36 +98,48 @@
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding-bottom:7%;
+    padding:0 0 7% 0;
 }
 
 .statPage{
     background-color: #202229;
     filter: opacity(90%);
-    margin: $globalPaddingTop 0 2rem 0;
+    margin: 160px 20% 2rem 8%;
     border-radius: 10px;
     color: $textLightColor;
-    margin-right: 20%;
-    margin-left: 8%;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 1rem 2rem 1rem;
     width: 200vw;
-    padding-bottom: 2rem;
 }
 
 .statScore {
-    //margin-left:20px;
     width:70px;
+    margin-top:2%;
+}
+
+.plus{
+    padding:1px 0 0 0;
+}
+
+.hiddenButton
+{
+    visibility:hidden;
 }
 
 .statName {
     width:150px;
+    margin:2% 0 0 0;
 }
 
 .displayValidationButton{
     display:flex;
     align-items:center;
     justify-content:center;
+    margin:2rem 0 0 0;
+}
+
+.pStat {
+    margin:0 0 6% 0;
 }
 
 .content
@@ -118,32 +147,27 @@
     font-size: 20px;
 }
 
+
 .selectStats {
     background-color: #202229;
     filter: opacity(90%);
-    margin-top: $globalPaddingTop;
-    margin-bottom: 2rem;
+    margin:160px 0 6% 8%;
     border-radius: 10px;
     color: $textLightColor;
-    margin-left: 8%;
     text-align: center;
-    padding: 1rem;
-    padding-bottom: 2rem;
+    padding: 1rem 1rem 2rem 1rem;
     width: 25vw;
 }
 
 p {
-    margin-top:2%;
-    margin-bottom:2%;
+    margin:2% 0 2% 0;
 }
 
 
   @media screen and (max-width: 768px) {
     .selectStats {
-        margin-top: 100px;
+        margin:100px 5vw 0 5vw;
         width: 90vw;
-        margin-right: 5vw;
-        margin-left: 5vw;
     }
     .content-page{
         align-items:center;
@@ -153,8 +177,63 @@ p {
     }
     .statPage {
         width: 90vw;
-        margin-right: 5vw;
-        margin-left: 5vw;
+        margin:5vw 0 5vw 0;
+    }
+    .flexRow {
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 120px);
+        margin:0 0 0 20%;
+    }
+
+    .addiction {
+        grid-row: 1;
+        grid-column: 1;
+    }
+    
+    .charism {
+        grid-row:1;
+        grid-column:2;
+    }
+    
+    .constitution {
+        grid-row:2;
+        grid-column:1;
+    }
+    
+    .dexterity {
+        grid-row:2;
+        grid-column:2;
+    }
+    
+    .strength {
+        grid-row:3;
+        grid-column:1;
+    }
+    
+    .intelligence {
+        grid-row:3;
+        grid-column:2;
+    }
+    
+    .perception {
+        grid-row:4;
+        grid-column:1;
+    }
+    
+    .speed {
+        grid-row:4;
+        grid-column:2;
+    }
+    
+    .wisdom {
+        grid-row:5;
+        grid-column:1;
+    }
+    
+    .survival {
+        grid-row:5;
+        grid-column:2;
     }
 }
 
@@ -163,11 +242,9 @@ p {
     width:1500px;
     height:700px;
     background-color:#202229;
-    margin-top: 7%;
-    margin-bottom:12%;
-    margin-left:6%;
+    margin:7% 0 12% 6%;
     border-radius: 10px;
-    color:white;
+    color:$textLightColor;
     font-size:20px;
 }
 
@@ -177,7 +254,7 @@ p {
     align-items:center;
     text-align: center;
     background-color: #DDB375;
-    color:black;
+    color:$textColor;
     border-radius: 5px;
     width:70px;
     height:30px;
@@ -185,45 +262,38 @@ p {
 
 h1{
     font-size:25px;
+    font-family:$subTitleFont;
 }
 
 h2{
     font-size:20px;
-    color: white;
+    color: $textLightColor;
     text-align:center;
+    font-family:$subTitleFont;
 }
 
 .title
 {
-    color:white;
+    color:$textLightColor;
     text-align: center;
-    //margin-top : 5%;
-    //padding-top:7%;
-    padding-bottom:7%;
+    padding:0 0 7% 0;
 }
 
 h2
 {
-    margin-top:5%;
-    margin-bottom:5%;
+    margin:5% 0 5% 0;
 }
 
 .modifyTitle
 {
     text-align: center;
-    margin-top : 2%;
+    margin: 2% 0 0 0;
 }
-
-// .modifyScore
-// {
-//     text-align: center;
-//     margin-top : 2%;
-// }
 
 .stat{
     display:flex;
     flex-direction:row;
-    color:white;
+    color:$textLightColor;
     height: 40px;
     justify-content:space-between;
 }
@@ -232,9 +302,3 @@ button
     margin-top:0%;
 }
 
-// .displayCaracteristics
-// {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-// }
