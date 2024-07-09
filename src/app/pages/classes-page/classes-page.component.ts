@@ -4,6 +4,7 @@ import { ApiDataService } from '../../service/api-data.service';
 import { Specialization } from '../../model/specialization/specialization';
 import { NgFor, NgStyle } from '@angular/common';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+import { SpecializationContent } from '../../model/specializationContent/specialization-content';
 
 @Component({
   selector: 'app-classes-page',
@@ -89,6 +90,18 @@ export class ClassesPageComponent {
       classes => 
         {
           this.classes = classes;
+          for(let i = 0; i < classes.length; i++)
+          {
+            const classe = classes[i];
+            var description = classe.content;
+            classe.contents = [];
+            for(let j = 0; j < description.length; j++)
+            {
+               let spec = new SpecializationContent();
+               spec.content = description[j];
+               classe.contents.push(spec)
+            }
+          }
           for(let i  = 0; i < 3; i++)
           {
             this.filterClasses[i] = this.classes[i];

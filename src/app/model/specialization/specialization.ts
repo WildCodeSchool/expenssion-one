@@ -9,5 +9,6 @@ export class Specialization {
     jobs!: Job[];
     skills?: Skill[];
     contents!: SpecializationContent[];
+    content!:String[];
     
 }
