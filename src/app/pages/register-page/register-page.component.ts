@@ -24,7 +24,7 @@ export class RegisterPageComponent {
       lastName: ['', [Validators.required]],
       birthDate: ['', [Validators.required]],
       pseudo: ['', [Validators.required]],
-      mailAdress: ['', [Validators.required, Validators.email]],
+      mailAddress: ['', [Validators.required, Validators.email]],
       confirmationMail: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8), this.passwordValidator]],
       passwordConfirmation: ['', [Validators.required]],
@@ -42,7 +42,7 @@ export class RegisterPageComponent {
   }
 
   emailMatchValidator(group: FormGroup): { [key: string]: boolean } | null {
-    if (group.get('mailAdress')?.value !== group.get('confirmationMail')?.value) {
+    if (group.get('mailAddress')?.value !== group.get('confirmationMail')?.value) {
       return { 'mailMismatch': true };
     }
     if (group.get('password')?.value !== group.get('passwordConfirmation')?.value) {
@@ -58,7 +58,7 @@ export class RegisterPageComponent {
         this.registerForm.value.lastName,
         this.registerForm.value.name,
         this.registerForm.value.password,
-        this.registerForm.value.mailAdress,
+        this.registerForm.value.mailAddress,
         this.registerForm.value.birthDate,
       );
       this.authentificationService.register(this.user).subscribe(() => {
