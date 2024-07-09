@@ -2,12 +2,24 @@
 
 .flexRow {
     display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 150px);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 110px);
+    font-size:12px;
+    width:50vw;
     li {
         margin-top:2%;
         margin-bottom:2%;
     }
+}
+
+// .title
+// {
+//     margin-top: 25%;
+// }
+
+.titleStat
+{
+    font-size:15px;
 }
 
 .addiction {
@@ -23,6 +35,16 @@
 .constitution {
     grid-row:1;
     grid-column:3;
+}
+
+.dexterity {
+    grid-row:1;
+    grid-column:4;
+}
+
+.strength {
+    grid-row:1;
+    grid-column:5;
 }
 
 
@@ -72,7 +94,7 @@
     margin-left: 8%;
     text-align: center;
     padding: 1rem;
-    width: 50vw;
+    width: 200vw;
     padding-bottom: 2rem;
 }
 
@@ -108,7 +130,6 @@
     padding: 1rem;
     padding-bottom: 2rem;
     width: 25vw;
-    
 }
 
 p {
@@ -176,7 +197,9 @@ h2{
 {
     color:white;
     text-align: center;
-    margin-top : 5%
+    //margin-top : 5%;
+    //padding-top:7%;
+    padding-bottom:7%;
 }
 
 h2
@@ -191,17 +214,18 @@ h2
     margin-top : 2%;
 }
 
-.modifyScore
-{
-    text-align: center;
-    margin-top : 2%;
-}
+// .modifyScore
+// {
+//     text-align: center;
+//     margin-top : 2%;
+// }
 
 .stat{
     display:flex;
     flex-direction:row;
     color:white;
     height: 40px;
+    justify-content:space-between;
 }
 button
 {

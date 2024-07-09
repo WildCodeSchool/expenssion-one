@@ -1,7 +1,7 @@
 <section class="background-image">
     <div class = "content-page">
 
-      <div class="selectStats">
+      <div class="selectStats" style="align-items: center;">
         <h1 class="title">Statistiques </h1>
         <p>Lancer vos dés 20 pour obtenir le niveau de chacune de vos statistiques <br/>
         puis répartissez vos {{points}} points </p>
@@ -15,6 +15,10 @@
                   @if(!stat.hidden && stat.score > 0)
                   {
                   <button class="content" (click)="scoreDown(stat.name)"><div class="circle">-</div></button>
+                  }
+                  @if(stat.hidden || stat.score == 0)
+                  {
+                    <button style="visibility:hidden;" class="content" (click)="scoreDown(stat.name)"><div class="circle">-</div></button>
                   }
                 
               <div class="statScore" style="margin-top:2%;" [style.color]="stat.score === 1 ? 'Red' : 'White'">{{stat.score}}</div>
@@ -34,14 +38,12 @@
       </div>
 
       <div class="statPage">
-        
-    <h1 class="modifyTitle">Explicatif des statistiques par mots clés</h1>
+    <h1 class="titleModif" >Explicatif des statistiques par mots clés</h1>
 
       <ul class="flexRow">
-      <!-- <div style="display:flex;align-items:center;justify-content:space-evenly;flex-direction:row;"> -->
         <li class="addiction">
           <div class="displayCaracteristics">
-          <h2>ADDICTION</h2>
+          <h2 class="titleStat">ADDICTION</h2>
           <ul>
             <li>Substance addictive</li>
             <li>Jeux</li>
@@ -53,7 +55,7 @@
         
         <li class="charism">
           <div class="displayCaracteristics">
-          <h2>CHARISME</h2>
+          <h2 class="titleStat">CHARISME</h2>
           <ul>
             <li>Image auprès des autres</li>
             <li>Auration</li>
@@ -66,7 +68,7 @@
 
         <li class="constitution">
           <div class="displayCaracteristics">
-          <h2>CONSTITUTION</h2>
+          <h2 class="titleStat">CONSTITUTION</h2>
           <ul>
             <li>Stature</li>
             <li>Résistance</li>
@@ -77,7 +79,7 @@
 
         <li class="dexterity">
           <div class="displayCaracteristics">
-          <h2>DEXTERITE</h2>
+          <h2 class="titleStat">DEXTERITE</h2>
           <ul>
             <li>Précision</li>
             <li>Lancer</li>
@@ -89,7 +91,7 @@
 
         <li class="strength">
           <div class="displayCaracteristics">
-          <h2>FORCE</h2>
+          <h2 class="titleStat">FORCE</h2>
           <ul>
             <li>Force brute</li>
             <li>Corps à corps</li>
@@ -100,7 +102,7 @@
 
         <li class="intelligence">
           <div class="displayCaracteristics">
-          <h2>INTELLIGENCE</h2>
+          <h2 class="titleStat">INTELLIGENCE</h2>
           <ul>
             <li>Compréhension</li>
             <li>Apprentissage</li>
@@ -111,7 +113,7 @@
 
         <li class="perception">
           <div class="displayCaracteristics">
-          <h2>PERCEPTION</h2>
+          <h2 class="titleStat">PERCEPTION</h2>
           <ul>
             <li>5 sens connus</li>
             <li>6eme sens connu</li>
@@ -121,7 +123,7 @@
 
         <li class="speed">
           <div class="displayCaracteristics">
-          <h2>RAPIDITE</h2>
+          <h2 class="titleStat">RAPIDITE</h2>
           <ul>
             <li>Courir</li>
             <li>Bondir</li>
@@ -133,7 +135,7 @@
 
         <li class="wisdom">
           <div class="displayCaracteristics">
-          <h2>SAGESSE</h2>
+          <h2 class="titleStat">SAGESSE</h2>
           <ul>
             <li>Esprit</li>
             <li>Sante mentale</li>
@@ -144,7 +146,7 @@
 
         <li class="survival">
           <div class="displayCaracteristics">
-          <h2>SURVIE</h2>
+          <h2 class="titleStat">SURVIE</h2>
           <ul>
             <li>Résistance environnement hostile</li>
             <li>Capacité de survité</li>
@@ -157,8 +159,19 @@
 
     <h2 class="modifyScore">Modificateur du score</h2>
     <p>On modifie le score en fonction de sa valeur<br/>
-    20-19 : (+5) 18-17 : (+4) 16-15 : (+3) 14-13 : (+2) 12-11 : (+1) 10 : 0<br/>
-    09-08 : (-1) 07-06 : (-2) 05-04 : (-3) 03-02 : (-4) 01 : (-5)</p>
+      <ul>
+    <li>20-19 : (+5)</li>
+    <li>18-17 : (+4)</li>
+    <li>16-15 : (+3)</li> 
+    <li>14-13 : (+2)</li> 
+    <li>12-11 : (+1)</li>
+    <li>10 : 0</li>
+    <li>09-08 : (-1)</li> 
+    <li>07-06 : (-2)</li>
+    <li>05-04 : (-3)</li> 
+    <li>03-02 : (-4)</li>
+    <li>01 : (-5)</li>
+  </ul>
       <!-- <app-explain-state-page-desktop></app-explain-state-page-desktop> -->
       </div>
 
