@@ -1,8 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { ApiDataService } from '../../service/api-data.service';
 import { City } from '../../model/city/city';
-import { Continent } from '../../model/continent/continent';
-import { Region } from '../../model/region/region';
+import { ApiDataService } from '../../service/api-data.service';
 
 @Component({
   selector: 'app-norta-map',
@@ -15,19 +13,24 @@ export class NortaMapComponent {
 
   apiDataService: ApiDataService = inject(ApiDataService);
   norta!: any;
+  cities!: City[];
 
   constructor() {}
 
   ngOnInit(): void {
-    this.apiDataService.getContinents().subscribe((data) => {this.norta = data)})
+    this.apiDataService.getContinents().subscribe((data) => {
+      this.norta = data[1]
+      this.cities = this.norta.regions.flatMap((region:any) => region.cities)
+  })
   }
 
-  selectedCity?: City;
+  selectedCity?: City= new City();
 
   isClicked: boolean = false;
   
-  onHover(string: string){
-    this.selectedCity = this.norta.regions.cities.find((city:any) => city.name = string)
+  onHover(cityName: string){
+    this.selectedCity = this.cities.find(city => city.name === cityName)
+    console.log(this.selectedCity)
     this.isClicked = false;
   }
 
@@ -38,7 +41,7 @@ export class NortaMapComponent {
 
   onMouseLeave(){
   if(this.isClicked === false){
-    this.selectedCity = undefined;
+    this.selectedCity = new City();
   }
   }
 
