@@ -1,3 +1,5 @@
+@use "../../../import" as *;
+
 .character-selection-container {
   display: flex;
   flex-direction: row;
@@ -9,17 +11,18 @@
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  color: white;
-  font-family: "Cinzel";
+  color: $textLightColor;
+  font-family: $subTitleFont;
 }
 
 .selection-box {
   width: 60%;
   background-color: rgba(32, 34, 41, 0.8);
-  margin-top: 10%;
+  margin-top: 5%;
   padding-top: 15%;
   padding-bottom: 15%;
   margin-left: 2%;
+  align-self: center;
   border-radius: 10px;
   text-align: center;
   position: relative;
@@ -35,7 +38,7 @@
 
 .add-button {
   background-color: #d4a373;
-  color: white;
+  color: $textLightColor;
   border: none;
   border-radius: 50%;
   width: 40px;
@@ -53,20 +56,20 @@
 }
 
 h1 {
-  color: white;
-  font-family: "Cinzel";
+  color: $textLightColor;
+  font-family: $subTitleFont;
   font-size: 30px;
 }
 
 .new-character-button {
   background-color: #d4a373;
-  color: white;
+  color: $textLightColor;
   border: none;
+  margin-top: 2rem;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
-  font-family: "Cinzel";
+  font-family: $subTitleFont;
 }
 
 .new-character-button:hover {
@@ -145,6 +148,9 @@ h1 {
     height: 50%;
     margin-top: -240px;
     box-sizing: border-box;
+    p {
+      margin-top: 4rem;
+    }
   }
 
   .character-slots-container {
@@ -155,6 +161,7 @@ h1 {
     order: -1;
     padding: 0;
     margin-top: -170px;
+    overflow-y: unset;
   }
 
   .slots-wrapper {
@@ -222,5 +229,6 @@ h1 {
     padding: 10px 20px;
     margin-top: 10px;
     font-size: 16px;
+    margin-top: 2rem;
   }
 }
