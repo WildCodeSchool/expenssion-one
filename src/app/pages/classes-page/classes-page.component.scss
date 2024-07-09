@@ -24,7 +24,7 @@
     display:flex;
     align-items: center;
     justify-content:center;
-    margin-top:8%;
+    margin:8% 0 0 0;
     justify-content: center;
     align-items: center;
 }
@@ -43,7 +43,7 @@
     display:flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-bottom:7%;
+    padding: 0 0 7% 0;
 }
 
 .selectClass{
@@ -55,11 +55,11 @@
     text-align: center;
     padding: 1rem;
     width: 50vw;
-    padding-bottom: 2rem;
+    padding: 0 0 2rem 0;
 }
 
 .statScore {
-    margin-left:50px;
+    margin: 0 0 0 50px;
     width:70px;
 }
 
@@ -71,7 +71,7 @@
     display:flex;
     align-items:center;
     justify-content:center;
-    margin-top:2%;
+    margin:2% 0 0 0;
 }
 
 .content
@@ -86,24 +86,19 @@
 
 .selectStats {
     background-color: #202229;
-            filter: opacity(90%);
-            margin-top: 160px;
-            margin-bottom: 2rem;
-            border-radius: 10px;
-            color: $textLightColor;
-            margin-left: 8%;
-            text-align: center;
-            padding: 1rem;
-            padding-bottom: 2rem;
-            width: 25vw;
+    filter: opacity(90%);
+    margin:160px 0 2rem 8%;
+    border-radius: 10px;
+    color: $textLightColor;
+    text-align: center;
+    padding: 1rem 1rem 2rem 1rem;
+    width: 25vw;
 }
 
 @media screen and (max-width: 768px) {
     .selectStats {
-        margin-top: 100px;
+        margin:100px 5vw 0 5vw;
         width: 90vw;
-        margin-right: 5vw;
-        margin-left: 5vw;
     }
     .content-page{
         display:flex;
@@ -113,8 +108,7 @@
     }
     .selectClass {
         width: 90vw;
-        margin-right: 5vw;
-        margin-left: 5vw;
+        margin: 0 5vw 0 5vw;
     }
 }
 
@@ -123,10 +117,7 @@
     width:1000px;
     height:700px;
     background-color:#202229;
-    margin-top: 7%;
-    margin-bottom:12%;
-    margin-left:20%;
-    margin-right:20%;
+    margin:7% 20% 12% 20%;
     border-radius: 10px;
     color:$textLightColor;
     font-size:20px;
@@ -158,25 +149,24 @@ h2{
 {
     color:$textLightColor;
     text-align: center;
-    margin-top : 5%
+    margin:5% 0 0 0;
 }
 
 h2
 {
-    margin-top:5%;
-    margin-bottom:5%;
+    margin: 5% 0 5% 0;
 }
 
 .modifyTitle
 {
     text-align: center;
-    margin-top : 2%;
+    margin:2% 0 0 0;
 }
 
 .modifyScore
 {
     text-align: center;
-    margin-top : 2%;
+    margin:2% 0 0 0;
 }
 
 .stat{
@@ -202,8 +192,8 @@ h2
     display:flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top:2%;
-    padding-bottom:2%;
+    margin:2% 0 0 0;
+    padding:0 0 2% 0;
 }
 .flexPic
 {
@@ -212,7 +202,7 @@ h2
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top:5%;
+    margin:5% 0 0 0;
 }
 button
 {
