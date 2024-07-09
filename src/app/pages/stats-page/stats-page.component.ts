@@ -19,11 +19,11 @@ export class StatsPageComponent {
 
   apiService = inject(ApiDataService);
 
-  generateScore(stat:Statistics){
+  generateScore(index:number){
     const max = 20;
     let score = Math.round(Math.random()*max);
     if(score >= 18) score = Math.round(score/2);
-    this.statistiques.filter(x => x.name == stat.name)[0].score = score;
+    this.statistiques[index].score = score;
   }
 
   modifyScore(score:number):number{

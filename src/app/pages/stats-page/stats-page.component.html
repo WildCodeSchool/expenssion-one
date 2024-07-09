@@ -7,27 +7,27 @@
         puis répartissez vos {{points}} points </p>
 
         <ul>
-        @for(stat of statistiques; track stat)
+        @for(stat of statistiques; track stat; let i = $index)
         {
           <li>
             <div class="stat">
               <div class="statName">{{stat.name}}</div>
                   @if(!stat.hidden && stat.score > 0)
                   {
-                  <button class="content" (click)="scoreDown(stat.name)"><div class="circle">-</div></button>
+                  <button class="content" (click)="scoreDown(i)"><div class="circle">-</div></button>
                   }
                   @if(stat.hidden || stat.score == 0)
                   {
-                    <button class="content hiddenButton" (click)="scoreDown(stat.name)"><div class="circle">-</div></button>
+                    <button class="content hiddenButton" (click)="scoreDown(i)"><div class="circle">-</div></button>
                   }
                 
               <div class="statScore" [style.color]="stat.score === 1 ? 'Red' : 'White'">{{stat.score}}</div>
               @if(points > 0)
               {
-              <button (click)="scoreUp(stat.name)" class="content"><div class="circle plus">+</div></button>
+              <button (click)="scoreUp(i)" class="content"><div class="circle plus">+</div></button>
               }
               
-              <button class="reset-button" (click)="generateScore(stat)">
+              <button class="reset-button" (click)="generateScore(i)">
                 <img src="assets/pictures/dice.svg" alt="reset">
             </button>
             </div>
