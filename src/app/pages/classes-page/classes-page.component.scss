@@ -20,7 +20,7 @@
     width: 30px;
     border-radius: 30px;
     background-color:#DDB375;
-    color: black;
+    color: $textColor;
     display:flex;
     align-items: center;
     justify-content:center;
@@ -49,11 +49,9 @@
 .selectClass{
     background-color: #202229;
     filter: opacity(90%);
-    margin: $globalPaddingTop 0 2rem 0;
+    margin: 160px 0 2rem 0;
     border-radius: 10px;
     color: $textLightColor;
-    margin-right: 20%;
-    margin-left: 8%;
     text-align: center;
     padding: 1rem;
     width: 50vw;
@@ -81,10 +79,15 @@
     font-size: 20px;
 }
 
+.buttonPic
+{
+    height:50px;width:50px;border-radius:50px;border-style:solid;
+}
+
 .selectStats {
     background-color: #202229;
             filter: opacity(90%);
-            margin-top: $globalPaddingTop;
+            margin-top: 160px;
             margin-bottom: 2rem;
             border-radius: 10px;
             color: $textLightColor;
@@ -103,8 +106,8 @@
         margin-left: 5vw;
     }
     .content-page{
-        align-items:center;
         display:flex;
+        align-items:center;
         flex-direction: column;
         justify-content: space-between;
     }

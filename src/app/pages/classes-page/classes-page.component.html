@@ -25,7 +25,7 @@
                 @for(filters of filterClasses; track filters)
                 {
                   <div class="flexPic" style="width:40%">
-                    <button (click)="changePic(filters.name)"><img [ngStyle] = "{'border-color': selectedClass.name === filters.name ? '#DDB375' : 'black'}"   style="height:50px;width:50px;border-radius:50px;border-style:solid;" src="{{filters.url}}"/></button>
+                    <button  (click)="changePic(filters.name)"><img class="buttonPic" [ngStyle] = "{'border-color': selectedClass.name === filters.name ? '#DDB375' : 'black'}" src="{{filters.url}}"/></button>
                     <div>{{filters.name}}</div>
                   </div>
                 }
