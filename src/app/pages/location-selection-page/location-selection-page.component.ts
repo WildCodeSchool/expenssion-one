@@ -21,7 +21,7 @@ export class LocationSelectionPageComponent {
     this.isNortaDisplay=event;
     console.log("reçu: " + this.isNortaDisplay);
   }
-  showNortaMap: boolean = false;
+
 
   constructor(private location: Location) { }
 

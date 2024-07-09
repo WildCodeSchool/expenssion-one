@@ -12,14 +12,16 @@
     </section>
 
     <div>
-
-        @if(!isNortaDisplay){
-            <app-world-map (sendNortaIsDisplayToParent)="onReceiveIsNortaDisplay($event)"></app-world-map>
-
-           
-        }    
-        @else{
-            <app-norta-map></app-norta-map>
+        @if(isNortaDisplay){
+        <app-norta-map></app-norta-map>
+        }
+        
+        
+        @if(isMobile && !isNortaDisplay){
+        <app-world-map-mobile></app-world-map-mobile>
+        }
+        @else if(!isMobile && !isNortaDisplay){
+        <app-world-map (sendNortaIsDisplayToParent)="onReceiveIsNortaDisplay($event)"></app-world-map>
         }
     </div>
     
