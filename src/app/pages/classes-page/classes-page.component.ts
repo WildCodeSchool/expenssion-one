@@ -95,7 +95,7 @@ export class ClassesPageComponent {
           for(let i = 0; i < classes.length; i++)
           {
             const classe = classes[i];
-            var description = classe.content;
+            let description = classe.content;
             classe.contents = [];
             for(let j = 0; j < description.length; j++)
             {
