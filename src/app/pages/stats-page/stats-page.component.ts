@@ -3,12 +3,11 @@ import { Statistics } from '../../model/stats/statistics';
 import { ApiDataService } from '../../service/api-data.service';
 import { NgFor } from '@angular/common';
 import { ExternalExpr } from '@angular/compiler';
-import { ExplainStatePageDesktopComponent } from '../explain-state-page-desktop/explain-state-page-desktop.component';
 
 @Component({
   selector: 'app-stats-page',
   standalone: true,
-  imports: [NgFor, ExplainStatePageDesktopComponent],
+  imports: [NgFor],
   templateUrl: './stats-page.component.html',
   styleUrl: './stats-page.component.scss'
 })
