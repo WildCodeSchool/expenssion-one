@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { User } from '../../model/user/user';
 import { AuthenticationService } from '../../service/authentication/authentification.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register-page',
@@ -26,20 +26,20 @@ export class RegisterPageComponent {
       pseudo: ['', [Validators.required]],
       mailAddress: ['', [Validators.required, Validators.email]],
       confirmationMail: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(8), this.passwordValidator]],
+      password: ['', [Validators.required, Validators.minLength(4)]],
       passwordConfirmation: ['', [Validators.required]],
       acceptCGU: [false, [Validators.requiredTrue]],
       isAdult: [false, [Validators.requiredTrue]]
     }, { validators: this.emailMatchValidator });
   }
 
-  passwordValidator(control: FormControl): { [key: string]: boolean } | null {
-    const value = control.value;
-    if (!/[A-Z]/.test(value) || !/[0-9]/.test(value) || !/[!@#$%^&*(),.?":{}|<>]/.test(value)) {
-      return { 'weakPassword': true };
-    }
-    return null;
-  }
+  // passwordValidator(control: FormControl): { [key: string]: boolean } | null {
+  //   const value = control.value;
+  //   if (!/[A-Z]/.test(value) || !/[0-9]/.test(value) || !/[!@#$%^&*(),.?":{}|<>]/.test(value)) {
+  //     return { 'weakPassword': true };
+  //   }
+  //   return null;
+  // }
 
   emailMatchValidator(group: FormGroup): { [key: string]: boolean } | null {
     if (group.get('mailAddress')?.value !== group.get('confirmationMail')?.value) {
@@ -52,7 +52,9 @@ export class RegisterPageComponent {
   }
 
   onSubmit(): void {
+    console.log("ici")
     if (this.registerForm.valid) {
+      
       this.user = new User(
         this.registerForm.value.pseudo,
         this.registerForm.value.lastName,
