@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatTooltipModule } from '@angular/material/tooltip';
+
 import { Secret } from '../../model/secret/secret';
 import { SecretService } from '../../service/secrect/secret.service';
 
