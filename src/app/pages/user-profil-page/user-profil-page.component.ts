@@ -1,13 +1,12 @@
 import { Component, inject } from '@angular/core';
-import { User } from '../../model/user/user';
 import { RouterLink } from '@angular/router';
-import { UserService } from '../../service/user/user.service';
-import { CharacterService } from '../../service/character/character.service';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { CalendarOptions } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin
 import timeGridPlugin from '@fullcalendar/timegrid';
-import { Router } from 'express';
+import { User } from '../../model/user/user';
+import { CharacterService } from '../../service/character/character.service';
+import { UserService } from '../../service/user/user.service';
 
 
 @Component({

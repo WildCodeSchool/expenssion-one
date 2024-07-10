@@ -1,0 +1,136 @@
+@use "../../../import" as *;
+
+$background-color: #bf8e5280;
+$border-radius: 10px;
+
+.beliefs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../../assets/background_pictures/beliefs.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  padding: $globalPaddingTop 5%;
+  font-family: $contentFont;
+
+  .main-title,
+  .cult-title,
+  .intro-divinities,
+  .divinities-title {
+    font-family: $subTitleFont;
+    font-weight: $fontBoldStyle;
+    text-align: center;
+  }
+
+  .main-title {
+    margin: 3rem 0;
+    @include underline-title;
+    &::before {
+      width: 3px;
+    }
+    &::after {
+      height: 3px;
+    }
+  }
+
+  .cult-title {
+    margin: 3rem 0;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-position: under;
+  }
+  .content-description {
+    background-color: #dbbc8699;
+    backdrop-filter: blur(5px);
+    border-radius: $border-radius;
+    padding: 1.5rem 3rem;
+    margin: 2rem 2.5rem 3.5rem 2.5rem;
+    font-size: 1.1rem;
+  }
+  .intro-divinities {
+    font-size: 2rem;
+    @include underline-title;
+    margin: 25px auto;
+  }
+  .divinities-description-container {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    align-items: flex-start;
+    justify-items: center;
+    margin: 2rem 0rem 2rem 0;
+    padding: 0 2rem;
+    .style-li {
+      width: 95%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid black;
+      border-radius: $border-radius;
+      padding: 2rem 2rem 2.5rem 2rem;
+      margin-top: 3rem;
+      background-color: #dbbc8699;
+      backdrop-filter: blur(5px);
+      .divinities-title {
+        font-size: 1.5rem;
+        width: 100%;
+        text-align: center;
+        text-decoration-line: underline;
+      }
+    }
+    h5 {
+      font-family: $subTitleFont;
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+  }
+
+  .divinities-identity {
+    text-align: center;
+    padding-top: 1.3rem;
+    color: $textColor;
+    .identity-color {
+      color: $textColor;
+    }
+  }
+
+  .bold-title {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 992px) {
+    .divinities-description-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .cult-title .intro-divinities {
+      font-size: 10px;
+    }
+    .divinities-description-container {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+  @media screen and (max-width: 520px) {
+    .intro-divinities {
+      font-size: 28px;
+      @include underline-title;
+      // &::after {
+      //   width: calc(80% + 40px);
+      // }
+    }
+  }
+  @media screen and (max-width: 468px) {
+    .style-li {
+      margin-top: 1rem;
+    }
+  }
+}

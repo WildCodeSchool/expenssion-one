@@ -1,0 +1,19 @@
+<div class="">
+    <section class="world_map_container">
+    <h1>Carte du monde</h1>
+    <div class="world_map">
+        <img src="../assets/pictures/WorldMap.svg" alt="WorldMap" usemap="#worldmap">
+        <map name="worldmap">
+            <area shape="circle" coords="130,60,30" alt="norta" (click)="onClick('Norta')" (mouseenter)="onHover('Norta')" (mouseleave)="onMouseLeave()">
+            <area shape="circle" coords="200,65,20" alt="nelm" (click)="onClick('Nelm')" (mouseenter)="onHover('Nelm')" (mouseleave)="onMouseLeave()">
+        </map>
+    </div>
+    <div class="show_continent_description">
+        @if (selectedContinent) {
+            <h2>{{ selectedContinent.name }}</h2>
+            <p>{{ selectedContinent.description }}</p>
+        }
+    </div>
+    <button>Valider</button>
+</section>
+</div>

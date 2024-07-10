@@ -1,0 +1,33 @@
+<section class="character-selection-container">
+  <div class="selection-box">
+    <div class="add-character">
+      <button class="add-button">+</button>
+      <h1>Ajouter un personnage</h1>
+    </div>
+    <p>Emplacement libre, vous pouvez créer un nouveau personnage</p>
+    <a routerLink="/creationPersonnage/secrets" class="new-character-button">Nouveau personnage</a>
+  </div>
+  <div class="character-slots-container">
+    <div class="scroll-arrow up" (click)="scroll('up')">▲</div>
+    <div class="slots-wrapper" #slotsWrapper>
+      <div class="character-slots">
+        <ul class="slot-column">
+          <li class="slot"></li>
+          <li class="slot"></li>
+          <li class="slot"></li>
+          <li class="slot"></li>
+          <li class="slot"></li>
+        </ul>
+      </div>
+    </div>
+    <button class="scroll-arrow down" (click)="scroll('down')">▼</button>
+  </div>
+</section>
+
+
+
+  
+  
+  
+  
+  
