@@ -19,7 +19,7 @@ import { StatsPageComponent } from './pages/stats-page/stats-page.component';
 import { SecretSelectionPageComponent } from './pages/secret-selection-page/secret-selection-page.component';
 import { SecretsPageComponent } from './pages/secrets-page/secrets-page.component';
 import { SelectRaceComponent } from './pages/select-race/select-race.component';
-import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
+
 import { UserProfilPageComponent } from './pages/user-profil-page/user-profil-page.component';
 
 export const routes: Routes = [
