@@ -11,6 +11,7 @@ import { RegisterPageComponent } from './pages/register-page/register-page.compo
 import { RulesPageComponent } from './pages/rules-page/rules-page.component';
 import { SecretsPageComponent } from './pages/secrets-page/secrets-page.component';
 import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
+
 import { UserProfilPageComponent } from './pages/user-profil-page/user-profil-page.component';
 import { BeliefsPageComponent } from './pages/beliefs-page/beliefs-page.component';
 import { ConstructionPageComponent } from './pages/construction-page/construction-page.component';
@@ -22,7 +23,18 @@ import { SecretsPageComponent } from './pages/secrets-page/secrets-page.componen
 import { SelectRaceComponent } from './pages/select-race/select-race.component';
 import { UserProfilPageComponent } from './pages/user-profil-page/user-profil-page.component';
 import { SecretSelectionPageComponent } from './pages/secret-selection-page/secret-selection-page.component';
+
+import { BeliefsPageComponent } from './pages/beliefs-page/beliefs-page.component';
+
 import { StatsPageComponent } from './pages/stats-page/stats-page.component';
+import { ClassesPageComponent } from './pages/classes-page/classes-page.component';
+import { SecretSelectionPageComponent } from './pages/secret-selection-page/secret-selection-page.component';
+import { ErrorPageComponent } from './pages/error-page/error-page.component';
+import { ConstructionPageComponent } from './pages/construction-page/construction-page.component';
+import { LocationSelectionPageComponent } from './pages/location-selection-page/location-selection-page.component';
+import { NortaMapComponent } from './components/norta-map/norta-map.component';
+import { UserProfilPageComponent } from './pages/user-profil-page/user-profil-page.component';
+
 
 
 export const routes: Routes = [
@@ -59,6 +71,10 @@ export const routes: Routes = [
     path: 'glossaire/lieux',
     component: LocationPageComponent,
   },
+  { 
+    path: 'creaPersonnage/classes', 
+    component: ClassesPageComponent 
+  },
   {
     path: 'glossaire/croyances',
     component: BeliefsPageComponent,
@@ -90,21 +106,27 @@ export const routes: Routes = [
     path: 'erreur',
     component: ErrorPageComponent,
   },
-
   {
-    path: 'Ajout/Perso',
-    component: NewsCharacterComponent,
-  },
-
-  {
-    path: 'creationPersonnage/secrets',
+    path: 'creation-personnage/secrets',
     component: SecretSelectionPageComponent,
   },
 
+  {
+    path: 'creation-personnage/lieux',
+    component: LocationSelectionPageComponent,
+  },
+  {
+    path: 'norta',
+    component: NortaMapComponent
+  },
+
+
         {
-    path: 'creationPersonnage/races',
+    path: 'creation-personnage/races',
     component: SelectRaceComponent,
   },
+
+
   {
     path: '**',
     redirectTo: 'erreur',
