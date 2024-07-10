@@ -18,6 +18,7 @@ import { SecretsPageComponent } from './pages/secrets-page/secrets-page.componen
 import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
 import { StatsPageComponent } from './pages/stats-page/stats-page.component';
 import { UserProfilPageComponent } from './pages/user-profil-page/user-profil-page.component';
+import { ClassesPageComponent } from './pages/classes-page/classes-page.component';
 
 export const routes: Routes = [
   {
@@ -99,6 +100,10 @@ export const routes: Routes = [
   {
     path: 'creation-personnage/lieux',
     component: LocationSelectionPageComponent,
+  },
+  {
+    path: 'creation-personnage/classes',
+    component: ClassesPageComponent,
   },
   {
     path: 'norta',
