@@ -6,7 +6,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { Secret } from '../../model/secret/secret';
 import { SecretService } from '../../service/secrect/secret.service';
 
-import { MatTooltipModule } from '@angular/material/tooltip';
 import { Router } from '@angular/router';
 
 
