@@ -1,8 +1,11 @@
-import { Component, inject } from '@angular/core';
-import { SecretService } from '../../service/secrect/secret.service';
-import {MatTooltipModule} from '@angular/material/tooltip';
 import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { Router } from '@angular/router';
 import { Secret } from '../../model/secret/secret';
+import { SecretService } from '../../service/secrect/secret.service';
+
+
 
 @Component({
   selector: 'app-secret-selection-page',
@@ -17,28 +20,31 @@ export class SecretSelectionPageComponent {
   isReset:boolean=false
   annecdoticSecret:Secret=new Secret(0,"");
   primordialSecret:Secret=new Secret(1,"")
+  router=inject(Router)
 
   initializeSecrets(){
-    this.secretService.getCharacterSecrets().subscribe(x=>{
-      this.annecdoticSecret=x[0]
-      this.annecdoticSecret=x[1]
-    }
-    )
+    this.secretService.getRandomAnnecdoticSecret().subscribe(x=>{this.annecdoticSecret=x
+    })
+    this.secretService.getRandomPrimordialSecret().subscribe(x=>{this.primordialSecret=x
+    })
     this.isGenerate=true
   }
   resetPrimordialSecret(){
+        this.secretService.getRandomPrimordialSecret().subscribe(x=>{this.primordialSecret=x
+    })
+
     this.isReset=true
-    this.secretService.resetPrimordialSecret().subscribe(
-    )
+    
   }
 
   resetSecondarySecret(){
-    this.secretService.resetSecondarySecret().subscribe(    
-    )
+   this.secretService.getRandomAnnecdoticSecret().subscribe(x=>{this.annecdoticSecret=x
+    })
     this.isReset=true
   }
 
   saveCharacter(){
+    this.router.navigateByUrl('/inscription')
   }
 
 }
