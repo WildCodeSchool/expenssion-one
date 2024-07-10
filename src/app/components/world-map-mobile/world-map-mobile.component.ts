@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject, Output } from '@angular/core';
+import { Continent } from '../../model/continent/continent';
+import { ApiDataService } from '../../service/api-data.service';
+import { EventEmitter } from 'stream';
 
 @Component({
   selector: 'app-world-map-mobile',
@@ -8,58 +11,35 @@ import { Component } from '@angular/core';
   styleUrl: './world-map-mobile.component.scss'
 })
 export class WorldMapMobileComponent {
-
-  norta: boolean = false;
-  nelm: boolean = false;
-  isClickedNorta: boolean = false;
-  isClickedNelm: boolean = false;
   
-  onMouseEnterNorta(): void {
-    if(!this.isClickedNorta) {
-      this.norta = true;
-      this.nelm = false;
-    }
+  apiDataService: ApiDataService = inject(ApiDataService);
+  continents!: Continent[];
+  selectedContinent?: Continent;
+  isClicked: boolean = false;
+
+  constructor() {}
+  
+  onHover(continentName: string){
+    this.selectedContinent = this.continents.find(continent => continent.name === continentName)
+    this.isClicked = false;
   }
 
-  onMouseLeaveNorta(): void {
-    if(!this.isClickedNorta && !this.isClickedNelm) {
-    this.norta = false;
-    }
-    if(this.isClickedNelm && !this.isClickedNorta){
-      this.nelm = true;
-      this.norta = false;
-    }
+  onClick(string: string){
+    this.selectedContinent = this.continents.find(continent => continent.name = string)
+    this.isClicked = true;
   }
 
-  onMouseEnterNelm(): void {
-    if(!this.isClickedNelm) {
-    this.nelm = true;
-    this.norta = false;
-    }
+  onMouseLeave(){
+  if(this.isClicked === false){
+    this.selectedContinent = new Continent();
+  }
   }
 
-  onMouseLeaveNelm(): void {
-    if(!this.isClickedNelm && !this.isClickedNorta) {
-    this.nelm = false;
-    }
-    if(this.isClickedNorta && !this.isClickedNelm){
-      this.norta = true;
-      this.nelm = false;
-    }
+   ngOnInit(): void {
+    this.apiDataService.getContinents().subscribe((data) => {
+      this.continents = this.continents.flatMap((continent:any) => continent)
+  })
   }
 
-  onClickNorta(): void {
-    this.isClickedNorta = true;
-    this.norta = true;
-    this.isClickedNelm = false;
-    this.nelm = false;
-  }
-
-  onClickNelm(): void {
-    this.isClickedNelm = true;
-    this.nelm = true;
-    this.isClickedNorta = false;
-    this.norta = false;
-  }
 }
 

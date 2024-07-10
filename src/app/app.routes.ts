@@ -84,16 +84,12 @@ export const routes: Routes = [
     component: ErrorPageComponent,
   },
   {
-    path: 'Ajout/Perso',
-    component: NewsCharacterComponent,
-  },
-  {
-    path: 'creationPersonnage/secrets',
+    path: 'creation-personnage/secrets',
     component: SecretSelectionPageComponent,
   },
 
   {
-    path: 'creationPersonnage/lieux',
+    path: 'creation-personnage/lieux',
     component: LocationSelectionPageComponent,
   },
   {

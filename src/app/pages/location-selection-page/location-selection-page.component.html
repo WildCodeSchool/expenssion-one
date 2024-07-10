@@ -1,7 +1,7 @@
 <div class="background_image">
     <section class="location_container">
         <div class="birth_place">
-            <h2>Lieu d'origine</h2>
+            <h1>Lieu d'origine</h1>
             <p>Choisissez votre lieu d'origine</p>
         </div>
         <div class="living_place">
@@ -10,13 +10,10 @@
         </div>
             <button (click)="goBack()">Retour</button>
     </section>
-
     <div>
         @if(isNortaDisplay){
         <app-norta-map></app-norta-map>
         }
-        
-        
         @if(isMobile && !isNortaDisplay){
         <app-world-map-mobile></app-world-map-mobile>
         }
@@ -24,6 +21,4 @@
         <app-world-map (sendNortaIsDisplayToParent)="onReceiveIsNortaDisplay($event)"></app-world-map>
         }
     </div>
-    
-
 </div>

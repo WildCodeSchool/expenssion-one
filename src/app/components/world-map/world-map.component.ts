@@ -1,5 +1,8 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { City } from '../../model/city/city';
+import { Continent } from '../../model/continent/continent';
+import { ApiDataService } from '../../service/api-data.service';
 
 @Component({
   selector: 'app-world-map',
@@ -9,72 +12,37 @@ import { Router } from '@angular/router';
   styleUrl: './world-map.component.scss'
 })
 export class WorldMapComponent {
-  norta: boolean = false;
-  nelm: boolean = false;
-  isClickedNorta: boolean = false;
-  isClickedNelm: boolean = false;
-  conditionNorta: boolean = false;
-  conditionNelm: boolean = false;
-
 
   @Output()
   sendNortaIsDisplayToParent: EventEmitter<boolean> = new EventEmitter();
   
+  apiDataService: ApiDataService = inject(ApiDataService);
+
   constructor (private router: Router) {};
 
-  onMouseEnterNorta(): void {
-    if(!this.isClickedNorta) {
-      this.norta = true;
-      this.nelm = false;
-    }
+  continents!: Continent[];
+  selectedContinent?: Continent;
+  isClicked: boolean = false;
+  
+  onHover(continentName: string){
+    this.selectedContinent = this.continents.find(continent => continent.name === continentName)
+    this.isClicked = false;
   }
 
-  onMouseLeaveNorta(): void {
-    if(!this.isClickedNorta && !this.isClickedNelm) {
-    this.norta = false;
-    }
-    if(this.isClickedNelm && !this.isClickedNorta){
-      this.nelm = true;
-      this.norta = false;
-    }
-  }
-
-  onMouseEnterNelm(): void {
-    if(!this.isClickedNelm) {
-    this.nelm = true;
-    this.norta = false;
-    }
-  }
-
-  onMouseLeaveNelm(): void {
-    if(!this.isClickedNelm && !this.isClickedNorta) {
-    this.nelm = false;
-    }
-    if(this.isClickedNorta && !this.isClickedNelm){
-      this.norta = true;
-      this.nelm = false;
-    }
-  }
-
-  onClickNorta(): void {
-    this.isClickedNorta = true;
-    this.norta = true;
-    this.isClickedNelm = false;
-    this.nelm = false;
-    this.conditionNorta = true;
-    this.selectedContinent = 'norta';
-    console.log("envoie") 
+  onClick(string: string){
+    this.selectedContinent = this.continents.find(continent => continent.name = string)
+    this.isClicked = true;
     this.sendNortaIsDisplayToParent.emit(true);
   }
 
-  onClickNelm(): void {
-    this.isClickedNelm = true;
-    this.nelm = true;
-    this.isClickedNorta = false;
-    this.norta = false;
-    this.conditionNelm = true;
+  onMouseLeave(){
+  if(this.isClicked === false){
+    this.selectedContinent = new Continent();
+  }
   }
 
-selectedContinent: string = 'none';
+  ngOnInit(){
+    this.apiDataService.getContinents().subscribe((data) => this.continents = data)
+  }
 
 }

@@ -19,9 +19,7 @@ export class LocationSelectionPageComponent {
 
     onReceiveIsNortaDisplay(event: boolean): void {
     this.isNortaDisplay=event;
-    console.log("reçu: " + this.isNortaDisplay);
   }
-
 
   constructor(private location: Location) { }
 

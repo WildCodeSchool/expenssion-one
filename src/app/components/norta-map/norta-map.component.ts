@@ -24,7 +24,7 @@ export class NortaMapComponent {
   })
   }
 
-  selectedCity?: City= new City();
+  selectedCity?: City;
   isClicked: boolean = false;
   
   onHover(cityName: string){
