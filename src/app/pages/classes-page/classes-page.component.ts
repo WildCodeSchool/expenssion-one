@@ -6,6 +6,7 @@ import { NgFor, NgStyle } from '@angular/common';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { SpecializationContent } from '../../model/specializationContent/specialization-content';
 import { SpecializationService } from '../../service/specialization/specialization.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-classes-page',
@@ -29,9 +30,15 @@ export class ClassesPageComponent {
 
   apiService = inject(ApiDataService);
 
+  router = inject(Router)
+
   changePic(name:String)
   {
     this.selectedClass = this.classes.filter(p => p.name === name)[0];
+  }
+
+  validateClasses(){
+    this.router.navigateByUrl('/creation-personnage/races')
   }
 
   getIndexFromSelected():number
