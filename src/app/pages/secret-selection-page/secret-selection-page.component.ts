@@ -3,10 +3,10 @@ import { Component, inject } from '@angular/core';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { Router } from '@angular/router';
 import { Secret } from '../../model/secret/secret';
 import { SecretService } from '../../service/secrect/secret.service';
-
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-secret-selection-page',
@@ -50,9 +50,6 @@ export class SecretSelectionPageComponent {
 
   saveCharacter(){
     this.router.navigateByUrl('/creation-personnage/statistiques')
-
-  saveCharacter() {
-    this.router.navigateByUrl('/inscription');
 
   }
 }
