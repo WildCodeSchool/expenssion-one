@@ -13,6 +13,7 @@ export class PersoServiceService {
   statistiques:Statistics[] = [];
   classe!:Specialization;
   race!:Race;
+  isNorta:boolean | null = null;
 
   constructor() { }
 }

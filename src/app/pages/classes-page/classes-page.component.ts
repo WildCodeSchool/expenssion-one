@@ -115,27 +115,25 @@ export class ClassesPageComponent {
           this.selectedClass = this.classes[0];
         }
     );
+
+    this.statistiques = this.persoService.statistiques;
     
-    this.apiService.getStatistics().subscribe(
-      statistiques => {
-        this.statistiques = statistiques
-        for(let i = 0; i < 10; i++)
-          {
-            const max = 20;
-            let score = Math.round(Math.random()*max);
-            if(score >= 18) score = Math.round(score/2);
-              this.statistiques[i].score = score;
-          }
-      }
-    )
+    // this.apiService.getStatistics().subscribe(
+    //   statistiques => {
+    //     this.statistiques = statistiques
+    //     for(let i = 0; i < 10; i++)
+    //       {
+    //         const max = 20;
+    //         let score = Math.round(Math.random()*max);
+    //         if(score >= 18) score = Math.round(score/2);
+    //           this.statistiques[i].score = score;
+    //       }
+    //   }
+    // )
   }
 
   validate(){
     this.persoService.classe = this.selectedClass;
-    console.log("Principal secret : " + this.persoService.primordialSecret.description);
-    console.log("Principal secret : " + this.persoService.anecdoticSecret.description);
-    console.log("Statistiques : " + this.persoService.statistiques[0].score);
-    console.log("Classe : " + this.persoService.classe.name);
     this.router.navigateByUrl('creation-personnage/races')
   }
 

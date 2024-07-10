@@ -5,6 +5,7 @@ import { RouterLink } from '@angular/router';
 import { NortaMapComponent } from '../../components/norta-map/norta-map.component';
 import { WorldMapMobileComponent } from '../../components/world-map-mobile/world-map-mobile.component';
 import { WorldMapComponent } from '../../components/world-map/world-map.component';
+import { PersoServiceService } from '../../service/perso-service.service';
 
 @Component({
   selector: 'app-location-selection-page',
@@ -33,6 +34,13 @@ export class LocationSelectionPageComponent {
 
   breakpointObserver = inject(BreakpointObserver)
   isMobile: boolean = false;
+
+  persoService = inject(PersoServiceService)
+
+  validate()
+  {
+    this.persoService.isNorta = this.isNortaDisplay;
+  }
 
 
 

@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Race } from '../../model/race/race';
 import { ApiDataService } from '../../service/api-data.service';
+import { PersoServiceService } from '../../service/perso-service.service';
 
 @Component({
   selector: 'app-select-race',
@@ -18,6 +19,8 @@ export class SelectRaceComponent {
   raceService=inject(ApiDataService)
   races:Race[]=[]
   router=inject(Router)
+
+  persoService = inject(PersoServiceService);
 
    currentIndex: number = 0;
 
@@ -39,6 +42,7 @@ export class SelectRaceComponent {
     this.currentIndex = (this.currentIndex < this.races.length - 1) ? this.currentIndex + 1 : 0;
   }
   saveRace(){
+    this.persoService.race = this.races[this.currentIndex];
     this.router.navigateByUrl('/creation-personnage/lieux')
   }
 
