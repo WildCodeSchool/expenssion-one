@@ -1,8 +1,8 @@
+import { NgFor } from '@angular/common';
 import { Component, inject } from '@angular/core';
+import { Router } from 'express';
 import { Statistics } from '../../model/stats/statistics';
 import { ApiDataService } from '../../service/api-data.service';
-import { NgFor } from '@angular/common';
-import { ExternalExpr } from '@angular/compiler';
 import { ExplainStatePageDesktopComponent } from '../explain-state-page-desktop/explain-state-page-desktop.component';
 
 @Component({
@@ -16,7 +16,7 @@ export class StatsPageComponent {
   statistiques:Statistics[] = [];
 
   points!:number;
-
+  router=inject(Router)
   apiService = inject(ApiDataService);
 
   modifyScore(score:number):number{
@@ -55,6 +55,13 @@ export class StatsPageComponent {
       this.points++;
     }
   }
+
+
+  validateStats(){
+    this.router.navigateByUrl('/creation-personnage/lieux')
+  }
+
+
   scoreUp(name:String)
   {
     if(this.points > 0)
