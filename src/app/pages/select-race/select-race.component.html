@@ -1,7 +1,7 @@
 <div class="background-image">
   <div class="container">
     <div class="carousel-container">
-      <button (click)="prev()" class="nav-button">Prev</button>
+      <button (click)="prev()" class="nav-button"><</button>
       <div class="carousel">
         <div class="card-breed-container" *ngIf="currentRace">
           <div class="title-container">
@@ -43,7 +43,7 @@
           </div>
         </div>
       </div>
-      <button (click)="next()" class="nav-button">Next</button>
+      <button (click)="next()" class="nav-button">></button>
     </div>
     <div class="nav-button">
       <button class="validate-button" (click)="saveRace()">VALIDER</button>
