@@ -16,6 +16,10 @@ import { UserService } from '../../service/user/user.service';
 })
 export class ProfilParameterPageComponent {
 
+  newPassword:string="";
+  oldPassword:string="";
+  newPassword2:string="";
+
   isDelete:boolean=false;
   iserror:boolean=false;
    userService=inject(UserService)

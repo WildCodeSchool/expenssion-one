@@ -1,13 +1,14 @@
-import { Component, inject } from '@angular/core';
-import { SecretService } from '../../service/secrect/secret.service';
-import {MatTooltipModule} from '@angular/material/tooltip';
 import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { Secret } from '../../model/secret/secret';
+import { SecretService } from '../../service/secrect/secret.service';
 
 @Component({
   selector: 'app-secret-selection-page',
   standalone: true,
-  imports: [MatTooltipModule,CommonModule],
+  imports: [MatTooltipModule,CommonModule,ReactiveFormsModule],
   templateUrl: './secret-selection-page.component.html',
   styleUrl: './secret-selection-page.component.scss'
 })

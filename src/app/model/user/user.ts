@@ -12,7 +12,7 @@ export class User {
     email!:string;
     dateOfBirth!:string;
 
-    isNewletters!:boolean;
+    isNewsletters!:boolean;
     isPublic!:boolean;
    
     biography!:string;
