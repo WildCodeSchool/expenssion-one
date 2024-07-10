@@ -10,6 +10,22 @@
     padding-bottom: 4rem;
 }
 
+.checkbox-container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+}
+
+.checkbox-container label {
+    font-family: 'Inika';
+    color: white;
+}
+
+
 .register-form {
     display: flex;
     flex-direction: column;
