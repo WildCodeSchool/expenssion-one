@@ -94,12 +94,12 @@ export const routes: Routes = [
   },
 
   {
-    path: 'creationPersonnage/secrets',
+    path: 'creation-personnage/secrets',
     component: SecretSelectionPageComponent,
   },
 
-        {
-    path: 'creationPersonnage/races',
+  {
+    path: 'creation-personnage/races',
     component: SelectRaceComponent,
   },
   {

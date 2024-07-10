@@ -1,47 +1,94 @@
 @use "../../../import" as *;
+
 .background-image {
-    background-color: rgba(0, 0, 0, 0.5);
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    min-height: calc(100vh - $headerHeight);
-    color: white;
-    font-family: "Inika";
-    font-size: 1.5rem;
-    padding-top: $globalPaddingTop;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 100px;
-}
-.container{
+  background-image: url("../../../assets/background_pictures/race-choice.png");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  min-height: calc(100vh - $headerHeight);
+  color: $textLightColor;
+  font-family: $contentFont;
+  font-size: 1.5rem;
+  padding-top: $globalPaddingTop;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+
+  .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.button-container{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-;
-}
 
-.carousel-container {
-    max-width: 1600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    .carousel-container {
+      max-width: 1600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .carousel {
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        .card-breed-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          flex: 1;
+          margin: 10px;
+          border: $borderCardBreed;
+          border-radius: $borderRadius;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          background-color: #c2c8bc99;
+
+          transform-origin: center center;
+          transition: transform 0.5s, opacity 0.5s;
+
+          .picture-stat-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 2rem 2rem;
+            .picture {
+              width: 55%;
+            }
+            .breed-statistics {
+              list-style-type: none;
+              padding: 0;
+            }
+          }
+
+          .picture-stat-container img {
+            height: auto;
+            max-width: 100%;
+            border-radius: $borderRadius;
+          }
+        }
+        .breed-title {
+          font-family: $subTitleFont;
+          font-weight: $fontBoldStyle;
+          color: $textColor;
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .nav-button {
   background-color: #007bff; /* Primary button color */
   border: none;
-  color: white;
+  color: $textLightColor;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
@@ -59,59 +106,24 @@
 }
 
 .nav-button:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-.carousel {
-    width: 100%;
-    display: flex;
-    overflow: hidden;
-}
-
-.card-breed-container {
-    background-color: lightgrey;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.5s, opacity 0.5s;
-    opacity: 0.5;
-    transform-origin: center center;
-}
-
-.card-breed-container.center {
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-.picture-stat-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.picture-stat-container img {
-    height: auto;
-    max-width: 100%;
-}
-
-.breed-statistics {
-    list-style-type: none;
-    padding: 0;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .bold-title {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .racial_trait {
-    margin-top: 10px;
+  margin-top: 10px;
+  font-size: 1.2rem;
 }
 
 .breed-description {
-    margin-top: 10px;
-    text-align: center;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 0 4rem;
+  //   .description {
+  //
+  //   }
 }

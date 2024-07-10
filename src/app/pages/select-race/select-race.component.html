@@ -1,44 +1,52 @@
 <div class="background-image">
-    <div class="container">
-            <div class="carousel-container">
-                <button (click)="prev()" class="nav-button">Prev</button>
-                <div class="carousel">
-                    <div class="card-breed-container" *ngIf="currentRace">
-                        <div class="title-container">
-                            <h2 class="breed-title">{{ currentRace.name }}</h2>
-                        </div>
-                        <div class="picture-stat-container">
-                            <div>
-                                <img [src]="currentRace.url" alt="{{ currentRace.name }}" />
-                            </div>
-                            <ul class="breed-statistics">
-                                <li>
-                                    <span class="bold-title">Âge :</span> {{ currentRace.min_age }} - {{ currentRace.max_age }}
-                                </li>
-                                <li>
-                                    <span class="bold-title">Taille :</span> {{ currentRace.min_height }} - {{
-                                    currentRace.max_height }}
-                                </li>
-                                <li><span class="bold-title">Vitesse :</span> {{ currentRace.speed }}</li>
-                                <li>
-                                    <span class="bold-title">Langues :</span> {{ currentRace.languages }}, +{{
-                                    currentRace.number_additional_language }} autre(s)
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="racial_trait">
-                            <span class="bold-title">Traits raciaux :</span> {{ currentRace.racial_trait }}
-                        </div>
-                        <div class="breed-description">
-                            <span class="bold-title">Description :</span>
-                            <p class="description">{{ currentRace.description }}</p>
-                        </div>
-                    </div>
-                </div>
-                <button (click)="next()" class="nav-button">Next</button>
+  <div class="container">
+    <div class="carousel-container">
+      <button (click)="prev()" class="nav-button">Prev</button>
+      <div class="carousel">
+        <div class="card-breed-container" *ngIf="currentRace">
+          <div class="title-container">
+            <h1 class="breed-title">{{ currentRace.name }}</h1>
+          </div>
+          <div class="picture-stat-container">
+            <div class="picture">
+              <img [src]="currentRace.url" alt="{{ currentRace.name }}" />
             </div>
-            <div class="nav-button"><button class="validate-button" (click)="saveRace()">VALIDER</button>
+            <ul class="breed-statistics">
+              <li>
+                <span class="bold-title">Âge :</span>
+                {{ currentRace.min_age }} - {{ currentRace.max_age }}
+              </li>
+              <li>
+                <span class="bold-title">Taille :</span>
+                {{ currentRace.min_height }} - {{ currentRace.max_height }}
+              </li>
+              <li>
+                <span class="bold-title">Vitesse :</span>
+                {{ currentRace.speed }}
+              </li>
+              <li>
+                <span class="bold-title">Langues :</span>
+                {{ currentRace.languages }}, +{{
+                  currentRace.number_additional_language
+                }}
+                autre(s)
+              </li>
+            </ul>
+          </div>
+          <div class="racial_trait">
+            <span class="bold-title">Traits raciaux :</span>
+            {{ currentRace.racial_trait }}
+          </div>
+          <div class="breed-description">
+            <span class="bold-title">Description :</span>
+            <p class="description">{{ currentRace.description }}</p>
+          </div>
+        </div>
+      </div>
+      <button (click)="next()" class="nav-button">Next</button>
     </div>
-
-  
+    <div class="nav-button">
+      <button class="validate-button" (click)="saveRace()">VALIDER</button>
+    </div>
+  </div>
 </div>

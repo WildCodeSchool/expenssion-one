@@ -28,7 +28,7 @@
       <div class="title-container">
         <h2 class="breed-title">{{ race.name }}</h2>
       </div>
-      <!-- création d'une div complémtaire pour contenir les paragraphes et le texte en responsive -->
+      <!-- création d'une div complémentaire pour contenir les paragraphes et le texte en responsive -->
       <div class="breed-description">
         <p class="description">{{ race.description }}</p>
         <p class="racial-trait">
@@ -47,17 +47,13 @@
         </li>
         <li><span class="bold-title">Vitesse :</span> {{ race.speed }}</li>
         <li>
-          <span class="bold-title">Langues :</span> 
+          <span class="bold-title">Langues :</span>
           <ul>
             @for(language of race.languages;track language) {
-            <li>{{ language.name }}</li>,
-            }
+            <li>{{ language.name }}</li>
+            , }
           </ul>
-            +{{
-            race.number_additional_language
-            }}
-          
-          
+          +{{ race.number_additional_language }}
           autre(s)
         </li>
       </ul>
