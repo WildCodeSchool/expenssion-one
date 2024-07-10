@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatTooltipModule } from '@angular/material/tooltip';
+
 import { Secret } from '../../model/secret/secret';
 import { SecretService } from '../../service/secrect/secret.service';
 
@@ -47,7 +47,12 @@ export class SecretSelectionPageComponent {
     this.isReset = true;
   }
 
+
+  saveCharacter(){
+    this.router.navigateByUrl('/creation-personnage/statistiques')
+
   saveCharacter() {
     this.router.navigateByUrl('/inscription');
+
   }
 }
