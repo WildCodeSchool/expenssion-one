@@ -5,6 +5,7 @@ import { Specialization } from '../../model/specialization/specialization';
 import { NgFor, NgStyle } from '@angular/common';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { SpecializationContent } from '../../model/specializationContent/specialization-content';
+import { SpecializationService } from '../../service/specialization/specialization.service';
 
 @Component({
   selector: 'app-classes-page',
@@ -78,6 +79,7 @@ export class ClassesPageComponent {
   }
 
   breakpointObserver = inject(BreakpointObserver)
+  specializationService=inject(SpecializationService)
   isMobile: boolean = false;
 
   ngOnInit()
@@ -86,41 +88,44 @@ export class ClassesPageComponent {
     this.isMobile = state.breakpoints[this.breakpoints.mobile]});
     this.points = 5;
     this.selectedClass = new Specialization();
-    this.apiService.getSpecialization().subscribe(
-      classes => 
-        {
-          this.classes = classes;
-          for(let i = 0; i < classes.length; i++)
-          {
-            const classe = classes[i];
-            var description = classe.content;
-            classe.contents = [];
-            for(let j = 0; j < description.length; j++)
-            {
-               let spec = new SpecializationContent();
-               spec.content = description[j];
-               classe.contents.push(spec)
-            }
-          }
-          for(let i  = 0; i < 3; i++)
-          {
-            this.filterClasses[i] = this.classes[i];
-          }
-          this.selectedClass = this.classes[0];
-        }
-    );
-    
-    this.apiService.getStatistics().subscribe(
-      statistiques => {
-        this.statistiques = statistiques
-        for(let i = 0; i < 10; i++)
-          {
-            const max = 20;
-            let score = Math.round(Math.random()*max);
-            if(score >= 18) score = Math.round(score/2);
-              this.statistiques[i].score = score;
-          }
-      }
-    )
+    this.specializationService.getAllSpecialization().subscribe(x=>{
+      this.classes=x});
   }
-}
+    // this.apiService.getSpecialization().subscribe(
+    //   classes => 
+    //     {
+          // this.classes = classes;
+          // for(let i = 0; i < classes.length; i++)
+          // {
+          //   const classe = classes[i];
+          //   var description = classe.content;
+          //   classe.contents = [];
+          //   for(let j = 0; j < description.length; j++)
+          //   {
+    //            let spec = new SpecializationContent();
+    //            spec.content = description[j];
+    //            classe.contents.push(spec)
+    //         }
+    //       }
+    //       for(let i  = 0; i < 3; i++)
+    //       {
+    //         this.filterClasses[i] = this.classes[i];
+    //       }
+    //       this.selectedClass = this.classes[0];
+    //     }
+    // );
+    
+    // this.apiService.getStatistics().subscribe(
+    //   statistiques => {
+    //     this.statistiques = statistiques
+    //     for(let i = 0; i < 10; i++)
+    //       {
+    //         const max = 20;
+    //         let score = Math.round(Math.random()*max);
+    //         if(score >= 18) score = Math.round(score/2);
+    //           this.statistiques[i].score = score;
+    //       }
+    //   }
+    // )
+  }
+
