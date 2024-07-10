@@ -1,10 +1,10 @@
 
-import { Component, Inject, Input, inject } from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialog, MatDialogModule, MatDialogRef} from '@angular/material/dialog';
-import {MatButtonModule} from '@angular/material/button';
+import { Component, Input, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Login } from '../../model/login.model';
+import { MatButtonModule } from '@angular/material/button';
+import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { Login } from '../../model/login.model';
 import { AuthenticationService } from '../../service/authentication/authentification.service';
 
 
@@ -36,9 +36,8 @@ export class PopupComponent {
  
    
 
+
   onLogin(username:string,password:string):void {
-     this.authenticationService.setToken("a")
-     this.dialogRef.close();
     this.authenticationService.login(username,password).subscribe(
       (response: any) => {
         if (response.access_token) {
@@ -56,5 +55,6 @@ export class PopupComponent {
       },
     );
   }
+  }
   
-}
+
