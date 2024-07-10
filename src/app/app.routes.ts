@@ -9,18 +9,21 @@ import { ProfilParameterPageComponent } from './pages/profil-parameter-page/prof
 import { RaceComponent } from './pages/race/race.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { RulesPageComponent } from './pages/rules-page/rules-page.component';
+import { SecretsPageComponent } from './pages/secrets-page/secrets-page.component';
 import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
-
+import { UserProfilPageComponent } from './pages/user-profil-page/user-profil-page.component';
 import { BeliefsPageComponent } from './pages/beliefs-page/beliefs-page.component';
-
+import { ConstructionPageComponent } from './pages/construction-page/construction-page.component';
+import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { NewsCharacterComponent } from './pages/news-character/news-character.component';
 import { StatsPageComponent } from './pages/stats-page/stats-page.component';
-
 import { SecretSelectionPageComponent } from './pages/secret-selection-page/secret-selection-page.component';
 import { SecretsPageComponent } from './pages/secrets-page/secrets-page.component';
 import { SelectRaceComponent } from './pages/select-race/select-race.component';
-
 import { UserProfilPageComponent } from './pages/user-profil-page/user-profil-page.component';
+import { SecretSelectionPageComponent } from './pages/secret-selection-page/secret-selection-page.component';
+import { StatsPageComponent } from './pages/stats-page/stats-page.component';
+
 
 export const routes: Routes = [
   {
@@ -106,5 +109,10 @@ export const routes: Routes = [
     path: '**',
     redirectTo: 'erreur',
     pathMatch: 'full',
+  },
+
+  {
+    path: 'creationPersonnage/statistiques',
+    component: StatsPageComponent,
   },
 ];
