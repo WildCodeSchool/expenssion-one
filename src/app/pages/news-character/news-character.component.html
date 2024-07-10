@@ -1,5 +1,8 @@
 <section class="character-selection-container">
+  
   <div class="selection-box">
+    <!-- @if(persoService.statistiques.length == 0)
+    { -->
     <div class="add-character">
       <a routerLink="/creation-personnage/secrets" class="add-button">+</a>
       <h1>Ajouter un personnage</h1>
@@ -22,6 +25,24 @@
       </div>
     </div>
     <button class="scroll-arrow down" (click)="scroll('down')">▼</button>
+  
+  <!-- }
+  @if(persoService.statistiques.length > 0)
+  { -->
+    <h2>Caractéristiques du personnage : </h2>
+    <ul>
+      <li>Secret principal : {{persoService.primordialSecret}}</li>
+      <li>Secret anecdotique : {{persoService.anecdoticSecret}}</li>
+      <ul>
+      @for(stat of persoService.statistiques;track stat) 
+      {
+        <li>{{stat.name}} : {{stat.score}}</li>
+      }
+      </ul>
+      <li>Classe : {{persoService.classe.name}}</li>
+      <li>Race : {{persoService.race.name}}</li>
+    </ul>
+  <!-- } -->
   </div>
 </section>
 

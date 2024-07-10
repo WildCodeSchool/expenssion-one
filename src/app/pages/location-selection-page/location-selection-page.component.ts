@@ -1,7 +1,7 @@
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { Location } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { NortaMapComponent } from '../../components/norta-map/norta-map.component';
 import { WorldMapMobileComponent } from '../../components/world-map-mobile/world-map-mobile.component';
 import { WorldMapComponent } from '../../components/world-map/world-map.component';
@@ -36,10 +36,12 @@ export class LocationSelectionPageComponent {
   isMobile: boolean = false;
 
   persoService = inject(PersoServiceService)
+  router = inject(Router);
 
   validate()
   {
     this.persoService.isNorta = this.isNortaDisplay;
+    this.router.navigateByUrl('creation-personnage')
   }
 
 

@@ -20,5 +20,6 @@
         @else if(!isMobile && !isNortaDisplay){
         <app-world-map (sendNortaIsDisplayToParent)="onReceiveIsNortaDisplay($event)"></app-world-map>
         }
+        <div class="displayValidationButton" (click)="validate()"><button class="validationButton">Valider</button></div>
     </div>
 </div>

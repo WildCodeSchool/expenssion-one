@@ -62,6 +62,25 @@
         }
 }
 
+.displayValidationButton{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:2rem 0 0 0;
+}
+
+.validationButton
+{
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    background-color: #DDB375;
+    color:$textColor;
+    border-radius: 5px;
+    width:70px;
+    height:30px;
+}
+
 @media screen and (min-width: 401px) and (max-width: 1200px) {
 
     .background_image {
