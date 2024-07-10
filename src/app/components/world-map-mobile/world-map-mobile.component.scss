@@ -1,0 +1,86 @@
+@use "../../../import" as *;
+
+.world_map_container {
+    background-color: #202229;
+    filter: opacity(90%);
+    margin: 2rem 0 2rem 0;
+    border-radius: 10px;
+    color: $textLightColor;
+    margin-right: 10vw;
+    margin-left: 10vw;
+    text-align: center;
+    padding: 1rem;
+    width: 80vw;
+    display: grid;
+    padding-bottom: 2rem;
+    position: relative;
+    right: 0;
+    justify-content: center;
+
+    h1 {
+        font-family: $subTitleFont;
+        font-size: 40px;
+        margin-bottom: 2rem;
+        font-weight: 600;
+    }
+
+    .world_map {
+        filter: opacity(100%);
+        width: 300px;
+        height: auto;
+        justify-self: center;
+        border-radius: 10px;
+        grid-column: 1fr;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    area {
+        cursor: pointer;
+    }
+
+    .show_continent_description {
+        grid-column: 2fr;
+        height: 14rem;
+    }
+
+    h2 {
+        font-family: $subTitleFont;
+        font-size: 40px;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+
+    p {
+        font-size: larger;
+        font-family: $contentFont;
+        line-height: 1.5;
+    }
+
+    button {
+        background-color: #DDB375;
+        width: 11rem;
+        height: 2.5rem;
+        border-radius: 10px;
+        justify-self: center;
+        color: $textColor;
+        font-size: larger;
+        font-family: $contentFont;
+        line-height: 1.5;
+        cursor: pointer;
+        align-self: flex-end;
+        justify-self: center;
+        grid-column: 1fr;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .world_map_container {
+        width: 90vw;
+        margin-right: 5vw;
+        margin-left: 5vw;
+    }
+}

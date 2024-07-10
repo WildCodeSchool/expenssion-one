@@ -7,10 +7,12 @@ import { Continent } from '../model/continent/continent';
 import { Secret } from '../model/secret/secret';
 import { Belief } from '../model/belief/belief';
 import { Statistics } from '../model/stats/statistics';
+import { City } from '../model/city/city';
 @Injectable({
   providedIn: 'root',
 })
 export class ApiDataService {
+
   private http = inject(HttpClient);
 
   constructor() {}
@@ -35,8 +37,12 @@ export class ApiDataService {
     return this.http.get<Continent[]>('assets/data/continents.json');
   }
 
-  getAnecdoticSecrets(): Observable<Secret[]> {
-    return this.http.get<Secret[]>('assets/data/anecdoticSecrets.json');
+  getCities(): Observable<City[]> {
+    return this.http.get<City[]>('assets/data/continents.json');
+  }
+
+  getAnecdoticSecrets():Observable<Secret[]>{
+    return this.http.get<Secret[]>('assets/data/anecdoticSecrets.json')
   }
 
   getPrimordialSecrets(): Observable<Secret[]> {

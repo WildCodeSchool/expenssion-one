@@ -74,6 +74,7 @@
     color:$textColor;
     display:flex;
     justify-content:center;
+        
 }
 
 .reset-button img{
@@ -91,6 +92,7 @@
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+min-height: calc(100vh - $headerHeight);
 }
 
 .content-page

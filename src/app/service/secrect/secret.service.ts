@@ -30,6 +30,14 @@ export class SecretService {
     return this.http.get<Secret[]>(this.url+"/getCharacterSecrets")
   }
 
+  getRandomPrimordialSecret():Observable<Secret>{
+    return this.http.get<Secret>(this.url+"/primordial-secrets/random-primordial-secret")
+  }
+
+  getRandomAnnecdoticSecret():Observable<Secret>{
+    return this.http.get<Secret>(this.url+"/anecdotic-secrets/random-anecdotic-secret")
+  }
+
   resetPrimordialSecret():Observable<Secret>{
     return this.http.get<Secret>(this.url+"/resetPrimordialSecret")
   }

@@ -14,36 +14,47 @@
                     <div class="avatar">
                         <img src="/assets/pictures/Connexion.png">
                     </div>
-                    <button>changer d'Avatar</button>
+                    <button>Changer d'Avatar</button>
                 </div>
             </div>
 
             <div class="pseudo-display-container">
 
-                <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+                <form #myForm="ngForm" (ngSubmit)="updateDisplayPseudo(user.pseudoDisplay)">
                 
                 
                     <fieldset>
                 
                         <label for="firstname-field">Pseudo affiché: </label>
                         <div>
-                            <input id="firstname-field" name="firstname" type="text" [(ngModel)]="user.pseudo" #pseudo="ngModel" required
-                                minlength="3" maxlength="15">
+                            <input id="firstname-field" name="firstname" type="text" [(ngModel)]="user.pseudoDisplay" #pseudo="ngModel" required
+                                minlength="5" maxlength="15">
                             <small>Entrez votre pseudo qui sera affiché en jeu.</small>
                         </div>
 
+                        @if(pseudo.errors && myForm.submitted){
+                        @if(pseudo.errors['required']){
+                        <span>Le champ pseudo est requis</span>
+                        }
+                        @if(pseudo.errors['minlength']){
+                        <span>La longueur minimale doit être supérieure à 5</span>
+                        }
+                        
+                        }
+
                         
                     </fieldset>
+                    <div class="button-container">
+                        <button type="submit">Sauvegarder</button>
+                    </div>
                 </form>
-                <div class="button-container">
-                    <button type="submit">Sauvegarder</button>
-                </div>
+                
               
 
 
             </div>
             <div class="biography-container">
-                <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+                <form #myForm="ngForm" (ngSubmit)="updateBiography(user.biography)">
                 
                 
                     <fieldset>
@@ -55,6 +66,8 @@
                             <small>Description de votre profil en moins de 300 caractères</small>
 
                         </div>
+
+            
                     </fieldset>
                     <div class="button-container">
                     <button type="submit">Sauvegarder</button>
@@ -63,15 +76,25 @@
 
             </div>
             <div class="personnal-information-container">
-                <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+                <form #myForm="ngForm" (ngSubmit)="updatePersonalData(user.firstname,user.lastname,user.email,user.dateOfBirth)">
 
                    
                     <fieldset>
                     
-                        <label for="firstname-field">nom: </label>
+                        <label for="firstname-field">Nom: </label>
                     
                         <input id="firstname-field" name="firstname" type="text" [(ngModel)]="user.firstname" #firstname="ngModel"
                             required minlength="3" maxlength="15">
+
+                                @if(firstname.errors && myForm.submitted){
+                                @if(firstname.errors['required']){
+                                <span>Le champ pseudo est requis</span>
+                                }
+                                @if(firstname.errors['minlength']){
+                                <span>La longueur minimale doit être supérieure à 3</span>
+                                }
+                                
+                                }
                     
                     </fieldset>
 
@@ -81,6 +104,16 @@
                     
                         <input id="lastname-field" name="lastname" type="text" [(ngModel)]="user.lastname" #lastname="ngModel"
                             required minlength="3" maxlength="15">
+
+                                    @if(lastname.errors && myForm.submitted){
+                                    @if(lastname.errors['required']){
+                                    <span>Le champ pseudo est requis</span>
+                                    }
+                                    @if(lastname.errors['minlength']){
+                                    <span>La longueur minimale doit être supérieure à 3</span>
+                                    }
+                                    
+                                    }
                     
                     </fieldset>
 
@@ -90,6 +123,13 @@
                     
                         <input id="date-of-birth-field" name="DateOfBirth" type="date" [(ngModel)]="user.dateOfBirth" #DateOfBirth="ngModel"
                             required minlength="3" maxlength="15">
+
+                                    @if(DateOfBirth.errors && myForm.submitted){
+                                    @if(DateOfBirth.errors['required']){
+                                    <span>Le champ pseudo est requis</span>
+                                    }
+            
+                                    }
                     
                     </fieldset>
                    
@@ -99,6 +139,16 @@
                 
                         <input id="email-field" name="email" [(ngModel)]="user.email" #email="ngModel" type="email" required
                             email>
+
+                            @if(email.errors && myForm.submitted){
+                            @if(email.errors['required']){
+                            <span>Le champ email est requis</span>
+                            }
+                            @if(email.errors['email']){
+                            <span>L'adresse email doit être valide</span>
+                            }
+                            
+                            }
                 
                     </fieldset>                
                     <div class="button-container">
@@ -108,25 +158,33 @@
 
             </div>
             <div class="change-password-container">              
-                <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+                <form #myForm="ngForm" (ngSubmit)="changePassword(actualPassword.value, newPassword.value)">
                     <fieldset>
                         <label for="actual-password-field">Mot de passe actuel: </label>
                         <div>
-                            <input id="actual-password-field" name="actualPassword" type="password" (ngModel)="user.lastname" #actualPassword="ngModel">
+                            <input id="actual-password-field" name="actualPassword" type="password" [(ngModel)]="oldPassword" #actualPassword="ngModel" required>
                         </div>
                     </fieldset>
                     <fieldset>
                         <label for="new-password-field">Nouveau mot de passe: </label>
                         <div>
-                            <input id="new-password-field" name="newPassword" type="password" (ngModel)="user.lastname" #newPassword="ngModel">
+                            <input id="new-password-field" name="newPassword" type="password"  [(ngModel)]="newPassword" #newPassword="ngModel" required>
                         </div>
                     </fieldset>
-                    <fieldset>
-                        <label for="actual-password-field">Confirmation de mot de passe: </label>
-                        <div>
-                            <input id="actual-password-field" name="confirmationNewPassword" type="password" (ngModel)="user.lastname"#confirmationActualPassword="ngModel">
-                        </div>
-                    </fieldset>
+        
+
+                            @if(actualPassword.errors && myForm.submitted){
+                            @if(actualPassword.errors['required']){
+                            <span>Le champ mot est requis</span>
+                            }
+                            @if(actualPassword.errors['password']){
+                            <span>Password invalid</span>
+                            }
+                            
+                            }
+
+
+
                     <div class="button-container">
                         <button type="submit">Changer de mot de passe</button>
                     </div>
@@ -136,32 +194,76 @@
             </div>
 
             <div class="notification-container">
-                <form>
+                <form #myForm="ngForm" (ngSubmit)="updatepamarater(user.isPublic,user.isNewsletters)">
                     <fieldset>
                         <label for="actual-password-field">Paramètres notifdications: </label>
                         <div>
-                            <mat-slide-toggle [checked]="user.isNewletters"></mat-slide-toggle>
+                            <mat-slide-toggle name="isNewsletters" #isNewletters="ngModel" [(ngModel)]="user.isNewsletters"></mat-slide-toggle>
                         </div>
+
+                        @if(isNewletters.errors && myForm.submitted){
+                        @if(isNewletters.errors['required']){
+                        <span>Le champ email est requis</span>
+                        }
+                        @if(isNewletters.errors['email']){
+                        <span>L'adresse email doit être valide</span>
+                        }
+                        
+                        }
                     </fieldset>
                     <fieldset>
                         <label for="actual-password-field">Paramètres de visibilité: </label>
                         <div>
-                            <mat-slide-toggle [checked]="user.isNewletters"></mat-slide-toggle>
+                            <mat-slide-toggle  name="isPublic"  #isPublic="ngModel" [(ngModel)]="user.isPublic"></mat-slide-toggle>
                         </div>
+                        @if(isPublic.errors && myForm.submitted){
+                        @if(isPublic.errors['required']){
+                        <span>Le champ email est requis</span>
+                        }
+                        @if(isPublic.errors['email']){
+                        <span>L'adresse email doit être valide</span>
+                        }
+                        
+                        }
                     </fieldset>
+                    <div class="button-container">
+                        <button type="submit">Sauvegarder</button>
+                    </div>
+
+
+                    
+
                 </form>
-                                <div class="button-container">
-                                    <button type="submit">Sauvegarder</button>
-                                </div>
+                                
                 
                 
                 
             </div>
 
             <div class="delete-account-container">
-                <button>Supprimer mon compte</button>
-            </div>
+                <button (click)="isDelete=true">Supprimer mon compte</button>
+                @if(isDelete){
+                <div class="delete-account-confirmation-container">
+                    <form #myForm="ngForm" (ngSubmit)="deleteUser(actualPassword.value)">
+                        <fieldset>
+                            <label for="actual-password-field">Mot de passe actuel: </label>
+                            <div>
+                                <input id="actual-password-field" name="actualPassword" type="password" #actualPassword>
+                            </div>
+                        </fieldset>
+                        <div class="button-container">
+                            <button type="submit">Confirmer la suppression</button>
+                        </div>
+                    </form>
+                </div>
+                @if(iserror){
+                    
+                    error wrong password
+                }
+            }
 
+            </div>
+           
         </div>
 
     </div>

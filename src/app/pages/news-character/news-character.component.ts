@@ -1,9 +1,14 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-character-selection',
+    standalone: true,
+  imports: [RouterLink],
   templateUrl: './news-character.component.html',
-  styleUrls: ['./news-character.component.scss']
+  styleUrls: ['./news-character.component.scss'],
+ 
+
 })
 export class NewsCharacterComponent {
   @ViewChild('slotsWrapper', { static: true }) slotsWrapper!: ElementRef;
@@ -19,6 +24,8 @@ export class NewsCharacterComponent {
       }
     }
   }
+
+
 }
 
 
