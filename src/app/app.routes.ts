@@ -18,8 +18,6 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { NewsCharacterComponent } from './pages/news-character/news-character.component';
 import { SecretSelectionPageComponent } from './pages/secret-selection-page/secret-selection-page.component';
 import { StatsPageComponent } from './pages/stats-page/stats-page.component';
-import { ErrorPageComponent } from './pages/error-page/error-page.component';
-import { ConstructionPageComponent } from './pages/construction-page/construction-page.component';
 import { ClassesPageComponent } from './pages/classes-page/classes-page.component';
 
 export const routes: Routes = [
