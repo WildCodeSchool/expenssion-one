@@ -86,9 +86,9 @@
 }
 
 .nav-button {
-  background-color: #c2c8bc; /* Primary button color */
+  background-color: #4ba0c0; /* Primary button color */
   border: none;
-  color: $textColor;
+  color: $textLightColor;
   font-family: $subTitleFont;
   font-weight: $fontBoldStyle;
   padding: 10px 20px;
@@ -103,12 +103,8 @@
 }
 
 .nav-button:hover {
-  background-color: #0056b3; /* Darker shade for hover effect */
+  background-color: #e3ac96; /* Darker shade for hover effect */
   transform: scale(1.05); /* Slightly enlarge the button */
-}
-
-.nav-button:hover {
-  background-color: #e3ac96;
 }
 
 .bold-title {
@@ -121,11 +117,8 @@
 }
 
 .breed-description {
-  margin-top: 10px;
+  margin: 10px;
   text-align: center;
   font-size: 1.2rem;
   padding: 0 4rem;
-  //   .description {
-  //
-  //   }
 }
