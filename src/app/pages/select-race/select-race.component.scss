@@ -86,9 +86,11 @@
 }
 
 .nav-button {
-  background-color: #007bff; /* Primary button color */
+  background-color: #c2c8bc; /* Primary button color */
   border: none;
-  color: $textLightColor;
+  color: $textColor;
+  font-family: $subTitleFont;
+  font-weight: $fontBoldStyle;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
@@ -106,7 +108,7 @@
 }
 
 .nav-button:hover {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #e3ac96;
 }
 
 .bold-title {
