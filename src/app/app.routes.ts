@@ -1,14 +1,13 @@
 import { Routes } from '@angular/router';
+import { AuthenticationGuard } from './guards/authentification.guard';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { RaceComponent } from './pages/race/race.component';
 import { LocationPageComponent } from './pages/location-page/location-page.component';
 import { NewsPageComponent } from './pages/news-page/news-page.component';
-import { RegisterPageComponent } from './pages/register-page/register-page.component';
-import { UserProfilPageComponent } from './pages/user-profil-page/user-profil-page.component';
-import { AuthenticationGuard } from './guards/authentification.guard';
 import { ProfilParameterPageComponent } from './pages/profil-parameter-page/profil-parameter-page.component';
-import { SecretsPageComponent } from './pages/secrets-page/secrets-page.component';
+import { RaceComponent } from './pages/race/race.component';
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { RulesPageComponent } from './pages/rules-page/rules-page.component';
+import { SecretsPageComponent } from './pages/secrets-page/secrets-page.component';
 import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
 import { BeliefsPageComponent } from './pages/beliefs-page/beliefs-page.component';
 import { StatsPageComponent } from './pages/stats-page/stats-page.component';
@@ -17,6 +16,7 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { ConstructionPageComponent } from './pages/construction-page/construction-page.component';
 import { LocationSelectionPageComponent } from './pages/location-selection-page/location-selection-page.component';
 import { NortaMapComponent } from './components/norta-map/norta-map.component';
+import { UserProfilPageComponent } from './pages/user-profil-page/user-profil-page.component';
 
 export const routes: Routes = [
   {
@@ -100,5 +100,10 @@ export const routes: Routes = [
     path: '**',
     redirectTo: 'erreur',
     pathMatch: 'full',
+  },
+
+  {
+    path: 'creationPersonnage/statistiques',
+    component: StatsPageComponent,
   },
 ];
