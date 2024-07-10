@@ -1,9 +1,8 @@
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Statistics } from '../../model/stats/statistics';
 import { ApiDataService } from '../../service/api-data.service';
-import { NgFor, NgIf } from '@angular/common';
 import { ExternalExpr } from '@angular/compiler';
 
 
@@ -69,11 +68,11 @@ export class StatsPageComponent {
   }
 
   validateStats(){
-    this.router.navigateByUrl('/creation-personnage/lieux')
+    this.router.navigateByUrl('/creation-personnage/classes')
   }
 
 
-  scoreUp(name:String)
+  scoreUp(index:number)
   {
     if(this.points > 0)
     {

@@ -1,8 +1,6 @@
 import { Routes } from '@angular/router';
-import { NortaMapComponent } from './components/norta-map/norta-map.component';
 import { AuthenticationGuard } from './guards/authentification.guard';
 
-import { BeliefsPageComponent } from './pages/beliefs-page/beliefs-page.component';
 import { ConstructionPageComponent } from './pages/construction-page/construction-page.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
@@ -19,17 +17,11 @@ import { SecretsPageComponent } from './pages/secrets-page/secrets-page.componen
 import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
 
 import { StatsPageComponent } from './pages/stats-page/stats-page.component';
-import { UserProfilPageComponent } from './pages/user-profil-page/user-profil-page.component';
-import { ClassesPageComponent } from './pages/classes-page/classes-page.component';
 
 import { UserProfilPageComponent } from './pages/user-profil-page/user-profil-page.component';
 import { BeliefsPageComponent } from './pages/beliefs-page/beliefs-page.component';
-import { NewsCharacterComponent } from './pages/news-character/news-character.component';
-import { StatsPageComponent } from './pages/stats-page/stats-page.component';
-import { SecretSelectionPageComponent } from './pages/secret-selection-page/secret-selection-page.component';
 import { SelectRaceComponent } from './pages/select-race/select-race.component';
 import { ClassesPageComponent } from './pages/classes-page/classes-page.component';
-import { LocationSelectionPageComponent } from './pages/location-selection-page/location-selection-page.component';
 import { NortaMapComponent } from './components/norta-map/norta-map.component';
 
 
@@ -77,7 +69,7 @@ export const routes: Routes = [
   },
 
   {
-    path: 'creationPersonnage/statistiques',
+    path: 'creation-personnage/statistiques',
     component: StatsPageComponent,
   },
   {
@@ -107,7 +99,7 @@ export const routes: Routes = [
     path: 'creation-personnage',
     component: NewsCharacterComponent,
   },
-
+  {
     path: 'Ajout/Perso',
     component: NewsCharacterComponent,
   },
@@ -141,7 +133,7 @@ export const routes: Routes = [
     path: '**',
     redirectTo: 'erreur',
     pathMatch: 'full',
-  },
+  }
 
 
 ];
