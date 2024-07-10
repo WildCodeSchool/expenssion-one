@@ -51,7 +51,7 @@ export class SecretSelectionPageComponent {
   }
 
   saveCharacter(){
-    this.router.navigateByUrl('/inscription')
+    this.router.navigateByUrl('/creation-personnage/statistiques')
   }
 
 }

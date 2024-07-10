@@ -9,11 +9,13 @@
     display:flex;
     align-items: center;
     justify-content:center;
+        
 }
 
 .background-image
 {
   background-image: url(../../../assets/background_pictures/backgorund_stat.jpg);
+min-height: calc(100vh - $headerHeight);
 }
 
 .content-page
