@@ -3,12 +3,17 @@ import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Statistics } from '../../model/stats/statistics';
 import { ApiDataService } from '../../service/api-data.service';
+
 import { ExplainStatePageDesktopComponent } from '../explain-state-page-desktop/explain-state-page-desktop.component';
+
+import { NgFor } from '@angular/common';
+import { ExternalExpr } from '@angular/compiler';
+
 
 @Component({
   selector: 'app-stats-page',
   standalone: true,
-  imports: [NgFor, ExplainStatePageDesktopComponent],
+  imports: [NgFor],
   templateUrl: './stats-page.component.html',
   styleUrl: './stats-page.component.scss'
 })
