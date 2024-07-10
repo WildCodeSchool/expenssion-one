@@ -3,17 +3,14 @@ import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Statistics } from '../../model/stats/statistics';
 import { ApiDataService } from '../../service/api-data.service';
-
-import { ExplainStatePageDesktopComponent } from '../explain-state-page-desktop/explain-state-page-desktop.component';
-
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { ExternalExpr } from '@angular/compiler';
 
 
 @Component({
   selector: 'app-stats-page',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, NgIf],
   templateUrl: './stats-page.component.html',
   styleUrl: './stats-page.component.scss'
 })
@@ -21,8 +18,17 @@ export class StatsPageComponent {
   statistiques:Statistics[] = [];
 
   points!:number;
+  isHidden:boolean = true;
+
   router=inject(Router)
   apiService = inject(ApiDataService);
+
+  generateScore(index:number){
+    const max = 20;
+    let score = Math.round(Math.random()*max);
+    if(score >= 18) score = Math.round(score/2);
+    this.statistiques[index].score = score;
+  }
 
   modifyScore(score:number):number{
     if(score == 20 || score == 19)
@@ -48,19 +54,19 @@ export class StatsPageComponent {
     return score;
   }
 
-  scoreDown(name:String)
+  scoreDown(index:number)
   {
     if(this.points < 5)
     {
-      for(let i = 0; i < this.statistiques.length; i++)
+      this.statistiques[index].score -= 1;
+      this.statistiques[index].differential -= 1;
+      if(this.statistiques[index].differential > 0) 
       {
-        if(this.statistiques[i].name === name)
-          this.statistiques[i].score -= 1;
+        this.statistiques[index].hidden = false;
       }
       this.points++;
     }
   }
-
 
   validateStats(){
     this.router.navigateByUrl('/creation-personnage/lieux')
@@ -71,27 +77,30 @@ export class StatsPageComponent {
   {
     if(this.points > 0)
     {
-      for(let i = 0; i < this.statistiques.length; i++)
-        {
-          if(this.statistiques[i].name === name)
-            this.statistiques[i].score += 1;
-        }
-      this.points--;
+      this.statistiques[index].score += 1;
+      this.statistiques[index].differential += 1;
+      if(this.statistiques[index].differential > 0) 
+      {
+        this.statistiques[index].hidden = false;
+      }
     }
+      this.points--;
+    
   }
 
   ngOnInit()
   {
+    
     this.points = 5;
     this.apiService.getStatistics().subscribe(
       statistiques => {
         this.statistiques = statistiques
         for(let i = 0; i < 10; i++)
           {
-            const max = 20;
-            let score = Math.round(Math.random()*max);
-            if(score >= 18) score = Math.round(score/2);
-              this.statistiques[i].score = score;
+            
+            this.statistiques[i].differential = 0;
+            this.statistiques[i].score = 0;
+            this.statistiques[i].hidden = true;
           }
       }
     )

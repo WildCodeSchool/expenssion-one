@@ -77,7 +77,7 @@ export const routes: Routes = [
   },
 
   {
-    path: 'stats',
+    path: 'creationPersonnage/statistiques',
     component: StatsPageComponent,
   },
   {
