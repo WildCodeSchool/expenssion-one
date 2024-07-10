@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Statistics } from '../../model/stats/statistics';
 import { ApiDataService } from '../../service/api-data.service';
+import { PersoServiceService } from '../../service/perso-service.service';
 
 
 
@@ -21,6 +22,8 @@ export class StatsPageComponent {
 
   router=inject(Router)
   apiService = inject(ApiDataService);
+
+  persoService = inject(PersoServiceService);
 
   generateScore(index:number){
     const max = 20;
@@ -68,6 +71,7 @@ export class StatsPageComponent {
   }
 
   validateStats(){
+    this.persoService.statistiques = this.statistiques;
     this.router.navigateByUrl('/creation-personnage/classes')
   }
 

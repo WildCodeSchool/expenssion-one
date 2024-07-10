@@ -7,6 +7,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { Router } from '@angular/router';
 import { Secret } from '../../model/secret/secret';
 import { SecretService } from '../../service/secrect/secret.service';
+import { PersoServiceService } from '../../service/perso-service.service';
 
 @Component({
   selector: 'app-secret-selection-page',
@@ -16,6 +17,9 @@ import { SecretService } from '../../service/secrect/secret.service';
   styleUrl: './secret-selection-page.component.scss',
 })
 export class SecretSelectionPageComponent {
+
+  persoService = inject(PersoServiceService);
+
   secretService = inject(SecretService);
   isGenerate: boolean = false;
   isReset: boolean = false;
@@ -49,6 +53,10 @@ export class SecretSelectionPageComponent {
 
 
   saveCharacter(){
+
+    this.persoService.anecdoticSecret = this.annecdoticSecret;
+    this.persoService.primordialSecret = this.primordialSecret;
+
     this.router.navigateByUrl('/creation-personnage/statistiques')
 
   }

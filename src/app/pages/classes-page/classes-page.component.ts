@@ -7,6 +7,7 @@ import { SpecializationContent } from '../../model/specializationContent/special
 import { Statistics } from '../../model/stats/statistics';
 import { ApiDataService } from '../../service/api-data.service';
 import { SpecializationService } from '../../service/specialization/specialization.service';
+import { PersoServiceService } from '../../service/perso-service.service';
 
 @Component({
   selector: 'app-classes-page',
@@ -29,6 +30,8 @@ export class ClassesPageComponent {
   points!:number;
 
   apiService = inject(ApiDataService);
+
+  persoService = inject(PersoServiceService);
 
   changePic(name:String)
   {
@@ -128,6 +131,11 @@ export class ClassesPageComponent {
   }
 
   validate(){
+    this.persoService.classe = this.selectedClass;
+    console.log("Principal secret : " + this.persoService.primordialSecret.description);
+    console.log("Principal secret : " + this.persoService.anecdoticSecret.description);
+    console.log("Statistiques : " + this.persoService.statistiques[0].score);
+    console.log("Classe : " + this.persoService.classe.name);
     this.router.navigateByUrl('creation-personnage/races')
   }
 
