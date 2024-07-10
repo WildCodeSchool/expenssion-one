@@ -20,12 +20,12 @@
               <div class="gear-menu">
                 <img class="gear-menu-image" src="assets/pictures/headerGear.png"> Glossaire
               </div>
-              
+
               <ul class="submenu">
                 <li><a routerLink="glossaire/races">Races</a></li>
                 <li><a routerLink="glossaire/classes">Classes</a></li>
                 <li><a routerLink="glossaire/secrets">Secrets</a></li>
-                <li><a routerLink="accueil">Croyances</a></li>
+                <li><a routerLink="glossaire/croyances">Croyances</a></li>
                 <li><a routerLink="glossaire/lieux">Lieux</a></li>
               </ul>
             </li>
@@ -38,30 +38,32 @@
           </ul>
         </div>
       </div>
-      
+
       <div class="connection-container">
         @if((isLogin$| async) ===true){
-          <a routerLink="/profil">
-            <div class="connection-image">
-              <img class="avatar" src="assets/pictures/Connexion.png" alt="profil">
-              <img class="avatar-gear" src="assets/pictures/headerGearProfil.png">
-            </div>
+        <a routerLink="/profil">
+          <div class="connection-image">
+            <img class="avatar" src="assets/pictures/Connexion.png" alt="profil">
+            <img class="avatar-gear" src="assets/pictures/headerGearProfil.png">
+          </div>
         </a>
-          <button (click)="onLogout()"><img class="logout-image" src="assets/pictures/log-out-button.svg" alt="LO"></button>
+        <button (click)="onLogout()"><img class="logout-image" src="assets/pictures/log-out-button.svg"
+            alt="LO"></button>
         }
         @else {
-          <button (click)="openDialogConnection()"><img  class="connection-logo" src="assets/pictures/Connexion.png" alt="Connection"></button>
+        <button (click)="openDialogConnection()"><img class="connection-logo" src="assets/pictures/Connexion.png"
+            alt="Connection"></button>
         }
       </div>
     </div>
   </nav>
   <div class="play-button">
     @if((isLogin$| async) ===true){
-        <a routerLink="/inscription"><img class="image-play-container"   src="assets/pictures/jouer.png" alt="profil"></a>
+    <a routerLink="/inscription"><img class="image-play-container" src="assets/pictures/jouer.png" alt="profil"></a>
 
     }
     @else{
-          <button (click)="openDialogGame()"><img class="image-play-container" src="assets/pictures/jouer.png"></button>
+    <button (click)="openDialogGame()"><img class="image-play-container" src="assets/pictures/jouer.png"></button>
     }
   </div>
 </header>

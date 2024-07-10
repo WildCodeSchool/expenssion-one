@@ -9,42 +9,34 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-header-mobile',
   standalone: true,
-  imports: [RouterOutlet,CommonModule,RouterLink],
+  imports: [RouterOutlet, CommonModule, RouterLink],
   templateUrl: './header-mobile.component.html',
-  styleUrl: './header-mobile.component.scss'
+  styleUrl: './header-mobile.component.scss',
 })
 export class HeaderMobileComponent {
+  authenticationService = inject(AuthenticationService);
 
-  authenticationService=inject(AuthenticationService)
+  isLogin$: Observable<Boolean> = this.authenticationService.isLogin$;
+  router = inject(Router);
+  isMobileSideNavOpen: boolean = false;
 
-
-  isLogin$:Observable<Boolean>=this.authenticationService.isLogin$
-  router=inject(Router)
-  isMobileSideNavOpen:boolean=false
-
-  
-  toggle(){
-    this.isMobileSideNavOpen=!this.isMobileSideNavOpen;
+  toggle() {
+    this.isMobileSideNavOpen = !this.isMobileSideNavOpen;
   }
 
   constructor(public dialog: MatDialog) {}
-  
+
   openDialog() {
-    const dialogRef = this.dialog.open(PopupComponent, {maxWidth:"100vw"
-    })
-    };
-
-
-    openDialogConnection() {
-    const dialogRef = this.dialog.open(PopupComponent, {maxWidth:"100vw",
-    });
-    dialogRef.afterClosed().subscribe(result => {});
+    const dialogRef = this.dialog.open(PopupComponent, { maxWidth: '100vw' });
   }
 
-  onLogout():void{
+  openDialogConnection() {
+    const dialogRef = this.dialog.open(PopupComponent, { maxWidth: '100vw' });
+    dialogRef.afterClosed().subscribe((result) => {});
+  }
+
+  onLogout(): void {
     this.authenticationService.removeToken();
-    this.router.navigateByUrl("/")
+    this.router.navigateByUrl('/');
   }
-
-
 }
