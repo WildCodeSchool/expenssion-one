@@ -3,7 +3,7 @@
 .flexRow {
     display:grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 110px);
+    grid-template-rows: repeat(2, 1fr);
     font-size:12px;
     width:50vw;
     li {
@@ -64,6 +64,10 @@
 .survival {
     grid-row:2;
     grid-column:5;
+}
+
+.style {
+    font-size: 18px;
 }
 
 .circle{
@@ -133,6 +137,7 @@ min-height: calc(100vh - $headerHeight);
     margin:2% 0 0 0;
 }
 
+
 .displayValidationButton{
     display:flex;
     align-items:center;
@@ -148,7 +153,9 @@ min-height: calc(100vh - $headerHeight);
 {
     font-size: 20px;
 }
-
+ .modifyScore {
+    margin: 2% 0 2% 0;
+ }
 
 .selectStats {
     background-color: #202229;
@@ -267,18 +274,25 @@ h1{
     font-family:$subTitleFont;
 }
 
-h2{
+h2{ 
     font-size:20px;
     color: $textLightColor;
     text-align:center;
     font-family:$subTitleFont;
 }
 
+.modifier {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
 .title
 {
     color:$textLightColor;
     text-align: center;
-    padding:0 0 7% 0;
+    padding:0 0 3% 0;
 }
 
 h2

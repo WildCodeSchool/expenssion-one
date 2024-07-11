@@ -1,6 +1,6 @@
 [
 {"name":"Pile ou Face",
-"url":"/assets/specialization/pile-face.png",
+"imageUrl":"/assets/specialization/pile-face.png",
 "jobs":[],
 "skills":[],
 "content":[
@@ -15,7 +15,7 @@
 ]
 },
 {"name":"Empoisonneur",
-"url":"/assets/specialization/empoisoneur.png",
+"imageUrl":"/assets/specialization/empoisoneur.png",
 "jobs":[],
 "skills":[],
 "content":[
@@ -32,7 +32,7 @@
 ]
 },
 {"name":"Brasseur non-conforme",
-"url":"/assets/specialization/brasseur.png",
+"imageUrl":"/assets/specialization/brasseur.png",
 "jobs":[],
 "skills":[],
 "content":[
@@ -51,7 +51,7 @@
 ]
 },
 {"name":"Mage de renom",
-"url":"/assets/specialization/mage.png",
+"imageUrl":"/assets/specialization/mage.png",
 "jobs":[],
 "skills":[],
 "content":["Les Mage de renom sont incontestablement des érudit, iels sont de brillant intellectuel et de grand stratège. Même enfants, iels dominaient leur camarade par une intelligence accrue.",
@@ -69,7 +69,7 @@
 ]
 },
 {"name":"Traqueur sauvage",
-"url":"/assets/specialization/traqueur.png",
+"imageUrl":"/assets/specialization/traqueur.png",
 "jobs":[],
 "skills":[],
 "content":["Les traqueur sauvages ont senti dès leur jeune âge, l'appelle de la forêt. Pendant que les autres enfants se rendaient dans des établissement éducatif ou ou aidaient leurs parents au diverses tâches familiales , ils arpentaient les bois en quête de découvertes.",
@@ -86,7 +86,7 @@
 ]
 },
 {"name":"Chevalier Frappe-Tonnerre",
-"url":"/assets/specialization/chevalier.png",
+"imageUrl":"/assets/specialization/chevalier.png",
 "jobs":[],
 "skills":[
     {"name":"Éclairé","caracteristic":"Intelligence","description":"Enchante une armes au corps à corps , l’armes foudroie le sol lors de son impacte sur 8mr"},
@@ -107,7 +107,7 @@
 ]
 },
 {"name":"Grand charlatan",
-"url":"/assets/specialization/charlatan.png",
+"imageUrl":"/assets/specialization/charlatan.png",
 "jobs":[],
 "skills":[{"name":"Piège maison","caracteristic":"Dextérité","description":"Vous fabriquez un piège improvisé mais efficace"},
 {"name":"Analyse et dépose ","caracteristic":"Dextérité","description":"Vous identifiez et démonter avec précaution un piège"},
@@ -126,7 +126,7 @@
 ]
 },
 {"name":"Mage élémentaire",
-"url":"/assets/specialization/mage-elementaire.png",
+"imageUrl":"/assets/specialization/mage-elementaire.png",
 "jobs":[],
 "skills":[{"name":"Poing de feu","caracteristic":"Intelligence","description":"Vous enflammez votre poing et lancer une boule de feu"},
 {"name":"Basier intérieur","caracteristic":"Intelligence","description":"Vous vous enflammer, votre prochain jet de dé stat sera doublé"},
@@ -148,7 +148,7 @@
 ]
 },
 {"name":"Ignoble célébrité",
-"url":"/assets/specialization/celebrity.png",
+"imageUrl":"/assets/specialization/celebrity.png",
 "jobs":[],
 "skills":[{"name":"Fausse note","caracteristic":"Charisme","description":"Vous produisez un son aigue, assourdissant ou cible ou la revigorant"},
 {"name":"Immondice sonor","caracteristic":"Charisme","description":"Vous jouez un air affreux, les cibles se concentre sur vous pour stoppez le massacre"},
@@ -169,7 +169,7 @@
 ]
 },
 {"name":"Chevalier d’extase",
-"url":"/assets/specialization/chevalier-extase.png",
+"imageUrl":"/assets/specialization/chevalier-extase.png",
 "jobs":[],
 "skills":[
 {"name":"Riposte","caracteristic":"Force","description":"Permet de frapper en riposte d’une parade ou d’un coup infligé"},
