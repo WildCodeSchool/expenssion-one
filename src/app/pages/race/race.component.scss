@@ -162,6 +162,16 @@ $fontSizeMobile: 25px;
       }
       .breed-statistics {
         margin-top: $marginOneSide;
+
+        .language-container{
+          display: flex;
+          font-family: $contentFont;
+
+          .language-list {
+            display: flex;
+          }
+        }
+
       }
     }
   }

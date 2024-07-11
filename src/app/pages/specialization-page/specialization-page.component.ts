@@ -15,6 +15,7 @@ export class SpecializationPageComponent {
   ngOnInit(){
     this.specializationService.getAllSpecialization().subscribe(x=>{
       this.specializations=x})
+
   }
 
 }
