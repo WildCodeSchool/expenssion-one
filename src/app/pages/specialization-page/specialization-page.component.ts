@@ -14,8 +14,8 @@ export class SpecializationPageComponent {
   specializations:Specialization[]=[];
   ngOnInit(){
     this.specializationService.getAllSpecialization().subscribe(x=>{
-      console.log(x)
       this.specializations=x})
+
   }
 
 }

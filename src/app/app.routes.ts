@@ -3,6 +3,7 @@ import { NortaMapComponent } from './components/norta-map/norta-map.component';
 import { AuthenticationGuard } from './guards/authentification.guard';
 
 import { BeliefsPageComponent } from './pages/beliefs-page/beliefs-page.component';
+import { ClassesPageComponent } from './pages/classes-page/classes-page.component';
 import { ConstructionPageComponent } from './pages/construction-page/construction-page.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
@@ -16,21 +17,12 @@ import { RegisterPageComponent } from './pages/register-page/register-page.compo
 import { RulesPageComponent } from './pages/rules-page/rules-page.component';
 import { SecretSelectionPageComponent } from './pages/secret-selection-page/secret-selection-page.component';
 import { SecretsPageComponent } from './pages/secrets-page/secrets-page.component';
-import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
-
-import { StatsPageComponent } from './pages/stats-page/stats-page.component';
-import { UserProfilPageComponent } from './pages/user-profil-page/user-profil-page.component';
-import { ClassesPageComponent } from './pages/classes-page/classes-page.component';
-
-import { UserProfilPageComponent } from './pages/user-profil-page/user-profil-page.component';
-import { BeliefsPageComponent } from './pages/beliefs-page/beliefs-page.component';
-import { NewsCharacterComponent } from './pages/news-character/news-character.component';
-import { StatsPageComponent } from './pages/stats-page/stats-page.component';
-import { SecretSelectionPageComponent } from './pages/secret-selection-page/secret-selection-page.component';
 import { SelectRaceComponent } from './pages/select-race/select-race.component';
-import { ClassesPageComponent } from './pages/classes-page/classes-page.component';
-import { LocationSelectionPageComponent } from './pages/location-selection-page/location-selection-page.component';
-import { NortaMapComponent } from './components/norta-map/norta-map.component';
+import { SpecializationPageComponent } from './pages/specialization-page/specialization-page.component';
+import { StatsPageComponent } from './pages/stats-page/stats-page.component';
+import { UserProfilPageComponent } from './pages/user-profil-page/user-profil-page.component';
+
+
 
 
 export const routes: Routes = [
@@ -68,17 +60,8 @@ export const routes: Routes = [
     component: LocationPageComponent,
   },
   {
-    path: 'creaPersonnage/classes',
-    component: ClassesPageComponent,
-  },
-  {
     path: 'glossaire/croyances',
     component: BeliefsPageComponent,
-  },
-
-  {
-    path: 'stats',
-    component: StatsPageComponent,
   },
   {
     path: 'profil',
@@ -107,11 +90,6 @@ export const routes: Routes = [
     path: 'creation-personnage',
     component: NewsCharacterComponent,
   },
-
-    path: 'Ajout/Perso',
-    component: NewsCharacterComponent,
-  },
-
   {
     path: 'creation-personnage/secrets',
     component: SecretSelectionPageComponent,

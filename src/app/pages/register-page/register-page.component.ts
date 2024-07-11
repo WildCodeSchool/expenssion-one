@@ -52,7 +52,6 @@ export class RegisterPageComponent {
   }
 
   onSubmit(): void {
-    console.log("ici")
     if (this.registerForm.valid) {
       
       this.user = new User(

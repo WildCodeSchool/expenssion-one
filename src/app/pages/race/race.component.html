@@ -47,14 +47,17 @@
         </li>
         <li><span class="bold-title">Vitesse :</span> {{ race.speed }}</li>
         <li>
-          <span class="bold-title">Langues :</span>
-          <ul>
+          <div class="language-container">
+            <span class="bold-title">Langues :&nbsp;</span>
+          <ul class="language-list">
             @for(language of race.languages;track language) {
-            <li>{{ language.name }}</li>
+            <li class="language">{{ language.name }}</li>
             , }
           </ul>
           +{{ race.number_additional_language }}
           autre(s)
+          </div>
+          
         </li>
       </ul>
     </section>

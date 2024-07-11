@@ -26,7 +26,7 @@ export class ProfilParameterPageComponent {
    authentificationService=inject(AuthenticationService)
    router=inject(Router)
 
-   user:User=new User("","string","string","string","string","string");
+   user:User=new User("","","","","","");
    ngOnInit(){
      this.userService.getUserData().subscribe(x=>{this.user=x
    }
@@ -62,7 +62,6 @@ export class ProfilParameterPageComponent {
     }
 
     updateDisplayPseudo(displayPseudo:string):void{
-      console.log(displayPseudo)
       this.userService.updateDisplayPseudo(displayPseudo).subscribe(x=>{this.user=x})
     }
 

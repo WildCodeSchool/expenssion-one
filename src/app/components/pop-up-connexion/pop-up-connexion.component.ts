@@ -44,7 +44,7 @@ export class PopupComponent {
           this.authenticationService.setToken(response.access_token);
           this.dialogRef.close();
           if(this.dialogData==="game"){
-          this.router.navigateByUrl('/inscription');
+          this.router.navigateByUrl('/creation-personnage');
         }
         this.onClose()
  

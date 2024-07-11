@@ -5,7 +5,7 @@ import { Skill } from "./skill/skill";
 export class Specialization {
     id?:number;
     name!: string;
-    url!: string;
+    imageUrl!: string;
     jobs!: Job[];
     skills?: Skill[];
     contents!: SpecializationContent[];
