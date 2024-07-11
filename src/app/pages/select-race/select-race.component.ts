@@ -39,7 +39,7 @@ export class SelectRaceComponent {
     this.currentIndex = (this.currentIndex < this.races.length - 1) ? this.currentIndex + 1 : 0;
   }
   saveRace(){
-    this.router.navigateByUrl('/inscription')
+    this.router.navigateByUrl('/creation-personnage/lieux')
   }
 
 

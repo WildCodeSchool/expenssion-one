@@ -1,10 +1,11 @@
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+import { NgFor, NgStyle } from '@angular/common';
 import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
+import { Specialization } from '../../model/specialization/specialization';
+import { SpecializationContent } from '../../model/specializationContent/specialization-content';
 import { Statistics } from '../../model/stats/statistics';
 import { ApiDataService } from '../../service/api-data.service';
-import { Specialization } from '../../model/specialization/specialization';
-import { NgFor, NgStyle } from '@angular/common';
-import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
-import { SpecializationContent } from '../../model/specializationContent/specialization-content';
 import { SpecializationService } from '../../service/specialization/specialization.service';
 
 @Component({
@@ -21,7 +22,7 @@ export class ClassesPageComponent {
 
   selectedClass!:Specialization;
 
-
+  router = inject(Router)
 
   count:number = 0;
 
@@ -124,6 +125,10 @@ export class ClassesPageComponent {
           }
       }
     )
+  }
+
+  validate(){
+    this.router.navigateByUrl('creation-personnage/races')
   }
 
   }
